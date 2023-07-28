@@ -29,11 +29,11 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 1.25rem;
   line-height: 1.5;
   background-color: var(--color-background);
+  color: var(--color);
   text-shadow: 0, 2px, 0 rgba(0, 0, 0, 0.07);
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
@@ -53,7 +53,6 @@ h6 {
   margin: 0 0 25px;
   padding: 0;
   color: var(--color);
-  font-family: "Rubik", sans-serif;
   vertical-align: baseline;
 }
 
@@ -106,8 +105,17 @@ a:focus {
 }
 
 .nav-link a {
-  font-weight: 300;
+  font-weight: 600;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 14px;
   text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 55px;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 10px 20px;
 }
 
 .nav-link a.bold {
