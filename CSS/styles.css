@@ -77,11 +77,11 @@ p:last-of-type {
 }
 
 ::-moz-selection {
-  background-color: var(--color-main-lighter);
+  background-color: var(--color-main-light);
 }
 
 ::selection {
-  background-color: var(--color-main-lighter);
+  background-color: var(--color-main-light);
 }
 
 h4 + p {
@@ -106,8 +106,6 @@ a:focus {
 
 .nav-link a {
   font-weight: 600;
-  font-kerning: auto;
-  font-optical-sizing: auto;
   font-size: 14px;
   text-decoration: none;
   text-align: left;
@@ -137,11 +135,18 @@ a:focus {
 }
 
 a.button {
-  padding: 0.25rem 0.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 5px;
-  font-size: 1rem;
+  color: var(--color);
+  background-color: var(--color-main-light);
+  background-color: RGB(24, 23, 28);
+
+  font-family: "Rubik" sans-serif;
+  line-height: 1.5;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  margin: 0px;
+  padding: 12px 28px;
+  font-weight: 600;
+  text-align: start;
 }
 
 a ion-icon {
