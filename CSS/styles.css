@@ -3,13 +3,11 @@
 GENERIC STYLES
 */
 :root {
-  --color: hsl(0, 1%, 15%);
-  --color-background: hsl(0, 100%, 100%);
-  --color-background-alt: #f3f3fe;
-  --color-main-dark: #4829f1;
-  --color-main-light: #7159f4;
-  --color-main-lighter: #a6afff;
-  --color-dist: #59f4be;
+  --color: #18171c;
+  --color-background: #ffffff;
+  --color-background-alt: #fff7e8;
+  --color-main-dark: #5c64cf;
+  --color-main-light: #f7af24;
 }
 
 *,
