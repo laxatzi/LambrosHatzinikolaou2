@@ -48,18 +48,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 500;
   text-align: left;
   line-height: 1.5;
-  margin: 10px 0;
+  margin: 0 0 25px;
+  padding: 0;
   color: var(--color);
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Rubik", sans-serif;
+  vertical-align: baseline;
 }
 
 h1 {
-  font-size: 3.5rem;
-  line-height: 1.25;
-  letter-spacing: -1px;
+  font-size: 70px;
 }
 
 h2 {
