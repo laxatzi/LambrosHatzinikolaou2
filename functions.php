@@ -99,4 +99,14 @@ function wpb_hook_javascript_footer() {
 }
 
 add_action('wp_footer', 'wpb_hook_javascript_footer');
+
+
+function add_favicon(){ ?>
+    <!-- Custom Favicons -->
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri();?>/images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
+    <?php }
+
+add_action('wp_head','add_favicon');
 ?>
+
