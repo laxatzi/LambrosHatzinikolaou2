@@ -2,3 +2,164 @@
 /*
 GENERIC STYLES
 */
+/*
+  Theme Name: Lambros Personal Theme
+  Author: Lambros Hatzinikolaou
+  Version: 1.0
+*/
+/* © Lambros Hatzinikolaou, 2023 */
+/*
+GENERIC STYLES
+*/
+:root {
+  --color: #2e353f;
+  --color-lighter: #4f5969;
+  --color-background: #ffffff;
+  --color-background-alt: #ecf2f7;
+  --color-main-dark: #026fb7;
+  --color-main-light: #5b8fb5;
+  --color-distinct: #f7af24;
+  --color-distinct-light: #ecc67c;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Helvetica, "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  text-align: left;
+  vertical-align: baseline;
+  line-height: 1.5;
+  background-color: var(--color-background);
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  position: relative;
+  min-width: 385px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 15px;
+  padding: 0;
+  color: var(--color);
+  vertical-align: baseline;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25;
+}
+
+p:first-of-type {
+  margin-top: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+::-moz-selection {
+  background-color: var(--color-distinct);
+}
+
+::selection {
+  background-color: var(--color-distinct);
+}
+
+h4 + p {
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+small {
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+a {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-main-dark);
+  text-decoration-skip-ink: none;
+}
+
+a.button {
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+a ion-icon {
+  color: var(--color-main-dark);
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+li {
+  list-style-type: square;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+blockquote {
+  text-align: left;
+  line-height: 1.6em;
+  font-size: 1.25;
+  font-style: italic;
+  color: var(--color-lighter);
+  padding: 10px;
+  margin: 0 0 20px;
+  border-left: 4px solid var(--color-main-dark);
+}
+
+section {
+  margin: 70px 0;
+}
