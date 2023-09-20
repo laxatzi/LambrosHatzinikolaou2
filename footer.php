@@ -12,6 +12,8 @@
    </div>
 </footer>
 <?php
+  get_template_part('template-parts/search-overlay');
+
   wp_footer();
 ?>
 </body>
