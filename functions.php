@@ -26,7 +26,17 @@
 function wpb_hook_javascript_footer() {
     ?>
     <script>
-
+  // window loader
+      document.querySelector("#wrapper").style.display= "none";
+   	    window.onload = function(){
+          document.getElementById("container-loader").style.display = "none";
+          document.querySelector("#wrapper").style.display= "block";
+      }
+    //  loading delay simulation
+        // setTimeout(() => {
+        //   document.getElementById("container-loader").style.display = "none";
+        //   document.querySelector("#wrapper").style.display= "block";
+        // }, 4000);
 
    // toggling nav bar
       const toggleMenu = document.querySelector(".toggle-menu");
@@ -99,7 +109,6 @@ function wpb_hook_javascript_footer() {
 }
 
 add_action('wp_footer', 'wpb_hook_javascript_footer');
-
 
 function add_favicon(){ ?>
     <!-- Custom Favicons -->
