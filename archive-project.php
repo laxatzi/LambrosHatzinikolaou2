@@ -10,8 +10,9 @@
       <?php
         while(have_posts()) {
           the_post();
-          get_template_part('template-parts/project-presentation.php');
+          get_template_part('template-parts/project-presentation');
         }
+
         echo paginate_links();
       ?>
 
