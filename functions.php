@@ -108,5 +108,14 @@ function add_favicon(){ ?>
     <?php }
 
 add_action('wp_head','add_favicon');
+
+function custom_javascript() {
+  wp_enqueue_script( 'my_script', get_template_directory_uri() . '/js/index.js');
+   wp_localize_script('my_script', 'website_data', array(
+    'root_url' => get_site_url(),
+  ));
+  }
+
+add_action('wp_footer', 'custom_javascript');
 ?>
 
