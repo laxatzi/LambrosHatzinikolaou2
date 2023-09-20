@@ -8,6 +8,9 @@
   <?php  wp_head(); ?>
 
 </head>
+ <?php
+    get_template_part('template-parts/container-loader');
+  ?>
 <body <?php body_class(); ?>>
 <button onclick="topFunction()" id="top-button" title="Go to top">&#8593;</button>
  <div id="wrapper">
