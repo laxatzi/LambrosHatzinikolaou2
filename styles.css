@@ -310,3 +310,11 @@ header menu a:focus,
 footer menu a:focus {
   text-decoration-color: var(--color-main-light);
 }
+
+a:focus-visible {
+  outline: 4px solid var(--color-main-light);
+}
+
+.visible:focus-visible {
+  outline: 4px solid var(--color-main-light);
+}
