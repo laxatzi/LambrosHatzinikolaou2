@@ -232,3 +232,27 @@ span.complement {
   color: var(--color-main-light);
   font-size: 200%;
 }
+
+#wrapper {
+  width: 65%;
+  max-width: 1200px;
+  min-width: 435px;
+  margin: 0 auto;
+  display: block;
+  padding: 0 10px;
+}
+
+main {
+  display: flex;
+  padding: 30px 0;
+}
+
+#p-wrapper {
+  min-height: 625px;
+  flex: 60%;
+  margin: 0 1.5rem;
+}
+
+.container {
+  width: 70%;
+}
