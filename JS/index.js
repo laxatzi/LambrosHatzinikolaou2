@@ -51,12 +51,19 @@ const keyToOpenSearch = function (ev) {
 };
 
 const getSearchResults = function () {
-  fetch(
+  // fetch json for posts and page separately
+  const posts = fetch(
     website_data.root_url + "/wp-json/wp/v2/posts?search=" + inputField.value
-  )
-    .then(function (response) {
-      return response.json();
-    })
+  ).then((response) => response.json());
+
+  const pages = fetch(
+    website_data.root_url + "/wp-json/wp/v2/pages?search=" + inputField.value
+  ).then((response) => response.json());
+
+  // Once fetched create a promise and then merge them together in one json file
+  Promise.all([posts, pages])
+    .then(([posts, pages]) => posts.concat(pages))
+    // Insert the suitable html for the respective case
     .then(function (json) {
       searchResultsDiv.insertAdjacentHTML(
         "beforeend",
@@ -72,6 +79,9 @@ const getSearchResults = function () {
             : `<p>Sorry. No results found!</p>`
         }`
       );
+    })
+    .catch(function (err) {
+      return `<p>${err.message}</p>`;
     });
 };
 
