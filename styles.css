@@ -223,3 +223,12 @@ a.read_more:hover,
 a.read_more:active {
   background-color: var(--color-distinct-light);
 }
+
+span.complement {
+  color: var(--color-main-light);
+}
+
+.error-code {
+  color: var(--color-main-light);
+  font-size: 200%;
+}
