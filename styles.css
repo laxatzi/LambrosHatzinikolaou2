@@ -1,7 +1,3 @@
-/* © Lambros Hatzinikolaou, 2023 */
-/*
-GENERIC STYLES
-*/
 /*
   Theme Name: Lambros Personal Theme
   Author: Lambros Hatzinikolaou
@@ -86,6 +82,29 @@ h3 {
 
 h4 {
   font-size: 1.25;
+}
+
+#latest-posts h3 a,
+#posts h3 a,
+#projects h3 a {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+h3.projects,
+h3.posts {
+  font-weight: 800;
+  color: var(--color-main-dark);
+}
+
+h3.posts,
+h3.project-title {
+  display: flex;
+  flex-direction: column;
+}
+
+h3.posts small {
+  color: var(--color);
 }
 
 p:first-of-type {
