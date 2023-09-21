@@ -190,3 +190,19 @@ blockquote {
 section {
   margin: 70px 0;
 }
+
+.intro {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.ion-icon.comp {
+  color: var(--color-main-light);
+}
+
+ion-icon {
+  color: var(--color-main-dark);
+  font-size: 0.95rem;
+  vertical-align: sub;
+  margin-right: 10px;
+}
