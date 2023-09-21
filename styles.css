@@ -256,3 +256,57 @@ main {
 .container {
   width: 70%;
 }
+
+img {
+  flex: 40%;
+}
+
+header {
+  display: flex;
+  padding: 10px 0 20px;
+  align-items: center;
+}
+
+#logo {
+  flex: 50%;
+}
+
+header menu {
+  display: flex;
+  flex: 50%;
+  justify-content: end;
+  align-items: center;
+}
+
+header menu a,
+footer menu a {
+  color: var(--color);
+  font-size: 1rem;
+  text-decoration: underline 4px;
+  padding: 0 10px;
+}
+
+header menu a,
+footer menu a {
+  text-decoration-color: var(--color-main-dark);
+}
+
+#logo a {
+  color: var(--color);
+  text-decoration: underline 4px var(--color-main-dark);
+  letter-spacing: -0.08em;
+  font-weight: 800;
+}
+
+/* #logo a:focus-visible {
+  outline: 4px solid var(--color-distinct);
+} */
+
+header menu a:hover,
+header menu a:active,
+footer menu a:hover,
+footer menu a:active,
+header menu a:focus,
+footer menu a:focus {
+  text-decoration-color: var(--color-main-light);
+}
