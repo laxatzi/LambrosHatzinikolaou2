@@ -440,3 +440,12 @@ ul ul li {
   list-style-type: circle;
   margin-left: 2%;
 }
+
+.project-title a {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+}
