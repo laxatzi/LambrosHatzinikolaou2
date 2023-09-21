@@ -400,3 +400,26 @@ textarea {
 form {
   margin-top: 20px;
 }
+
+.the-post {
+  margin-top: 70px;
+}
+
+.the-post:last-of-type {
+  margin-bottom: 50px;
+}
+
+.the-post:first-of-type {
+  margin-top: 30px;
+}
+
+.the-project,
+#newsletter {
+  margin-top: 30px;
+  background-color: var(--color-background-alt);
+  padding: 10px;
+}
+
+.the-project ul {
+  padding: 0 20px;
+}
