@@ -107,6 +107,14 @@ h3.posts small {
   color: var(--color);
 }
 
+#post-container {
+  width: 75%;
+}
+
+.the_post {
+  margin-top: 50px;
+}
+
 p:first-of-type {
   margin-top: 0;
 }
