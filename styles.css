@@ -423,3 +423,20 @@ form {
 .the-project ul {
   padding: 0 20px;
 }
+
+ul {
+  margin: 20px 0;
+}
+
+ul ul {
+  margin: 5px 0;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ul ul li {
+  list-style-type: circle;
+  margin-left: 2%;
+}
