@@ -612,3 +612,22 @@ pre {
   overflow-x: auto;
   padding: 15px;
 }
+
+#error-message {
+  padding: 5% 10%;
+}
+
+#error-message h1 {
+  font-size: 290px;
+  font-weight: 900;
+  color: var(--color-main-dark);
+}
+
+#error-message small {
+  font-weight: 800;
+}
+
+#error-message a {
+  text-decoration: none;
+  font-weight: 900;
+}
