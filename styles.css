@@ -571,3 +571,18 @@ hr {
   list-style: none;
   margin-right: 10px;
 }
+
+.contact-info_box {
+  margin-top: 40px;
+}
+.contact-info_box p {
+  margin: 5px;
+}
+
+#contactme h3 {
+  font-weight: 800;
+}
+
+#contain-about {
+  margin-top: 100px;
+}
