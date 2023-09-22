@@ -92,9 +92,9 @@ function wpb_hook_javascript_footer() {
 
    function scrollFunction() {
       if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        topButton.style.display = "block";
+        topButton.style.opacity = 1;
       } else {
-        topButton.style.display = "none";
+        topButton.style.opacity = 0;
       }
   }
 
