@@ -518,3 +518,11 @@ a.indicator {
   text-decoration: underline 4px var(--color-distinct);
   font-weight: 800;
 }
+
+.meta {
+  margin: 10px 0;
+}
+
+hr {
+  border: 1px solid lightgray;
+}
