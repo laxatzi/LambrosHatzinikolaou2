@@ -550,3 +550,24 @@ hr {
   justify-content: space-between;
   align-items: center;
 }
+
+.tag {
+  padding: 1px 3px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--color-main-dark);
+  font-style: italic;
+  background-color: var(--color-background-alt);
+}
+
+.tags ul {
+  margin-top: 0;
+}
+.taglist-parent {
+  display: flex;
+}
+
+.taglist {
+  list-style: none;
+  margin-right: 10px;
+}
