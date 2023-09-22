@@ -81,7 +81,7 @@ const getSearchResults = function () {
       );
     })
     .catch(function (err) {
-      return `<p>${err.message}</p>`;
+      console.error(err.message);
     });
 };
 
