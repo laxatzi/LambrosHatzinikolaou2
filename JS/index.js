@@ -82,6 +82,7 @@ const getSearchResults = function () {
     })
     .catch(function (err) {
       console.error(err.message);
+      searchResultsDiv.insertAdjacentHTML("beforeend", `<p>${err.stack}</p>`);
     });
 };
 
