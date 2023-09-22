@@ -644,3 +644,26 @@ pre {
   font-size: 32px;
   color: var(--color-main-dark);
 }
+
+.toggle-menu {
+  margin-top: 20px;
+}
+
+.toggle-menu ion-icon {
+  color: var(--color-main-dark);
+  font-size: 3.5rem;
+  vertical-align: middle;
+  margin: 0;
+  display: none;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+/* .toggle-menu ion-icon:hover,
+.toggle-menu ion-icon:focus {
+  border: 1px solid var(--color-distinct);
+  border-radius: 15px;
+} */
