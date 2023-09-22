@@ -480,3 +480,18 @@ ul ul li {
 .contact-info {
   flex: 4;
 }
+
+.buttons a:hover {
+  background-color: var(--color-distinct-light);
+}
+
+.label-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 800;
+}
