@@ -598,3 +598,17 @@ hr {
 .archive {
   margin-bottom: 50px;
 }
+
+code {
+  font-family: JetBrains Mono, monospace;
+  font-size: 0.95rem;
+}
+
+pre {
+  background: #eee;
+  border: 3px var(--color) solid;
+  border-top: 30px var(--color) solid;
+  white-space: pre;
+  overflow-x: auto;
+  padding: 15px;
+}
