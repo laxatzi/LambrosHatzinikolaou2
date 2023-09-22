@@ -631,3 +631,16 @@ pre {
   text-decoration: none;
   font-weight: 900;
 }
+
+/* 404 page  */
+.back-to-home {
+  display: inline-block;
+  width: 300px;
+  margin-top: 50px;
+}
+
+.back-to-home span {
+  vertical-align: sub;
+  font-size: 32px;
+  color: var(--color-main-dark);
+}
