@@ -526,3 +526,20 @@ a.indicator {
 hr {
   border: 1px solid lightgray;
 }
+
+.writtenby p {
+  padding: 20px;
+  flex: 5;
+}
+
+.writtenby img {
+  border-radius: 100%;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  flex: 1;
+}
+
+.writtenby p {
+  font-size: 0.95rem;
+}
