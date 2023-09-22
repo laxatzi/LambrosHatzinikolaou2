@@ -508,3 +508,13 @@ label {
   display: flex;
   flex-direction: column;
 }
+
+a.indicator {
+  text-decoration-color: var(--color-distinct);
+  font-weight: 800;
+}
+
+#logo a.indicator {
+  text-decoration: underline 4px var(--color-distinct);
+  font-weight: 800;
+}
