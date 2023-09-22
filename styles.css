@@ -590,3 +590,11 @@ hr {
 .contents {
   margin-top: 50px;
 }
+
+.archive h1 {
+  font-size: 48px;
+}
+
+.archive {
+  margin-bottom: 50px;
+}
