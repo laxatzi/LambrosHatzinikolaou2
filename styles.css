@@ -661,3 +661,13 @@ pre {
   justify-content: center;
   margin-left: auto;
 }
+
+form#search {
+  width: 60%;
+  margin: 100px 0;
+}
+
+form#search input {
+  width: 75%;
+  margin-bottom: 5px;
+}
