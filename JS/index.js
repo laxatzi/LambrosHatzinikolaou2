@@ -1,3 +1,5 @@
+document.documentElement.className = "js";
+
 const searchTrigger = document.querySelector(".search-trigger");
 const closer = document.querySelector(".closer");
 const searchOverlay = document.querySelector(".search-overlay");
