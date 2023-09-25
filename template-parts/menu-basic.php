@@ -8,7 +8,7 @@
           -->
   <a <?php if (is_page('contact')) echo 'class="indicator"' ?> href="<?php echo site_url('/contact') ?>">Contact</a>
 
-  <div tabindex="0" class="visible search-trigger" aria-description="You can search for your topic of interest either by clicking here or by clicking the keys s + alt">
+  <a tabindex="0" class="visible search-trigger" aria-description="You can search for your topic of interest either by clicking here or by clicking the keys s + alt">
          Search <ion-icon name="search" size="small" ></ion-icon>
-  </div>
+  </a>
 </menu>
