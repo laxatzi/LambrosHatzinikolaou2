@@ -688,6 +688,7 @@ form#search input {
   display: none;
 }
 
+/* js class resides in root so -- here it makes container visible only if js is enabled */
 .js #container-loader {
   display: block;
 }
