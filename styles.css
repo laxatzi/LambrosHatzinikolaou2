@@ -808,3 +808,12 @@ form#search input {
   margin-left: 25%;
   display: block;
 }
+
+#wrapper {
+  width: 65%;
+  max-width: 1200px;
+  min-width: 435px;
+  margin: 0 auto;
+  display: block;
+  padding: 0 10px;
+}
