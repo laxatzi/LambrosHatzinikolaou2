@@ -982,3 +982,113 @@ form#search input {
     /* margin-left: 22%; */
   }
 }
+
+/*------------------------------------------------------------------
+   ^MAX 1200px
+-------------------------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+
+  #wrapper-spinner {
+    width: 100%;
+    margin-left: 20%;
+  }
+
+  /* toggling navigation */
+  header {
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    display: none;
+    width: 100%;
+  }
+
+  .nav a {
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+
+  .toggle-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .toggle-menu ion-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  .toggle-menu ion-icon.close {
+    display: none;
+  }
+
+  .toggle-menu ion-icon.show {
+    display: flex;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .search-trigger {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .contact {
+    flex-direction: column;
+  }
+
+  .message,
+  .contact-info-section {
+    margin: 35px 0 0;
+  }
+
+  .message,
+  .contact-info-section {
+    flex: 1;
+  }
+
+  #contain-about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #p-wrapper {
+    flex: 100%;
+    margin: 0;
+  }
+  .input-field {
+    width: 80%;
+  }
+
+  .search-overlay .label-form {
+    width: 60%;
+  }
+  .search-overlay .label-form label {
+    font-size: 165%;
+  }
+
+  form#search {
+    width: 70%;
+  }
+}
