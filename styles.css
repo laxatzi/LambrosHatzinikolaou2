@@ -926,3 +926,19 @@ form#search input {
 .input-field input:focus + span {
   border-left: none;
 }
+
+.no-scroll {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+}
