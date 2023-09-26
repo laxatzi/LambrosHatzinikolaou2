@@ -769,3 +769,42 @@ form#search input {
     transform: translateX(225px);
   }
 }
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-loader {
+  margin-left: 10%;
+  margin-bottom: 45px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 0.25rem solid rgba(0, 0, 0, 0.2);
+  border-top-color: var(--color-main-dark);
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+#wrapper-spinner {
+  width: 50%;
+  max-width: 800px;
+  min-width: 435px;
+  margin: 0;
+  margin-left: 25%;
+  display: block;
+}
