@@ -872,3 +872,13 @@ form#search input {
 .search-trigger {
   margin-left: 10px;
 }
+
+form#search {
+  width: 60%;
+  margin: 100px 0;
+}
+
+form#search input {
+  width: 75%;
+  margin-bottom: 5px;
+}
