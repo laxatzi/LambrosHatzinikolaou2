@@ -883,6 +883,12 @@ form#search input {
   margin-bottom: 5px;
 }
 
+.search-query {
+  font-style: oblique;
+  font-size: 1.75rem;
+  color: var(--color-main-dark);
+}
+
 .input-field {
   display: flex;
   width: 60%;
