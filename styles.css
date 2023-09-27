@@ -889,6 +889,10 @@ form#search input {
   color: var(--color-main-dark);
 }
 
+.search-query--heading {
+  background-color: var(--color-distinct-light);
+}
+
 .input-field {
   display: flex;
   width: 60%;
