@@ -890,7 +890,7 @@ form#search input {
 }
 
 .search-query--heading {
-  background-color: var(--color-distinct-light);
+  background-color: var(--color-distinct);
 }
 
 .input-field {
