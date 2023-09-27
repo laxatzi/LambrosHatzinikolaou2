@@ -3,7 +3,7 @@
       <span class="closer">&times;</span>
       <label for="search">Search what you are looking for:</label>
       <div class="input-field">
-        <input name="search" id="search" type="search" /> <span>&#128270;</span>
+        <input name="search" id="search" type="search" autocomplete="off"/> <span>&#128270;</span>
       </div>
     </div>
     <div id="wrapper-spinner">
