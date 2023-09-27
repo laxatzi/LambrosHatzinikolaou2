@@ -16,6 +16,7 @@
           echo "<h3 class=\"search-query--heading\">No results much the search!</h3>";
         }
 
+          get_search_form();
       ?>
 
     </section>
