@@ -118,7 +118,6 @@ const typing = function (ev) {
 };
 
 // Event Listeners
-searchTrigger.addEventListener("click", openSearch);
 window.addEventListener("load", openTheSearch);
 closer.addEventListener("click", closeSearch);
 document.addEventListener("keydown", keyToOpenSearch);
