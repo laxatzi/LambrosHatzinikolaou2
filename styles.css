@@ -1161,3 +1161,20 @@ form#search input {
     width: 100%;
   }
 }
+/*------------------------------------------------------------------
+   ^MAX 550px
+-------------------------------------------------------------------*/
+@media screen and (max-width: 550px) {
+  .search-overlay .label-form label {
+    font-size: 115%;
+  }
+
+  .search-overlay .label-form {
+    width: 90%;
+    margin-right: 20px;
+  }
+
+  #wrapper-spinner {
+    margin-left: 7%;
+  }
+}
