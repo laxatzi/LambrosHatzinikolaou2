@@ -1,4 +1,11 @@
 <?php
+  function my_custom_rest() {
+    register_rest_field('post', 'authorName', array(
+      'get_callback' => function() { return get_the_author() ;}
+    ));
+  }
+  add_action('rest_api_init', 'my_custom_rest');
+
    function style_files() {
      wp_enqueue_style('main_styles', get_stylesheet_uri());
      wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap');
