@@ -881,12 +881,12 @@ form#search input {
   margin-left: 10px;
 }
 
-form#search {
+form#searchform {
   width: 60%;
   margin: 100px 0;
 }
 
-form#search input {
+form#searchform input {
   width: 75%;
   margin-bottom: 5px;
 }
@@ -1106,7 +1106,7 @@ form#search input {
     font-size: 165%;
   }
 
-  form#search {
+  form#searchform {
     width: 70%;
   }
 }
