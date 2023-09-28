@@ -31,6 +31,12 @@ const closeSearch = function () {
     searchOverlay.classList.remove("search-overlay--active");
     body.classList.remove("no-scroll");
     isSearchOverlayOpen = false;
+    // in order to compensate the small lag in redirecting
+    if (window.location.href.match("/search") != null) {
+      body.classList.add("hidden");
+    }
+    // redirecting
+    window.location.href = "http://lambroshatzinikolaou.local/";
   } else return;
 };
 
