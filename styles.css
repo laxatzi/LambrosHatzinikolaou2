@@ -531,6 +531,10 @@ hr {
   border: 1px solid lightgray;
 }
 
+.writtenby {
+  display: flex;
+}
+
 .writtenby p {
   padding: 20px;
   flex: 5;
@@ -824,7 +828,7 @@ form#search input {
 
 /* Search overlay */
 
-.search-overlay {
+.js .search-overlay {
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 10;
