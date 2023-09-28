@@ -114,18 +114,5 @@ const typing = function (ev) {
 // Event Listeners
 searchTrigger.addEventListener("click", openSearch);
 closer.addEventListener("click", closeSearch);
-searchGlass.addEventListener("click", () => console.log(inputField.value));
 document.addEventListener("keydown", keyToOpenSearch);
 inputField.addEventListener("keyup", typing);
-
-// window loader
-document.querySelector("#wrapper").style.display = "none";
-window.onload = function () {
-  document.getElementById("container-loader").style.display = "none";
-  document.querySelector("#wrapper").style.display = "block";
-};
-//loading delay simulation
-// setTimeout(() => {
-//   document.getElementById("container-loader").style.display = "none";
-//   document.querySelector("#wrapper").style.display = "block";
-// }, 4000);
