@@ -42,14 +42,6 @@ const closeSearch = function () {
 
 const keyToOpenSearch = function (ev) {
   let key = ev.key;
-
-  if (
-    searchTrigger === document.activeElement &&
-    key === "Enter" &&
-    !isSearchOverlayOpen
-  ) {
-    openSearch();
-  }
   if ((key == "s" || key == "S") && ev.altKey && !isSearchOverlayOpen) {
     openSearch();
   }
