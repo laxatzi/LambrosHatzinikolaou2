@@ -1,8 +1,8 @@
 <section id="newsletter">
-  <h2>My Weekly Newsletter about Frontend</h2>
-    <small>Subscribe to my newsletter to get useful tips and the week's
-              selection of articles about frontend technologies every
-              Tuesday.
+  <h2>My Monthly Newsletter about Web Development</h2>
+    <small>Subscribe to my newsletter to get useful tips and a
+              selection of articles about web technologies on the first
+              Monday of every month.
     </small>
     <form action="">
       <input type="email" placeholder="Email" name="email" autocomplete="email"/>
