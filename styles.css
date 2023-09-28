@@ -840,7 +840,7 @@ form#search input {
   background-color: var(--color-background-alt);
   opacity: 0.98;
   transform: scale(1.08);
-  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
   box-sizing: border-box;
 }
 
