@@ -50,6 +50,12 @@ const keyToOpenSearch = function (ev) {
   }
 };
 
+const openTheSearch = function (ev) {
+  if (window.location.href.match("/search") != null) {
+    openSearch();
+  } else return;
+};
+
 const getSearchResults = function () {
   // fetch json for posts and page separately
   const posts = fetch(
@@ -113,6 +119,7 @@ const typing = function (ev) {
 
 // Event Listeners
 searchTrigger.addEventListener("click", openSearch);
+window.addEventListener("load", openTheSearch);
 closer.addEventListener("click", closeSearch);
 document.addEventListener("keydown", keyToOpenSearch);
 inputField.addEventListener("keyup", typing);
