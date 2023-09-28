@@ -51,6 +51,10 @@ body {
   min-width: 385px;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 h1,
 h2,
 h3,
