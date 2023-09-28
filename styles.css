@@ -1102,3 +1102,62 @@ form#search input {
     width: 70%;
   }
 }
+
+/*------------------------------------------------------------------
+   ^MAX 920px
+-------------------------------------------------------------------*/
+@media screen and (max-width: 940px) {
+  h1.intro-heading {
+    font-size: 38px;
+  }
+
+  .intro-heading-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .intro-heading-image img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #error-message {
+    padding: 5%;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  a.read_more {
+    margin-top: 20px;
+    padding: 5px 10px;
+    display: block;
+    width: 40%;
+  }
+
+  .back-to-top {
+    padding: 0.2em;
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-overlay .label-form {
+    width: 80%;
+  }
+  .search-overlay .label-form label {
+    font-size: 145%;
+  }
+
+  #wrapper-spinner {
+    margin-left: 10%;
+  }
+
+  form#searchform {
+    width: 100%;
+  }
+}
