@@ -8,7 +8,7 @@
   <div class="tags">
     <ul class="taglist-parent">
       <li class="taglist tag">
-        <?php echo '#'.get_the_category_list(' / #') ?>
+        <?php echo get_the_category_list(' / ') ?>
       </li>
     </ul>
   </div>
