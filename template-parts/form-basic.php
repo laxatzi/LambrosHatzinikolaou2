@@ -1,4 +1,5 @@
-<form name="contact_form" method="post" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" enctype="multipart/form-data" autocomplete="off">
+<form name="contact_form" method="post" action="<?php echo esc_url( get_permalink() ); ?>" enctype="multipart/form-data" autocomplete="off">
+<input type="hidden" name="contact_form">
   <div class="label-form">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required />
