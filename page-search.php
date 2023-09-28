@@ -9,5 +9,6 @@
     </form>
    <?php
   }
+   get_template_part('template-parts/search-overlay');
     get_footer();
   ?>
