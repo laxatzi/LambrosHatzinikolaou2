@@ -1,4 +1,4 @@
-<form action="index.php">
+<form name="contact_form" method="post" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" enctype="multipart/form-data" autocomplete="off">
   <div class="label-form">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required />
