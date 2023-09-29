@@ -8,7 +8,7 @@
         title="Aggeliki is a web developer's cat!"
       />
     </div>
-      <h1 class="intro-heading">Hi, I'm Lambros</h1>
+      <h1 class="intro-heading">Hi, I'm Lambros!</h1>
     </div>
     <p>
       I'm a web developer in Thessaloniki, Greece. This is my tech blog
