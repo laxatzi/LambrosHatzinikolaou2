@@ -7,4 +7,4 @@
    <?php
   }
     get_footer();
-  ?>
+  
