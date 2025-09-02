@@ -133,5 +133,5 @@ if (!is_admin()) {
 }
   add_filter('pre_get_posts','search_filter_posts');
 }
-?>
+
 
