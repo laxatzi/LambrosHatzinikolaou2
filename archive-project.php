@@ -4,6 +4,7 @@
 
 <main id="main-content" aria-labelledby="archive-project-title">
   <div class="container">
+    <?php if ( have_posts() ) : ?>
     <header class="archive-header">
       <?php
       // Title + description (WP will escape these appropriately)
@@ -32,6 +33,10 @@
       ] 
     );
   ?>
+  <?php else : ?>
+  <?php get_template_part( 'template-parts/content', 'none' ); ?>
+  <?php endif; ?>
+
   </div>
 </main>
 
