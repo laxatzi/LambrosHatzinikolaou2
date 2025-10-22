@@ -1,8 +1,8 @@
 <?php
  get_header();
 ?>
-<main>
-  <div class="container">
+
+  <main id="main-content" aria-labelledby="archive-project-title">
     <section id="posts">
        <h1>Projects</h1>
        <p><?php the_archive_description(); ?></p>
@@ -17,7 +17,7 @@
       ?>
 
     </section>
-</div>
 </main>
+
 <?php
   get_footer();
