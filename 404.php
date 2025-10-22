@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<main id="error-message">
+<main id="main-content" class="site-main error-404 not-found" aria-labelledby="page-title">
   <div class="container">
 
     <h1 id="page-title">404</h1>
