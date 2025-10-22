@@ -3,6 +3,7 @@
 ?>
 <main id="main-content" aria-labelledby="archive-title">
   <div class="container">
+    <?php if ( have_posts() ) : ?>
     <header class="archive-header">
         <?php
         // Title + description (WP will escape these appropriately)
@@ -30,7 +31,10 @@
         'class'              => 'posts-pagination',
       ] );
     ?>
-</div>
+    <?php else : ?>
+    <?php get_template_part( 'template-parts/content', 'none' ); ?>
+    <?php endif; ?>
+   </div>
 </main>
 <?php
   get_footer();
