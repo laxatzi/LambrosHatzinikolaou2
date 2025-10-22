@@ -11,7 +11,6 @@
         ?>
       </header>
     <section id="posts">
-
       <?php
         while(have_posts()) {
           the_post();
@@ -20,8 +19,17 @@
 
         echo paginate_links();
       ?>
-
     </section>
+    <?php
+    // Accessible pagination
+      the_posts_pagination( [
+        'mid_size'           => 1,
+        'prev_text'          => '<span class="screen-reader-text">' . esc_html__( 'Previous', 'LambrosPersonalTheme' ) . '</span><span aria-hidden="true">←</span>',
+        'next_text'          => '<span class="screen-reader-text">' . esc_html__( 'Next', 'LambrosPersonalTheme' ) . '</span><span aria-hidden="true">→</span>',
+        'screen_reader_text' => esc_html__( 'Posts navigation', 'LambrosPersonalTheme' ),
+        'class'              => 'posts-pagination',
+      ] );
+    ?>
 </div>
 </main>
 <?php
