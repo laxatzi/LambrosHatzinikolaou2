@@ -13,12 +13,10 @@
       </header>
     <section id="posts">
       <?php
-        while(have_posts()) {
+        while(have_posts()) :
           the_post();
           get_template_part('template-parts/blog-presentation');
-        }
-
-        echo paginate_links();
+        endwhile;        
       ?>
     </section>
     <?php
