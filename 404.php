@@ -6,8 +6,10 @@ get_header();
   <div class="container">
 
     <h1 id="page-title">404</h1>
-       <h2 class="page-subtitle"><span><?php esc_html_e('Oops', 'LambrosPersonalTheme'); ?></span>, 
-           <?php esc_html_e("we haven't found what you're looking for.", 'LambrosPersonalTheme'); ?></h2>
+    <h2 class="page-subtitle">
+      <span><?php esc_html_e('Oops', 'LambrosPersonalTheme'); ?></span>, 
+      <?php esc_html_e("we haven't found what you're looking for.", 'LambrosPersonalTheme'); ?>
+    </h2>
     <p>The page you are looking for might have been removed, had its
               name changed, or is temporally unavailable.</p>
 
