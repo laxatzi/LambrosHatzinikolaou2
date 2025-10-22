@@ -10,8 +10,9 @@ get_header();
       <span><?php esc_html_e('Oops', 'LambrosPersonalTheme'); ?></span>, 
       <?php esc_html_e("we haven't found what you're looking for.", 'LambrosPersonalTheme'); ?>
     </h2>
-    <p>The page you are looking for might have been removed, had its
-              name changed, or is temporally unavailable.</p>
+    <p>
+        <?php esc_html_e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'LambrosPersonalTheme'); ?>
+    </p>
 
     <div class="back-to-home">
       <a href="<?php echo site_url(); ?>"><span>&#8592;</span> Back to home page</a>
