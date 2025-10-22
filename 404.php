@@ -10,7 +10,7 @@
 <main id="error-message">
   <div class="container">
 
-    <h1>404</h1>
+    <h1 id="page-title">404</h1>
     <h2><span>Oops</span>, haven't found what you looking for?</h2>
     <p>The page you are looking for might have been removed, had its
               name changed, or is temporally unavailable.</p>
