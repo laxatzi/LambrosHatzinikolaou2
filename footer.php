@@ -3,7 +3,7 @@
  * Theme footer
  */
 ?>
-<footer>
+<footer id="colophon" class="site-footer" role="contentinfo">
   <div id="sig">
     <?php
         get_template_part('template-parts/menu-footer');
