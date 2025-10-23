@@ -4,7 +4,7 @@
 <main id="main-content">
 <div class="dot-bg-section-1"></div>
   <div class="container">
-    <section id="posts">
+    <section id="posts" aria-labelledby="posts-title">
       <?php
         while(have_posts()) {
           the_post();
