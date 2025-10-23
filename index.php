@@ -72,6 +72,7 @@
     ?>
  </section>
 </div>
+<div class="dot-bg-section-2"></div>
 </main>
 <?php
   get_footer();
