@@ -1,4 +1,10 @@
-  <menu>
+<?php
+  // Configure your social URLs here (or move to Customizer later)
+  $twitter  = 'https://twitter.com/yourhandle';
+  $linkedin = 'https://www.linkedin.com/in/yourhandle/';
+  $github   = 'https://github.com/yourhandle';
+?>
+<menu>
     <a href="#twitter">Twitter</a> .
     <a href="#linkedin">Linkedin</a> .
     <a href="#github">GitHub</a> .
