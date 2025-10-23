@@ -1,7 +1,8 @@
 <?php
  get_header();
 ?>
-<main>
+<main id="main-content">
+<div class="dot-bg-section-1"></div>
   <div class="container">
     <section id="posts">
       <?php
