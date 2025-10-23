@@ -5,6 +5,9 @@
 <div class="dot-bg-section-1"></div>
   <div class="container">
     <section id="posts" aria-labelledby="posts-title">
+      <h1 id="posts-title" class="screen-reader-text">
+        <?php esc_html_e('Posts', 'LambrosPersonalTheme'); ?>
+      </h1>
       <?php
         while(have_posts()) {
           the_post();
