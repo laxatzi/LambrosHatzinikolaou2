@@ -1,3 +1,8 @@
+<?php
+/**
+ * Theme footer
+ */
+?>
 <footer>
   <div id="sig">
     <?php
