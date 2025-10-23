@@ -23,7 +23,12 @@
   </div>
 </footer>
 <?php
-  wp_footer();
+// Place overlay markup before wp_footer so plugins can still hook very last.
+get_template_part( 'template-parts/search-overlay' );
+
+// Must be the last thing before </body>.
+wp_footer();
 ?>
 </body>
 </html>
+
