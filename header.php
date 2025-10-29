@@ -21,7 +21,7 @@
   ↑
 </button>
  <div id="wrapper">
-    <header>
+     <header class="site-header" role="banner">
       <div id="logo">
         <a <?php if (is_front_page()) echo 'class="indicator"'?> href="<?php echo site_url(); ?>">Lambros Hatzinikolaou</a>
       </div>
