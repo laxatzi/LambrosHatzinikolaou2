@@ -25,16 +25,33 @@ $links = [
 ];
 ?>
 <nav class="primary-nav" aria-label="<?php esc_attr_e( 'Primary', 'LambrosPersonalTheme' ); ?>">
-  <a <?php if (is_page('about')) echo 'class="indicator"' ?>   href="<?php echo site_url('/about') ?>">About</a>
-  <a <?php if (get_post_type() == 'post') echo 'class="indicator"' ?> href="<?php  echo site_url('/blog') ?>">Articles</a>
-  <a <?php if (get_post_type() == 'project') echo 'class="indicator"' ?> href="<?php  echo site_url('/projects') ?>">Projects</a>
-          <!--
-            <a href="#books">Books</a>
-            <a href="#now">Now</a>
-          -->
-  <a <?php if (is_page('contact')) echo 'class="indicator"' ?> href="<?php echo site_url('/contact') ?>">Contact</a>
+  <ul class="nav site-nav" id="js--menu">
+    <?php foreach ( $links as $item ) : ?>
+      <li>
+        <a
+          href="<?php echo $item['url']; ?>"
+          class="<?php echo $item['current'] ? 'indicator' : ''; ?>"
+          <?php echo $item['current'] ? 'aria-current="page"' : ''; ?>
+        >
+          <?php echo $item['label']; ?>
+        </a>
+      </li>
+    <?php endforeach; ?>
 
-  <a <?php if (is_page('search')) echo 'class="indicator"' ?>  href="<?php echo esc_url(site_url('/search')) ?>" tabindex="0" class="visible search-trigger" aria-description="You can search for your topic of interest either by clicking here or by clicking the keys s + alt">
-         Search <ion-icon name="search" size="small" ></ion-icon>
-  </a>
+    <li>
+      <!-- Search trigger: this activates your overlay via JS -->
+      <a
+        href="#"
+        class="search-trigger visible"
+        aria-label="<?php esc_attr_e( 'Open search', 'LambrosPersonalTheme' ); ?>"
+        aria-haspopup="dialog"
+        aria-controls="search-overlay"
+        aria-expanded="false"
+      >
+        <?php esc_html_e( 'Search', 'LambrosPersonalTheme' ); ?>
+        <ion-icon class="magnifying-glass" name="search" size="small" aria-hidden="true"></ion-icon>
+        <span class="sr-only"><?php esc_html_e( 'Open site search', 'LambrosPersonalTheme' ); ?></span>
+      </a>
+    </li>
+  </ul>
 </menu>
