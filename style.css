@@ -805,15 +805,29 @@ form#searchform input {
   overflow-x: hidden;
 }
 
+.screen-reader-text,
 .sr-only {
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  width: 1px;
+  position: absolute !important;
   height: 1px;
-  position: absolute;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  z-index: 10000;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 /*------------------------------------------------------------------
