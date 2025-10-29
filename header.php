@@ -14,8 +14,8 @@
   id="top-button"
   class="back-to-top"
   type="button"
-  title="<?php echo esc_attr__( 'Go to top', 'personaltheme' ); ?>"
-  aria-label="<?php echo esc_attr__( 'Back to top', 'personaltheme' ); ?>"
+  title="<?php echo esc_attr__( 'Go to top', 'LambrosPersonalTheme' ); ?>"
+  aria-label="<?php echo esc_attr__( 'Back to top', 'LambrosPersonalTheme' ); ?>"
   hidden
 >
   ↑
