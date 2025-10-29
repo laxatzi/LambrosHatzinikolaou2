@@ -24,7 +24,7 @@ $links = [
   ],
 ];
 ?>
-<menu class="nav" id="js--menu">
+<nav class="primary-nav" aria-label="<?php esc_attr_e( 'Primary', 'LambrosPersonalTheme' ); ?>">
   <a <?php if (is_page('about')) echo 'class="indicator"' ?>   href="<?php echo site_url('/about') ?>">About</a>
   <a <?php if (get_post_type() == 'post') echo 'class="indicator"' ?> href="<?php  echo site_url('/blog') ?>">Articles</a>
   <a <?php if (get_post_type() == 'project') echo 'class="indicator"' ?> href="<?php  echo site_url('/projects') ?>">Projects</a>
