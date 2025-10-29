@@ -134,4 +134,13 @@ if (!is_admin()) {
   add_filter('pre_get_posts','search_filter_posts');
 }
 
+add_action('after_setup_theme', function () {
+  add_theme_support('custom-logo', [
+    'height' => 80,
+    'width'  => 80,
+    'flex-height' => true,
+    'flex-width'  => true,
+  ]);
+});
+
 
