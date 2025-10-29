@@ -62,7 +62,18 @@
       <?php echo esc_html__( 'Skip to content', 'LambrosPersonalTheme' ); ?>
     </a>
    
-
+    <button
+      class="toggle-menu button-reset"
+      id="toggle-menu-button"
+      aria-label="<?php echo esc_attr__( 'Toggle main menu', 'LambrosPersonalTheme' ); ?>"
+      aria-controls="js--menu"
+      aria-expanded="false"
+      type="button"
+    >
+      <span class="sr-only"><?php echo esc_html__( 'Toggle main menu', 'LambrosPersonalTheme' ); ?></span>
+      <ion-icon name="menu"  aria-hidden="true"></ion-icon>
+      <ion-icon name="close" aria-hidden="true" hidden></ion-icon>
+    </button>
        <?php
 
         get_template_part('template-parts/menu-basic');
