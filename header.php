@@ -62,15 +62,7 @@
       <?php echo esc_html__( 'Skip to content', 'LambrosPersonalTheme' ); ?>
     </a>
    
-        <div
-          class="toggle-menu"
-          id="toggle-menu-button"
-          aria-label="Toggle main menu"
-          tabindex="0"
-        >
-          <ion-icon name="menu" class="show"></ion-icon>
-          <ion-icon name="close" class="close"></ion-icon>
-      </div>
+
        <?php
 
         get_template_part('template-parts/menu-basic');
