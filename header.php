@@ -9,7 +9,17 @@
 
 </head>
 <body <?php body_class(); ?>>
-<button onclick="topFunction()" id="top-button" title="Go to top">&#8593;</button>
+<?php wp_body_open(); ?>
+<button
+  id="top-button"
+  class="back-to-top"
+  type="button"
+  title="<?php echo esc_attr__( 'Go to top', 'personaltheme' ); ?>"
+  aria-label="<?php echo esc_attr__( 'Back to top', 'personaltheme' ); ?>"
+  hidden
+>
+  ↑
+</button>
  <div id="wrapper">
     <header>
       <div id="logo">
