@@ -57,7 +57,11 @@
       <?php endif; ?>
       <!-- end #logo -->
     </div>
-    <!-- End Logo -->
+       
+    <a class="skip-link screen-reader-text" href="#main-content">
+      <?php echo esc_html__( 'Skip to content', 'LambrosPersonalTheme' ); ?>
+    </a>
+   
         <div
           class="toggle-menu"
           id="toggle-menu-button"
