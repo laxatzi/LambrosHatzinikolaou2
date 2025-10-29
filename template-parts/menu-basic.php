@@ -1,3 +1,4 @@
+<?php 
 // Build link data
 $links = [
   [
