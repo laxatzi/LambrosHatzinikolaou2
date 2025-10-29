@@ -54,4 +54,4 @@ $links = [
       </a>
     </li>
   </ul>
-</menu>
+</nav>
