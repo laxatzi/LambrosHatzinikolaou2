@@ -117,6 +117,13 @@ const typing = function (ev) {
   typedVal = inputField.value;
 };
 
+const topBtn = document.getElementById('top-button');
+window.addEventListener('scroll', () => {
+  const show = window.scrollY > 250;
+  if (topBtn) topBtn.hidden = !show;
+});
+topBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
 // Event Listeners
 window.addEventListener("load", openTheSearch);
 closer.addEventListener("click", closeSearch);
