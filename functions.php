@@ -162,13 +162,12 @@ add_action('wp_footer', 'wpb_hook_javascript_footer');
 
   add_action( 'after_setup_theme', 'theme_slug_setup' );
 
-function add_favicon(){ ?>
-    <!-- Custom Favicons -->
-    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri();?>/images/favicon.ico"/>
-    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
-    <?php }
-
-add_action('wp_head','add_favicon');
+// add favicon
+function add_favicon_html() { ?>
+  <link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/favicon.ico' ); ?>" />
+  <link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/apple-touch-icon.png' ); ?>">
+<?php }
+add_action('wp_head', 'add_favicon_html', 5);
 
 function custom_javascript() {
   wp_enqueue_script( 'my_script', get_template_directory_uri() . '/js/index.js');
