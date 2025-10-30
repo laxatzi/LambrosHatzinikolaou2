@@ -195,5 +195,7 @@ function add_emoji_to_title_frontend( $title, $post_id ) {
     return '✨ ' . $title;
 }
 
+add_filter( 'the_title', 'add_emoji_to_title_frontend', 10, 2 );
+
 
 
