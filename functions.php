@@ -137,6 +137,31 @@ function wpb_hook_javascript_footer() {
 
 add_action('wp_footer', 'wpb_hook_javascript_footer');
 
+// Set the title tag automatically also loads the theme’s translated strings.
+
+    function theme_slug_setup() {
+      load_theme_textdomain('LambrosPersonalTheme', get_template_directory().'/languages');
+      add_theme_support( 'title-tag' );
+      add_theme_support('post-thumbnails');
+      add_theme_support('html5', ['search-form', 'gallery', 'caption', 'script', 'style']);
+  // Custom logo support
+  add_theme_support('custom-logo', [
+    'height' => 80,
+    'width'  => 80,
+    'flex-height' => true,
+    'flex-width'  => true,
+  ]);
+  // Menus
+  register_nav_menus([
+    'primary' => __( 'Primary menu', 'LambrosPersonalTheme' ),
+    'footer'  => __( 'Footer menu',  'LambrosPersonalTheme' ),
+    'social'  => __( 'Social links', 'LambrosPersonalTheme' ),
+  ]);
+
+    }
+
+  add_action( 'after_setup_theme', 'theme_slug_setup' );
+
 function add_favicon(){ ?>
     <!-- Custom Favicons -->
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri();?>/images/favicon.ico"/>
