@@ -1,7 +1,10 @@
 <?php
+  // Add custom fields to REST API responses
   function my_custom_rest() {
     register_rest_field('post', 'authorName', array(
-      'get_callback' => function() { return get_the_author() ;}
+    'get_callback' => function($obj) {
+      return get_the_author_meta('display_name', $obj['author'] ?? 0);
+    }
     ));
   }
   add_action('rest_api_init', 'my_custom_rest');
