@@ -185,4 +185,15 @@ add_action('pre_get_posts', function ($q) {
   }
 });
 
+// Add emoji to post titles
+function add_emoji_to_title_frontend( $title, $post_id ) {
+    if ( get_post_type($post_id) !== 'post' ) return $title;
+    if ( is_admin() || ! in_the_loop() || ! is_main_query() ) {
+        return $title;
+    }
+
+    return '✨ ' . $title;
+}
+
+
 
