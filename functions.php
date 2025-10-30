@@ -179,24 +179,10 @@ function custom_javascript() {
 add_action('wp_footer', 'custom_javascript');
 
 //Alter the WordPress search to return ONLY posts, no pages
-if (!is_admin()) {
-  function search_filter_posts($query) {
-    if ($query->is_search) {
-  $query->set('post_type', 'post');
-
-}
-  return $query;
-}
-  add_filter('pre_get_posts','search_filter_posts');
-}
-
-add_action('after_setup_theme', function () {
-  add_theme_support('custom-logo', [
-    'height' => 80,
-    'width'  => 80,
-    'flex-height' => true,
-    'flex-width'  => true,
-  ]);
+add_action('pre_get_posts', function ($q) {
+  if ( ! is_admin() && $q->is_main_query() && $q->is_search() ) {
+    $q->set('post_type', 'post'); // only posts on front-end search
+  }
 });
 
 
