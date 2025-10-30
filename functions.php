@@ -9,27 +9,56 @@
   }
   add_action('rest_api_init', 'my_custom_rest');
 
-   function style_files() {
-     wp_enqueue_style('main_styles', get_stylesheet_uri());
-     wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap');
-  }
+// Styles & Scripts
+add_action('wp_enqueue_scripts', function () {
+  $ver = wp_get_theme()->get('Version') ?: null;
 
-  add_action('wp_enqueue_scripts', 'style_files');
+  // Styles
+  //Adding a version (cache busting)
+  wp_enqueue_style('main-styles', get_stylesheet_uri(), [], $ver);
+  wp_enqueue_style(
+    'google-fonts',
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap',
+    [],
+    null
+  );
 
-  // import ion-icons
-  function my_theme_load_ionicons_font() {
-    // Load Ionicons font from CDN
-    wp_enqueue_script( 'my-theme-ionicons', 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', array(), '7.1.0', true );
-  }
+  // Ionicons (module + nomodule)
+  wp_enqueue_script(
+    'ionicons-module',
+    'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js',
+    [],
+    null,
+    true
+  );
+  wp_script_add_data('ionicons-module', 'type', 'module');
 
-  add_action( 'wp_enqueue_scripts', 'my_theme_load_ionicons_font' );
+  wp_enqueue_script(
+    'ionicons-legacy',
+    'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js',
+    [],
+    null,
+    true
+  );
+  wp_script_add_data('ionicons-legacy', 'nomodule', true);
 
-  // Set the title tag automatically
-    function theme_slug_setup() {
-      add_theme_support( 'title-tag' );
-    }
+  // YOUR theme JS — note the CASE "JS/index.js"
+  wp_enqueue_script(
+    'theme-scripts',
+    get_template_directory_uri() . '/JS/index.js',
+    [],
+    $ver,
+    true
+  );
 
-  add_action( 'after_setup_theme', 'theme_slug_setup' );
+  // Provide root URL to JS
+  wp_localize_script('theme-scripts', 'website_data', [
+    'root_url' => get_site_url(),
+  ]);
+});
+
+// If you previously injected inline JS in the footer, keep this to avoid duplicate/old code
+remove_action('wp_footer', 'wpb_hook_javascript_footer');
 
   //add JavaScript to your WordPress footer
 function wpb_hook_javascript_footer() {
