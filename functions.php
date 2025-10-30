@@ -216,4 +216,10 @@ add_filter('get_the_archive_title', function ($title) {
     return $title;
 });
 
+// Add noindex to 404 pages
+
+add_action('wp_head', function () {
+  if (is_404()) echo '<meta name="robots" content="noindex,follow">';
+}, 5);
+
 
