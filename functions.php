@@ -197,5 +197,23 @@ function add_emoji_to_title_frontend( $title, $post_id ) {
 
 add_filter( 'the_title', 'add_emoji_to_title_frontend', 10, 2 );
 
+// Manipulate archive titles to remove prefixes
+
+add_filter('get_the_archive_title', function ($title) {
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    } elseif (is_tag()) {
+        $title = single_tag_title('', false);
+    } elseif (is_author()) {
+        $author = get_queried_object();
+    $title  = $author ? '<span class="vcard">' . esc_html( $author->display_name ) . '</span>' : $title;
+  } elseif ( is_tax() ) {
+
+        $title = sprintf(__('%1$s'), single_term_title('', false));
+    } elseif (is_post_type_archive()) {
+        $title = post_type_archive_title('', false);
+    }
+    return $title;
+});
 
 
