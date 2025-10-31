@@ -4,14 +4,26 @@ get_header();
 ?>
 <main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
 
-  while(have_posts()) {
-   the_post(); ?>
-   <h1> <?php the_title(); ?></h1>
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <header class="entry-header">
+        <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"><?php the_title(); ?></h1>
+      </header>
 
-   <?php
-   get_search_form();
-  }
-   get_template_part('template-parts/search-overlay');
+      <div class="entry-content">
+        <?php
+          // Optional intro/instructions edited in the page body
+          the_content();
+
+          // Core search form (already pre-fills the current query and has label)
+          get_search_form();
+        ?>
+      </div>
+    </article>
+  <?php endwhile; else : ?>
+    <?php get_template_part( 'template-parts/content', 'none' ); ?>
+  <?php endif; ?>
+
 </main>
     get_footer();
   
