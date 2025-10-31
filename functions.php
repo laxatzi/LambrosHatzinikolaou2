@@ -92,15 +92,6 @@ function add_favicon_html() { ?>
 <?php }
 add_action('wp_head', 'add_favicon_html', 5);
 
-function custom_javascript() {
-  wp_enqueue_script( 'my_script', get_template_directory_uri() . '/js/index.js');
-   wp_localize_script('my_script', 'website_data', array(
-    'root_url' => get_site_url(),
-  ));
-  }
-
-add_action('wp_footer', 'custom_javascript');
-
 //Alter the WordPress search to return ONLY posts, no pages
 add_action('pre_get_posts', function ($q) {
   if ( ! is_admin() && $q->is_main_query() && $q->is_search() ) {
