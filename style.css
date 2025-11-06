@@ -485,6 +485,16 @@ ul ul li {
   }
 }
 
+.contact-info_box p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0;
+}
+.social-links a {
+  margin-right: 0.75rem;
+}
+
 .sr-only {
   position: absolute !important;
   width: 1px;
