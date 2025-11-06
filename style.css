@@ -468,22 +468,6 @@ ul ul li {
   margin: 15px 0;
 }
 
-.contact {
-  display: flex;
-}
-
-.message,
-.contact-info {
-  margin: 50px 0;
-}
-
-.message {
-  flex: 5;
-}
-
-.contact-info {
-  flex: 4;
-}
 
 .buttons a:hover {
   background-color: var(--color-distinct-light);
