@@ -2,6 +2,8 @@
   get_header();
 ?>
 <main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
   <section id="contactme">
     <h2>Why don't you reach out?</h2>
     <p>
@@ -56,6 +58,7 @@
       </div>
     </div>
   </section>
+  <?php endwhile; endif; ?>
 </main>
 <?php
   get_footer();
