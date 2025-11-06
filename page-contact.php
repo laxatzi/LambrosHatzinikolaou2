@@ -1,7 +1,7 @@
 <?php
   get_header();
 ?>
-<main>
+<main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <section id="contactme">
     <h2>Why don't you reach out?</h2>
     <p>
