@@ -23,44 +23,45 @@
             ?>
      </div>
        <div class="contact-info">
-        <h3>Or get in touch another way</h3>
-        <div class="contact-info_box">
-          <p>
-            <ion-icon name="location" size="large"></ion-icon>Mikras Asia 89, Thessaloniki, Greece
-          </p>
-          <p>
-            <ion-icon name="home" size="large"></ion-icon>
-                  ZIP code: 55000
-          </p>
-          <p>
-            <ion-icon name="mail" size="large"></ion-icon>duck@gmail.com
-          </p>
-          <p>
-            <ion-icon name="call" size="large"></ion-icon>2310-xxx-xxx
-          </p>
-          <p>
-            <ion-icon size="large" name="logo-whatsapp"></ion-icon>6948-xxx-xxx
-          </p>
-            &nbsp;
-          <p>
-            <a href="linkedin.com" target="_blank">
-              <ion-icon
-                style="color: var(--color-main-dark)"
-                size="large"
-                name="logo-linkedin"
-              ></ion-icon>
-            </a>
-            <a href="twitter.com" target="_blank">
-              <ion-icon
-                style="color: var(--color-main-dark)"
-                size="large"
-                name="logo-twitter"
-              ></ion-icon>
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
+         <h3><?php esc_html_e( 'Or get in touch another way', 'LambrosPersonalTheme' ); ?></h3>
+           <address class="contact-info_box" translate="no">
+              <p>
+                <ion-icon name="location" size="large" aria-hidden="true"></ion-icon>
+                <?php esc_html_e( 'Mikras Asia 89, Thessaloniki, Greece', 'LambrosPersonalTheme' ); ?>
+              </p>
+              <p>
+                <ion-icon name="home" size="large" aria-hidden="true"></ion-icon>
+                <?php esc_html_e( 'ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
+              </p>
+              <p>
+                <ion-icon name="mail" size="large" aria-hidden="true"></ion-icon>
+                <a href="mailto:duck@gmail.com">duck@gmail.com</a>
+              </p>
+              <p>
+                <ion-icon name="call" size="large" aria-hidden="true"></ion-icon>
+                <a href="tel:+302310XXXXXX">+30 2310 XXX XXX</a>
+              </p>
+              <p>
+                <ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
+                <a href="https://wa.me/306948XXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </p>
+
+              <p class="social-links">
+                <a href="<?php echo esc_url( 'https://www.linkedin.com/in/your-handle' ); ?>"
+                   target="_blank" rel="noopener noreferrer">
+                  <ion-icon class="social-icon" name="logo-linkedin" size="large" aria-hidden="true"></ion-icon>
+                  <span class="sr-only"><?php esc_html_e( 'LinkedIn', 'LambrosPersonalTheme' ); ?></span>
+                </a>
+
+                <a href="<?php echo esc_url( 'https://x.com/your-handle' ); ?>"
+                   target="_blank" rel="noopener noreferrer">
+                  <ion-icon class="social-icon" name="logo-twitter" size="large" aria-hidden="true"></ion-icon>
+                  <span class="sr-only"><?php esc_html_e( 'X (Twitter)', 'LambrosPersonalTheme' ); ?></span>
+                </a>
+              </p>
+            </address>
+          </div>
+     </div>
   </section>
   </article>
   <?php endwhile; endif; ?>
