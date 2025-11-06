@@ -18,6 +18,12 @@ get_header();
         <?php esc_html_e('Back to home page', 'LambrosPersonalTheme'); ?>
       </a>
     </p>
+
+  <?php
+    // Show a few recent posts to help users recover
+    the_widget( 'WP_Widget_Recent_Posts', [ 'number' => 5 ], [ 'before_title' => '<h3>', 'after_title' => '</h3>' ] );
+    ?>
+
   </div>
 </main>
 <?php
