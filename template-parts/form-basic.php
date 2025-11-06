@@ -16,6 +16,11 @@ $msg    = isset($posted['message'])? wp_kses_post($posted['message'])       : ''
   novalidate
 >
 <?php wp_nonce_field( 'contact_form_submit', 'contact_nonce' ); ?>
+ <!-- Honeypot: should stay empty -->
+  <div class="honeypot" aria-hidden="true">
+    <label for="website"><?php esc_html_e('Leave this field empty', 'LambrosPersonalTheme'); ?></label>
+    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+  </div>
 <input type="hidden" name="contact_form">
   <div class="label-form">
     <label for="name"><?php echo esc_html( 'Name', 'LambrosPersonalTheme' ); ?></label>
