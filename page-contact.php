@@ -15,6 +15,13 @@
     </header>
  <section id="contactme" class="contact-section">
    <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
+<!-- Show flash message on the page -->
+    <?php if ( $m = get_transient('contact_msg') ) : delete_transient('contact_msg'); ?>
+      <div class="notice notice-<?php echo esc_attr($m['type']); ?>" role="status" aria-live="polite">
+        <?php echo esc_html( $m['text'] ); ?>
+      </div>
+    <?php endif; ?>
+
     <div class="contact grid">
       <div class="message">
         <h3><?php esc_html_e( 'Send a message', 'LambrosPersonalTheme' ); ?></h3>
