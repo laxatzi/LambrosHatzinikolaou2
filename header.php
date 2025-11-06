@@ -1,4 +1,13 @@
-<!-- ©Lambros Hatzinikolaou 2023 -->
+<?php
+/**
+ * Theme header
+ *
+ * Outputs <head> and everything up to the opening of <main>.
+ *
+ * @package PersonalTheme
+ */
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
