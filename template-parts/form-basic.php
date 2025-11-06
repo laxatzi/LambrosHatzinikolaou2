@@ -15,6 +15,7 @@ $msg    = isset($posted['message'])? wp_kses_post($posted['message'])       : ''
   enctype="multipart/form-data"
   novalidate
 >
+<?php wp_nonce_field( 'contact_form_submit', 'contact_nonce' ); ?>
 <input type="hidden" name="contact_form">
   <div class="label-form">
     <label for="name"><?php echo esc_html( 'Name', 'LambrosPersonalTheme' ); ?></label>
