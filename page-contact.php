@@ -14,20 +14,16 @@
       ?>
     </header>
  <section id="contactme" class="contact-section">
-    <h2>Why don't you reach out?</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-      provident repellat in expedita saepe numquam nesciunt maiores.
-    </p>
-    <div class="contact">
+   <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
+    <div class="contact grid">
       <div class="message">
-        <h3>Send a message</h3>
-        <?php
-          get_template_part('template-parts/form-basic');
-        ?>
-      </div>
-
-      <div class="contact-info">
+        <h3><?php esc_html_e( 'Send a message', 'LambrosPersonalTheme' ); ?></h3>
+            <?php
+              // Your contact form partial (ensure it outputs a <form> with nonce & validation)
+              get_template_part( 'template-parts/form-basic' );
+            ?>
+  
+       <div class="contact-info">
         <h3>Or get in touch another way</h3>
         <div class="contact-info_box">
           <p>
