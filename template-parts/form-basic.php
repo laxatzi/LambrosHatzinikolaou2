@@ -1,4 +1,20 @@
-<form name="contact_form" method="post" action="<?php echo esc_url( get_permalink() ); ?>" enctype="multipart/form-data" autocomplete="off">
+<?php
+// Pre-fill values when redisplaying after a failed submit
+$posted = wp_unslash( $_POST ?? [] );
+$name   = isset($posted['name'])   ? sanitize_text_field($posted['name'])   : '';
+$email  = isset($posted['email'])  ? sanitize_email($posted['email'])       : '';
+$subj   = isset($posted['subject'])? sanitize_text_field($posted['subject']): '';
+$msg    = isset($posted['message'])? wp_kses_post($posted['message'])       : '';
+?>
+ <form
+  class="contact-form"
+  name="contact_form"
+  method="post"
+  action="<?php echo esc_url( get_permalink() ); ?>"
+  autocomplete="on"
+  enctype="multipart/form-data"
+  novalidate
+>
 <input type="hidden" name="contact_form">
   <div class="label-form">
     <label for="name"><?php echo esc_html( 'Name', 'LambrosPersonalTheme' ); ?></label>
