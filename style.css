@@ -473,6 +473,18 @@ ul ul li {
   background-color: var(--color-distinct-light);
 }
 
+.page-contact .grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) {
+  .page-contact .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
 .sr-only {
   position: absolute !important;
   width: 1px;
