@@ -4,6 +4,15 @@
 <main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class('page-contact'); ?>>
+    <header class="entry-header">
+      <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"><?php the_title(); ?></h1>
+      <?php
+        // Optional: intro text editable in the page body (block editor)
+        if ( has_excerpt() ) {
+          echo '<div class="page-intro">' . wp_kses_post( wpautop( get_the_excerpt() ) ) . '</div>';
+        }
+      ?>
+    </header>
   <section id="contactme">
     <h2>Why don't you reach out?</h2>
     <p>
