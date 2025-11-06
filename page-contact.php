@@ -21,7 +21,7 @@
             <?php
               get_template_part( 'template-parts/form-basic' );
             ?>
-     </div>
+      </div>
        <div class="contact-info">
          <h3><?php esc_html_e( 'Or get in touch another way', 'LambrosPersonalTheme' ); ?></h3>
            <address class="contact-info_box" translate="no">
