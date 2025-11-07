@@ -44,7 +44,7 @@
     <!-- latest projects -->
           <section id="latest-projects" class="home-section" aria-labelledby="latest-projects-title">
             <div class="heading">
-              <h2>My latest projects</h2>
+              <h2 id="latest-projects-title"><?php esc_html_e( 'My latest projects!', 'LambrosPersonalTheme' ); ?></h2>
               <a href="<?php echo site_url('/projects');  ?>" class="read_more">View All</a>
             </div>
             <?php
