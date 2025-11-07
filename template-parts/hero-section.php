@@ -14,7 +14,9 @@ $img_src = get_theme_file_uri('images/aggelikoyla.jpg');
         decoding="async"
       />
     </div>
-      <h1 class="intro-heading">Hi, I'm Lambros!</h1>
+      <h1 class="intro-heading">
+        <?php echo esc_html__( "Hi, I'm Lambros", 'LambrosPersonalTheme' ); ?>
+      </h1>
     </div>
     <p>
       I'm a web developer in Thessaloniki, Greece. This is my tech blog
