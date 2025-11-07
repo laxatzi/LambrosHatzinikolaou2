@@ -225,9 +225,10 @@ add_action('template_redirect', function () {
   $body .= "Message:\n{$message}\n";
 
   // Send
-  $to = get_option('admin_email'); // Change to a custom recipient if you prefer
-  $ok = wp_mail( $to, $mail_subject, $body, $headers );
-
+  $to = get_option('admin_email');
+  // Change to a custom recipient if you prefer
+ // $to = 'laxatzi@gmail.com';
+  
   set_transient('contact_msg', [
     'type' => $ok ? 'success' : 'error',
     'text' => $ok
