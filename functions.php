@@ -241,3 +241,25 @@ add_action('template_redirect', function () {
   exit;
 });
 
+// Preconnecting to fonts.googleapis.com and fonts.gstatic.com lets the browser do the slow handshake work early so your text styles apply faster.
+
+// Preconnect (and DNS prefetch fallback) for Google Fonts
+add_filter('wp_resource_hints', function ($urls, $relation_type) {
+  if ( $relation_type === 'preconnect' ) {
+    // Preconnect: opens socket + TLS early
+    $urls[] = 'https://fonts.googleapis.com';
+    $urls[] = [
+      'href'        => 'https://fonts.gstatic.com',
+      'crossorigin' => 'anonymous',
+    ];
+  }
+
+  if ( $relation_type === 'dns-prefetch' ) {
+    // Light fallback for older browsers
+    $urls[] = 'https://fonts.googleapis.com';
+    $urls[] = 'https://fonts.gstatic.com';
+  }
+
+  return $urls;
+}, 10, 2);
+
