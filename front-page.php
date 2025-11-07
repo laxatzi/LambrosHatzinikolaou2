@@ -1,7 +1,7 @@
 <?php
   get_header();
   ?>
-    <main>
+    <main id="main-content">
         <div class="container">
           <?php
             get_template_part('template-parts/hero-section');
