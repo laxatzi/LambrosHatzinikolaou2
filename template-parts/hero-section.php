@@ -7,8 +7,8 @@ $img_src = get_theme_file_uri('images/aggelikoyla.jpg');
     <div class="intro-heading-image">
       <img
         class="intro-heading-img"
-        src="<?php echo get_template_directory_uri(); ?>/images\aggelikoyla.jpg"
-        alt="Lambros Hatzinikolaou's cat profile"
+        src="<?php echo esc_url( $img_src ); ?>"        
+      
         title="Aggeliki is a web developer's cat!"
       />
     </div>
