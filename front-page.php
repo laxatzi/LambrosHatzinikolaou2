@@ -42,7 +42,7 @@
          </section>
 
     <!-- latest projects -->
-          <section id="latest-projects">
+          <section id="latest-projects" class="home-section" aria-labelledby="latest-projects-title">
             <div class="heading">
               <h2>My latest projects</h2>
               <a href="<?php echo site_url('/projects');  ?>" class="read_more">View All</a>
