@@ -56,7 +56,7 @@ add_action('wp_enqueue_scripts', function () {
 
   // Provide root URL to JS
   wp_localize_script('theme-scripts', 'website_data', [
-    'root_url' => get_site_url(),
+    'root_url' => home_url('/'),
   ]);
 });
 
