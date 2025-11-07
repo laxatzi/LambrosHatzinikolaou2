@@ -21,15 +21,23 @@
                  </a>
               </div>
             <?php
-            $latestPosts = new WP_Query(array(
+           $latestPosts = new WP_Query(array(
               'posts_per_page' => 2,
+              'ignore_sticky_posts'    => true,
+              'no_found_rows'          => true,
+               'update_post_term_cache' => false,
+               'update_post_meta_cache' => false,
+
             ));
-              while($latestPosts -> have_posts()) {
+          if($latestPosts -> have_posts()) :
+              while($latestPosts -> have_posts()) :
                 $latestPosts -> the_post();
 
                 get_template_part('template-parts/blog-presentation');
-              }
-              wp_reset_postdata();
+
+              endwhile;
+           endif;
+          wp_reset_postdata();
             ?>
          </section>
 
