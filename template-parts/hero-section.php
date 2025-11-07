@@ -1,3 +1,7 @@
+<?php
+  // Safer asset URL helper (child-theme friendly)
+$img_src = get_theme_file_uri('images/aggelikoyla.jpg');
+?>
 <section id="hero">
   <div class="intro-heading-section">
     <div class="intro-heading-image">
