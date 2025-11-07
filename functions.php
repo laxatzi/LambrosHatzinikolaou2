@@ -9,6 +9,9 @@
   }
   add_action('rest_api_init', 'my_custom_rest');
 
+// Enqueue styles & scripts
+
+
 // Styles & Scripts
 add_action('wp_enqueue_scripts', function () {
   $ver = wp_get_theme()->get('Version') ?: null;
@@ -86,10 +89,13 @@ remove_action('wp_footer', 'wpb_hook_javascript_footer');
   add_action( 'after_setup_theme', 'theme_slug_setup' );
 
 // add favicon
-function add_favicon_html() { ?>
+function add_favicon_html() {
+if (has_site_icon()) return;
+?>
   <link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/favicon.ico' ); ?>" />
   <link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/apple-touch-icon.png' ); ?>">
 <?php }
+
 add_action('wp_head', 'add_favicon_html', 5);
 
 //Alter the WordPress search to return ONLY posts, no pages
