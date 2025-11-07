@@ -142,71 +142,101 @@ add_action('wp_head', function () {
   if (is_404()) echo '<meta name="robots" content="noindex,follow">';
 }, 5);
 
-//This processes the form safely, throttles repeat posts, and sets messages via a transient. It posts back to the same page.
 
+//This processes the form safely, throttles repeat posts, and sets messages via a transient. It posts back to the same page.
+// Contact form handler: nonce + honeypot + throttle + hardened mail headers
 add_action('template_redirect', function () {
-  if ( empty($_POST['contact_nonce']) || ! isset($_POST['submit']) ) return;
-  if ( ! wp_verify_nonce( $_POST['contact_nonce'], 'contact_form_submit' ) ) return;
+  // Only handle our form posts
+  if ( empty($_POST['contact_nonce']) || ! isset($_POST['submit']) ) {
+    return;
+  }
+
+  // CSRF check
+  if ( ! wp_verify_nonce( $_POST['contact_nonce'], 'contact_form_submit' ) ) {
+    set_transient('contact_msg', ['type'=>'error','text'=>__('Security check failed. Please try again.','LambrosPersonalTheme')], 30);
+    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
+    exit;
+  }
 
   // Basic throttle by IP (60s)
   $ip = $_SERVER['REMOTE_ADDR'] ?? '';
   $k  = 'contact_last_' . md5($ip);
   if ( get_transient($k) ) {
     set_transient('contact_msg', ['type'=>'error','text'=>__('Please wait a minute before sending again.','LambrosPersonalTheme')], 30);
-    wp_safe_redirect( wp_get_referer() ?: home_url('/') ); exit;
+    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
+    exit;
   }
   set_transient($k, 1, 60);
 
-  // Honeypot
+  // Honeypot (bots usually fill this)
   if ( ! empty($_POST['website']) ) {
     set_transient('contact_msg', ['type'=>'error','text'=>__('Spam detected.','LambrosPersonalTheme')], 30);
-    wp_safe_redirect( wp_get_referer() ?: home_url('/') ); exit;
+    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
+    exit;
   }
 
-  // Sanitize
-  $name    = sanitize_text_field( wp_unslash($_POST['name'] ?? '') );
-  $email   = sanitize_email( wp_unslash($_POST['email'] ?? '') );
-  $subject = sanitize_text_field( wp_unslash($_POST['subject'] ?? '') );
-  $message = wp_strip_all_tags( wp_unslash($_POST['message'] ?? '') );
+  // Helper to strip CR/LF to prevent header injection
+  $strip_crlf = static function ($s) {
+    $s = (string) $s;
+    return preg_replace("/[\r\n]+/", ' ', $s);
+  };
 
-  // Validate
+  // Sanitize input
+  $name    = sanitize_text_field( wp_unslash($_POST['name'] ?? '') );
+  $email   = sanitize_email(      wp_unslash($_POST['email'] ?? '') );
+  $subject = sanitize_text_field( wp_unslash($_POST['subject'] ?? '') );
+  $message = wp_strip_all_tags(   wp_unslash($_POST['message'] ?? '') );
+
+  // Extra: strip CR/LF from header-related data
+  $name    = $strip_crlf($name);
+  $email   = $strip_crlf($email);
+  $subject = $strip_crlf($subject);
+
+  // Validate required fields
   $errors = [];
-  if ( $name === '' )    $errors[] = __('Name is required.','LambrosPersonalTheme');
-  if ( ! is_email($email) ) $errors[] = __('A valid email is required.','LambrosPersonalTheme');
-  if ( $subject === '' ) $errors[] = __('Subject is required.','LambrosPersonalTheme');
-  if ( $message === '' ) $errors[] = __('Message is required.','LambrosPersonalTheme');
+  if ( $name === '' )              $errors[] = __('Name is required.','LambrosPersonalTheme');
+  if ( ! is_email($email) )        $errors[] = __('A valid email is required.','LambrosPersonalTheme');
+  if ( $subject === '' )           $errors[] = __('Subject is required.','LambrosPersonalTheme');
+  if ( trim($message) === '' )     $errors[] = __('Message is required.','LambrosPersonalTheme');
 
   if ( $errors ) {
     set_transient('contact_msg', ['type'=>'error','text'=>implode(' ', $errors)], 30);
-    wp_safe_redirect( wp_get_referer() ?: home_url('/') ); exit;
+    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
+    exit;
   }
 
-  // Compose email
-  $to      = get_option('admin_email');
-  $subject = sprintf( __('Contact form: %s','LambrosPersonalTheme'), $subject );
+  // ---- Hardened email headers ----
+  // Use a site address as the From: to avoid SPF/DMARC rejections.
+  $host = wp_parse_url( home_url(), PHP_URL_HOST );
+  $host = $host ? preg_replace('/^www\./', '', $host) : 'example.com';
+  $site_from = 'wordpress@' . $host; // or create a real mailbox like "noreply@yourdomain"
+
+  $mail_subject = sprintf( __('Contact form: %s','LambrosPersonalTheme'), $subject );
   $headers = [
+    'From: ' . get_bloginfo('name') . ' <' . $site_from . '>',
     'Reply-To: ' . $name . ' <' . $email . '>',
     'Content-Type: text/plain; charset=UTF-8',
   ];
-  $body = "From: $name <${email}>\n\nMessage:\n${message}\n";
 
-  $ok = wp_mail( $to, $subject, $body, $headers );
+  // Body as plain text
+  $body  = "From: {$name} <{$email}>\n";
+  $body .= "IP: {$ip}\n";
+  $body .= "URL: " . ( wp_get_referer() ?: home_url('/') ) . "\n\n";
+  $body .= "Message:\n{$message}\n";
+
+  // Send
+  $to = get_option('admin_email'); // Change to a custom recipient if you prefer
+  $ok = wp_mail( $to, $mail_subject, $body, $headers );
 
   set_transient('contact_msg', [
     'type' => $ok ? 'success' : 'error',
-    'text' => $ok ? __('Thanks! Your message has been sent.','LambrosPersonalTheme')
-                  : __('Sorry, something went wrong. Please try again later.','LambrosPersonalTheme')
+    'text' => $ok
+      ? __('Thanks! Your message has been sent.','LambrosPersonalTheme')
+      : __('Sorry, something went wrong. Please try again later.','LambrosPersonalTheme'),
   ], 30);
 
+  // PRG pattern: redirect to avoid resubmits on refresh
   wp_safe_redirect( wp_get_referer() ?: home_url('/') );
   exit;
 });
-
-
-
-
-
-
-
-
 
