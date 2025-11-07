@@ -8,7 +8,7 @@ $img_src = get_theme_file_uri('images/aggelikoyla.jpg');
       <img
         class="intro-heading-img"
         src="<?php echo esc_url( $img_src ); ?>"        
-      
+       alt="<?php esc_attr_e('Portrait of Aggelikoyla', 'LambrosPersonalTheme'); ?>"
         title="Aggeliki is a web developer's cat!"
       />
     </div>
