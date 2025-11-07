@@ -27,4 +27,47 @@ $img_src = get_theme_file_uri('images/aggelikoyla.jpg');
   // This ensures we always get the correct front page content.
   // Note: This assumes this template part is only used on the front page.
   // If used elsewhere, additional checks may be needed.
+$front_id = get_queried_object_id();
+
+  if ( ! $front_id && get_option('show_on_front') === 'page' ) {
+    $front_id = (int) get_option('page_on_front');
+  }
+
+  if ( $front_id ) {
+    $content = get_post_field( 'post_content', $front_id );
+    if ( $content ) {
+      echo '<div class="hero__content">';
+      // the_content filters add paragraph tags, shortcodes, embeds, etc.
+      echo apply_filters( 'the_content', $content );
+      echo '</div>';
+    } else {
+      // Fallback (what you had commented out, cleaned up + escaped)
+      ?>
+      <div class="hero__content">
+        <p><?php echo esc_html__( "I'm a web developer in Thessaloniki, Greece. This is my tech blog where", 'LambrosPersonalTheme' ); ?>
+          <a href="<?php echo esc_url( site_url( '/blog' ) ); ?>">
+            <?php echo esc_html__( 'I write about web development', 'LambrosPersonalTheme' ); ?>
+          </a>,
+          <a href="#latest-projects" class="hop">
+            <?php echo esc_html__( 'my work', 'LambrosPersonalTheme' ); ?>
+          </a>,
+          <?php echo esc_html__( 'and my life as a programmer.', 'LambrosPersonalTheme' ); ?>
+        </p>
+        <p>
+          <a href="#latest-posts" class="hop">
+            <?php echo esc_html__( 'I’ve written a few interesting posts recently.', 'LambrosPersonalTheme' ); ?>
+          </a>
+        </p>
+        <p>
+          <?php echo esc_html__( 'You can look over', 'LambrosPersonalTheme' ); ?>
+          <a href="https://github.com/laxatzi" rel="me noopener" target="_blank">
+            <?php echo esc_html__( 'my code on GitHub', 'LambrosPersonalTheme' ); ?>
+          </a>.
+        </p>
+        <p><?php echo esc_html__( "If you want to talk about anything programming related, have recommendations, comments, want to work with me, meet up or just say hello—tweet me or send an email!", 'LambrosPersonalTheme' ); ?></p>
+      </div>
+      <?php
+    }
+  }
+  ?>
  </section>
