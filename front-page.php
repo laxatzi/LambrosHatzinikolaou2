@@ -45,7 +45,11 @@
           <section id="latest-projects" class="home-section" aria-labelledby="latest-projects-title">
             <div class="heading">
               <h2 id="latest-projects-title"><?php esc_html_e( 'My latest projects!', 'LambrosPersonalTheme' ); ?></h2>
-              <a href="<?php echo site_url('/projects');  ?>" class="read_more">View All</a>
+              <?php
+                $projects_url = get_post_type_archive_link( 'project' ) ?: home_url( '/projects/' );
+              ?>
+              <a href="<?php echo site_url($projects_url);  ?>" class="read_more"><?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?></a>
+            
             </div>
             <?php
             $latestProjects = new WP_Query(array(
