@@ -55,12 +55,17 @@
             $latestProjects = new WP_Query(array(
               'posts_per_page' => 2,
               'post_type' => 'project',
+              'no_found_rows'          => true,
+              'update_post_term_cache' => false,
+              'update_post_meta_cache' => false,
             ));
-              while($latestProjects -> have_posts()) {
+            if ( $latestProjects->have_posts() ) :
+              while($latestProjects -> have_posts()) :
                 $latestProjects -> the_post();
 
                 get_template_part('template-parts/project-presentation');
-              }
+              endwhile;
+              endif;
               wp_reset_postdata();
             ?>
           </section>
