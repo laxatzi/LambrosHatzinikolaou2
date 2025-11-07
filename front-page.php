@@ -11,7 +11,7 @@
     <!-- latest posts -->
           <section id="latest-posts" class="home-section" aria-labelledby="latest-posts-title">
             <div class="blog-intro">
-                <h2>My latest posts</h2>
+                  <h2 id="latest-posts-title"><?php esc_html_e( 'My latest posts', 'LambrosPersonalTheme' ); ?></h2>
                 <a href="<?php echo site_url('/blog');  ?>" class="read_more">View All</a>
               </div>
             <?php
