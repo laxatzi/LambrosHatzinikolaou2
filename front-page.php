@@ -12,7 +12,13 @@
           <section id="latest-posts" class="home-section" aria-labelledby="latest-posts-title">
             <div class="blog-intro">
                   <h2 id="latest-posts-title"><?php esc_html_e( 'My latest posts', 'LambrosPersonalTheme' ); ?></h2>
-                <a href="<?php echo site_url('/blog');  ?>" class="read_more">View All</a>
+                  <?php
+                    $posts_page_id = (int) get_option('page_for_posts');
+                    $blog_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/blog/');
+                  ?>
+                  <a href="<?php echo esc_url( $blog_url ); ?>" class="read_more">
+                   <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
+                 </a>
               </div>
             <?php
             $latestPosts = new WP_Query(array(
