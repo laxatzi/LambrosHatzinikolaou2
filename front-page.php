@@ -3,7 +3,7 @@
   ?>
     <main id="main-content">
     <div class="dot-bg-section-1"></div>
-        <div class="container">
+      <div class="container">
           <?php
             get_template_part('template-parts/hero-section');
             get_template_part('template-parts/newsletter');
