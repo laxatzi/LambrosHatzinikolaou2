@@ -22,7 +22,7 @@
     </p>
 
     <p class="back-to-home">
-      <a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+      <a class="button" href="<?php echo esc_url( home_url('/') ); ?>">
         <span aria-hidden="true">←</span>
         <?php esc_html_e('Back to home page', 'LambrosPersonalTheme'); ?>
       </a>
