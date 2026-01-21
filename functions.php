@@ -163,11 +163,12 @@ function lambros_handle_contact_form() {
   $ip = $_SERVER['REMOTE_ADDR'] ?? '';
   $k  = 'contact_last_' . md5($ip);
   if ( get_transient($k) ) {
-    set_transient('contact_msg', ['type'=>'error','text'=>__('Please wait a minute before sending again.','LambrosPersonalTheme')], 30);
-    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
-    exit;
+    lambros_set_contact_message('error', __('Please wait a minute before sending again.',
+    'LambrosPersonalTheme')); 
+    return lambros_redirect_back();
   }
   set_transient($k, 1, 60);
+  
 // Honeypot (bots usually fill this)
   if ( ! empty($_POST['website']) ) {
     set_transient('contact_msg', ['type'=>'error','text'=>__('Spam detected.','LambrosPersonalTheme')], 30);
