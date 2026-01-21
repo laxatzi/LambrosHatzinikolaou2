@@ -145,8 +145,9 @@ add_action('wp_head', function () {
 
 //This processes the form safely, throttles repeat posts, and sets messages via a transient. It posts back to the same page.
 // Contact form handler: nonce + honeypot + throttle + hardened mail headers
-add_action('template_redirect', function () {
-  // Only handle our form posts
+
+function lambros_handle_contact_form() {
+   // Only handle our form posts
   if ( empty($_POST['contact_nonce']) || ! isset($_POST['submit']) ) {
     return;
   }
@@ -167,8 +168,7 @@ add_action('template_redirect', function () {
     exit;
   }
   set_transient($k, 1, 60);
-
-  // Honeypot (bots usually fill this)
+// Honeypot (bots usually fill this)
   if ( ! empty($_POST['website']) ) {
     set_transient('contact_msg', ['type'=>'error','text'=>__('Spam detected.','LambrosPersonalTheme')], 30);
     wp_safe_redirect( wp_get_referer() ?: home_url('/') );
@@ -204,7 +204,6 @@ add_action('template_redirect', function () {
     wp_safe_redirect( wp_get_referer() ?: home_url('/') );
     exit;
   }
-
   // ---- Hardened email headers ----
   // Use a site address as the From: to avoid SPF/DMARC rejections.
   $host = wp_parse_url( home_url(), PHP_URL_HOST );
@@ -218,14 +217,14 @@ add_action('template_redirect', function () {
     'Content-Type: text/plain; charset=UTF-8',
   ];
 
-  // Body as plain text
+// Body as plain text
   $body  = "From: {$name} <{$email}>\n";
   $body .= "IP: {$ip}\n";
   $body .= "URL: " . ( wp_get_referer() ?: home_url('/') ) . "\n\n";
   $body .= "Message:\n{$message}\n";
 
-  // Send
-  $to = get_option('admin_email');
+// Send
+   $to = get_option('admin_email');
   // Change to a custom recipient if you prefer
  // $to = 'laxatzi@gmail.com';
   
@@ -236,10 +235,13 @@ add_action('template_redirect', function () {
       : __('Sorry, something went wrong. Please try again later.','LambrosPersonalTheme'),
   ], 30);
 
-  // PRG pattern: redirect to avoid resubmits on refresh
+// PRG pattern: redirect to avoid resubmits on refresh
   wp_safe_redirect( wp_get_referer() ?: home_url('/') );
   exit;
-});
+
+}
+
+add_action('template_redirect', 'lambros_handle_contact_form' );
 
 // Preconnecting to fonts.googleapis.com and fonts.gstatic.com lets the browser do the slow handshake work early so your text styles apply faster.
 
