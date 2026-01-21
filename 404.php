@@ -1,5 +1,14 @@
 <?php
-get_header();
+  /**
+   * 404 Error Page Template
+   *
+   * Displays when a requested page is not found.
+   * Shows a helpful message and recent posts to aid navigation.
+   *
+   * @package LambrosPersonalTheme
+   * @since 1.0.0
+   */
+  get_header();
 ?>
 
 <main id="main-content" class="site-main error-404 not-found" aria-labelledby="page-title">
