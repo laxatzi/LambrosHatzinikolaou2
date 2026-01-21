@@ -217,7 +217,8 @@ function lambros_handle_contact_form() {
    $to = get_option('admin_email');
   // Change to a custom recipient if you prefer
  // $to = 'laxatzi@gmail.com';
-  
+  $ok = wp_mail( $to, $mail_subject, $body, $headers );
+
   set_transient('contact_msg', [
     'type' => $ok ? 'success' : 'error',
     'text' => $ok
