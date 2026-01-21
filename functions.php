@@ -219,17 +219,14 @@ function lambros_handle_contact_form() {
  // $to = 'laxatzi@gmail.com';
   $ok = wp_mail( $to, $mail_subject, $body, $headers );
 
-  set_transient('contact_msg', [
-    'type' => $ok ? 'success' : 'error',
-    'text' => $ok
-      ? __('Thanks! Your message has been sent.','LambrosPersonalTheme')
-      : __('Sorry, something went wrong. Please try again later.','LambrosPersonalTheme'),
-  ], 30);
+ lambros_set_contact_message(
+   $ok ? 'success' : 'error',
+   $ok
+     ? __('Thanks! Your message has been sent.','LambrosPersonalTheme')
+     : __('Sorry, something went wrong. Please try again later.',
+      'LambrosPersonalTheme') );
 
-// PRG pattern: redirect to avoid resubmits on refresh
-  wp_safe_redirect( wp_get_referer() ?: home_url('/') );
-  exit;
-
+     return lambros_redirect_back();
 }
 
 add_action('template_redirect', 'lambros_handle_contact_form' );
