@@ -175,11 +175,6 @@ function lambros_handle_contact_form() {
     return lambros_redirect_back();
   }
 
-  // Helper to strip CR/LF to prevent header injection
-  $strip_crlf = static function ($s) {
-    $s = (string) $s;
-    return preg_replace("/[\r\n]+/", ' ', $s);
-  };
 
   // Sanitize input
   $name    = sanitize_text_field( wp_unslash($_POST['name'] ?? '') );
