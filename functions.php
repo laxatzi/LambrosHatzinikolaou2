@@ -231,6 +231,16 @@ function lambros_handle_contact_form() {
 
 add_action('template_redirect', 'lambros_handle_contact_form' );
 
+// --- Helpers ---
+function lambros_set_contact_message($type, $text) {
+    set_transient('contact_msg', ['type'=>$type,'text'=>$text], 30);
+  }
+
+function lambros_redirect_back() {
+  wp_safe_redirect( wp_get_referer() ?: home_url('/') );
+  exit;
+  }
+
 // Preconnecting to fonts.googleapis.com and fonts.gstatic.com lets the browser do the slow handshake work early so your text styles apply faster.
 
 // Preconnect (and DNS prefetch fallback) for Google Fonts
