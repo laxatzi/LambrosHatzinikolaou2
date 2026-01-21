@@ -505,6 +505,25 @@ ul ul li {
   overflow: hidden;
 }
 
+.contact-message {
+  margin: 1em auto;
+  padding: 1em;
+  max-width: 600px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-align: center;
+}
+.contact-success {
+  background: #e6ffed;
+  color: #1a7f37;
+  border: 1px solid #1a7f37;
+}
+.contact-error {
+  background: #ffe6e6;
+  color: #a71d2a;
+  border: 1px solid #a71d2a;
+}
+
 // Flash message styles
 .notice {
   margin: 1rem 0;
