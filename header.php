@@ -18,7 +18,9 @@
 
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php wp_body_open(); 
+  get_template_part('template-parts/alerts');
+?>
 <button
   id="top-button"
   class="back-to-top"
