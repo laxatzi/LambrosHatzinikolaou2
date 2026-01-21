@@ -154,9 +154,9 @@ function lambros_handle_contact_form() {
 
   // CSRF check
   if ( ! wp_verify_nonce( $_POST['contact_nonce'], 'contact_form_submit' ) ) {
-    set_transient('contact_msg', ['type'=>'error','text'=>__('Security check failed. Please try again.','LambrosPersonalTheme')], 30);
-    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
-    exit;
+    lambros_set_contact_message('error', __('Security check failed. Please try again.',
+    'LambrosPersonalTheme')); 
+     return lambros_redirect_back();
   }
 
   // Basic throttle by IP (60s)
