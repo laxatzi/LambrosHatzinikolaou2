@@ -171,9 +171,8 @@ function lambros_handle_contact_form() {
   
 // Honeypot (bots usually fill this)
   if ( ! empty($_POST['website']) ) {
-    set_transient('contact_msg', ['type'=>'error','text'=>__('Spam detected.','LambrosPersonalTheme')], 30);
-    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
-    exit;
+   lambros_set_contact_message('error', __('Spam detected.','LambrosPersonalTheme')); 
+    return lambros_redirect_back();
   }
 
   // Helper to strip CR/LF to prevent header injection
