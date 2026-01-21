@@ -175,17 +175,12 @@ function lambros_handle_contact_form() {
     return lambros_redirect_back();
   }
 
-
-  // Sanitize input
+// Sanitize input
   $name    = sanitize_text_field( wp_unslash($_POST['name'] ?? '') );
   $email   = sanitize_email(      wp_unslash($_POST['email'] ?? '') );
   $subject = sanitize_text_field( wp_unslash($_POST['subject'] ?? '') );
   $message = wp_strip_all_tags(   wp_unslash($_POST['message'] ?? '') );
 
-  // Extra: strip CR/LF from header-related data
-  $name    = $strip_crlf($name);
-  $email   = $strip_crlf($email);
-  $subject = $strip_crlf($subject);
 
   // Validate required fields
   $errors = [];
