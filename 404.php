@@ -24,10 +24,8 @@
      * @since 1.0.0
      */
     do_action('lambros_before_404_content');
-    ?>
-
+  ?>
   <?php get_template_part('template-parts/content', '404'); ?>
-
   <?php
      /**
      * Fires after 404 page content.
@@ -36,7 +34,6 @@
      */
     do_action('lambros_after_404_content');  
   ?>
-
   </div>
 </main>
 <?php
