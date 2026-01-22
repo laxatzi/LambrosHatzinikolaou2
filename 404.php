@@ -10,6 +10,8 @@
    */
   get_header();
 
+// Ensure proper HTTP status
+  status_header( 404 );
   nocache_headers();
 ?>
 
