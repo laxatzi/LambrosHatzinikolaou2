@@ -26,7 +26,7 @@
     do_action('lambros_before_404_content');
     ?>
 
-  <?php get_template_part('template-parts/content', 'none'); ?>
+  <?php get_template_part('template-parts/content', '404'); ?>
 
   <?php
      /**
