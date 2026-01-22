@@ -142,6 +142,24 @@ add_action('wp_head', function () {
   if (is_404()) echo '<meta name="robots" content="noindex,follow">';
 }, 5);
 
+/**
+ * Log 404 errors for debugging
+ */
+function lambros_log_404_errors() {
+    if (is_404()) {
+        $url = isset($_SERVER['REQUEST_URI']) ? esc_url_raw($_SERVER['REQUEST_URI']) : '';
+        $referrer = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : 'Direct';
+
+        error_log(sprintf(
+            '404 Error: %s | Referrer: %s | IP: %s',
+            $url,
+            $referrer,
+            $_SERVER['REMOTE_ADDR']
+        ));
+    }
+}
+add_action('wp', 'lambros_log_404_errors');
+
 
 //This processes the form safely, throttles repeat posts, and sets messages via a transient. It posts back to the same page.
 // Contact form handler: nonce + honeypot + throttle + hardened mail headers
