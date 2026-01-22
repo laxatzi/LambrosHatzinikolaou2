@@ -28,6 +28,28 @@
     </p>
   </div>
 
+ <!-- Search Form -->
+  <div class="error-search">
+    <h3><?php esc_html_e('Try searching for what you need:', 'LambrosPersonalTheme'); ?></h3>
+    <form role="search" method="get" class="404-search-form" action="<?php echo esc_url(home_url('/')); ?>">
+      <label for="error-page-search">
+          <span class="screen-reader-text"><?php esc_html_e('Search for:', 'LambrosPersonalTheme'); ?></span>
+      </label>
+      <input
+          type="search"
+          id="error-page-search"
+          class="search-field"
+          placeholder="<?php esc_attr_e('Search...', 'LambrosPersonalTheme'); ?>"
+          value="<?php echo get_search_query(); ?>"
+          name="s"
+      />
+      <button type="submit" class="search-submit">
+          <?php esc_html_e('Search', 'LambrosPersonalTheme'); ?>
+      </button>
+   </form>
+  </div>
+
+  <!-- Actions -->
     <div class="back-to-home">
       <a class="button" href="<?php echo esc_url(home_url('/')); ?>">
       <span aria-hidden="true">←</span>
