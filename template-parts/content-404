@@ -1,27 +1,26 @@
 <section class="no-results not-found">
-    <!-- Error message header -->
-    <header class="error-page-header">
-       <h1 id="page-title">404</h1>
-       <h2 class="page-subtitle">
-       <?php
-       printf(
+  <!-- Error message header -->
+  <header class="error-page-header">
+    <h1 id="page-title">404</h1>
+    <h2 class="page-subtitle">
+    <?php
+      printf(
           /* translators: %s: "Oops" or equivalent attention-getting word */
           esc_html__('%s, we haven\'t found what you\'re looking for.', 'LambrosPersonalTheme'),
           '<span class="subtitle-emphasis">' . esc_html__('Oops', 'LambrosPersonalTheme') . '</span>'
        );
-       ?>
-       </h2>
-    </header>
-
-    <?php
+    ?>
+    </h2>
+  </header>
+  <?php
     /**
      * Fires after 404 page header.
      *
      * @since 1.0.0
      */
     do_action('lambros_after_404_header');
-    ?>
- <!-- Explanation text -->
+  ?>
+  <!-- Explanation text -->
   <div class="error-explanation">
     <p>
       <?php esc_html_e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'LambrosPersonalTheme'); ?>
@@ -29,43 +28,43 @@
   </div>
 
  <!-- Search Form -->
-    <div class="error-search">
+ <div class="error-search">
     <h3><?php esc_html_e('Try searching for what you need:', 'LambrosPersonalTheme'); ?></h3>
     <form role="search" method="get" class="search-form search-form-404" action="<?php echo esc_url(home_url('/')); ?>">
-        <div class="search-wrapper">
-            <label for="error-page-search" class="screen-reader-text">
-                <?php esc_html_e('Search for:', 'LambrosPersonalTheme'); ?>
-            </label>
-            <input
-                type="search"
-                id="error-page-search"
-                class="search-field"
-                placeholder="<?php esc_attr_e('What are you looking for?', 'LambrosPersonalTheme'); ?>"
-                value="<?php echo get_search_query(); ?>"
-                name="s"
-                autocomplete="off"
-                required
-            />
-            <button type="submit" class="search-submit" aria-label="<?php esc_attr_e('Search', 'LambrosPersonalTheme'); ?>">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <span class="search-submit-text"><?php esc_html_e('Search', 'LambrosPersonalTheme'); ?></span>
-            </button>
+      <div class="search-wrapper">
+        <label for="error-page-search" class="screen-reader-text">
+          <?php esc_html_e('Search for:', 'LambrosPersonalTheme'); ?>
+        </label>
+        <input
+          type="search"
+          id="error-page-search"
+          class="search-field"
+          placeholder="<?php esc_attr_e('What are you looking for?', 'LambrosPersonalTheme'); ?>"
+          value="<?php echo get_search_query(); ?>"
+          name="s"
+          autocomplete="off"
+          required
+         />
+         <button type="submit" class="search-submit" aria-label="<?php esc_attr_e('Search', 'LambrosPersonalTheme'); ?>">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <span class="search-submit-text"><?php esc_html_e('Search', 'LambrosPersonalTheme'); ?></span>
+         </button>
         </div>
      </form>
   </div>
 
   <!-- Actions -->
-    <div class="back-to-home">
-      <a class="button" href="<?php echo esc_url(home_url('/')); ?>">
+  <div class="back-to-home">
+    <a class="button" href="<?php echo esc_url(home_url('/')); ?>">
       <span aria-hidden="true">←</span>
       <?php esc_html_e('Back to home page', 'LambrosPersonalTheme'); ?>
-      </a>
-    </div>
-    <?php
+    </a>
+  </div>
+  <?php
     // Show a few recent posts to help users recover
     the_widget( 'WP_Widget_Recent_Posts', [ 'number' => 5 ], [ 'before_title' => '<h3>', 'after_title' => '</h3>' ] );
-    ?>
+  ?>
 </section>
