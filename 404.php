@@ -48,12 +48,12 @@
         <?php esc_html_e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'LambrosPersonalTheme'); ?>
     </p>
 
-    <p class="back-to-home">
-      <a class="button" href="<?php echo esc_url( home_url('/') ); ?>">
-        <span aria-hidden="true">←</span>
-        <?php esc_html_e('Back to home page', 'LambrosPersonalTheme'); ?>
+    <div class="back-to-home">
+      <a class="button" href="<?php echo esc_url(home_url('/')); ?>">
+      <span aria-hidden="true">←</span>
+      <?php esc_html_e('Back to home page', 'LambrosPersonalTheme'); ?>
       </a>
-    </p>
+    </div>
 
   <?php
     // Show a few recent posts to help users recover
