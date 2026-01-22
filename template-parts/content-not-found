@@ -22,9 +22,11 @@
     do_action('lambros_after_404_header');
     ?>
  <!-- Explanation text -->
+  <div class="error-explanation">
     <p>
       <?php esc_html_e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'LambrosPersonalTheme'); ?>
     </p>
+  </div>
 
     <div class="back-to-home">
       <a class="button" href="<?php echo esc_url(home_url('/')); ?>">
