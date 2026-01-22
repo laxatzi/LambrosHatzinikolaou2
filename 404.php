@@ -9,6 +9,10 @@
    * @since 1.0.0
    */
   get_header();
+
+  // Ensure proper HTTP status
+  status_header(404);
+  nocache_headers();
 ?>
 
 <main id="main-content" class="site-main error-404 not-found" aria-labelledby="page-title">
