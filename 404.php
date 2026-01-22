@@ -18,9 +18,13 @@
     <header class="error-page-header">
       <h1 id="page-title">404</h1>
       <h2 class="page-subtitle">
-  <!-- Span allows styling "Oops" differently via CSS -->
-        <span class="subtitle-emphasis"><?php esc_html_e('Oops', 'LambrosPersonalTheme'); ?></span>, 
-        <?php esc_html_e("we haven't found what you're looking for.", 'LambrosPersonalTheme'); ?>
+   <?php
+      printf(
+          /* translators: %s: "Oops" or equivalent attention-getting word */
+          esc_html__('%s, we haven\'t found what you\'re looking for.', 'LambrosPersonalTheme'),
+          '<span class="subtitle-emphasis">' . esc_html__('Oops', 'LambrosPersonalTheme') . '</span>'
+      );
+      ?>
      </h2>
     </header>
 <!-- Explanation text -->
