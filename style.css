@@ -719,6 +719,151 @@ pre {
   color: var(--color-main-dark);
 }
 
+
+/* ============================================
+   404 Page Search Form - Modern Minimal
+   ============================================ */
+
+.error-search {
+  margin: 3rem 0;
+  max-width: 600px;
+}
+
+.error-search h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.search-form-404 {
+  position: relative;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  gap: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-wrapper:focus-within {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Screen reader text for accessibility */
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Search Input */
+.search-field {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-right: none;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-field:focus {
+  border-color: #026fb7;
+}
+
+.search-field::placeholder {
+  color: #9ca3af;
+}
+
+/* Search Button */
+.search-submit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #026fb7;
+  color: #ffffff;
+  border: 2px solid #026fb7;
+  border-left: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.search-submit:hover {
+  background-color: #a4c3dd;
+  border-color: #a4c3dd;
+}
+
+.search-submit:active {
+  transform: scale(0.98);
+}
+
+.search-submit:focus {
+  outline: 2px solid #026fb7;
+  outline-offset: 2px;
+}
+
+.search-submit svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hide text on mobile, show icon only */
+.search-submit-text {
+  display: none;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .search-submit-text {
+    display: inline;
+  }
+
+  .search-field {
+    font-size: 1.125rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .error-search h3 {
+    color: #f9fafb;
+  }
+
+  .search-field {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+  }
+
+  .search-field::placeholder {
+    color: #6b7280;
+  }
+
+  .search-field:focus {
+    border-color: #60a5fa;
+  }
+}
+
+
 .toggle-menu {
   margin-top: 20px;
 }
