@@ -18,7 +18,7 @@
       /* translators: 1: Developer/brand name, 2: year */
       printf(
             esc_html__( 'Developed by %1$s © 2024 - %2$s. All rights reserved.', 'LambrosPersonalTheme' ),
-            '<span>' . esc_html( 'Lambros Hatzinikolaou' ) . '</span>',
+            '<span>' . esc_html( LAMBROS_THEME_AUTHOR ) . '</span>',
             esc_html( wp_date( 'Y' ) )
            );
       ?>
