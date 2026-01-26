@@ -10,7 +10,9 @@
    */
   get_header();
 
-// Ensure proper HTTP status
+// Ensure proper HTTP status.
+// Set the 404 status and send no‑cache headers.
+// This ensures browsers and crawlers treat the page correctly.
   status_header( 404 );
   nocache_headers();
 ?>
