@@ -707,6 +707,18 @@ pre {
 }
 
 /* 404 page  */
+main.not-found {
+  padding-top: 0;
+}
+
+section.not-found {
+  margin-top: 0;
+}
+
+.error-page-header H1 {
+  margin: 0;
+}
+
 .back-to-home {
   display: inline-block;
   width: 300px;
