@@ -6,11 +6,13 @@
 <footer id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter" aria-labelledby="footer-title">
   <h2 id="footer-title" class="screen-reader-text">Footer</h2>
   <div id="sig" class="container">
-    <nav class="footer-nav" aria-label="<?php esc_attr_e( 'Footer', 'LambrosPersonalTheme' ); ?>">
+    <div class="footer-menu-wrapper">
+      <nav class="footer-nav" aria-label="<?php esc_attr_e( 'Footer', 'LambrosPersonalTheme' ); ?>">
       <?php
             get_template_part('template-parts/menu-footer');
         ?>
-    </nav>
+      </nav>
+    </div>
     <small class="site-credit">
       <?php
       /* translators: 1: Developer/brand name, 2: year */
