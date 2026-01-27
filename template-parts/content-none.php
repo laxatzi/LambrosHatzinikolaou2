@@ -97,12 +97,10 @@
       </h2>
     </header>
 
-    <div class="no-results-explanation">
-      <p>
-        <a href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>">
-          <?php esc_html_e( 'Click here to start writing.', 'LambrosPersonalTheme' ); ?>
-        </a>
-      </p>
+    <div class="no-results-explanation error-explanation">
+        <p>
+          <?php esc_html_e( 'Ready to publish your first post?', 'LambrosPersonalTheme' ); ?>
+        </p>
     </div>
 
 
