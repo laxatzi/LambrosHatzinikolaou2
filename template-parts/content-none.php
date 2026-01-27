@@ -142,6 +142,10 @@
       </a>
     </div>
 
+    <div class="recent-posts-404">
+      <?php the_widget( 'WP_Widget_Recent_Posts', [ 'number' => 5 ], [ 'before_title' => '<h3>', 'after_title' => '</h3>' ] ); ?>
+    </div>
+
   <?php endif; ?>
 
 </section>
