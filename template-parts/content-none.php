@@ -135,6 +135,13 @@
       <?php get_search_form(); ?>
     </div>
 
+    <div class="back-to-home">
+      <a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <span aria-hidden="true">←</span>
+        <?php esc_html_e( 'Back to home page', 'LambrosPersonalTheme' ); ?>
+      </a>
+    </div>
+
   <?php endif; ?>
 
 </section>
