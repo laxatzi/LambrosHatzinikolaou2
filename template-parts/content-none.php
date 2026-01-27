@@ -63,7 +63,8 @@
       </p>
     </div>
 
-    <div class="no-results-search">
+    <div class="no-results-search error-search">
+      <h3><?php esc_html_e( 'Search the site:', 'LambrosPersonalTheme' ); ?></h3>
       <?php get_search_form(); ?>
     </div>
 
