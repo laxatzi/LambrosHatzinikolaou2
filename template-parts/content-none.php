@@ -103,6 +103,12 @@
         </p>
     </div>
 
+    <div class="back-to-home">
+      <a class="button" href="<?php echo esc_url( admin_url( 'post-new.php' ) ); ?>">
+        <span aria-hidden="true">✎</span>
+        <?php esc_html_e( 'Create your first post', 'LambrosPersonalTheme' ); ?>
+      </a>
+    </div>
 
   <?php else : ?>
 
