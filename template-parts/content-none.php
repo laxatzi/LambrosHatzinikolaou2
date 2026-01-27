@@ -22,7 +22,9 @@
       </p>      
     </div>
 
-    <div class="no-results-search">
+<!-- Search Form -->
+    <div class="error-search">
+      <h3><?php esc_html_e( 'Try searching again:', 'LambrosPersonalTheme' ); ?></h3>
       <?php get_search_form(); ?>
     </div>
 
