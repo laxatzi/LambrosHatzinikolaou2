@@ -39,8 +39,8 @@
       ?>
     <?php else : ?>
       <?php get_template_part( 'template-parts/content', 'none' ); ?>
-    <?php endif; ?>
-   <?php
+    <?php endif; 
+   
     /**
      * Fires after archive page content.
      *
