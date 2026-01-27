@@ -82,10 +82,19 @@
 
   <?php elseif ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-    <header class="page-header no-results-header">
+   <!-- Header -->
+    <header class="error-page-header no-results-header">
       <h1 class="page-title">
         <?php esc_html_e( 'Ready to publish your first post?', 'LambrosPersonalTheme' ); ?>
       </h1>
+      <h2 class="page-subtitle">
+        <?php
+        printf(
+          esc_html__( '%s, your blog is empty.', 'LambrosPersonalTheme' ),
+          '<span class="subtitle-emphasis">' . esc_html__( 'Welcome', 'LambrosPersonalTheme' ) . '</span>'
+        );
+        ?>
+      </h2>
     </header>
 
     <div class="no-results-explanation">
