@@ -5,7 +5,7 @@
 <main id="main-content" aria-labelledby="archive-project-title">
   <div class="container">
     <?php if ( have_posts() ) : ?>
-    <header class="archive-header">
+    <header class="archive-header" aria-labelledby="archive-project-title">
       <?php
       // Title + description (WP will escape these appropriately)
 
