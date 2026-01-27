@@ -1,11 +1,19 @@
 <section class="no-results not-found">
-
   <?php if ( is_search() ) : ?>
-
-    <header class="page-header no-results-header">
+ <!-- Header -->
+    <header class="error-page-header no-results-header">
       <h1 class="page-title">
         <?php esc_html_e( 'No results found', 'LambrosPersonalTheme' ); ?>
       </h1>
+      <h2 class="page-subtitle">
+        <?php
+        printf(
+          /* translators: %s: "Sorry" or equivalent */
+          esc_html__( '%s, no results matched your search.', 'LambrosPersonalTheme' ),
+          '<span class="subtitle-emphasis">' . esc_html__( 'Sorry', 'LambrosPersonalTheme' ) . '</span>'
+        );
+        ?>
+      </h2>
     </header>
 
     <div class="no-results-explanation">
