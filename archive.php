@@ -3,7 +3,15 @@
 ?>
 <main id="main-content" aria-labelledby="archive-title">
   <div class="container">
-    <?php if ( have_posts() ) : ?>
+  <?php
+    /**
+     * Fires before archive page content.
+     *
+     * @since 1.0.0
+     */
+    do_action('lambros_before_archive_loop');
+    
+     if ( have_posts() ) : ?>
       <header class="archive-header" aria-labelledby="archive-title">
         <?php
         // Title + description (WP will escape these appropriately)
@@ -32,6 +40,14 @@
     <?php else : ?>
       <?php get_template_part( 'template-parts/content', 'none' ); ?>
     <?php endif; ?>
+   <?php
+    /**
+     * Fires after archive page content.
+     *
+     * @since 1.0.0
+     */
+    do_action('lambros_after_archive_loop');
+    ?>
    </div>
 </main>
 <?php
