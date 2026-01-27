@@ -27,7 +27,14 @@
       <h3><?php esc_html_e( 'Try searching again:', 'LambrosPersonalTheme' ); ?></h3>
       <?php get_search_form(); ?>
     </div>
-
+  
+<!-- Back to Home -->
+    <div class="back-to-home">
+      <a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <span aria-hidden="true">←</span>
+        <?php esc_html_e( 'Back to home page', 'LambrosPersonalTheme' ); ?>
+      </a>
+    </div>
 
   <?php elseif ( is_archive() ) : ?>
 
