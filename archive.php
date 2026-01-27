@@ -4,7 +4,7 @@
 <main id="main-content" aria-labelledby="archive-title">
   <div class="container">
     <?php if ( have_posts() ) : ?>
-      <header class="archive-header">
+      <header class="archive-header" aria-labelledby="archive-title">
         <?php
         // Title + description (WP will escape these appropriately)
           the_archive_title('<h1>','</h1>');
