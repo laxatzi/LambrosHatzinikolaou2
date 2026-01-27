@@ -43,8 +43,15 @@
   ?>
   <?php else : ?>
   <?php get_template_part( 'template-parts/content', 'none' ); ?>
-  <?php endif; ?>
+  <?php endif; 
 
+  /**
+   * Fires after archive page content.
+   *
+   * @since 1.0.0
+   */
+    do_action('lambros_after_archive_loop');
+  ?>
   </div>
 </main>
 
