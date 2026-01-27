@@ -57,9 +57,9 @@
       </h2>
     </header>
 
-    <div class="no-results-explanation">
+    <div class="no-results-explanation error-explanation">
       <p>
-        <?php esc_html_e( 'This archive does not contain any posts yet.', 'LambrosPersonalTheme' ); ?>
+        <?php esc_html_e( 'There are no posts here yet. You can try searching or browse recent posts.', 'LambrosPersonalTheme' ); ?>
       </p>
     </div>
 
