@@ -123,12 +123,13 @@
         ?>
       </h2>
     </header>
-
-    <div class="no-results-explanation">
+  
+    <div class="error-explanation no-results-explanation">
       <p>
-        <?php esc_html_e( 'We couldn’t find anything here. Try searching for something else.', 'LambrosPersonalTheme' ); ?>
+        <?php esc_html_e( 'Try searching for something else or explore recent posts below.', 'LambrosPersonalTheme' ); ?>
       </p>
     </div>
+
 
     <div class="no-results-search">
       <?php get_search_form(); ?>
