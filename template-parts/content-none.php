@@ -35,6 +35,11 @@
         <?php esc_html_e( 'Back to home page', 'LambrosPersonalTheme' ); ?>
       </a>
     </div>
+  
+<!-- Recent Posts -->
+  <div class="recent-posts-404">
+      <?php the_widget( 'WP_Widget_Recent_Posts', [ 'number' => 3 ], [ 'before_title' => '<h3>', 'after_title' => '</h3>' ] ); ?>
+  </div>
 
   <?php elseif ( is_archive() ) : ?>
 
