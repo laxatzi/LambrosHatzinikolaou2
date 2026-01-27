@@ -111,11 +111,17 @@
     </div>
 
   <?php else : ?>
-
-    <header class="page-header no-results-header">
-      <h1 class="page-title">
-        <?php esc_html_e( 'No content found', 'LambrosPersonalTheme' ); ?>
-      </h1>
+    <!-- Header -->
+    <header class="error-page-header">
+      <h1 id="page-title">0</h1>
+      <h2 class="page-subtitle">
+        <?php
+        printf(
+          esc_html__( '%s, we couldn’t find anything here.', 'LambrosPersonalTheme' ),
+          '<span class="subtitle-emphasis">' . esc_html__( 'Sorry', 'LambrosPersonalTheme' ) . '</span>'
+        );
+        ?>
+      </h2>
     </header>
 
     <div class="no-results-explanation">
