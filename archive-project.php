@@ -42,7 +42,7 @@
     );
   ?>
   <?php else : ?>
-  <?php get_template_part( 'template-parts/content', 'none' ); ?>
+  <?php get_template_part( 'template-parts/content', '404' ); ?>
   <?php endif; 
 
   /**
