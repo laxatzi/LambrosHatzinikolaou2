@@ -16,10 +16,10 @@
       </h2>
     </header>
 
-    <div class="no-results-explanation">
+    <div class="no-results-explanation error-explanation">
       <p>
-        <?php esc_html_e( 'Sorry, but nothing matched your search terms. Try searching again with different keywords.', 'LambrosPersonalTheme' ); ?>
-      </p>
+       <?php esc_html_e( 'Try adjusting your search terms or explore some of our recent content below.', 'LambrosPersonalTheme' ); ?>
+      </p>      
     </div>
 
     <div class="no-results-search">
