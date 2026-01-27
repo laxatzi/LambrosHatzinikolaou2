@@ -43,10 +43,18 @@
 
   <?php elseif ( is_archive() ) : ?>
 
-    <header class="page-header no-results-header">
+    <header class="error-page-header no-results-header">
       <h1 class="page-title">
         <?php esc_html_e( 'Nothing here yet', 'LambrosPersonalTheme' ); ?>
       </h1>
+      <h2 class="page-subtitle">
+        <?php
+        printf(
+          esc_html__( '%s, this archive is empty.', 'LambrosPersonalTheme' ),
+          '<span class="subtitle-emphasis">' . esc_html__( 'Oops', 'LambrosPersonalTheme' ) . '</span>'
+        );
+        ?>
+      </h2>
     </header>
 
     <div class="no-results-explanation">
