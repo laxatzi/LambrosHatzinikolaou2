@@ -4,7 +4,15 @@
 
 <main id="main-content" aria-labelledby="archive-project-title">
   <div class="container">
-    <?php if ( have_posts() ) : ?>
+    <?php 
+     /**
+      * Fires before archive page content.
+      *
+      * @since 1.0.0
+     */
+    do_action('lambros_before_archive_loop');
+
+    if ( have_posts() ) : ?>
     <header class="archive-header" aria-labelledby="archive-project-title">
       <?php
       // Title + description (WP will escape these appropriately)
