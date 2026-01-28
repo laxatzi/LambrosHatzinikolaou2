@@ -32,7 +32,7 @@
   ↑
 </button>
  <div id="wrapper">
-     <header class="site-header" role="banner">
+     <header class="site-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
   <!-- Logo -->
     <div id="logo" class="site-branding">
       <!-- Upload a logo in Customizer (Appearance → Customize → Site Identity). No hard-coding image tags; users can swap logos without editing code. WordPress outputs proper img with alt, srcset, etc. -->
