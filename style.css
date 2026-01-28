@@ -329,9 +329,32 @@ footer {
   flex-direction: column;
 }
 
-footer menu {
-  justify-content: center;
-  align-items: center;
+.footer-nav .footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav .footer-links li {
+  display: inline;
+}
+
+.footer-nav .footer-links a {
+  text-decoration: none;
+  font-size: medium;
+}
+
+.footer-nav .footer-links a:hover,
+.footer-nav .footer-links a:focus {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.footer-nav .footer-links .indicator {
+  font-weight: 800;
 }
 
 .footer-links.social-links li a {
