@@ -36,7 +36,11 @@
                 get_template_part('template-parts/blog-presentation');
 
               endwhile;
-           endif;
+          else :
+          ?>
+            <p><?php esc_html_e( 'No posts found.', 'LambrosPersonalTheme' ); ?></p>
+          <?php
+          endif;
           wp_reset_postdata();
             ?>
          </section>
