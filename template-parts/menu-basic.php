@@ -2,23 +2,23 @@
 // Build link data
 $links = [
   [
-    'label'   => esc_html__( 'About', 'personaltheme' ),
+    'label'   => esc_html__( 'About', 'LambrosPersonalTheme' ),
     'url'     => esc_url( home_url( '/about' ) ),
     'current' => is_page( 'about' ),
   ],
   [
-    'label'   => esc_html__( 'Articles', 'personaltheme' ),
+    'label'   => esc_html__( 'Articles', 'LambrosPersonalTheme' ),
     'url'     => esc_url( home_url( '/blog' ) ),
     // active on the posts index and on single posts
     'current' => is_home() || is_singular( 'post' ),
   ],
   [
-    'label'   => esc_html__( 'Projects', 'personaltheme' ),
+    'label'   => esc_html__( 'Projects', 'LambrosPersonalTheme' ),
     'url'     => esc_url( get_post_type_archive_link( 'project' ) ?: home_url( '/projects' ) ),
     'current' => is_post_type_archive( 'project' ) || is_singular( 'project' ),
   ],
   [
-    'label'   => esc_html__( 'Contact', 'personaltheme' ),
+    'label'   => esc_html__( 'Contact', 'LambrosPersonalTheme' ),
     'url'     => esc_url( home_url( '/contact' ) ),
     'current' => is_page( 'contact' ),
   ],
