@@ -16,9 +16,11 @@
                     $posts_page_id = (int) get_option('page_for_posts');
                     $blog_url = $posts_page_id ? get_permalink($posts_page_id) : home_url('/blog/');
                   ?>
-                  <a href="<?php echo esc_url( $blog_url ); ?>" class="read_more">
-                   <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
-                 </a>
+                <a href="<?php echo esc_url( $blog_url ); ?>" class="read_more" 
+                  aria-label="<?php esc_attr_e( 'View all blog posts', 'LambrosPersonalTheme' ); ?>"
+                >
+                  <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
+                </a>
               </div>
             <?php
            $latestPosts = new WP_Query(array(
