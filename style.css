@@ -334,6 +334,16 @@ footer menu {
   align-items: center;
 }
 
+.footer-links.social-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-links.social-links ion-icon {
+  font-size: 1.2rem;
+}
+
 #sig {
   margin-left: 1%;
   margin-top: 1%;
