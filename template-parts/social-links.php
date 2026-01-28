@@ -1,1 +1,46 @@
+<?php
+// Fetch social URLs
+$social_links = [
+    'twitter'   => get_theme_mod( 'lambros_twitter_url' ),
+    'linkedin'  => get_theme_mod( 'lambros_linkedin_url' ),
+    'github'    => get_theme_mod( 'lambros_github_url' ),
+    'youtube'   => get_theme_mod( 'lambros_youtube_url' ),
+    'instagram' => get_theme_mod( 'lambros_instagram_url' ),
+];
+
+// Icon mapping (Ionicons)
+$icons = [
+    'twitter'   => 'logo-twitter',
+    'linkedin'  => 'logo-linkedin',
+    'github'    => 'logo-github',
+    'youtube'   => 'logo-youtube',
+    'instagram' => 'logo-instagram',
+];
+
+// Display names (for accessibility) mapping
+$display_names = [
+    'twitter'   => 'Twitter',
+    'linkedin'  => 'LinkedIn',
+    'github'    => 'GitHub',
+    'youtube'   => 'YouTube',
+    'instagram' => 'Instagram',
+];
+
+?>
+
+<ul class="footer-links social-links">
+  <?php foreach ( $social_links as $network => $url ) : ?>
+    <?php if ( $url ) : ?>
+      <li>
+        <a href="<?php echo esc_url( $url ); ?>"
+           target="_blank"
+
+           rel="noopener noreferrer">
+          <ion-icon name="<?php echo esc_attr( isset($icons[$network]) ? $icons[$network] : '' ); ?>" aria-hidden="true"></ion-icon>
+          <span><?php echo esc_html( isset($display_names[ $network ]) ? $display_names[ $network ] : '' ); ?></span>
+        </a>
+      </li>
+    <?php endif; ?>
+  <?php endforeach; ?>
+</ul>
 
