@@ -284,3 +284,59 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
 // Constants
 define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 
+// CUSTOMIZER SETTINGS
+  //Social Links panel in the Customizer
+function lambros_customize_social_links( $wp_customize ) {
+
+    $wp_customize->add_section( 'lambros_social_links', [
+        'title'       => __( 'Social Links', 'LambrosPersonalTheme' ),
+        'priority'    => 160,
+        'description' => __( 'Add your social media profile URLs.', 'LambrosPersonalTheme' ),
+    ] );
+
+    // Helper: domain validation
+    // Ensures only correct domains are accepted - Empty fields simply don’t render in the footer
+    function lambros_validate_social_url( $url, $allowed_domain ) {
+        $url = esc_url_raw( $url );
+        if ( empty( $url ) ) {
+            return '';
+        }
+        $host = wp_parse_url( $url, PHP_URL_HOST );
+        if ( $host && str_contains( $host, $allowed_domain ) ) {
+            return $url;
+        }
+        return '';
+    }
+
+    // Social networks
+    $social_networks = [
+        'twitter'   => 'twitter.com',
+        'linkedin'  => 'linkedin.com',
+        'github'    => 'github.com',
+        'youtube'   => 'youtube.com',
+        'instagram' => 'instagram.com',
+    ];
+
+    foreach ( $social_networks as $network => $domain ) {
+
+        $setting_id = "lambros_{$network}_url";
+
+        $wp_customize->add_setting( $setting_id, [
+            'default'           => '',
+            'sanitize_callback' => function( $value ) use ( $domain ) {
+                return lambros_validate_social_url( $value, $domain );
+            },
+        ] );
+
+        $wp_customize->add_control( $setting_id, [
+            'label'   => ucfirst( $network ) . ' URL',
+            'section' => 'lambros_social_links',
+            'type'    => 'url',
+        ] );
+    }
+}
+add_action( 'customize_register', 'lambros_customize_social_links' );
+
+
+
+
