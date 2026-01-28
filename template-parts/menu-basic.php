@@ -29,7 +29,7 @@ $links = [
     <?php foreach ( $links as $item ) : ?>
       <li>
         <a
-          href="<?php echo $item['url']; ?>"
+          href="<?php echo esc_url($item['url']); ?>"
           class="<?php echo $item['current'] ? 'indicator' : ''; ?>"
           <?php echo $item['current'] ? 'aria-current="page"' : ''; ?>
         >
