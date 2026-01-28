@@ -27,7 +27,8 @@ $links = [
 <nav class="primary-nav" aria-label="<?php esc_attr_e( 'Primary', 'LambrosPersonalTheme' ); ?>">
   <ul class="nav site-nav" id="js--menu">
     <?php foreach ( $links as $item ) : ?>
-      <li>
+    <!-- If you ever want to style the active item differently (background, underline, etc.), it’s useful to have a CSS class on that item. Here, we add the class current-menu-item to the <li> of the active page. -->
+      <li class="<?php echo $item['current'] ? 'current-menu-item' : ''; ?>">
         <a
           href="<?php echo esc_url($item['url']); ?>"
           class="<?php echo $item['current'] ? 'indicator' : ''; ?>"
