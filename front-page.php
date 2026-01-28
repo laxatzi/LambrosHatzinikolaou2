@@ -63,7 +63,9 @@
             // The actual code
               <a href="<?php echo site_url($projects_url);  ?>" class="read_more"><?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?></a>
               -->
-              <a href="<?php echo esc_url( $projects_url ); ?>" class="read_more">
+              <a href="<?php echo esc_url( $projects_url ); ?>" class="read_more" aria-label="<?php esc_attr_e( 'View all projects', 'LambrosPersonalTheme' ); ?>">
+                <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
+              </a>
             </div>
             <?php
             $latestProjects = new WP_Query(array(
