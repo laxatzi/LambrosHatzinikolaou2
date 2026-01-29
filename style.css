@@ -1298,6 +1298,10 @@ form#searchform input {
    ^MAX 550px
 -------------------------------------------------------------------*/
 @media screen and (max-width: 550px) {
+  
+h1 {
+    font-size: 36px;
+  }
   .search-overlay .label-form label {
     font-size: 115%;
   }
