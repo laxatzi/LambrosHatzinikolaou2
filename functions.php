@@ -337,6 +337,27 @@ function lambros_customize_social_links( $wp_customize ) {
 }
 add_action( 'customize_register', 'lambros_customize_social_links' );
 
+// Make the Front-Page fallback editable via the Customizer
+function lambros_customize_hero_intro( $wp_customize ) {
+  $wp_customize->add_section( 'lambros_hero_intro', [
+    'title'       => __( 'Hero Intro Text', 'LambrosPersonalTheme' ),
+    'priority'    => 30,
+    'description' => __( 'Customize the fallback intro text shown on the homepage.', 'LambrosPersonalTheme' ),
+  ] );
+
+  $wp_customize->add_setting( 'lambros_hero_intro_text', [
+    'default'           => '',
+    'sanitize_callback' => 'wp_kses_post',
+  ] );
+
+  $wp_customize->add_control( 'lambros_hero_intro_text', [
+    'label'   => __( 'Intro Text (HTML allowed)', 'LambrosPersonalTheme' ),
+    'section' => 'lambros_hero_intro',
+    'type'    => 'textarea',
+  ] );
+}
+add_action( 'customize_register', 'lambros_customize_hero_intro' );
+
 
 
 
