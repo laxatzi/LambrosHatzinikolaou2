@@ -42,6 +42,10 @@ $front_id = get_queried_object_id();
       echo '</div>';
     } else {
       // Fallback (what you had commented out, cleaned up + escaped)
+      $custom_intro = get_theme_mod( 'lambros_hero_intro_text' );
+      echo '<div class="hero__content">';
+      echo $custom_intro ? wp_kses_post( $custom_intro ) : '<p>' . esc_html__( 'Welcome to my blog. I write about web development, my work, and life as a programmer.', 'LambrosPersonalTheme' ) . '</p>';
+      echo '</div>';
       ?>
       <div class="hero__content">
         <p><?php echo esc_html__( "I'm a web developer in Thessaloniki, Greece. This is my tech blog where", 'LambrosPersonalTheme' ); ?>
