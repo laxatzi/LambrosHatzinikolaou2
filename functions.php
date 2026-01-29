@@ -310,7 +310,7 @@ function lambros_customize_social_links( $wp_customize ) {
 
     // Social networks
     $social_networks = [
-        'twitter'   => 'twitter.com',
+        'x'   => 'x.com',
         'linkedin'  => 'linkedin.com',
         'github'    => 'github.com',
         'youtube'   => 'youtube.com',
