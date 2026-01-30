@@ -9,11 +9,13 @@
   </h3>
  <p class="project-desc">
   <?php
-    if (has_excerpt()) {
-        echo get_the_excerpt();
-      } else {
-        echo wp_trim_words(get_the_content(), 26);
-      } ?>
+  <?php
+    if ( has_excerpt() ) { 
+      the_excerpt(); 
+    } else { 
+      echo esc_html( wp_trim_words( get_the_content(), 26 ) ); 
+    }
+   ?>
   </p>
   <div class="buttons">
    <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php echo esc_html__( 'Project article', 'LambrosPersonalTheme' ); ?> </a>
