@@ -5,7 +5,7 @@
               Monday of every month.
     </small>
     <form action="" method="post">
-      <input type="email" placeholder="Email" name="email" autocomplete="email"/>
+      <input type="email" placeholder="Email" name="email" autocomplete="email" required/>
       <label for="newsletter-email" class="screen-reader-text">
         Email address
       </label>
