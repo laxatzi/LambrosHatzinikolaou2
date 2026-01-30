@@ -9,5 +9,6 @@
       </label>
       
       <input type="submit" value="<?php echo esc_attr__( 'Subscribe', 'LambrosPersonalTheme' ); ?>" />
+      <div class="newsletter-message" aria-live="polite"></div>
     </form>
 </section>
