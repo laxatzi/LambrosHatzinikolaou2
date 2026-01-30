@@ -1,12 +1,14 @@
 <article class="the-project">
-  <h3 class="project-title">
-    <a href="<?php echo esc_url( get_permalink() ); ?>">
-     <?php the_title(); ?>
-    </a>
-  </h3>
-  <small>
-    <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
-  </small>
+  <div class="project-title--wrapper">
+    <h3 class="project-title">
+      <a href="<?php echo esc_url( get_permalink() ); ?>">
+       <?php the_title(); ?>
+      </a>
+    </h3>
+    <small>
+      <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
+    </small>
+  </div>
  <p class="project-desc">
   <?php
   <?php
