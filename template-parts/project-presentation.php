@@ -1,7 +1,7 @@
 <article class="the-project">
   <h3 class="project-title">
     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    <small><?php echo get_the_date( 'l F j, Y' ); ?></small>
+    <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
   </h3>
  <p class="project-desc">
   <?php
