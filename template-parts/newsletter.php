@@ -4,7 +4,7 @@
               selection of articles about web technologies on the first
               Monday of every month.
     </small>
-    <form action="">
+    <form action="" method="post">
       <input type="email" placeholder="Email" name="email" autocomplete="email"/>
       <label for="newsletter-email" class="screen-reader-text">
         Email address
