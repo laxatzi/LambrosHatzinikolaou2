@@ -14,7 +14,7 @@
       } ?>
   </p>
   <div class="buttons">
-    <a href="<?php the_permalink(); ?>">project article</a>
-    <a href="https://github.com/laxatzi">source code</a>
+   <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php echo esc_html__( 'Project article', 'LambrosPersonalTheme' ); ?> </a>
+   <a href="https://github.com/laxatzi/LambrosHatzinikolaou2.git"> <?php echo esc_html__( 'Source code', 'LambrosPersonalTheme' ); ?> </a>
   </div>
 </article>
