@@ -1,5 +1,5 @@
 <section id="newsletter">
-  <h2>My Monthly Newsletter about Web Development</h2>
+  <h2><?php echo esc_html__( 'My Monthly Newsletter about Web Development', 'LambrosPersonalTheme' ); ?></h2>
     <small>Subscribe to my newsletter to get useful tips and a
               selection of articles about web technologies on the first
               Monday of every month.
