@@ -516,6 +516,14 @@ ul ul li {
   font-size: 0.95rem;
 }
 
+.project-title--wrapper {
+  margin-bottom: 10px;
+}
+
+.project-title--wrapper h3 {
+  margin-bottom: 0;
+}
+
 .buttons a {
   font-size: 0.75rem;
   font-weight: 800;
