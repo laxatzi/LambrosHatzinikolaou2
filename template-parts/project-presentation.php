@@ -1,6 +1,8 @@
 <article class="the-project">
   <h3 class="project-title">
-    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    <a href="<?php echo esc_url( get_permalink() ); ?>">
+     <?php the_title(); ?>
+    </a>
     <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
   </h3>
  <p class="project-desc">
