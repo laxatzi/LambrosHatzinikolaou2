@@ -7,6 +7,7 @@
       <label for="newsletter-email" class="screen-reader-text">
         Email address
       </label>
-      <input type="submit" value="Subscribe" />
+      
+      <input type="submit" value="<?php echo esc_attr__( 'Subscribe', 'LambrosPersonalTheme' ); ?>" />
     </form>
 </section>
