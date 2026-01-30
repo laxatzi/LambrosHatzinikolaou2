@@ -6,6 +6,9 @@
     </small>
     <form action="">
       <input type="email" placeholder="Email" name="email" autocomplete="email"/>
+      <label for="newsletter-email" class="screen-reader-text">
+        Email address
+      </label>
       <input type="submit" value="Subscribe" />
     </form>
 </section>
