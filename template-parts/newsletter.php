@@ -4,6 +4,11 @@
     </small>
     <form action="" method="post" aria-label="Newsletter subscription form">
       <input type="email" placeholder="<?php echo esc_attr__( 'Email', 'LambrosPersonalTheme' ); ?>" name="email" autocomplete="email" required/>
+  <!-- Honeypot field (hidden from humans, visible to bots) -->
+      <div class="hp-field">
+        <label for="hp"><?php echo esc_html__( 'Leave this field empty', 'LambrosPersonalTheme' ); ?></label>
+        <input type="text" id="hp" name="hp" tabindex="-1" autocomplete="off" />
+      </div>
       <label for="newsletter-email" class="screen-reader-text">
         Email address
       </label>
