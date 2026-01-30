@@ -60,6 +60,19 @@ add_action('wp_enqueue_scripts', function () {
   ]);
 });
 
+// Enqueue newsletter script
+function lambros_enqueue_newsletter_script() {
+    wp_enqueue_script(
+        'newsletter-script',
+        get_template_directory_uri() . '/js/newsletter.js',
+        [],
+        null,
+        true
+    );
+}
+add_action( 'wp_enqueue_scripts', 'lambros_enqueue_newsletter_script' );
+
+
 // If you previously injected inline JS in the footer, keep this to avoid duplicate/old code
 remove_action('wp_footer', 'wpb_hook_javascript_footer');
 
