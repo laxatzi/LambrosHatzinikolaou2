@@ -3,7 +3,9 @@
     <a href="<?php echo esc_url( get_permalink() ); ?>">
      <?php the_title(); ?>
     </a>
-    <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
+    <small>
+      <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
+    </small>
   </h3>
  <p class="project-desc">
   <?php
