@@ -43,12 +43,13 @@
           <?php endif; ?>
 
           <div class="entry-summary">
-            <?php
-              $excerpt = get_the_excerpt();
+          <?php
+              $excerpt        = get_the_excerpt();
+              $excerpt_length = 26;
               if ( $excerpt ) {
                 echo wp_kses_post( wpautop( $excerpt ) );
               } else {
-                echo esc_html( wp_trim_words( wp_strip_all_tags( get_the_content() ), 26, '…' ) );
+                echo esc_html( wp_trim_words( wp_strip_all_tags( get_the_content() ), $excerpt_length, '…' ) );
               }
             ?>
           </div>
