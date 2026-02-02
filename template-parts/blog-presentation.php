@@ -11,9 +11,10 @@
     </div>
     <div class="tags">
       <ul class="taglist-parent">
-        <li class="taglist tag">
-          <?php echo get_the_category_list(' / ') ?>
-        </li>
+        <?php
+          $categories = get_the_category_list( '' );
+          echo $categories ? '<li class="taglist tag">' . $categories . '</li>' : '';
+         ?>
       </ul>
     </div>
     <div>
