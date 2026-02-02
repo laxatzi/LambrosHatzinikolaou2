@@ -7,6 +7,8 @@
           <span itemprop="headline"><?php the_title(); ?></span>
         </a>
         <small class="project-date">
+              <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"
+              itemprop="datePublished">
             <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
         </small>
       </h3>
