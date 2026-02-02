@@ -2,7 +2,8 @@
   <div class="post-title--wrapper">
     <div class="the-post_title">
       <h3 class="posts">
-        <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+        <a href="<?php echo esc_url( get_permalink() ); ?>">
+        <?php the_title(); ?></a>
         <small><?php echo get_the_date( 'l F j, Y' ); ?></small>
       </h3>
     </div>
