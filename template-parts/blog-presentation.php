@@ -4,7 +4,9 @@
       <h3 class="posts">
         <a href="<?php echo esc_url( get_permalink() ); ?>">
         <?php the_title(); ?></a>
-        <small><?php echo get_the_date( 'l F j, Y' ); ?></small>
+        <small class="project-date">
+            <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
+        </small>
       </h3>
     </div>
     <div class="tags">
