@@ -1,4 +1,5 @@
-<article class="the-post">
+<article class="the-post" itemscope
+  itemtype="https://schema.org/BlogPosting">
   <div class="post-title--wrapper">
     <div class="the-post_title">
       <h3 class="posts">
