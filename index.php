@@ -9,7 +9,7 @@
         <?php esc_html_e('Posts', 'LambrosPersonalTheme'); ?>
       </h1>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-         <article id="post-<?php the_ID(); ?>" <?php post_class('the-post'); ?>>
+         <article id="post-<?php the_ID(); ?>" <?php post_class('the-post'); ?> itemscope itemtype="https://schema.org/BlogPosting">
            <header class="the-post_title">
              <h2 class="posts">
                <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
