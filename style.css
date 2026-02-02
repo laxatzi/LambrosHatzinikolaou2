@@ -716,6 +716,10 @@ hr {
   margin-right: 10px;
 }
 
+.post-categories li {
+  list-style-type: none;
+}
+
 .contact-info_box {
   margin-top: 40px;
 }
