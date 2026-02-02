@@ -1210,6 +1210,36 @@ form#searchform input {
   color: var(--color-main-dark);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .intro-heading-img,
+  .intro-heading,
+  .hero__content,
+  .hero__cta {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .intro-heading {
+    animation-delay: 0.1s;
+  }
+
+  .hero__content {
+    animation-delay: 0.2s;
+  }
+
+  .hero__cta {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 
 /*------------------------------------------------------------------
    ^MAX 1500px
