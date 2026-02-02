@@ -294,6 +294,21 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
   return $urls;
 }, 10, 2);
 
+// Reading time function
+
+function lambros_get_reading_time( $post_id = null ) {
+    $post_id = $post_id ?: get_the_ID();
+    $content = get_post_field( 'post_content', $post_id );
+
+    // Count words
+    $word_count = str_word_count( wp_strip_all_tags( $content ) );
+
+    // Average reading speed: 200 wpm
+    $minutes = ceil( $word_count / 200 );
+
+    return $minutes;
+}
+
 // CONSTANTS
 define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 
