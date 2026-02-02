@@ -29,7 +29,15 @@
           ?>
             <div class="tags">
               <ul class="taglist-parent">
-                <li class="taglist tag"><?php echo $categories; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></li>
+                <?php
+                  $cats = get_the_category(); foreach ( $cats as $cat ) { 
+                    echo '<li class="taglist tag">
+                            <a href="' . esc_url( get_category_link( $cat ) ) . '">' 
+                             . esc_html( $cat->name ) .
+                            '</a>
+                          </li>'; 
+                  }
+                ?>
               </ul>
             </div>
           <?php endif; ?>
