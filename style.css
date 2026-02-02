@@ -1197,6 +1197,19 @@ form#searchform input {
   text-align: left;
 }
 
+/* Error page */
+.error-page-header {
+  display: flex;
+  padding: 10px 0 20px;
+  flex-direction: column;
+}
+
+.error-page-header #page-title {
+  font-size: 290px;
+  font-weight: 900;
+  color: var(--color-main-dark);
+}
+
 
 /*------------------------------------------------------------------
    ^MAX 1500px
