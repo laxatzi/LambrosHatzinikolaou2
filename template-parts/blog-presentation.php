@@ -13,7 +13,7 @@
         </small>
       </h3>
     </div>
-    <div class="tags">
+    <div class="tags" itemprop="keywords">
       <ul class="taglist-parent">
         <?php
           $categories = get_the_category_list( '' );
