@@ -294,7 +294,7 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
   return $urls;
 }, 10, 2);
 
-// Constants
+// CONSTANTS
 define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 
 // CUSTOMIZER SETTINGS
