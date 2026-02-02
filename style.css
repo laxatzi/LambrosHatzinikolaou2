@@ -1238,6 +1238,30 @@ form#searchform input {
       transform: translateY(0);
     }
   }
+
+  .the-post {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: postFadeUp 0.7s ease-out forwards;
+  } /* Stagger effect for lists of posts */
+  .the-post:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+  .the-post:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  .the-post:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+  .the-post:nth-child(4) {
+    animation-delay: 0.2s;
+  }
+  @keyframes postFadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 
