@@ -1,4 +1,4 @@
-<div class="the-post">
+<article class="the-post">
   <div class="the-post_title">
     <h3 class="posts">
       <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
@@ -21,4 +21,4 @@
   } ?>
 </div>
   <a href="<?php the_permalink(); ?>" class="read_more">Read More</a>
-</div>
+</article>
