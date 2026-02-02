@@ -21,7 +21,7 @@
          ?>
       </ul>
     </div>
-    <div>
+    <div class="post-excerpt" itemprop="description">
     <?php
       if (has_excerpt()) {
         echo get_the_excerpt();
