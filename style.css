@@ -1169,6 +1169,34 @@ form#searchform input {
   display: none;
 }
 
+/* Optional inner container styling */
+.search-overlay__container {
+  max-width: 780px;
+  margin: 10vh auto;
+  height: 25vh;
+  background: #d0d0d7;
+  color: var(--color-text, #111);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.search-overlay__content {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: inherit;
+  padding: 1rem;
+}
+
+.search-overlay p {
+  max-width: 600px;
+}
+
+.search-overlay .search-results {
+  background-color: transparent;
+  text-align: left;
+}
+
 
 /*------------------------------------------------------------------
    ^MAX 1500px
