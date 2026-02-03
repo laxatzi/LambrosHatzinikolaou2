@@ -26,7 +26,7 @@ get_header();
         </figure>
       <?php endif; ?>
 
-      <div class="entry-content">
+      <div class="entry-content" itemprop="mainEntity">
         <?php
           the_content();
 
