@@ -11,7 +11,10 @@ get_header();
     >
 
       <header class="entry-header">
-        <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"> <?php the_title(); ?> </h1>
+        <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"
+          itemprop="headline">
+           <?php the_title(); ?>
+        </h1>
         <?php
         // For posts only, you might add meta (date, categories). Skip for pages.
         ?>
