@@ -61,6 +61,9 @@
             </address>
             <?php
               // Retrieve social handles from theme mods (set via Customizer or similar).
+              $whatsapp_number_raw = sanitize_text_field( get_theme_mod( 'whatsapp_number', '' ) );
+              // Strip all non-digit characters to form a wa.me-compatible phone number.
+              $whatsapp_number     = preg_replace( '/\D+/', '', $whatsapp_number_raw );
               $linkedin_handle = sanitize_text_field( get_theme_mod( 'linkedin_handle', '' ) );
               $x_url_raw = sanitize_text_field( get_theme_mod( 'x_url', '' ) );
               $x_url     = ! empty( $x_url_raw ) ? esc_url( $x_url_raw ) : '';
