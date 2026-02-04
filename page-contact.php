@@ -53,6 +53,13 @@
                 <a href="https://wa.me/306948XXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </p>
             </address>
+            <?php
+              // Retrieve social handles from theme mods (set via Customizer or similar).
+              $linkedin_handle = sanitize_text_field( get_theme_mod( 'linkedin_handle', '' ) );
+              $x_url_raw = sanitize_text_field( get_theme_mod( 'x_url', '' ) );
+              $x_url     = ! empty( $x_url_raw ) ? esc_url( $x_url_raw ) : '';
+
+            ?>
             <p class="social-links">
                 <a href="<?php echo esc_url( 'https://www.linkedin.com/in/your-handle' ); ?>"
                    target="_blank" rel="noopener noreferrer">
