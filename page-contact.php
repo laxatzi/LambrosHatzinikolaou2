@@ -60,18 +60,22 @@
               $x_url     = ! empty( $x_url_raw ) ? esc_url( $x_url_raw ) : '';
 
             ?>
-            <p class="social-links">
-                <a href="<?php echo esc_url( 'https://www.linkedin.com/in/your-handle' ); ?>"
-                   target="_blank" rel="noopener noreferrer">
-                  <ion-icon class="social-icon" name="logo-linkedin" size="large" aria-hidden="true"></ion-icon>
-                  <span class="sr-only"><?php esc_html_e( 'LinkedIn', 'LambrosPersonalTheme' ); ?></span>
-                </a>
+              <p class="social-links">
+                <?php if ( ! empty( $linkedin_handle ) ) : ?>
+                  <a href="<?php echo esc_url( 'https://www.linkedin.com/in/' . ltrim( $linkedin_handle, '@/' ) ); ?>"
+                     target="_blank" rel="noopener noreferrer">
+                    <ion-icon class="social-icon" name="logo-linkedin" size="large" aria-hidden="true"></ion-icon>
+                    <span class="sr-only"><?php esc_html_e( 'LinkedIn', 'LambrosPersonalTheme' ); ?></span>
+                  </a>
+                <?php endif; ?>
 
-                <a href="<?php echo esc_url( 'https://x.com/your-handle' ); ?>"
-                   target="_blank" rel="noopener noreferrer">
-                  <ion-icon class="social-icon" name="logo-twitter" size="large" aria-hidden="true"></ion-icon>
-                  <span class="sr-only"><?php esc_html_e( 'X (Twitter)', 'LambrosPersonalTheme' ); ?></span>
-                </a>
+                <?php if ( ! empty( $x_url ) ) : ?>
+                  <a href="<?php echo esc_url( $x_url ); ?>"
+                     target="_blank" rel="noopener noreferrer">
+                    <ion-icon class="social-icon" name="logo-twitter" size="large" aria-hidden="true"></ion-icon>
+                    <span class="sr-only"><?php esc_html_e( 'X (Twitter)', 'LambrosPersonalTheme' ); ?></span>
+                  </a>
+                <?php endif; ?>
               </p>
           </div>
      </div>
