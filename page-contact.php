@@ -37,10 +37,6 @@
                 <?php esc_html_e( 'Mikras Asia 89, Thessaloniki, Greece,', 'LambrosPersonalTheme' ); esc_html_e( ' ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
               </p>
               <p>
-                <ion-icon name="home" size="large" aria-hidden="true"></ion-icon>
-                <?php esc_html_e( 'ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
-              </p>
-              <p>
                 <ion-icon name="mail" size="large" aria-hidden="true"></ion-icon>
                 <a href="mailto:duck@gmail.com">duck@gmail.com</a>
               </p>
