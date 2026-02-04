@@ -35,23 +35,23 @@
            <address class="contact-info_box" translate="no">
                <ul class="contact-list">
                 <li class="contact-item">
-                  <ion-icon name="location" size="large" aria-hidden="true"></ion-icon>
+                  <ion-icon name="location" size="small" aria-hidden="true"></ion-icon>
                   <?php echo esc_html__( 'Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
                 </li>
                 <li class="contact-item">
-                  <ion-icon name="mail" size="large" aria-hidden="true"></ion-icon>
+                  <ion-icon name="mail" size="small" aria-hidden="true"></ion-icon>
                   <a href="mailto:duck@gmail.com">
                     <span class="sr-only"><?php esc_html_e( 'Email: ', 'LambrosPersonalTheme' ); ?></span>duck@gmail.com
                   </a>
                 </li>
                 <li class="contact-item">
-                  <ion-icon name="call" size="large" aria-hidden="true"></ion-icon>
+                  <ion-icon name="call" size="small" aria-hidden="true"></ion-icon>
                   <a href="tel:+302310XXXXXX" aria-label="<?php esc_attr_e( 'Phone: +30 2310 XXX XXX', 'LambrosPersonalTheme' ); ?>">
                     +30 2310 XXX XXX
                   </a>
                 </li>
                 <li class="contact-item">
-                  <ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
+                  <ion-icon name="logo-whatsapp" size="small" aria-hidden="true"></ion-icon>
                   <a aria-label="<?php esc_attr_e( 'Contact via WhatsApp', 'LambrosPersonalTheme' ); ?>"
                      href="<?php echo esc_url( 'https://wa.me/' . $whatsapp_number ); ?>"
                      target="_blank" rel="noopener noreferrer">
