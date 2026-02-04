@@ -556,7 +556,7 @@ ul ul li {
   }
 }
 
-.contact-info_box p{
+.contact-info_box ul li{
   display: flex;
   align-items: center;
   gap: 0.5rem;
