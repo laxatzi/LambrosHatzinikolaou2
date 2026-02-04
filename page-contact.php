@@ -51,7 +51,11 @@
                 </li>
                 <li class="contact-item">
                   <ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
-                  <a href="<?php echo esc_url( 'https://wa.me/306948XXXXXX' ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">WhatsApp</a>
+                  <a aria-label="<?php esc_attr_e( 'Contact via WhatsApp', 'LambrosPersonalTheme' ); ?>"
+                     href="<?php echo esc_url( 'https://wa.me/' . $whatsapp_number ); ?>"
+                     target="_blank" rel="noopener noreferrer">
+                    WhatsApp
+                  </a>
                 </li>
               </ul>
             </address>
