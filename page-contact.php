@@ -13,8 +13,8 @@
         }
       ?>
     </header>
- <section id="contactme" class="contact-section">
-   <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
+  <section id="contactme" class="contact-section">
+    <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
 <!-- Show flash message on the page -->
     <?php if ( $m = get_transient('contact_msg') ) : delete_transient('contact_msg'); ?>
       <div class="notice notice-<?php echo esc_attr($m['type']); ?>" role="status" aria-live="polite">
@@ -62,55 +62,21 @@
                 </li>
               </ul>
             </address>
-            <?php
-              // Retrieve social handles from theme mods (set via Customizer or similar).
-              $whatsapp_number_raw = sanitize_text_field( get_theme_mod( 'whatsapp_number', '' ) );
-              // Strip all non-digit characters to form a wa.me-compatible phone number.
-              $whatsapp_number     = preg_replace( '/\D+/', '', $whatsapp_number_raw );
-              $linkedin_handle = sanitize_text_field( get_theme_mod( 'linkedin_handle', '' ) );
-              $x_url_raw = sanitize_text_field( get_theme_mod( 'x_url', '' ) );
-              $x_url     = ! empty( $x_url_raw ) ? esc_url( $x_url_raw ) : '';
-
-            ?>
-             <nav aria-label="Social links" class="social-links-contact">
-                <?php if ( ! empty( $linkedin_handle ) ) : ?>
-                  <a href="<?php echo esc_url( 'https://www.linkedin.com/in/' . ltrim( $linkedin_handle, '@/' ) ); ?>"
-                     target="_blank" rel="noopener noreferrer">
-                    <ion-icon class="social-icon" name="logo-linkedin" size="large" aria-hidden="true"></ion-icon>
-                    <span class="sr-only"><?php esc_html_e( 'LinkedIn', 'LambrosPersonalTheme' ); ?></span>
-                  </a>
-                <?php endif; ?>
-
-                <?php if ( ! empty( $x_url ) ) : ?>
-                  <a href="<?php echo esc_url( $x_url ); ?>"
-                     target="_blank" rel="noopener noreferrer">
-                    <ion-icon class="social-icon" name="logo-twitter" size="large" aria-hidden="true"></ion-icon>
-                    <span class="sr-only"><?php esc_html_e( 'X (Twitter)', 'LambrosPersonalTheme' ); ?></span>
-                  </a>
-                <?php endif; ?>
-                 <?php if ( ! empty( $whatsapp_number ) ) : ?>
-                  <a href="<?php echo esc_url( 'https://wa.me/' . $whatsapp_number ); ?>"
-                     target="_blank" rel="noopener noreferrer">
-                    <ion-icon class="social-icon" name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
-                    <span class="sr-only"><?php esc_html_e( 'WhatsApp', 'LambrosPersonalTheme' ); ?></span>
-                  </a>
-                <?php endif; ?>
-             </nav>
-              <nav class="social-link-contact">
-                <?php
-                  get_template_part( 'template-parts/social-link-contact' );
-                ?>
-              </nav>
-          </div>
+            <nav class="social-link-contact">
+              <?php
+                get_template_part( 'template-parts/social-link-contact' );
+              ?>
+            </nav>
+        </div>
      </div>
-  </section>
-    <div class="entry-content">
-        <?php
-          // Optional: let editors add more content below the contact blocks
-          the_content();
-        ?>
-    </div>
-  </article>
+   </section>
+   <div class="entry-content">
+     <?php
+        // Optional: let editors add more content below the contact blocks
+        the_content();
+      ?>
+   </div>
+</article>
   <?php endwhile; endif; ?>
 </main>
 <?php
