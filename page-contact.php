@@ -69,7 +69,7 @@
               $x_url     = ! empty( $x_url_raw ) ? esc_url( $x_url_raw ) : '';
 
             ?>
-              <p class="social-links">
+             <nav aria-label="Social links" class="social-links-contact">
                 <?php if ( ! empty( $linkedin_handle ) ) : ?>
                   <a href="<?php echo esc_url( 'https://www.linkedin.com/in/' . ltrim( $linkedin_handle, '@/' ) ); ?>"
                      target="_blank" rel="noopener noreferrer">
@@ -95,7 +95,7 @@
                 <?php
                   get_template_part( 'template-parts/social-link-contact' );
                 ?>
-              </p>
+              </nav>
           </div>
      </div>
   </section>
