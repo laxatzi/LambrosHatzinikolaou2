@@ -35,7 +35,7 @@
                <ul class="contact-list">
                 <li class="contact-item">
                   <ion-icon name="location" size="large" aria-hidden="true"></ion-icon>
-                  <?php echo esc_html( 'Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000' ); ?>
+                  <?php echo esc_html__( 'Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
                 </li>
                 <li class="contact-item">
                   <ion-icon name="mail" size="large" aria-hidden="true"></ion-icon>
