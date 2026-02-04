@@ -52,8 +52,8 @@
                 <ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
                 <a href="https://wa.me/306948XXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               </p>
-
-              <p class="social-links">
+            </address>
+            <p class="social-links">
                 <a href="<?php echo esc_url( 'https://www.linkedin.com/in/your-handle' ); ?>"
                    target="_blank" rel="noopener noreferrer">
                   <ion-icon class="social-icon" name="logo-linkedin" size="large" aria-hidden="true"></ion-icon>
@@ -66,7 +66,6 @@
                   <span class="sr-only"><?php esc_html_e( 'X (Twitter)', 'LambrosPersonalTheme' ); ?></span>
                 </a>
               </p>
-            </address>
           </div>
      </div>
   </section>
