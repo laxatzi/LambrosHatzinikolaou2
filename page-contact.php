@@ -69,6 +69,12 @@
           </div>
      </div>
   </section>
+    <div class="entry-content">
+        <?php
+          // Optional: let editors add more content below the contact blocks
+          the_content();
+        ?>
+    </div>
   </article>
   <?php endwhile; endif; ?>
 </main>
