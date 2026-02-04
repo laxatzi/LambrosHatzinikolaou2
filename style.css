@@ -556,7 +556,7 @@ ul ul li {
   }
 }
 
-.contact-info_box p {
+.contact-info_box p{
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -744,8 +744,10 @@ time {
 .contact-info_box {
   margin-top: 40px;
 }
-.contact-info_box p {
+
+.contact-info_box ul li {
   margin: 5px;
+  list-style-type: none;
 }
 
 #contactme h3 {
