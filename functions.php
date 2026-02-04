@@ -343,6 +343,7 @@ function lambros_customize_social_links( $wp_customize ) {
         'github'    => 'github.com',
         'youtube'   => 'youtube.com',
         'instagram' => 'instagram.com',
+        'whatsapp'  => 'wa.me',
     ];
 
     foreach ( $social_networks as $network => $domain ) {
