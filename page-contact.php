@@ -30,7 +30,7 @@
             ?>
       </div>
        <div class="contact-info">
-         <h3><?php esc_html_e( 'Or get in touch another way', 'LambrosPersonalTheme' ); ?></h3>
+         <h3><?php esc_html_e( 'Other ways to get in touch', 'LambrosPersonalTheme' ); ?></h3>
            <address class="contact-info_box" translate="no">
                <ul class="contact-list">
                 <li class="contact-item" aria-label="<?php esc_attr_e( 'Location: Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>">
