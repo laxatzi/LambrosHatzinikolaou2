@@ -85,6 +85,13 @@
                     <span class="sr-only"><?php esc_html_e( 'X (Twitter)', 'LambrosPersonalTheme' ); ?></span>
                   </a>
                 <?php endif; ?>
+                 <?php if ( ! empty( $whatsapp_number ) ) : ?>
+                  <a href="<?php echo esc_url( 'https://wa.me/' . $whatsapp_number ); ?>"
+                     target="_blank" rel="noopener noreferrer">
+                    <ion-icon class="social-icon" name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
+                    <span class="sr-only"><?php esc_html_e( 'WhatsApp', 'LambrosPersonalTheme' ); ?></span>
+                  </a>
+                <?php endif; ?>
               </p>
           </div>
      </div>
