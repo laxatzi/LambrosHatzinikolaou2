@@ -34,7 +34,7 @@
            <address class="contact-info_box" translate="no">
               <p>
                 <ion-icon name="location" size="large" aria-hidden="true"></ion-icon>
-                <?php esc_html_e( 'Mikras Asia 89, Thessaloniki, Greece', 'LambrosPersonalTheme' ); ?>
+                <?php esc_html_e( 'Mikras Asia 89, Thessaloniki, Greece,', 'LambrosPersonalTheme' ); esc_html_e( ' ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
               </p>
               <p>
                 <ion-icon name="home" size="large" aria-hidden="true"></ion-icon>
