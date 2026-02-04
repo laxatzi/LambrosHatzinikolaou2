@@ -95,6 +95,8 @@
                     <span class="sr-only"><?php esc_html_e( 'WhatsApp', 'LambrosPersonalTheme' ); ?></span>
                   </a>
                 <?php endif; ?>
+             </nav>
+              <nav class="social-link-contact">
                 <?php
                   get_template_part( 'template-parts/social-link-contact' );
                 ?>
