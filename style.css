@@ -750,6 +750,22 @@ time {
   list-style-type: none;
 }
 
+.contact-info_box ul {
+  margin-bottom: 0;
+}
+
+nav.social-link-contact li {
+  list-style-type: none;
+}
+
+nav.social-link-contact ul {
+  margin: 0;
+}
+
+ul.contact-list li {
+  margin: 0;
+}
+
 #contactme h3 {
   font-weight: 800;
 }
