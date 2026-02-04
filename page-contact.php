@@ -32,9 +32,9 @@
        <div class="contact-info">
          <h3><?php esc_html_e( 'Or get in touch another way', 'LambrosPersonalTheme' ); ?></h3>
            <address class="contact-info_box" translate="no">
-                <p class="contact-item" aria-label="<?php esc_attr_e( 'Location: Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>">
+                <p class="contact-item" aria-label="<?php esc_attr_e( 'Location: Mikras Asia 89, 55000 Thessaloniki, Greece', 'LambrosPersonalTheme' ); ?>">
                   <ion-icon name="location" size="large" aria-hidden="true"></ion-icon>
-                  <?php esc_html_e( 'Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
+                  <?php esc_html_e( 'Mikras Asia 89, 55000 Thessaloniki, Greece', 'LambrosPersonalTheme' ); ?>
                 </p>
               <p>
                 <ion-icon name="mail" size="large" aria-hidden="true"></ion-icon>
