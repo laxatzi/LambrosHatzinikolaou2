@@ -32,22 +32,28 @@
        <div class="contact-info">
          <h3><?php esc_html_e( 'Or get in touch another way', 'LambrosPersonalTheme' ); ?></h3>
            <address class="contact-info_box" translate="no">
-                <p class="contact-item" aria-label="<?php esc_attr_e( 'Location: Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>">
+               <ul class="contact-list">
+                <li class="contact-item" aria-label="<?php esc_attr_e( 'Location: Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>">
                   <ion-icon name="location" size="large" aria-hidden="true"></ion-icon>
                   <?php esc_html_e( 'Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
-                </p>
-              <p>
-                <ion-icon name="mail" size="large" aria-hidden="true"></ion-icon>
-                <a href="mailto:duck@gmail.com">duck@gmail.com</a>
-              </p>
-              <p>
-                <ion-icon name="call" size="large" aria-hidden="true"></ion-icon>
-                <a href="tel:+302310XXXXXX">+30 2310 XXX XXX</a>
-              </p>
-              <p>
-                <ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
-                <a href="https://wa.me/306948XXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              </p>
+                </li>
+                <li class="contact-item">
+                  <ion-icon name="mail" size="large" aria-hidden="true"></ion-icon>
+                  <a href="mailto:duck@gmail.com">
+                    <span class="sr-only"><?php esc_html_e( 'Email: ', 'LambrosPersonalTheme' ); ?></span>duck@gmail.com
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <ion-icon name="call" size="large" aria-hidden="true"></ion-icon>
+                  <a href="tel:+302310XXXXXX" aria-label="<?php esc_attr_e( 'Phone: +30 2310 XXX XXX', 'LambrosPersonalTheme' ); ?>">
+                    +30 2310 XXX XXX
+                  </a>
+                </li>
+                <li class="contact-item">
+                  <ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon>
+                  <a href="<?php echo esc_url( 'https://wa.me/306948XXXXXX' ); ?>" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </li>
+              </ul>
             </address>
             <?php
               // Retrieve social handles from theme mods (set via Customizer or similar).
