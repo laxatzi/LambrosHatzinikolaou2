@@ -1,7 +1,7 @@
 <?php
 // Fetch social URLs
 $social_links = [
-    'twitter'   => get_theme_mod( 'lambros_x_url' ),
+    'x'   => get_theme_mod( 'lambros_x_url' ),
     'linkedin'  => get_theme_mod( 'lambros_linkedin_url' ),
     'github'    => get_theme_mod( 'lambros_github_url' ),
     'youtube'   => get_theme_mod( 'lambros_youtube_url' ),
