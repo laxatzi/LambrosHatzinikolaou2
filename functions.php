@@ -309,6 +309,61 @@ function lambros_get_reading_time( $post_id = null ) {
     return $minutes;
 }
 
+
+//Live search endpoint for AJAX requests
+function lambros_live_search_scripts() {
+    wp_enqueue_script(
+        'live-search',
+        get_template_directory_uri() . '/js/liveSearch.js',
+        [],
+        null,
+        true
+    );
+
+    wp_localize_script('live-search', 'LiveSearch', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+    ]);
+}
+add_action('wp_enqueue_scripts', 'lambros_live_search_scripts');
+
+// AJAX handler for live search
+function lambros_live_search_ajax() {
+    $query = isset($_GET['q']) ? sanitize_text_field($_GET['q']) : '';
+
+    if (strlen($query) < 2) {
+        wp_die();
+    }
+
+    $search = new WP_Query([
+        'post_type'      => 'any',
+        'posts_per_page' => 5,
+        's'              => $query,
+    ]);
+
+    if ($search->have_posts()) {
+        echo '<ul class="live-search-list">';
+
+        while ($search->have_posts()) {
+            $search->the_post();
+
+            echo '<li class="live-search-item">';
+            echo '<a href="' . esc_url(get_permalink()) . '">';
+            echo esc_html(get_the_title());
+            echo '</a>';
+            echo '</li>';
+        }
+
+        echo '</ul>';
+    } else {
+        echo '<p class="no-results">' . esc_html__('No results found.', 'LambrosPersonalTheme') . '</p>';
+    }
+
+    wp_reset_postdata();
+    wp_die();
+}
+add_action('wp_ajax_live_search', 'lambros_live_search_ajax');
+add_action('wp_ajax_nopriv_live_search', 'lambros_live_search_ajax');
+
 // CONSTANTS
 define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 
