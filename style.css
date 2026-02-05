@@ -1104,6 +1104,36 @@ main#main-content.main-page-search section form#searchform {
   margin: 0;
 }
 
+.live-search-results {
+  margin-top: 1rem;
+  background: var(--color-background-alt);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--color-background);
+}
+
+.live-search-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.live-search-item + .live-search-item {
+  margin-top: 0.5rem;
+}
+
+.live-search-item a {
+  color: var(--color-main-dark);
+}
+
+.live-search-item a:hover {
+  text-decoration: underline;
+}
+
+li.live-search-item {
+  list-style-type: none;
+}
+
 .input-field {
   display: flex;
   width: 60%;
