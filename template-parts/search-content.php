@@ -1,4 +1,4 @@
-      <div class="the-post">
+      <div class="the-post" style="margin-bottom: 40px">
         <div class="the-post_title">
           <h3 class="posts">
             <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
