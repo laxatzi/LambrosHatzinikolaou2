@@ -1092,6 +1092,18 @@ form#searchform input {
   background-color: var(--color-distinct);
 }
 
+main#main-content.main-page-search {
+  flex-direction: column;
+}
+
+main#main-content.main-page-search section {
+  margin-top: 20px;
+}
+
+main#main-content.main-page-search section form#searchform {
+  margin: 0;
+}
+
 .input-field {
   display: flex;
   width: 60%;
