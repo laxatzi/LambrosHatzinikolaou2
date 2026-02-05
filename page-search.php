@@ -5,7 +5,8 @@ get_header();
 <main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
 
  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
+     itemscope itemtype="https://schema.org/SearchResultsPage">
       <header class="entry-header">
         <h1 id="page-title" class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
       </header>
