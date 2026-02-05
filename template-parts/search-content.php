@@ -18,5 +18,4 @@
           } else {
             echo wp_trim_words(get_the_content(), 26);
           } ?></div>
-          <a href="<?php the_permalink(); ?>" class="read_more">Read More</a>
       </div>
