@@ -178,6 +178,7 @@ add_action('wp', 'lambros_log_404_errors');
 // Contact form handler: nonce + honeypot + throttle + hardened mail headers
 
 function lambros_handle_contact_form() {
+    // This function is now empty because we moved the code to an anonymous function below.
    // Only handle our form posts
   if ( empty($_POST['contact_nonce']) || ! isset($_POST['submit']) ) {
     return;
