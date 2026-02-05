@@ -1506,4 +1506,9 @@ h1 {
   #wrapper-spinner {
     margin-left: 7%;
   }
+  
+  form#searchform input {
+    width: 100%;
+    max-width: 100%;
+  }
 }
