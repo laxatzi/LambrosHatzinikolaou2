@@ -328,18 +328,22 @@ function lambros_live_search_scripts() {
 add_action('wp_enqueue_scripts', 'lambros_live_search_scripts');
 
 // AJAX handler for live search
+
 function lambros_live_search_ajax() {
     $query = isset($_GET['q']) ? sanitize_text_field($_GET['q']) : '';
+    $type  = isset($_GET['type']) ? sanitize_text_field($_GET['type']) : 'any';
 
     if (strlen($query) < 2) {
         wp_die();
     }
 
-    $search = new WP_Query([
-        'post_type'      => 'any',
+    $args = [
+        'post_type'      => $type === 'any' ? ['post', 'page', 'project'] : $type,
         'posts_per_page' => 5,
         's'              => $query,
-    ]);
+    ];
+
+    $search = new WP_Query($args);
 
     if ($search->have_posts()) {
         echo '<ul class="live-search-list">';
@@ -347,10 +351,25 @@ function lambros_live_search_ajax() {
         while ($search->have_posts()) {
             $search->the_post();
 
-            echo '<li class="live-search-item">';
-            echo '<a href="' . esc_url(get_permalink()) . '">';
-            echo esc_html(get_the_title());
-            echo '</a>';
+            $title = get_the_title();
+            $highlighted = preg_replace(
+                '/(' . preg_quote($query, '/') . ')/i',
+                '<mark class="highlight">$1</mark>',
+                $title
+            );
+
+            echo '<li class="live-search-item" tabindex="-1">';
+
+            if (has_post_thumbnail()) {
+                echo '<span class="thumb">';
+                echo get_the_post_thumbnail(get_the_ID(), 'thumbnail', ['loading' => 'lazy']);
+                echo '</span>';
+            }
+
+            echo '<a href="' . esc_url(get_permalink()) . '">' . $highlighted . '</a>';
+
+            // echo '<span class="type-label">' . esc_html(ucfirst(get_post_type())) . '</span>';
+
             echo '</li>';
         }
 
