@@ -22,6 +22,11 @@ $links = [
     'url'     => esc_url( home_url( '/contact' ) ),
     'current' => is_page( 'contact' ),
   ],
+  [
+    'label'   => esc_html__( 'Search', 'LambrosPersonalTheme' ),
+    'url'     => esc_url( home_url( '/search' ) ),
+    'current' => is_page( 'search' ),
+  ],
 ];
 ?>
 <nav class="primary-nav" aria-label="<?php esc_attr_e( 'Primary', 'LambrosPersonalTheme' ); ?>">
