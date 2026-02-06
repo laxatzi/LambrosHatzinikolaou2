@@ -1,5 +1,5 @@
 (function () {
-  const input = document.querySelector("#search-type");
+  const input = document.querySelector("#live-search-input");
   const typeSelect = document.querySelector("#search-type");
   const resultsBox = document.querySelector("#live-search-results");
 
