@@ -43,25 +43,27 @@
 
   typeSelect.addEventListener("change", fetchResults);
 
-  // Keyboard navigation (unchanged)
+ 
+  // Keyboard navigation for result types
   input.addEventListener("keydown", function (e) {
     const items = resultsBox.querySelectorAll(".live-search-item");
     if (!items.length) return;
 
+    const updateActiveClass = () => {
+      items.forEach((item, i) =>
+        item.classList.toggle("active", i === activeIndex),
+      );
+    };
+
     if (e.key === "ArrowDown") {
       e.preventDefault();
       activeIndex = (activeIndex + 1) % items.length;
-      items.forEach((item, i) =>
-        item.classList.toggle("active", i === activeIndex),
-      );
-    }
-
-    if (e.key === "ArrowUp") {
+      updateActiveClass();
+    } else if (e.key === "ArrowUp") {
       e.preventDefault();
       activeIndex = (activeIndex - 1 + items.length) % items.length;
-      items.forEach((item, i) =>
-        item.classList.toggle("active", i === activeIndex),
-      );
+      updateActiveClass();
+    } else if (e.key === "Enter" && activeIndex >= 0) {
     }
 
     if (e.key === "Enter" && activeIndex >= 0) {
