@@ -64,11 +64,9 @@
       activeIndex = (activeIndex - 1 + items.length) % items.length;
       updateActiveClass();
     } else if (e.key === "Enter" && activeIndex >= 0) {
-    }
-
-    if (e.key === "Enter" && activeIndex >= 0) {
-      e.preventDefault();
+       e.preventDefault();
       items[activeIndex].querySelector("a").click();
     }
+
   });
 })();
