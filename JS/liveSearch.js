@@ -21,6 +21,10 @@
     const url = new URL(LiveSearch.ajax_url); 
     url.search = new URLSearchParams({ action: "live_search", q: query, type: type, }).toString();
 
+    resultsBox.innerHTML = "<p class='loading'>Searching…</p>";
+    resultsBox.classList.add("open");
+    resultsBox.setAttribute("aria-busy", "true");
+    
     fetch(url)
       .then((res) => { 
          if (!res.ok) throw new Error("Request failed"); 
