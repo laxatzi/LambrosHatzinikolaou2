@@ -22,7 +22,13 @@
     url.search = new URLSearchParams({ action: "live_search", q: query, type: type, }).toString();
 
     fetch(url)
-      .then((res) => res.text())
+      .then((res) => { 
+        if (!res.ok) { 
+          const safeHtml = DOMPurify.sanitize(html); 
+          resultsBox.innerHTML = safeHtml; 
+        } 
+        return res.text(); 
+      })
       .then((html) => {
         resultsBox.innerHTML = html;
         resultsBox.classList.add("open");
