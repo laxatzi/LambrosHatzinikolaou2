@@ -68,5 +68,7 @@
       items[activeIndex].querySelector("a").click();
     }
 
+    items[activeIndex].querySelector("a").focus();
+
   });
 })();
