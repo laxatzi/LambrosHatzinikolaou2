@@ -3,7 +3,7 @@
   const typeSelect = document.querySelector("#search-type");
   const resultsBox = document.querySelector("#live-search-results");
 
-  if (!input || !resultsBox || !typeSelect) return;
+  if (!input || !resultsBox) return;
 
   let timer;
   let activeIndex = -1;
