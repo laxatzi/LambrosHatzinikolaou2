@@ -33,6 +33,7 @@
       .then((html) => {
         resultsBox.innerHTML = html;
         resultsBox.classList.add("open");
+        resultsBox.removeAttribute("aria-busy");
         activeIndex = -1;
       })
       .catch(() => {
