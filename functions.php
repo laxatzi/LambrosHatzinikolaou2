@@ -78,7 +78,7 @@ remove_action('wp_footer', 'wpb_hook_javascript_footer');
 
 // Set the title tag automatically also loads the theme’s translated strings.
 
-    function theme_slug_setup() {
+function theme_slug_setup() {
       load_theme_textdomain('LambrosPersonalTheme', get_template_directory().'/languages');
       add_theme_support( 'title-tag' );
       add_theme_support('post-thumbnails');
@@ -358,7 +358,7 @@ function lambros_live_search_ajax() {
                 $title
             );
 
-            echo '<li class="live-search-item" tabindex="-1">';
+            echo '<li class="live-search-item" >';
 
             if (has_post_thumbnail()) {
                 echo '<span class="thumb">';
