@@ -10,7 +10,7 @@
 
   function fetchResults() {
     const query = input.value.trim();
-    const type = typeSelect.value;
+    const type = typeSelect ? typeSelect.value: 'Any';
 
     if (query.length < 2) {
       resultsBox.innerHTML = "";
