@@ -18,13 +18,10 @@
       return;
     }
 
-    fetch(
-      LiveSearch.ajax_url +
-        "?action=live_search&q=" +
-        encodeURIComponent(query) +
-        "&type=" +
-        encodeURIComponent(type),
-    )
+    const url = new URL(LiveSearch.ajax_url); 
+    url.search = new URLSearchParams({ action: "live_search", q: query, type: type, }).toString();
+
+    fetch(url)
       .then((res) => res.text())
       .then((html) => {
         resultsBox.innerHTML = html;
