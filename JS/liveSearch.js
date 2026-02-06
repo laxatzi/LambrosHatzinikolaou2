@@ -23,10 +23,7 @@
 
     fetch(url)
       .then((res) => { 
-        if (!res.ok) { 
-          const safeHtml = DOMPurify.sanitize(html); 
-          resultsBox.innerHTML = safeHtml; 
-        } 
+         if (!res.ok) throw new Error("Request failed"); 
         return res.text(); 
       })
       .then((html) => {
