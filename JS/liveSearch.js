@@ -37,7 +37,8 @@
         activeIndex = -1;
       })
       .catch(() => {
-        resultsBox.innerHTML = "<p>Error loading results.</p>";
+        resultsBox.innerHTML = "<p class='error'>Error loading results.</p>";
+        resultsBox.removeAttribute("aria-busy");
       });
   }
 
