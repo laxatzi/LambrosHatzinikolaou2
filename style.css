@@ -1112,6 +1112,11 @@ main#main-content.main-page-search section form#searchform {
   box-shadow: var(--color-background);
 }
 
+.live-search-results .loading {
+  font-style: italic;
+  opacity: 0.8;
+}
+
 .live-search-list {
   list-style: none;
   margin: 0;
