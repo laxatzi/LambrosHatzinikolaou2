@@ -6,8 +6,8 @@
 <?php
 while ( have_posts() ) : the_post(); ?>
 <article <?php post_class(); ?> itemscope itemtype="https://schema.org/Article">
-  <header class="entry-header">
-      <h1 id="post-title-<?php the_ID(); ?>" class="posts" itemprop="headline">
+  <header class="entry-header">      
+      <h1 id="post-title-<?php the_ID(); ?>" class="entry-title" itemprop="headline">
         <?php the_title(); ?>
       </h1>
       <time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>" itemprop="datePublished">
