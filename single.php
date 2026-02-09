@@ -19,6 +19,12 @@ while ( have_posts() ) : the_post(); ?>
       <span class="author" itemprop="author" itemscope itemtype="https://schema.org/Person">
         <span itemprop="name"><?php the_author(); ?></span>
       </span>
+      <?php if ( get_post_type() === 'post' && has_category() ) : ?>
+        <div class="entry-categories">
+          <span class="categories-label"><?php esc_html_e( 'Categories:', 'LambrosPersonalTheme' ); ?></span>
+          <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
+        </div>
+      <?php endif; ?>
       
         <?php if ( get_post_type() === 'post' ) : ?>
           <div class="tags">
