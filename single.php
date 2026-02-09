@@ -1,7 +1,7 @@
 <?php
   get_header();
 ?>
-<main class='the_post'>
+<main id="main-content" class='the_post' aria-labelledby="post-title-<?php the_ID(); ?>">
   <div class="container">
 <?php
   while(have_posts()) {
