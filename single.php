@@ -25,6 +25,15 @@ while ( have_posts() ) : the_post(); ?>
    </header>
    <?php the_content(); ?>
 </article>
+<!-- Navigation OUTSIDE article -->
+  <nav class="post-navigation" aria-label="<?php esc_attr_e( 'Post navigation', 'LambrosPersonalTheme' ); ?>">
+    <div class="nav-previous">
+      <?php previous_post_link( '%link', esc_html__( 'Previous post: %title', 'LambrosPersonalTheme' ) ); ?>
+    </div>
+    <div class="nav-next">
+      <?php next_post_link( '%link', esc_html__( 'Next post: %title', 'LambrosPersonalTheme' ) ); ?>
+    </div>
+  </nav>
 <?php
   endwhile;
 ?>
