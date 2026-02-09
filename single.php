@@ -6,19 +6,23 @@
 <?php
   while(have_posts()) {
    the_post(); ?>
-    <div class="the-post_title">
-      <h3 class="posts">
+    <header class="entry-header">
+      <h1 id="post-title-<?php the_ID(); ?>" class="posts" itemprop="headline">
         <?php the_title(); ?>
-        <small><?php echo get_the_date( 'l F j, Y' ); ?></small>
-      </h3>
-    </div>
-      <div class="tags">
-        <ul class="taglist-parent">
-          <li class="taglist tag">
-            <?php if ( get_post_type() == 'post') echo get_the_category_list(' / ') ?>
-          </li>
-        </ul>
-      </div>
+      </h1>
+      <time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>" itemprop="datePublished">
+        <?php echo esc_html( get_the_date() ); ?>
+      </time>
+        <?php if ( get_post_type() === 'post' ) : ?>
+          <div class="tags">
+            <ul class="taglist-parent">
+              <li class="taglist tag">
+                <?php echo wp_kses_post( get_the_category_list( ' / ' ) ); ?>
+              </li>
+            </ul>
+          </div>
+        <?php endif; ?>
+   </header>
    <?php the_content(); ?>
 
 </div>
