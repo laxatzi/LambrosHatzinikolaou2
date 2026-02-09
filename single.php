@@ -6,7 +6,8 @@
 <?php
   while(have_posts()) {
    the_post(); ?>
-    <header class="entry-header">
+<article <?php post_class(); ?> itemscope itemtype="https://schema.org/Article">
+  <header class="entry-header">
       <h1 id="post-title-<?php the_ID(); ?>" class="posts" itemprop="headline">
         <?php the_title(); ?>
       </h1>
@@ -24,6 +25,7 @@
         <?php endif; ?>
    </header>
    <?php the_content(); ?>
+</article>
 
 </div>
 </main>
