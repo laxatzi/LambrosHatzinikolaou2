@@ -25,16 +25,6 @@ while ( have_posts() ) : the_post(); ?>
           <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
         </div>
       <?php endif; ?>
-      
-        <?php if ( get_post_type() === 'post' ) : ?>
-          <div class="tags">
-            <ul class="taglist-parent">
-              <li class="taglist tag">
-                <?php echo wp_kses_post( get_the_category_list( ' / ' ) ); ?>
-              </li>
-            </ul>
-          </div>
-        <?php endif; ?>
    </header>
    <?php the_content(); ?>
 </article>
