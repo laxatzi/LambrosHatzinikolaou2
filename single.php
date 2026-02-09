@@ -4,8 +4,7 @@
 <main id="main-content" class='the_post' aria-labelledby="post-title-<?php the_ID(); ?>">
   <div class="container">
 <?php
-  while(have_posts()) {
-   the_post(); ?>
+while ( have_posts() ) : the_post(); ?>
 <article <?php post_class(); ?> itemscope itemtype="https://schema.org/Article">
   <header class="entry-header">
       <h1 id="post-title-<?php the_ID(); ?>" class="posts" itemprop="headline">
@@ -26,7 +25,9 @@
    </header>
    <?php the_content(); ?>
 </article>
-
+<?php
+  endwhile;
+?>
 </div>
 </main>
 <?php
