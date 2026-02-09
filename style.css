@@ -479,6 +479,26 @@ form {
   margin-top: 30px;
 }
 
+.nav-subtitle {
+  display: block;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.nav-title {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.nav-previous::before {
+  content: '← ';
+}
+
+.nav-next::after {
+  content: ' →';
+}
+
 .the-project,
 #newsletter {
   margin-top: 30px;
