@@ -101,12 +101,12 @@ while ( have_posts() ) : the_post(); ?>
   
 </article>
   
-<!-- Navigation  section -->
+<!-- Post Navigation  -->
 <?php
   $prev_post = get_previous_post();
   $next_post = get_next_post();
-?>
-<?php if ( $prev_post || $next_post ) : ?>
+  
+  if ( $prev_post || $next_post ) : ?>
   <nav class="post-navigation" aria-label="<?php esc_attr_e( 'Post navigation', 'LambrosPersonalTheme' ); ?>">
 
     <?php if ( $prev_post ) : ?>
@@ -137,6 +137,7 @@ while ( have_posts() ) : the_post(); ?>
 
   </nav>
   <?php endif;
+  
   // If comments are open or there are comments, load the comment template
   if ( comments_open() || get_comments_number() ) :
       comments_template();
@@ -145,6 +146,7 @@ while ( have_posts() ) : the_post(); ?>
  ?>
 </div>
 </main>
+
 <?php
   }
   get_footer();
