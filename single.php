@@ -68,8 +68,17 @@ while ( have_posts() ) : the_post(); ?>
       do_action( 'lambros_after_post_content' );
      ?>
   
-   </header>
-   <?php the_content(); ?>
+   </header> <!-- .entry-header -->
+
+<!-- Content -->
+<div class="entry-content" itemprop="articleBody">
+  <?php the_content(); 
+        wp_link_pages( [
+          'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'LambrosPersonalTheme' ),
+          'after'  => '</div>',
+          ] );
+  ?>
+</div>
 </article>
 <!-- Navigation  section -->
 <?php
