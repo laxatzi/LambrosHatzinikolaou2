@@ -18,19 +18,18 @@ while ( have_posts() ) : the_post(); ?>
          */
         do_action( 'lambros_before_post_content' );
     ?>
-  <header class="entry-header"> 
+  <!-- Featured Image -->
     <?php if ( has_post_thumbnail() ) : ?>
-        <div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <?php
           the_post_thumbnail( 'large', [
             'itemprop' => 'url',
             'alt'      => get_the_title()
           ] );
         ?>
-        <meta itemprop="width" content="<?php echo esc_attr( get_post_thumbnail_id() ? wp_get_attachment_metadata( get_post_thumbnail_id() )['width'] : '' ); ?>">
-        <meta itemprop="height" content="<?php echo esc_attr( get_post_thumbnail_id() ? wp_get_attachment_metadata( get_post_thumbnail_id() )['height'] : '' ); ?>">
-       </div>
+      </div>
     <?php endif; ?>
+  <header class="entry-header"> 
       <h1 id="post-title-<?php the_ID(); ?>" class="entry-title" itemprop="headline">
         <?php the_title(); ?>
       </h1>
