@@ -111,26 +111,18 @@ while ( have_posts() ) : the_post(); ?>
 
     <?php if ( $prev_post ) : ?>
       <div class="nav-previous">
-        <a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">
-          <?php
-            printf(
-              esc_html__( 'Previous post: %s', 'LambrosPersonalTheme' ),
-              esc_html( get_the_title( $prev_post->ID ) )
-            );
-          ?>
-        </a>
+         <span class="nav-subtitle"><?php  esc_html_e( 'Previous Post', 'LambrosPersonalTheme' ); ?></span>
+          <a href="<?php echo esc_url( get_permalink( $prev_post ) ); ?>" rel="prev">
+            <span class="nav-title"><?php echo esc_html( get_the_title( $prev_post ) ); ?></span>
+          </a>
       </div>
     <?php endif; ?>
 
     <?php if ( $next_post ) : ?>
       <div class="nav-next">
-        <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
-          <?php
-            printf(
-              esc_html__( 'Next post: %s', 'LambrosPersonalTheme' ),
-              esc_html( get_the_title( $next_post->ID ) )
-            );
-          ?>
+        <span class="nav-subtitle"><?php esc_html_e( 'Next Post', 'LambrosPersonalTheme' ); ?></span>
+        <a href="<?php echo esc_url( get_permalink( $next_post ) ); ?>" rel="next">
+          <span class="nav-title"><?php echo esc_html( get_the_title( $next_post ) ); ?></span>
         </a>
       </div>
     <?php endif; ?>
