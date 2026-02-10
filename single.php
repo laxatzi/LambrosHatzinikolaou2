@@ -12,6 +12,12 @@
 <?php
 while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/Article">
+  <?php
+        /**
+         * Hook: lambros_before_post_content
+         */
+        do_action( 'lambros_before_post_content' );
+    ?>
   <header class="entry-header"> 
     <?php if ( has_post_thumbnail() ) : ?>
         <div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
