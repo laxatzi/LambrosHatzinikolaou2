@@ -91,8 +91,16 @@ while ( have_posts() ) : the_post(); ?>
        <?php endif; ?>
      </footer>
   <?php endif; ?>
+
+  <?php
+  /**
+   * Hook: lambros_after_post_content
+   */
+  do_action( 'lambros_after_post_content' );
+  ?>
   
 </article>
+  
 <!-- Navigation  section -->
 <?php
   $prev_post = get_previous_post();
