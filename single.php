@@ -35,11 +35,13 @@ while ( have_posts() ) : the_post(); ?>
         <?php the_title(); ?>
       </h1>
     
+    <!-- Published Date -->
       <time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>" itemprop="datePublished">
         <?php echo esc_html( get_the_date() ); ?>
       </time>
     <!-- Modified date (hidden visually, important for SEO) -->
       <meta itemprop="dateModified" content="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>">
+   
     <!-- Author -->
       <?php if ( get_post_type() === 'post' ) : ?>
         <span class="byline">
