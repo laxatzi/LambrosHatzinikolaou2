@@ -53,13 +53,14 @@ while ( have_posts() ) : the_post(); ?>
           </span>
         </span>
       <?php endif; ?>
-
-      <?php if ( get_post_type() === 'post' && has_category() ) : ?>
+  
+  <!-- Categories -->
+    <?php if ( get_post_type() === 'post' && has_category() ) : ?>
         <div class="entry-categories">
           <span class="categories-label"><?php esc_html_e( 'Categories:', 'LambrosPersonalTheme' ); ?></span>
           <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
         </div>
-      <?php endif; ?>
+    <?php endif; ?>
    </header>
    <?php the_content(); ?>
 </article>
