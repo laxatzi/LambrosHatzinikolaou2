@@ -75,10 +75,13 @@ while ( have_posts() ) : the_post(); ?>
     <?php endif; ?>
 
   </nav>
-<?php endif; ?>
-<?php
+  <?php endif;
+  // If comments are open or there are comments, load the comment template
+  if ( comments_open() || get_comments_number() ) :
+      comments_template();
+    endif;
   endwhile;
-?>
+ ?>
 </div>
 </main>
 <?php
