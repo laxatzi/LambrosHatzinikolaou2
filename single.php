@@ -11,7 +11,7 @@
   <div class="container">
 <?php
 while ( have_posts() ) : the_post(); ?>
-<article <?php post_class(); ?> itemscope itemtype="https://schema.org/Article">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="https://schema.org/Article">
   <header class="entry-header"> 
     <?php if ( has_post_thumbnail() ) : ?>
         <div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
