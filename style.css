@@ -367,6 +367,48 @@ footer {
   font-size: 1.2rem;
 }
 
+
+#respond {
+  margin: 50px auto;
+}
+
+#commentform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#commentform p.comment-notes {
+  font-size: 0.95rem;
+}
+
+p.comment-form-comment,
+p.comment-form-author,
+p.comment-form-email,
+p.comment-form-url {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p.form-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+}
+
+p.comment-form-cookies-consent label {
+  font-size: 0.85rem !important;
+}
+
+p.comment-form-cookies-consent {
+  display: inline-block;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
 #sig {
   margin-left: 1%;
   margin-top: 1%;
