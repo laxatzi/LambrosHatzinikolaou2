@@ -79,6 +79,19 @@ while ( have_posts() ) : the_post(); ?>
           ] );
   ?>
 </div>
+
+  <!-- Footer: Tags, Share, etc. -->
+  <?php if ( get_post_type() === 'post' ) : ?>
+    <footer class="entry-footer">
+      <?php if ( has_tag() ) : ?>
+        <div class="entry-tags">
+          <span class="tags-label"><?php esc_html_e( 'Tags:', 'LambrosPersonalTheme' ); ?></span>
+          <?php the_tags( '', ', ', '' ); ?>
+        </div>
+       <?php endif; ?>
+     </footer>
+  <?php endif; ?>
+  
 </article>
 <!-- Navigation  section -->
 <?php
