@@ -7,7 +7,7 @@
  */
   get_header();
 ?>
-<main id="main-content" class='the_post' aria-labelledby="post-title-<?php the_ID(); ?>">
+<main id="main-content" class="the_post" aria-labelledby="post-title-<?php the_ID(); ?>">
   <div class="container">
 <?php
 while ( have_posts() ) : the_post(); ?>
@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
         /**
          * Hook: lambros_before_post_content
          */
-        do_action( 'lambros_before_post_content' );
+        do_action( "lambros_before_post_content" );
     ?>
   <!-- Featured Image -->
     <?php if ( has_post_thumbnail() ) : ?>
@@ -43,10 +43,10 @@ while ( have_posts() ) : the_post(); ?>
       <meta itemprop="dateModified" content="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>">
    
     <!-- Author -->
-      <?php if ( get_post_type() === 'post' ) : ?>
+      <?php if ( get_post_type() === "post" ) : ?>
         <span class="byline">
           <span class="author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <?php esc_html_e( 'by', 'LambrosPersonalTheme' ); ?>
+            <?php esc_html_e( "by", "LambrosPersonalTheme" ); ?>
             <a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" itemprop="url">
               <span itemprop="name"><?php echo esc_html( get_the_author() ); ?></span>
             </a>
@@ -55,17 +55,17 @@ while ( have_posts() ) : the_post(); ?>
       <?php endif; ?>
   
   <!-- Categories -->
-    <?php if ( get_post_type() === 'post' && has_category() ) : ?>
+    <?php if ( get_post_type() === "post" && has_category() ) : ?>
         <div class="entry-categories">
-          <span class="categories-label"><?php esc_html_e( 'Categories:', 'LambrosPersonalTheme' ); ?></span>
-          <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
+          <span class="categories-label"><?php esc_html_e( "Categories:", "LambrosPersonalTheme" ); ?></span>
+          <?php echo wp_kses_post( get_the_category_list( ", " ) ); ?>
         </div>
     <?php endif; ?>
     <?php
       /**
        * Hook: lambros_after_post_content
        */
-      do_action( 'lambros_after_post_content' );
+      do_action( "lambros_after_post_content" );
      ?>
   
    </header> <!-- .entry-header -->
@@ -81,11 +81,11 @@ while ( have_posts() ) : the_post(); ?>
 </div>
 
   <!-- Footer: Tags, Share, etc. -->
-  <?php if ( get_post_type() === 'post' ) : ?>
+  <?php if ( get_post_type() === "post" ) : ?>
     <footer class="entry-footer">
       <?php if ( has_tag() ) : ?>
         <div class="entry-tags">
-          <span class="tags-label"><?php esc_html_e( 'Tags:', 'LambrosPersonalTheme' ); ?></span>
+          <span class="tags-label"><?php esc_html_e( "Tags:", "LambrosPersonalTheme" ); ?></span>
           <?php the_tags( '', ', ', '' ); ?>
         </div>
        <?php endif; ?>
@@ -107,11 +107,11 @@ while ( have_posts() ) : the_post(); ?>
   $next_post = get_next_post();
   
   if ( $prev_post || $next_post ) : ?>
-  <nav class="post-navigation" aria-label="<?php esc_attr_e( 'Post navigation', 'LambrosPersonalTheme' ); ?>">
+  <nav class="post-navigation" aria-label="<?php esc_attr_e( "Post navigation", "LambrosPersonalTheme" ); ?>">
 
     <?php if ( $prev_post ) : ?>
       <div class="nav-previous">
-         <span class="nav-subtitle"><?php  esc_html_e( 'Previous Post', 'LambrosPersonalTheme' ); ?></span>
+         <span class="nav-subtitle"><?php  esc_html_e( "Previous Post", "LambrosPersonalTheme" ); ?></span>
           <a href="<?php echo esc_url( get_permalink( $prev_post ) ); ?>" rel="prev">
             <span class="nav-title"><?php echo esc_html( get_the_title( $prev_post ) ); ?></span>
           </a>
@@ -120,7 +120,7 @@ while ( have_posts() ) : the_post(); ?>
 
     <?php if ( $next_post ) : ?>
       <div class="nav-next">
-        <span class="nav-subtitle"><?php esc_html_e( 'Next Post', 'LambrosPersonalTheme' ); ?></span>
+        <span class="nav-subtitle"><?php esc_html_e( "Next Post", "LambrosPersonalTheme" ); ?></span>
         <a href="<?php echo esc_url( get_permalink( $next_post ) ); ?>" rel="next">
           <span class="nav-title"><?php echo esc_html( get_the_title( $next_post ) ); ?></span>
         </a>
