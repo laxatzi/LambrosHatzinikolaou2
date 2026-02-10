@@ -61,6 +61,13 @@ while ( have_posts() ) : the_post(); ?>
           <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
         </div>
     <?php endif; ?>
+    <?php
+      /**
+       * Hook: lambros_after_post_content
+       */
+      do_action( 'lambros_after_post_content' );
+     ?>
+  
    </header>
    <?php the_content(); ?>
 </article>
