@@ -28,15 +28,42 @@ while ( have_posts() ) : the_post(); ?>
    </header>
    <?php the_content(); ?>
 </article>
-<!-- Navigation OUTSIDE article -->
+<!-- Navigation  section -->
+<?php
+  $prev_post = get_previous_post();
+  $next_post = get_next_post();
+?>
+<?php if ( $prev_post || $next_post ) : ?>
   <nav class="post-navigation" aria-label="<?php esc_attr_e( 'Post navigation', 'LambrosPersonalTheme' ); ?>">
-    <div class="nav-previous">
-      <?php previous_post_link( '%link', esc_html__( 'Previous post: %title', 'LambrosPersonalTheme' ) ); ?>
-    </div>
-    <div class="nav-next">
-      <?php next_post_link( '%link', esc_html__( 'Next post: %title', 'LambrosPersonalTheme' ) ); ?>
-    </div>
+
+    <?php if ( $prev_post ) : ?>
+      <div class="nav-previous">
+        <a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">
+          <?php
+            printf(
+              esc_html__( 'Previous post: %s', 'LambrosPersonalTheme' ),
+              esc_html( get_the_title( $prev_post->ID ) )
+            );
+          ?>
+        </a>
+      </div>
+    <?php endif; ?>
+
+    <?php if ( $next_post ) : ?>
+      <div class="nav-next">
+        <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+          <?php
+            printf(
+              esc_html__( 'Next post: %s', 'LambrosPersonalTheme' ),
+              esc_html( get_the_title( $next_post->ID ) )
+            );
+          ?>
+        </a>
+      </div>
+    <?php endif; ?>
+
   </nav>
+<?php endif; ?>
 <?php
   endwhile;
 ?>
