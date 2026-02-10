@@ -1,4 +1,10 @@
 <?php
+/**
+ * Single Post Template
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
   get_header();
 ?>
 <main id="main-content" class='the_post' aria-labelledby="post-title-<?php the_ID(); ?>">
