@@ -31,7 +31,23 @@
           </time>
         <!-- Modified date (hidden visually, important for SEO) -->
           <meta itemprop="dateModified" content="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>" >
-
+          <?php
+              $published = get_the_date( 'U' );
+              $modified  = get_the_modified_date( 'U' );
+              $diff_days = ( $modified - $published ) / DAY_IN_SECONDS;
+  
+              // If modified more than 7 days after publish
+              if ( $diff_days > 7 ) :
+            ?>
+            <div class="updated-notice">
+              <?php
+                printf(
+                    esc_html__( 'Updated on %s', 'LambrosPersonalTheme' ),
+                    esc_html( get_the_modified_date( LAMBROS_DATE_FORMAT ) )
+                );
+              ?>
+            </div>
+            <?php endif; ?>
 
         <!-- Author -->
             <?php if ( get_post_type() === "post" ) : ?>
