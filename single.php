@@ -35,6 +35,9 @@ while ( have_posts() ) : the_post(); ?>
         <?php the_title(); ?>
       </h1>
     
+  <div class="header-info">
+    <div class="header-metadata">
+    
     <!-- Published Date -->
       <time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>" itemprop="datePublished">
         <?php echo esc_html( get_the_date() ); ?>
@@ -53,6 +56,8 @@ while ( have_posts() ) : the_post(); ?>
           </span>
         </span>
       <?php endif; ?>
+
+    </div> <!-- header-metadata -->
   
   <!-- Categories -->
     <?php if ( get_post_type() === "post" && has_category() ) : ?>
@@ -67,8 +72,8 @@ while ( have_posts() ) : the_post(); ?>
        */
       do_action( "lambros_after_post_content" );
      ?>
-  
-   </header> <!-- .entry-header -->
+    </div> <!-- .header-info --> 
+  </header> <!-- .entry-header -->
 
 <!-- Content -->
 <div class="entry-content" itemprop="articleBody">
