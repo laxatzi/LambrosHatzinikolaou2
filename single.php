@@ -23,7 +23,10 @@
     <nav class="post-navigation" aria-label="<?php esc_attr_e( 'Post navigation', 'LambrosPersonalTheme' ); ?>">
     <?php if ( $prev_post ) : ?>
       <div class="nav-previous">
-         <span class="nav-subtitle"><?php  esc_html_e( 'Previous Post', 'LambrosPersonalTheme' ); ?></span>
+         <span class="nav-subtitle">
+           <?php  esc_html_e( 'Previous Post', 'LambrosPersonalTheme' ); ?>
+           <span aria-hidden="true">← </span>
+         </span>
           <a href="<?php echo esc_url( get_permalink( $prev_post ) ); ?>" rel="prev">
             <span class="nav-title"><?php echo esc_html( get_the_title( $prev_post ) ); ?></span>
           </a>
@@ -32,7 +35,10 @@
 
     <?php if ( $next_post ) : ?>
       <div class="nav-next">
-        <span class="nav-subtitle"><?php esc_html_e( 'Next Post', 'LambrosPersonalTheme' ); ?></span>
+        <span class="nav-subtitle">
+          <?php esc_html_e( 'Next Post', 'LambrosPersonalTheme' ); ?>
+          <span aria-hidden="true"> →</span>
+        </span>
         <a href="<?php echo esc_url( get_permalink( $next_post ) ); ?>" rel="next">
           <span class="nav-title"><?php echo esc_html( get_the_title( $next_post ) ); ?></span>
         </a>
