@@ -6,7 +6,7 @@
       </a>
     </h3>
     <small>
-      <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
+      <?php echo get_the_date( get_option( LAMBROS_DATE_FORMAT ) ); ?>
     </small>
   </div>
  <p class="project-desc">
