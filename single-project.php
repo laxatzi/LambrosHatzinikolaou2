@@ -2,18 +2,19 @@
 
   get_header();
 ?>
-<main>
+<main id="main-content">
   <div class="container">
 <?php
   while(have_posts()) {
    the_post(); ?>
-   <div class="the-project">
-      <h3 class="project-title">
+    <div class="the-project">
+      <h1 class="project-title">
         <?php the_title(); ?>
-        <small><?php echo get_the_date( 'l F j, Y' ); ?></small>
-      </h3>
+
+      </h1>
     </div>
-   <?php the_content(); ?>
+    <small><?php echo get_the_date( LAMBROS_DATE_FORMAT ); ?></small>
+  <?php the_content(); ?>
 
 </div>
 </main>
