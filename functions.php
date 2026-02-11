@@ -384,6 +384,14 @@ function lambros_live_search_ajax() {
 add_action('wp_ajax_live_search', 'lambros_live_search_ajax');
 add_action('wp_ajax_nopriv_live_search', 'lambros_live_search_ajax');
 
+/**
+ * Get reading time icon SVG
+ */
+function lambros_get_reading_time_icon() {
+    return '<svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+}
+
+
 // CONSTANTS
 define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 
