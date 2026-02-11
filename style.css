@@ -857,6 +857,16 @@ span.byline {
   font-weight: lighter;
 }
 
+/* Updated Notice */
+.updated-notice {
+  margin: 0;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  font-style: oblique;
+}
+
+
 .entry-categories {
   margin-top: 10px;
   font-size: 0.95rem;
