@@ -5,6 +5,7 @@
          */
         do_action( "lambros_before_post_content" );
     ?>
+  <!-- Featured Image -->
     <?php if ( has_post_thumbnail() ) : ?>
       <div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <?php
@@ -25,8 +26,8 @@
         <div class="header-metadata">
 
         <!-- Published Date -->
-          <time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>" itemprop="datePublished">
-              <?php echo esc_html( get_the_date() ); ?>
+          <time datetime="<?php echo esc_attr( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>" itemprop="datePublished">
+              <?php echo esc_html( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>
           </time>
         <!-- Modified date (hidden visually, important for SEO) -->
           <meta itemprop="dateModified" content="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>" >
