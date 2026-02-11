@@ -803,6 +803,66 @@ time {
   list-style-type: none;
 }
 
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.entry-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.entry-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  max-width: 600px;
+}
+
+.single-metadata time {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.95rem;
+  font-weight: bold;
+  display: block;
+}
+
+.header-metadata span {
+  margin-top: 5px;
+}
+
+span.byline {
+  margin-top: 5px;
+  display: block;
+}
+
+.author span {
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.author span .author-name {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.entry-categories {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
 .contact-info_box {
   margin-top: 40px;
 }
