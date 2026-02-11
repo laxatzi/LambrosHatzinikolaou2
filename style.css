@@ -791,7 +791,7 @@ time {
   gap: 0.3rem;
   opacity: 0.8;
   font-size: 0.85em;
-  justify-content: center;
+  font-weight: bold;
 }
 
 .read-time-icon {
