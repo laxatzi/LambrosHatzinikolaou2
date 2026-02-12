@@ -354,12 +354,15 @@ function lambros_live_search_ajax() {
 
         while ($search->have_posts()) {
             $search->the_post();
-
             $title = get_the_title();
-            $highlighted = preg_replace(
-                '/(' . preg_quote($query, '/') . ')/i',
+          // Escape title FIRST, then highlight
+            $safe_title = esc_html( $title );
+          
+           // Now safely highlight the already-escaped content
+           $highlighted = preg_replace(
+                '/(' . preg_quote( esc_html($query), '/') . ')/i',
                 '<mark class="highlight">$1</mark>',
-                $title
+                $safe_title
             );
 
             echo '<li class="live-search-item" >';
