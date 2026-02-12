@@ -1,13 +1,13 @@
 <?php
   // Add custom fields to REST API responses
-  function my_custom_rest() {
+  function lambros_my_custom_rest() {
     register_rest_field('post', 'authorName', array(
     'get_callback' => function($obj,  $field=null, $req=null) {
       return get_the_author_meta('display_name', (int)$obj['author'] ?? 0);
     }
     ));
   }
-  add_action('rest_api_init', 'my_custom_rest');
+  add_action('rest_api_init', 'lambros_my_custom_rest');
 
 // Enqueue styles & scripts
 
@@ -78,7 +78,7 @@ remove_action('wp_footer', 'wpb_hook_javascript_footer');
 
 // Set the title tag automatically also loads the theme’s translated strings.
 
-function theme_slug_setup() {
+function lambros_theme_slug_setup() {
       load_theme_textdomain('LambrosPersonalTheme', get_template_directory().'/languages');
       add_theme_support( 'title-tag' );
       add_theme_support('post-thumbnails');
@@ -99,17 +99,17 @@ function theme_slug_setup() {
 
     }
 
-  add_action( 'after_setup_theme', 'theme_slug_setup' );
+  add_action( 'after_setup_theme', 'lambros_theme_slug_setup' );
 
 // add favicon
-function add_favicon_html() {
+function lambros_add_favicon_html() {
 if (has_site_icon()) return;
 ?>
   <link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/favicon.ico' ); ?>" />
   <link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/apple-touch-icon.png' ); ?>">
 <?php }
 
-add_action('wp_head', 'add_favicon_html', 5);
+add_action('wp_head', 'lambros_add_favicon_html', 5);
 
 //Alter the WordPress search to return ONLY posts, no pages
 add_action('pre_get_posts', function ($q) {
@@ -119,7 +119,7 @@ add_action('pre_get_posts', function ($q) {
 });
 
 // Add emoji to post titles
-function add_emoji_to_title_frontend( $title, $post_id ) {
+function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
     if ( get_post_type($post_id) !== 'post' ) return $title;
     if ( is_admin() || ! in_the_loop() || ! is_main_query() ) {
         return $title;
@@ -128,7 +128,7 @@ function add_emoji_to_title_frontend( $title, $post_id ) {
     return '✨ ' . $title;
 }
 
-add_filter( 'the_title', 'add_emoji_to_title_frontend', 10, 2 );
+add_filter( 'the_title', 'lambros_add_emoji_to_title_frontend', 10, 2 );
 
 // Manipulate archive titles to remove prefixes
 
