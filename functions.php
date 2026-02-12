@@ -114,11 +114,12 @@ if (has_site_icon()) return;
 add_action('wp_head', 'lambros_add_favicon_html', 5);
 
 //Alter the WordPress search to return ONLY posts, no pages
-add_action('pre_get_posts', function ($q) {
+function lambros_limit_search_to_posts( $q ) {
   if ( ! is_admin() && $q->is_main_query() && $q->is_search() ) {
     $q->set('post_type', 'post'); // only posts on front-end search
   }
-});
+}
+add_action('pre_get_posts', 'lambros_limit_search_to_posts');
 
 // Add emoji to post titles
 function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
