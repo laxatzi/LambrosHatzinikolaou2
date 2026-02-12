@@ -162,12 +162,16 @@ function lambros_log_404_errors() {
     if (is_404()) {
         $url = isset($_SERVER['REQUEST_URI']) ? esc_url_raw($_SERVER['REQUEST_URI']) : '';
         $referrer = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : 'Direct';
+        $ip = filter_var(
+                $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0',
+                FILTER_VALIDATE_IP
+            ) ?: 'Unknown';
 
         error_log(sprintf(
             '404 Error: %s | Referrer: %s | IP: %s',
             $url,
             $referrer,
-            $_SERVER['REMOTE_ADDR']
+            $ip
         ));
     }
 }
