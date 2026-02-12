@@ -235,14 +235,16 @@ function lambros_handle_contact_form() {
   $host = wp_parse_url( home_url(), PHP_URL_HOST );
   $host = $host ? preg_replace('/^www\./', '', $host) : 'example.com';
   $site_from = 'wordpress@' . $host; // or create a real mailbox like "noreply@yourdomain"
-
   $mail_subject = sprintf( __('Contact form: %s','LambrosPersonalTheme'), $subject );
-  $headers = [
-    'From: ' . get_bloginfo('name') . ' <' . $site_from . '>',
-    'Reply-To: ' . $name . ' <' . $email . '>',
-    'Content-Type: text/plain; charset=UTF-8',
-  ];
+  // Remove newlines from name to prevent header injection
+  $safe_name = str_replace( ["\r", "\n"], '', $name );
 
+  $headers = [
+      'From: ' . get_bloginfo( 'name' ) . ' <' . $site_from . '>',
+      'Reply-To: ' . $safe_name . ' <' . $email . '>',
+      'Content-Type: text/plain; charset=UTF-8',
+  ];
+  
 // Body as plain text
   $body  = "From: {$name} <{$email}>\n";
   $body .= "IP: {$ip}\n";
