@@ -292,7 +292,7 @@ function lambros_redirect_back() {
 // Preconnecting to fonts.googleapis.com and fonts.gstatic.com lets the browser do the slow handshake work early so your text styles apply faster.
 
 // Preconnect (and DNS prefetch fallback) for Google Fonts
-add_filter('wp_resource_hints', function ($urls, $relation_type) {
+ function lambros_preconnect_Google_Fonts ($urls, $relation_type) {
   if ( $relation_type === 'preconnect' ) {
     // Preconnect: opens socket + TLS early
     $urls[] = 'https://fonts.googleapis.com';
@@ -304,12 +304,33 @@ add_filter('wp_resource_hints', function ($urls, $relation_type) {
 
   if ( $relation_type === 'dns-prefetch' ) {
     // Light fallback for older browsers
-    $urls[] = 'https://fonts.googleapis.com';
-    $urls[] = 'https://fonts.gstatic.com';
+    $urls[] = '//fonts.googleapis.com';
+    $urls[] = '//fonts.gstatic.com';
   }
 
-  return $urls;
-}, 10, 2);
+  // De-duplicate resource hints (handle both strings and ['href' => ...] arrays)
+  $unique_urls = [];
+  $seen        = [];
+
+  foreach ( $urls as $entry ) {
+    if ( is_array( $entry ) && isset( $entry['href'] ) ) {
+      $key = strtolower( (string) $entry['href'] );
+    } else {
+      $key = strtolower( (string) $entry );
+    }
+
+    if ( isset( $seen[ $key ] ) ) {
+      continue;
+    }
+
+    $seen[ $key ]   = true;
+    $unique_urls[] = $entry;
+  }
+
+  return $unique_urls;
+}
+
+add_filter('wp_resource_hints', 'lambros_preconnect_Google_Fonts', 10, 2);
 
 // Reading time function
 
