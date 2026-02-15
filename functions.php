@@ -290,7 +290,6 @@ function lambros_redirect_back() {
   }
 
 // Preconnecting to fonts.googleapis.com and fonts.gstatic.com lets the browser do the slow handshake work early so your text styles apply faster.
-
 // Preconnect (and DNS prefetch fallback) for Google Fonts
  function lambros_preconnect_Google_Fonts ($urls, $relation_type) {
   if ( $relation_type === 'preconnect' ) {
@@ -331,6 +330,7 @@ function lambros_redirect_back() {
 }
 
 add_filter('wp_resource_hints', 'lambros_preconnect_Google_Fonts', 10, 2);
+
 
 // Reading time function
 
