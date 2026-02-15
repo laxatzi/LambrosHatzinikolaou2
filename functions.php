@@ -133,24 +133,31 @@ function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
 
 add_filter( 'the_title', 'lambros_add_emoji_to_title_frontend', 10, 2 );
 
-// Manipulate archive titles to remove prefixes
 
-add_filter('get_the_archive_title', function ($title) {
-    if (is_category()) {
-        $title = single_cat_title('', false);
-    } elseif (is_tag()) {
-        $title = single_tag_title('', false);
-    } elseif (is_author()) {
+/**
+ * Filter archive titles to remove default prefixes.
+ *
+ * @param string $title The archive title.
+ * @return string Filtered archive title.
+ */
+function lambros_filter_archive_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
         $author = get_queried_object();
-    $title  = $author ? '<span class="vcard">' . esc_html( $author->display_name ) . '</span>' : $title;
-  } elseif ( is_tax() ) {
-
-        $title = sprintf(__('%1$s'), single_term_title('', false));
-    } elseif (is_post_type_archive()) {
-        $title = post_type_archive_title('', false);
+        $title  = $author ? '<span class="vcard">' . esc_html( $author->display_name ) . '</span>' : $title;
+    } elseif ( is_tax() ) {
+        $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
     }
+
     return $title;
-});
+}
+
+add_filter( 'get_the_archive_title', 'lambros_filter_archive_title' );
 
 // Add noindex to 404 pages
 
