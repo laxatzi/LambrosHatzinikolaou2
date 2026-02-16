@@ -44,10 +44,10 @@ function lambros_enqueue_assets() {
     );
     wp_script_add_data('ionicons-legacy', 'nomodule', true);
 
-  // YOUR theme JS — note the CASE "JS/index.js"
+  // YOUR theme JS — note the CASE "js/index.js"
     wp_enqueue_script(
       'theme-scripts',
-      get_template_directory_uri() . '/JS/index.js',
+      get_template_directory_uri() . '/js/index.js',
       [],
       $ver,
       true
