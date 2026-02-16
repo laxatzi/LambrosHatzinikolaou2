@@ -192,8 +192,8 @@ add_action('wp', 'lambros_log_404_errors');
 // Contact form handler: nonce + honeypot + throttle + hardened mail headers
 
 function lambros_handle_contact_form() {
-    // This function is now empty because we moved the code to an anonymous function below.
-   // Only handle our form posts
+  // This function is now empty because we moved the code to an anonymous function below.
+  // Only handle our form posts
   if ( empty($_POST['contact_nonce']) || ! isset($_POST['submit']) ) {
     return;
   }
@@ -264,7 +264,6 @@ function lambros_handle_contact_form() {
 // Send
    $to = get_option('admin_email');
   // Change to a custom recipient if you prefer
- // $to = 'laxatzi@gmail.com';
   $ok = wp_mail( $to, $mail_subject, $body, $headers );
 
  lambros_set_contact_message(
@@ -391,7 +390,7 @@ function lambros_live_search_ajax() {
           // Escape title FIRST, then highlight
             $safe_title = esc_html( $title );
           
-           // Now safely highlight the already-escaped content
+     // Now safely highlight the already-escaped content
            $highlighted = preg_replace(
                 '/(' . preg_quote( esc_html($query), '/') . ')/i',
                 '<mark class="highlight">$1</mark>',
@@ -407,9 +406,6 @@ function lambros_live_search_ajax() {
             }
 
             echo '<a href="' . esc_url(get_permalink()) . '">' . $highlighted . '</a>';
-
-            // echo '<span class="type-label">' . esc_html(ucfirst(get_post_type())) . '</span>';
-
             echo '</li>';
         }
 
