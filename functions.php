@@ -16,6 +16,7 @@
   }
   add_action('rest_api_init', 'lambros_my_custom_rest');
 
+
 /**
  * Enqueue the theme’s stylesheets and JavaScript assets.
  *
@@ -35,7 +36,6 @@
  *
  * @return void
  */
-
 
 function lambros_enqueue_assets() {
 
@@ -118,6 +118,7 @@ remove_action('wp_footer', 'wpb_hook_javascript_footer');
  *
  * @return void
  */
+
 function lambros_theme_slug_setup() {
       load_theme_textdomain('LambrosPersonalTheme', get_template_directory().'/languages');
       add_theme_support( 'title-tag' );
@@ -139,7 +140,8 @@ function lambros_theme_slug_setup() {
 
     }
 
-  add_action( 'after_setup_theme', 'lambros_theme_slug_setup' );
+add_action( 'after_setup_theme', 'lambros_theme_slug_setup' );
+
 
 /**
  * Outputs fallback favicon and Apple touch icon links in the document head.
@@ -155,6 +157,7 @@ function lambros_theme_slug_setup() {
  *
  * @return void
  */
+
 function lambros_add_favicon_html() {
 if (has_site_icon()) return;
 ?>
@@ -163,6 +166,7 @@ if (has_site_icon()) return;
 <?php }
 
 add_action('wp_head', 'lambros_add_favicon_html', 5);
+
 
 /**
  * Restrict front-end search results to standard posts only.
@@ -185,6 +189,7 @@ function lambros_limit_search_to_posts( $q ) {
   }
 }
 add_action('pre_get_posts', 'lambros_limit_search_to_posts');
+
 
 // Add emoji to post titles
 function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
@@ -224,6 +229,7 @@ function lambros_filter_archive_title( $title ) {
 
 add_filter( 'get_the_archive_title', 'lambros_filter_archive_title' );
 
+
 // Add noindex to 404 pages
 
 add_action('wp_head', function () {
@@ -250,6 +256,7 @@ add_action('wp_head', function () {
  *
  * @return void
  */
+
 function lambros_log_404_errors() {
     if (is_404()) {
         $url = isset($_SERVER['REQUEST_URI']) ? esc_url_raw($_SERVER['REQUEST_URI']) : '';
@@ -301,7 +308,6 @@ add_action('wp', 'lambros_log_404_errors');
  *
  * @return void Redirects back to the referring page after processing the form.
  */
-
 
 function lambros_handle_contact_form() {
   // This function is now empty because we moved the code to an anonymous function below.
@@ -390,6 +396,7 @@ function lambros_handle_contact_form() {
 
 add_action('template_redirect', 'lambros_handle_contact_form' );
 
+
 // --- Helpers ---
 /**
  * Store a temporary contact form message for display after redirect.
@@ -408,6 +415,7 @@ function lambros_set_contact_message($type, $text) {
     set_transient('contact_msg', ['type'=>$type,'text'=>$text], 30);
   }
 
+
 /**
  * Redirect the user back to the referring page and stop execution.
  *
@@ -422,6 +430,7 @@ function lambros_redirect_back() {
   wp_safe_redirect( wp_get_referer() ?: home_url('/') );
   exit;
   }
+
 
 // Preconnecting to fonts.googleapis.com and fonts.gstatic.com lets the browser do the slow handshake work early so your text styles apply faster.
 // Preconnect (and DNS prefetch fallback) for Google Fonts
@@ -498,6 +507,7 @@ function lambros_live_search_scripts() {
 }
 add_action('wp_enqueue_scripts', 'lambros_live_search_scripts');
 
+
 // AJAX handler for live search
 
 function lambros_live_search_ajax() {
@@ -554,6 +564,7 @@ function lambros_live_search_ajax() {
 }
 add_action('wp_ajax_live_search', 'lambros_live_search_ajax');
 add_action('wp_ajax_nopriv_live_search', 'lambros_live_search_ajax');
+
 
 /**
  * Get reading time icon SVG
@@ -619,6 +630,7 @@ function lambros_customize_social_links( $wp_customize ) {
     }
 }
 add_action( 'customize_register', 'lambros_customize_social_links' );
+
 
 // Make the Front-Page fallback editable via the Customizer
 function lambros_customize_hero_intro( $wp_customize ) {
