@@ -8,11 +8,23 @@
    * @return void
    */
   function lambros_my_custom_rest() {
-    register_rest_field('post', 'authorName', array(
-    'get_callback' => function($obj,  $field=null, $req=null) {
-      return get_the_author_meta('display_name', (int)$obj['author'] ?? 0);
-    }
-    ));
+    register_rest_field( 'post', 'authorName', [
+        'get_callback' => function( $post ) {
+            if ( empty( $post['author'] ) ) {
+                return '';
+            }
+
+            $author_id = absint( $post['author'] );
+            $author_name = get_the_author_meta( 'display_name', $author_id );
+
+            return $author_name ?: '';
+        },
+        'schema' => [
+            'description' => __( 'Post author display name', 'LambrosPersonalTheme' ),
+            'type'        => 'string',
+            'context'     => [ 'view', 'edit' ],
+        ],
+    ] );
   }
   add_action('rest_api_init', 'lambros_my_custom_rest');
 
