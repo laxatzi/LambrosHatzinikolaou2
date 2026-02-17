@@ -51,7 +51,7 @@ function lambros_enqueue_assets() {
     );
     wp_script_add_data('ionicons-legacy', 'nomodule', true);
 
-  // YOUR theme JS — note the CASE "js/index.js"
+// YOUR theme JS — note the CASE "js/index.js"
     wp_enqueue_script(
       'theme-scripts',
       get_template_directory_uri() . '/js/index.js',
@@ -60,7 +60,16 @@ function lambros_enqueue_assets() {
       true
     );
 
-  // Provide root URL to JS
+// Enqueue newsletter script
+    wp_enqueue_script(
+       'newsletter-script',
+        get_template_directory_uri() . '/js/newsletter.js',
+        [],
+        null,
+        true
+    );
+
+// Provide root URL to JS
     wp_localize_script('theme-scripts', 'website_data', [
       'root_url' => home_url('/'),
     ]);
