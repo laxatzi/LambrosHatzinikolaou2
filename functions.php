@@ -349,6 +349,16 @@ function lambros_set_contact_message($type, $text) {
     set_transient('contact_msg', ['type'=>$type,'text'=>$text], 30);
   }
 
+/**
+ * Redirect the user back to the referring page and stop execution.
+ *
+ * This helper safely redirects the user to the page they came from. If the
+ * referrer is missing or invalid, it falls back to the site’s home URL.
+ * Execution is terminated immediately after the redirect.
+ *
+ * @return void
+ */
+
 function lambros_redirect_back() {
   wp_safe_redirect( wp_get_referer() ?: home_url('/') );
   exit;
