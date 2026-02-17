@@ -549,16 +549,25 @@ add_filter('wp_resource_hints', 'lambros_preconnect_Google_Fonts', 10, 2);
  */
 
 function lambros_get_reading_time( $post_id = null ) {
-    $post_id = $post_id ?: get_the_ID();
+  $post_id = $post_id ?: get_the_ID();
     $content = get_post_field( 'post_content', $post_id );
+
+    // If content is empty
+    if ( empty( $content ) ) {
+        return 0;
+    }
 
     // Count words
     $word_count = str_word_count( wp_strip_all_tags( $content ) );
 
+   if ( $word_count < 200 ) {
+        return 1; // Minimum 1 minute for very short posts
+    }
+
     // Average reading speed: 200 wpm
     $minutes = ceil( $word_count / 200 );
 
-    return $minutes;
+    return (int) $minutes;
 }
 
 
