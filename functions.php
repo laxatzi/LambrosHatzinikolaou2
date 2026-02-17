@@ -241,8 +241,38 @@ function lambros_log_404_errors() {
 add_action('wp', 'lambros_log_404_errors');
 
 
-//This processes the form safely, throttles repeat posts, and sets messages via a transient. It posts back to the same page.
-// Contact form handler: nonce + honeypot + throttle + hardened mail headers
+/**
+ * Process and validate submissions from the theme’s contact form.
+ *
+ * This handler runs only when the contact form is submitted with the expected
+ * nonce and submit field. It performs multiple security checks including CSRF
+ * validation, a honeypot field, and a short IP‑based throttle to reduce spam.
+ * All user input is sanitized and validated before an email is constructed
+ * using hardened headers to avoid header injection and mail delivery issues.
+ *
+ * Workflow:
+ * 1. Confirm the request belongs to this form using a nonce and submit check.
+ * 2. Validate the nonce to prevent CSRF attacks.
+ * 3. Apply a 60‑second throttle per IP address using transients.
+ * 4. Reject submissions where the honeypot field is filled.
+ * 5. Sanitize and validate all fields (name, email, subject, message).
+ * 6. Build safe email headers using a site‑based From address and a sanitized
+ *    Reply‑To header.
+ * 7. Send the message to the site administrator and store a success or error
+ *    message in a transient.
+ * 8. Redirect the user back to the referring page.
+ *
+ * Security considerations:
+ * - Prevents CSRF via wp_verify_nonce.
+ * - Blocks automated bots with a honeypot field.
+ * - Limits rapid repeat submissions with a transient‑based throttle.
+ * - Sanitizes all user input and strips tags from the message body.
+ * - Removes newline characters from the Reply‑To name to prevent header injection.
+ * - Uses a domain‑safe From header to avoid SPF and DMARC failures.
+ *
+ * @return void Redirects back to the referring page after processing the form.
+ */
+
 
 function lambros_handle_contact_form() {
   // This function is now empty because we moved the code to an anonymous function below.
