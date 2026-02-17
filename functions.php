@@ -432,8 +432,28 @@ function lambros_redirect_back() {
   }
 
 
-// Preconnecting to fonts.googleapis.com and fonts.gstatic.com lets the browser do the slow handshake work early so your text styles apply faster.
-// Preconnect (and DNS prefetch fallback) for Google Fonts
+/**
+ * Adds preconnect and dns-prefetch resource hints for Google Fonts.
+ *
+ * This function optimizes the loading of Google Fonts by establishing early
+ * connections to the required domains. It supports both preconnect (which opens
+ * a socket and establishes TLS early) and dns-prefetch (a lighter fallback for
+ * older browsers) relation types.
+ *
+ * The function also deduplicates resource hints to prevent duplicate entries,
+ * handling both string URLs and array-based URL configurations.
+ *
+ * @param array $urls          An array of URLs or URL configurations to be processed.
+ *                             Each entry can be either a string or an associative array
+ *                             with an 'href' key and additional attributes.
+ * @param string $relation_type The type of resource hint relation. Accepts 'preconnect'
+ *                             or 'dns-prefetch'.
+ *
+ * @return array An array of deduplicated URL entries filtered by relation type.
+ *               Returns preconnect and dns-prefetch hints with appropriate formatting
+ *               based on the specified relation type.
+ */
+
  function lambros_preconnect_Google_Fonts ($urls, $relation_type) {
   if ( $relation_type === 'preconnect' ) {
     // Preconnect: opens socket + TLS early
