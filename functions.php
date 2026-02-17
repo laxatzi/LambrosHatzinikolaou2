@@ -719,7 +719,26 @@ function lambros_customize_social_links( $wp_customize ) {
 add_action( 'customize_register', 'lambros_customize_social_links' );
 
 
-// Make the Front-Page fallback editable via the Customizer
+/**
+ * Register a Customizer section, setting, and control for the homepage hero intro text.
+ *
+ * This function adds a dedicated Customizer section that allows users to edit
+ * the fallback intro text displayed on the front page. It registers a setting
+ * that accepts HTML (sanitized through wp_kses_post) and exposes it through a
+ * textarea control inside the new "Hero Intro Text" section.
+ *
+ * Behavior:
+ * - Creates a Customizer section with a title, priority, and description.
+ * - Registers a setting for storing the intro text, allowing safe HTML.
+ * - Adds a textarea control so users can edit the intro text directly.
+ *
+ * Intended to be hooked into the 'customize_register' action.
+ *
+ * @param WP_Customize_Manager $wp_customize The Customizer manager instance.
+ *
+ * @return void
+ */
+
 function lambros_customize_hero_intro( $wp_customize ) {
   $wp_customize->add_section( 'lambros_hero_intro', [
     'title'       => __( 'Hero Intro Text', 'LambrosPersonalTheme' ),
