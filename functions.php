@@ -495,7 +495,18 @@ function lambros_redirect_back() {
 add_filter('wp_resource_hints', 'lambros_preconnect_Google_Fonts', 10, 2);
 
 
-// Reading time function
+/**
+ * Calculate the estimated reading time for a post
+ *
+ * @param int|null $post_id The post ID to calculate reading time for.
+ *                          If null, uses the current post ID.
+ *
+ * @return int The estimated reading time in minutes (rounded up).
+ *
+ * @example
+ *     $reading_time = lambros_get_reading_time( 42 );
+ *     echo $reading_time; // Output: 5
+ */
 
 function lambros_get_reading_time( $post_id = null ) {
     $post_id = $post_id ?: get_the_ID();
