@@ -85,8 +85,24 @@ add_action( 'wp_enqueue_scripts', 'lambros_enqueue_newsletter_script' );
 // If you previously injected inline JS in the footer, keep this to avoid duplicate/old code
 remove_action('wp_footer', 'wpb_hook_javascript_footer');
 
-// Set the title tag automatically also loads the theme’s translated strings.
 
+/**
+ * Sets up theme defaults and registers supported WordPress features.
+ *
+ * This function is hooked into `after_setup_theme` and performs the
+ * initial configuration for the theme. It:
+ *
+ * - Loads the theme text domain for translation.
+ * - Enables support for the document title tag.
+ * - Enables featured images (post thumbnails).
+ * - Adds HTML5 markup support for specific elements.
+ * - Registers support for a custom logo.
+ * - Registers navigation menu locations.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
 function lambros_theme_slug_setup() {
       load_theme_textdomain('LambrosPersonalTheme', get_template_directory().'/languages');
       add_theme_support( 'title-tag' );
