@@ -210,12 +210,16 @@ add_action('wp_head', 'lambros_add_favicon_html', 5);
  * @return void
  */
 
-function lambros_limit_search_to_posts( $q ) {
-  if ( ! is_admin() && $q->is_main_query() && $q->is_search() ) {
-    $q->set('post_type', 'post'); // only posts on front-end search
-  }
+function lambros_modify_search_query( $query ) {
+    // Only modify front-end main search queries
+    if ( is_admin() || ! $query->is_main_query() || ! $query->is_search() ) {
+        return;
+    }
+
+    // Exclude pages from search results
+    $query->set( 'post_type', 'post' );
 }
-add_action('pre_get_posts', 'lambros_limit_search_to_posts');
+add_action( 'pre_get_posts', 'lambros_modify_search_query' );
 
 
 // Add emoji to post titles
