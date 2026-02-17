@@ -522,7 +522,15 @@ function lambros_get_reading_time( $post_id = null ) {
 }
 
 
-//Live search endpoint for AJAX requests
+/**
+ * Enqueue live search scripts and localize AJAX URL.
+ *
+ * Registers and enqueues the live search JavaScript file with dependencies.
+ * Localizes the script with the WordPress AJAX URL for frontend requests.
+ *
+ * @return void
+ */
+
 function lambros_live_search_scripts() {
     wp_enqueue_script(
         'live-search',
