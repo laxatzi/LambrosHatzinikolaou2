@@ -1,5 +1,12 @@
 <?php
-  // Add custom fields to REST API responses
+  /**
+   * Registers a custom REST field for posts to expose the author's display name.
+   *
+   * Adds an 'authorName' field to the REST API for post endpoints that returns
+   * the display name of the post author.
+   *
+   * @return void
+   */
   function lambros_my_custom_rest() {
     register_rest_field('post', 'authorName', array(
     'get_callback' => function($obj,  $field=null, $req=null) {
