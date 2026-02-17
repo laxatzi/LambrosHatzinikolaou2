@@ -201,8 +201,25 @@ add_action('wp_head', function () {
   if (is_404()) echo '<meta name="robots" content="noindex,follow">';
 }, 5);
 
+
 /**
- * Log 404 errors for debugging
+ * Logs details of 404 (Not Found) errors to the PHP error log.
+ *
+ * This function checks whether the current request results in a 404
+ * response. If so, it collects relevant request information including:
+ *
+ * - The requested URL.
+ * - The referring URL (if available).
+ * - The visitor's IP address (validated).
+ *
+ * The collected data is sanitized and written to the server's error log
+ * using `error_log()` for debugging and monitoring purposes.
+ *
+ * Intended to be hooked into an appropriate action such as `template_redirect`.
+ *
+ * @since 1.0.0
+ *
+ * @return void
  */
 function lambros_log_404_errors() {
     if (is_404()) {
