@@ -73,7 +73,7 @@ function lambros_my_custom_rest() {
 
 function lambros_enqueue_assets() {
 
-    $ver = wp_get_theme()->get('Version') ?: null;
+    $ver = 'LAMBROS_THEME_VERSION'
 
 // Styles
     //Adding a version (cache busting)
