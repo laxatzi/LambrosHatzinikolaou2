@@ -332,6 +332,19 @@ function lambros_handle_contact_form() {
 add_action('template_redirect', 'lambros_handle_contact_form' );
 
 // --- Helpers ---
+/**
+ * Store a temporary contact form message for display after redirect.
+ *
+ * This helper saves a short-lived status message (success or error) in a
+ * transient so it can be shown to the user after the form handler redirects.
+ * The message is expected to be retrieved and displayed on the next page load.
+ *
+ * @param string $type Message type, usually 'success' or 'error'.
+ * @param string $text Human-readable message to show to the user.
+ *
+ * @return void
+ */
+
 function lambros_set_contact_message($type, $text) {
     set_transient('contact_msg', ['type'=>$type,'text'=>$text], 30);
   }
