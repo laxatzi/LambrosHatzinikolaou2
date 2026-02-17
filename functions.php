@@ -16,7 +16,26 @@
   }
   add_action('rest_api_init', 'lambros_my_custom_rest');
 
-// # Enqueue styles & scripts
+/**
+ * Enqueue the theme’s stylesheets and JavaScript assets.
+ *
+ * This function loads all front-end assets required by the theme, including
+ * the main stylesheet, Google Fonts, Ionicons (module and legacy versions),
+ * the primary theme script, and the newsletter script. It also passes useful
+ * data to JavaScript through wp_localize_script.
+ *
+ * Behavior:
+ * - Retrieves the active theme version and uses it for cache busting.
+ * - Enqueues the main stylesheet and Google Fonts.
+ * - Loads Ionicons in both module and nomodule formats for broad browser support.
+ * - Enqueues the theme’s main JavaScript file and the newsletter script.
+ * - Localizes the theme script with the site’s root URL for use in JS.
+ *
+ * Intended to be hooked into the 'wp_enqueue_scripts' action.
+ *
+ * @return void
+ */
+
 
 function lambros_enqueue_assets() {
 
