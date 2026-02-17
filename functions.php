@@ -547,7 +547,34 @@ function lambros_live_search_scripts() {
 add_action('wp_enqueue_scripts', 'lambros_live_search_scripts');
 
 
-// AJAX handler for live search
+/**
+ * Handles AJAX live search functionality for posts, pages, and projects.
+ *
+ * Retrieves search query and post type from GET parameters, sanitizes input,
+ * and queries for matching posts. Displays results in an HTML list with
+ * highlighted search terms and optional post thumbnails.
+ *
+ * @return void Outputs HTML list of search results or "no results" message,
+ *              then terminates execution with wp_die().
+ *
+ * @since 1.0.0
+ *
+ * @global wpdb $wpdb WordPress database object.
+ *
+ * @uses sanitize_text_field() To sanitize GET parameters.
+ * @uses WP_Query To query posts by search term and type.
+ * @uses get_the_title() To retrieve post title.
+ * @uses esc_html() To escape HTML content.
+ * @uses preg_quote() To escape regex special characters.
+ * @uses has_post_thumbnail() To check if post has featured image.
+ * @uses get_the_post_thumbnail() To retrieve post thumbnail HTML.
+ * @uses get_the_ID() To retrieve current post ID.
+ * @uses esc_url() To escape permalink URL.
+ * @uses get_permalink() To retrieve post permalink.
+ * @uses esc_html__() To translate and escape no results message.
+ * @uses wp_reset_postdata() To restore original post data.
+ * @uses wp_die() To terminate execution.
+ */
 
 function lambros_live_search_ajax() {
     $query = isset($_GET['q']) ? sanitize_text_field($_GET['q']) : '';
