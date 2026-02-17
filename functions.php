@@ -126,7 +126,20 @@ function lambros_theme_slug_setup() {
 
   add_action( 'after_setup_theme', 'lambros_theme_slug_setup' );
 
-// add favicon
+/**
+ * Outputs fallback favicon and Apple touch icon links in the document head.
+ *
+ * This function checks whether a Site Icon has been set in the WordPress
+ * Customizer. If one exists, no additional markup is added. If not, it
+ * prints default <link> tags pointing to favicon assets located in the
+ * theme directory.
+ *
+ * Intended to be hooked into `wp_head`.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
 function lambros_add_favicon_html() {
 if (has_site_icon()) return;
 ?>
