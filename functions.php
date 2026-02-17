@@ -644,7 +644,28 @@ function lambros_get_reading_time_icon() {
 define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 
 // CUSTOMIZER SETTINGS
-  //Social Links panel in the Customizer
+
+/**
+ * Customize social links in the WordPress customizer.
+ *
+ * Adds a new customizer section that allows users to input URLs for their social media profiles.
+ * Only accepts URLs from whitelisted domains (X, LinkedIn, GitHub, YouTube, Instagram, and WhatsApp).
+ * Empty fields are not rendered in the frontend.
+ *
+ * @param WP_Customize_Manager $wp_customize The customizer object passed by reference.
+ *
+ * @return void
+ *
+ * @since 1.0.0
+ *
+ * @uses wp_customize->add_section() Registers a new customizer section for social links.
+ * @uses wp_customize->add_setting() Registers customizer settings for each social network.
+ * @uses wp_customize->add_control() Creates UI controls for each social network URL input.
+ * @uses lambros_validate_social_url() Validates and sanitizes social media URLs against allowed domains.
+ *
+ * @see lambros_validate_social_url()
+ */
+
 function lambros_customize_social_links( $wp_customize ) {
 
     $wp_customize->add_section( 'lambros_social_links', [
