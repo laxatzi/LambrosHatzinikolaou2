@@ -1,13 +1,28 @@
 <?php
-  /**
-   * Registers a custom REST field for posts to expose the author's display name.
-   *
-   * Adds an 'authorName' field to the REST API for post endpoints that returns
-   * the display name of the post author.
-   *
-   * @return void
-   */
-  function lambros_my_custom_rest() {
+/**
+ * Register a custom REST API field that exposes the post author's display name.
+ *
+ * This function adds a new field named "authorName" to the REST API response
+ * for the "post" post type. The field is populated through a callback that
+ * retrieves the author's display name based on the post's author ID.
+ *
+ * Behavior:
+ * - Runs during REST API initialization.
+ * - Adds a read-only field "authorName" to each post object.
+ * - Uses a callback to safely fetch and return the author's display name.
+ * - Returns an empty string if no author is found.
+ *
+ * Schema:
+ * - Description: Human-readable author display name.
+ * - Type: string
+ * - Context: view, edit
+ *
+ * Intended to be hooked into the 'rest_api_init' action.
+ *
+ * @return void
+ */
+
+function lambros_my_custom_rest() {
     register_rest_field( 'post', 'authorName', [
         'get_callback' => function( $post ) {
             if ( empty( $post['author'] ) ) {
