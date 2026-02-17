@@ -149,7 +149,21 @@ if (has_site_icon()) return;
 
 add_action('wp_head', 'lambros_add_favicon_html', 5);
 
-//Alter the WordPress search to return ONLY posts, no pages
+/**
+ * Restrict front-end search results to standard posts only.
+ *
+ * This helper checks the main query on the front-end and, when a search
+ * request is detected, forces the query to return only items of the
+ * "post" post type. This prevents pages or custom post types from
+ * appearing in search results unless explicitly allowed elsewhere.
+ *
+ * Intended to be used with the "pre_get_posts" action.
+ *
+ * @param WP_Query $q The query instance being modified.
+ *
+ * @return void
+ */
+
 function lambros_limit_search_to_posts( $q ) {
   if ( ! is_admin() && $q->is_main_query() && $q->is_search() ) {
     $q->set('post_type', 'post'); // only posts on front-end search
