@@ -1,4 +1,11 @@
 <?php
+
+// CONSTANTS
+define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
+define( 'LAMBROS_DATE_FORMAT', 'F j, Y' );
+define( 'LAMBROS_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
+
+
 /**
  * Register a custom REST API field that exposes the post author's display name.
  *
@@ -688,9 +695,6 @@ function lambros_get_reading_time_icon() {
     return '<svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
 }
 
-
-// CONSTANTS
-define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 
 // CUSTOMIZER SETTINGS
 
