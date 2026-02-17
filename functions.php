@@ -220,11 +220,20 @@ add_action('pre_get_posts', 'lambros_limit_search_to_posts');
 
 // Add emoji to post titles
 function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
-    if ( get_post_type($post_id) !== 'post' ) return $title;
+     // Only on singular post pages, in the main content area
+    if ( ! is_singular( 'post' ) ) {
+        return $title;
+    }
+    
     if ( is_admin() || ! in_the_loop() || ! is_main_query() ) {
         return $title;
     }
-
+    
+    // Optional: Make it toggleable via post meta
+    if ( get_post_meta( $post_id, '_disable_emoji', true ) ) {
+        return $title;
+    }
+    
     return '✨ ' . $title;
 }
 
