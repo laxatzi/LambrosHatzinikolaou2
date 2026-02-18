@@ -857,6 +857,24 @@ function lambros_register_social_network_setting( $wp_customize, $network, $doma
 }
 
 
+/**
+ * Get saved social link URL for a specific network
+ *
+ * Helper function to retrieve social links from theme mods.
+ * Returns empty string if not set or invalid.
+ *
+ * @param string $network Network slug (e.g., 'github').
+ *
+ * @return string The saved URL or empty string.
+ *
+ * @since 1.0.0
+ */
+function lambros_get_social_link( $network ) {
+    return get_theme_mod( "lambros_{$network}_url", '' );
+}
+
+
+
 
 
 
