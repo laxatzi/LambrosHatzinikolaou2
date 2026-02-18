@@ -52,9 +52,11 @@
     timer = setTimeout(fetchResults, 250);
   });
 
-  typeSelect.addEventListener("change", fetchResults);
+   if (typeSelect) {
+    typeSelect.addEventListener("change", fetchResults);
+  }
+  
 
- 
   // Keyboard navigation for result types
   input.addEventListener("keydown", function (e) {
     const items = resultsBox.querySelectorAll(".live-search-item");
