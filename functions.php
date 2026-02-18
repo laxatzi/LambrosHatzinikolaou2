@@ -598,6 +598,7 @@ function lambros_live_search_scripts() {
 
     wp_localize_script('live-search', 'LiveSearch', [
         'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce( 'live_search_nonce' ),                       
     ]);
 }
 add_action('wp_enqueue_scripts', 'lambros_live_search_scripts');
@@ -633,6 +634,9 @@ add_action('wp_enqueue_scripts', 'lambros_live_search_scripts');
  */
 
 function lambros_live_search_ajax() {
+// Verify nonce
+    check_ajax_referer( 'live_search_nonce', 'nonce' );
+    
     $query = isset($_GET['q']) ? sanitize_text_field($_GET['q']) : '';
     $type  = isset($_GET['type']) ? sanitize_text_field($_GET['type']) : 'any';
 
