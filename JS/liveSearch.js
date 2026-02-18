@@ -10,7 +10,7 @@
 
   function fetchResults() {
     const query = input.value.trim();
-    const type = typeSelect ? typeSelect.value: 'Any';
+    const type = typeSelect ? typeSelect.value: 'any';
 
     if (query.length < 2) {
       resultsBox.innerHTML = "";
@@ -18,8 +18,13 @@
       return;
     }
 
-    const url = new URL(LiveSearch.ajax_url); 
-    url.search = new URLSearchParams({ action: "live_search", q: query, type: type, }).toString();
+    const url = new URL(LiveSearch.ajax_url);
+    url.search = new URLSearchParams({
+      action: "live_search",
+      q: query,
+      type: type,
+      nonce: LiveSearch.nonce,
+    }).toString();
 
     resultsBox.innerHTML = "<p class='loading'>Searching…</p>";
     resultsBox.classList.add("open");
