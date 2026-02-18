@@ -298,6 +298,44 @@ function lambros_emoji_meta_box_callback( $post ) {
 
 
 
+/**
+ * Save emoji toggle meta box data
+ *
+ * @param int $post_id The post ID.
+ *
+ * @return void
+ */
+function lambros_save_emoji_meta( $post_id ) {
+    // Check if nonce is set
+    if ( ! isset( $_POST['lambros_emoji_nonce'] ) ) {
+        return;
+    }
+
+    // Verify nonce
+    if ( ! wp_verify_nonce( $_POST['lambros_emoji_nonce'], 'lambros_save_emoji_meta' ) ) {
+        return;
+    }
+
+    // Don't save during autosave
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    // Check user permissions
+    if ( ! current_user_can( 'edit_post', $post_id ) ) {
+        return;
+    }
+
+    // Save or delete the meta based on checkbox state
+    if ( isset( $_POST['lambros_disable_emoji'] ) && $_POST['lambros_disable_emoji'] === '1' ) {
+        update_post_meta( $post_id, '_disable_emoji', '1' );
+    } else {
+        delete_post_meta( $post_id, '_disable_emoji' );
+    }
+}
+add_action( 'save_post', 'lambros_save_emoji_meta' );
+
+
 
 /**
  * Filter archive titles to remove default prefixes.
