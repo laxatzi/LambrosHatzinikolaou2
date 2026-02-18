@@ -762,3 +762,106 @@ function lambros_validate_social_url( $url, $allowed_domain ) {
     return ''; // Domain doesn't match
 }
 
+
+/**
+ * Get social network configuration
+ *
+ * Returns array of supported social networks with their domains.
+ * Centralized so it can be used by multiple functions.
+ *
+ * @return array Associative array of network slug => domain.
+ *
+ * @since 1.0.0
+ */
+function lambros_get_social_networks() {
+    return [
+        'x'         => 'x.com',
+        'linkedin'  => 'linkedin.com',
+        'github'    => 'github.com',
+        'youtube'   => 'youtube.com',
+        'instagram' => 'instagram.com',
+        'whatsapp'  => 'wa.me',
+    ];
+}
+
+
+/**
+ * Register social links customizer section and settings
+ *
+ * Creates a customizer section with URL inputs for each supported social network.
+ * Only accepts URLs from whitelisted domains. Empty fields are ignored in frontend.
+ *
+ * @param WP_Customize_Manager $wp_customize WordPress customizer object.
+ *
+ * @return void
+ *
+ * @since 1.0.0
+ */
+function lambros_customize_social_links( $wp_customize ) {
+    // Add customizer section
+    $wp_customize->add_section( 'lambros_social_links', [
+        'title'       => __( 'Social Links', 'LambrosPersonalTheme' ),
+        'priority'    => 160,
+        'description' => __( 'Add your social media profile URLs. Empty fields will not be displayed.', 'LambrosPersonalTheme' ),
+    ] );
+
+    // Get social networks configuration
+    $social_networks = lambros_get_social_networks();
+
+    // Register settings and controls for each network
+    foreach ( $social_networks as $network => $domain ) {
+        lambros_register_social_network_setting( $wp_customize, $network, $domain );
+    }
+}
+add_action( 'customize_register', 'lambros_customize_social_links' );
+
+
+/**
+ * Register a single social network setting and control
+ *
+ * @param WP_Customize_Manager $wp_customize WordPress customizer object.
+ * @param string               $network      Network slug (e.g., 'github').
+ * @param string               $domain       Allowed domain (e.g., 'github.com').
+ *
+ * @return void
+ *
+ * @since 1.0.0
+ */
+function lambros_register_social_network_setting( $wp_customize, $network, $domain ) {
+    $setting_id = "lambros_{$network}_url";
+
+    // Add setting with validation
+    $wp_customize->add_setting( $setting_id, [
+        'default'           => '',
+        'transport'         => 'refresh', // or 'postMessage' for live preview
+        'sanitize_callback' => function( $value ) use ( $domain ) {
+            return lambros_validate_social_url( $value, $domain );
+        },
+    ] );
+
+    // Add control (UI input field)
+    $wp_customize->add_control( $setting_id, [
+        'label'       => sprintf(
+            /* translators: %s: Social network name */
+            __( '%s Profile URL', 'LambrosPersonalTheme' ),
+            ucfirst( $network )
+        ),
+        'section'     => 'lambros_social_links',
+        'type'        => 'url',
+        'description' => sprintf(
+            /* translators: %s: Allowed domain */
+            __( 'Must be a %s URL', 'LambrosPersonalTheme' ),
+            $domain
+        ),
+    ] );
+}
+
+
+
+
+
+
+
+
+
+
