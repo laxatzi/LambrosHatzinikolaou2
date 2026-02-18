@@ -80,7 +80,7 @@ function lambros_my_custom_rest() {
 
 function lambros_enqueue_assets() {
 
-    $ver = 'LAMBROS_THEME_VERSION'
+    $ver = 'LAMBROS_THEME_VERSION';
 
 // Styles
     //Adding a version (cache busting)
