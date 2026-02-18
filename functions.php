@@ -1,5 +1,11 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+    http_response_code( 403 );
+     header( 'Content-Type: text/plain; charset=utf-8' );
+    exit( 'Forbidden: direct access is not allowed.' );
+}
+
 // CONSTANTS
 define( 'LAMBROS_THEME_AUTHOR', 'Lambros Hatzinikolaou' );
 define( 'LAMBROS_DATE_FORMAT', 'F j, Y' );
