@@ -874,6 +874,39 @@ function lambros_get_social_link( $network ) {
 }
 
 
+/**
+ * Get all saved social links
+ *
+ * Returns an associative array of all configured social links.
+ * Only includes networks that have a URL set.
+ *
+ * @return array Array of network => URL pairs.
+ *
+ * @since 1.0.0
+ *
+ * @example
+ * $links = lambros_get_all_social_links();
+ * // Returns: ['github' => 'https://github.com/username', ...]
+ */
+function lambros_get_all_social_links() {
+    $social_networks = lambros_get_social_networks();
+    $links = [];
+
+    foreach ( $social_networks as $network => $domain ) {
+        $url = lambros_get_social_link( $network );
+
+        if ( ! empty( $url ) ) {
+            $links[ $network ] = $url;
+        }
+    }
+
+    return $links;
+}
+
+
+
+
+
 
 
 
