@@ -1,4 +1,13 @@
 <?php
+/**
+ * Single Project Template
+ *
+ * Displays individual project pages from the portfolio.
+ * Shows project title, date, and full content.
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
 
   get_header();
 ?>

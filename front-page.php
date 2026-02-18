@@ -1,4 +1,13 @@
 <?php
+  /**
+   * Front Page Template
+   *
+   * Displays the site's homepage with hero section, newsletter signup,
+   * latest blog posts, and featured projects.
+   *
+   * @package LambrosPersonalTheme
+   * @since 1.0.0
+   */
   get_header();
   ?>
     <main id="main-content">

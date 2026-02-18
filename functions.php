@@ -236,7 +236,29 @@ function lambros_modify_search_query( $query ) {
 add_action( 'pre_get_posts', 'lambros_modify_search_query' );
 
 
-// Add emoji to post titles
+/**
+ * Add an emoji prefix to post titles on the front-end.
+ *
+ * This function prepends a sparkle emoji (✨) to post titles when they
+ * are displayed on singular post pages in the main content area. It
+ * respects WordPress template hierarchy and can be disabled per-post
+ * using custom post meta.
+ *
+ * Behavior:
+ * - Only applies to singular post views (not archives or admin).
+ * - Only affects titles within the main query loop.
+ * - Can be disabled per-post with the '_disable_emoji' meta key.
+ * - Does not modify the actual post title in the database.
+ *
+ * Intended to be hooked into the 'the_title' filter.
+ *
+ * @param string $title   The post title to be filtered.
+ * @param int    $post_id The ID of the post whose title is being filtered.
+ *
+ * @return string The modified post title with emoji prefix, or the original title.
+ *
+ * @since 1.0.0
+ */
 function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
      // Only on singular post pages, in the main content area
     if ( ! is_singular( 'post' ) ) {
@@ -700,7 +722,18 @@ add_action('wp_ajax_nopriv_live_search', 'lambros_live_search_ajax');
 
 
 /**
- * Get reading time icon SVG
+ * Get the SVG icon for reading time indicators.
+ *
+ * Returns an inline SVG representing a clock icon, used to visually
+ * indicate estimated reading time for posts. The icon uses currentColor
+ * for stroke, allowing it to inherit the text color from its context.
+ *
+ * The icon is marked with aria-hidden="true" since it is purely decorative
+ * and the reading time text provides the necessary context.
+ *
+ * @return string SVG markup for a clock icon.
+ *
+ * @since 1.0.0
  */
 function lambros_get_reading_time_icon() {
     return '<svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';

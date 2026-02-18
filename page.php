@@ -1,4 +1,13 @@
 <?php
+/**
+ * Default Page Template
+ *
+ * Displays standard WordPress pages with their content, featured images,
+ * and optional comments section.
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
 
 get_header();
 ?>

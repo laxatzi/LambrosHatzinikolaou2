@@ -1,4 +1,13 @@
 <?php
+/**
+ * Blog Index Template
+ *
+ * Displays the main blog listing page showing all posts with pagination.
+ * This template is used when no more specific template is available.
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
  get_header();
 ?>
 <main id="main-content">

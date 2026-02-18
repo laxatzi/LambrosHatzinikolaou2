@@ -1,4 +1,13 @@
 <?php
+/**
+ * Project Archive Template
+ *
+ * Displays an archive of all projects in the portfolio.
+ * Shows project listings with their metadata and descriptions.
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
  get_header();
 ?>
 

@@ -1,4 +1,13 @@
 <?php
+/**
+ * Archive Template
+ *
+ * Displays archive pages for categories, tags, dates, and authors.
+ * Shows a list of posts with archive header and description.
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
  get_header();
 ?>
 <main id="main-content" aria-labelledby="archive-title">

@@ -1,4 +1,13 @@
 <?php
+/**
+ * Search Results Template
+ *
+ * Displays search results for user queries.
+ * Shows matching posts with pagination and a search form for new queries.
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
  get_header();
 ?>
 <main style="margin-top:50px">
