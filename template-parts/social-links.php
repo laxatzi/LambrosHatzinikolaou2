@@ -37,9 +37,8 @@ $display_names = [
             class="social-link social-link-<?php echo esc_attr( $network ); ?>"
             aria-label="<?php echo esc_attr( isset( $display_names[ $network ] ) ? $display_names[ $network ] : ucfirst( $network ) ); ?>"
             rel="noopener noreferrer">
-            
-          <ion-icon name="<?php echo esc_attr( isset($icons[$network]) ? $icons[$network] : '' ); ?>" aria-hidden="true"></ion-icon>
-          <span><?php echo esc_html( isset($display_names[ $network ]) ? $display_names[ $network ] : '' ); ?></span>
+           <ion-icon name="<?php echo esc_attr( $icons[ $network ] ); ?>" aria-hidden="true"></ion-icon>
+           <span><?php echo esc_html( $display_names[ $network ] ); ?></span>
         </a>
       </li>
     <?php endif; ?>
