@@ -1,14 +1,14 @@
 <?php
-  /**
-   * Contact Page Template
-   *
-   * Displays the contact form and social media links for user communication.
-   * Handles form submission feedback and validation messages.
-   *
-   * @package LambrosPersonalTheme
-   * @since 1.0.0
-   */
-  get_header();
+/**
+ * Contact Page Template
+ *
+ * Displays the contact form and social media links for user communication.
+ * Handles form submission feedback and validation messages.
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
+get_header();
 ?>
 <main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
