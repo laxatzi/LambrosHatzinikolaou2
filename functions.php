@@ -709,6 +709,12 @@ function lambros_get_reading_time_icon() {
 
 // CUSTOMIZER SETTINGS
 
+/**
+ * Social Links Customizer Settings
+ *
+ * @package LambrosPersonalTheme
+ * @since 1.0.0
+ */
 
 /**
  * Validate and sanitize social media URLs
