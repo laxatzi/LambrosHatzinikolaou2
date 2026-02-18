@@ -28,6 +28,9 @@ $display_names = [
 
 ?>
 
+<?php
+
+if ( ! empty( $social_links ) ) : ?>
 <ul class="footer-links social-links">
   <?php foreach ( $social_links as $network => $url ) : ?>
     <?php if ( $url ) : ?>
@@ -44,4 +47,6 @@ $display_names = [
     <?php endif; ?>
   <?php endforeach; ?>
 </ul>
+<?php endif; ?>
+    
 
