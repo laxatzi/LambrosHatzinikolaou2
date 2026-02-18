@@ -266,6 +266,38 @@ function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
 
 add_filter( 'the_title', 'lambros_add_emoji_to_title_frontend', 10, 2 );
 
+/**
+ * Render emoji toggle meta box content
+ *
+ * @param WP_Post $post The current post object.
+ *
+ * @return void
+ */
+function lambros_emoji_meta_box_callback( $post ) {
+    // Add nonce for security
+    wp_nonce_field( 'lambros_save_emoji_meta', 'lambros_emoji_nonce' );
+
+    // Get current value
+    $disable_emoji = get_post_meta( $post->ID, '_disable_emoji', true );
+    ?>
+    <label for="lambros_disable_emoji">
+        <input
+            type="checkbox"
+            id="lambros_disable_emoji"
+            name="lambros_disable_emoji"
+            value="1"
+            <?php checked( $disable_emoji, '1' ); ?>
+        />
+        <?php esc_html_e( 'Disable emoji (✨) in title', 'LambrosPersonalTheme' ); ?>
+    </label>
+    <p class="description">
+        <?php esc_html_e( 'Check this to hide the sparkle emoji from the post title on the front end.', 'LambrosPersonalTheme' ); ?>
+    </p>
+    <?php
+}
+
+
+
 
 /**
  * Filter archive titles to remove default prefixes.
