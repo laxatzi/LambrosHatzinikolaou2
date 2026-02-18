@@ -709,120 +709,50 @@ function lambros_get_reading_time_icon() {
 
 // CUSTOMIZER SETTINGS
 
+
 /**
- * Customize social links in the WordPress customizer.
+ * Validate and sanitize social media URLs
  *
- * Adds a new customizer section that allows users to input URLs for their social media profiles.
- * Only accepts URLs from whitelisted domains (X, LinkedIn, GitHub, YouTube, Instagram, and WhatsApp).
- * Empty fields are not rendered in the frontend.
+ * Ensures URLs match whitelisted domains. Accepts exact domain matches
+ * or subdomains (e.g., "mobile.twitter.com" for "twitter.com").
  *
- * @param WP_Customize_Manager $wp_customize The customizer object passed by reference.
+ * @param string $url            The URL to validate.
+ * @param string $allowed_domain The allowed domain (e.g., "github.com").
  *
- * @return void
+ * @return string Sanitized URL if valid, empty string otherwise.
  *
  * @since 1.0.0
- *
- * @uses wp_customize->add_section() Registers a new customizer section for social links.
- * @uses wp_customize->add_setting() Registers customizer settings for each social network.
- * @uses wp_customize->add_control() Creates UI controls for each social network URL input.
- * @uses lambros_validate_social_url() Validates and sanitizes social media URLs against allowed domains.
- *
- * @see lambros_validate_social_url()
  */
+function lambros_validate_social_url( $url, $allowed_domain ) {
+    // Sanitize URL
+    $url = esc_url_raw( $url );
 
-function lambros_customize_social_links( $wp_customize ) {
-
-    $wp_customize->add_section( 'lambros_social_links', [
-        'title'       => __( 'Social Links', 'LambrosPersonalTheme' ),
-        'priority'    => 160,
-        'description' => __( 'Add your social media profile URLs.', 'LambrosPersonalTheme' ),
-    ] );
-
-    // Helper: domain validation
-    // Ensures only correct domains are accepted - Empty fields simply don’t render in the footer
-    function lambros_validate_social_url( $url, $allowed_domain ) {
-        $url = esc_url_raw( $url );
-        if ( empty( $url ) ) {
-            return '';
-        }
-        $host = wp_parse_url( $url, PHP_URL_HOST );
-        if ( $host && str_contains( $host, $allowed_domain ) ) {
-            return $url;
-        }
+    // Allow empty values (field is optional)
+    if ( empty( $url ) ) {
         return '';
     }
 
-    // Social networks
-    $social_networks = [
-        'x'   => 'x.com',
-        'linkedin'  => 'linkedin.com',
-        'github'    => 'github.com',
-        'youtube'   => 'youtube.com',
-        'instagram' => 'instagram.com',
-        'whatsapp'  => 'wa.me',
-    ];
+    // Extract hostname
+    $host = wp_parse_url( $url, PHP_URL_HOST );
 
-    foreach ( $social_networks as $network => $domain ) {
-
-        $setting_id = "lambros_{$network}_url";
-
-        $wp_customize->add_setting( $setting_id, [
-            'default'           => '',
-            'sanitize_callback' => function( $value ) use ( $domain ) {
-                return lambros_validate_social_url( $value, $domain );
-            },
-        ] );
-
-        $wp_customize->add_control( $setting_id, [
-            'label'   => ucfirst( $network ) . ' URL',
-            'section' => 'lambros_social_links',
-            'type'    => 'url',
-        ] );
+    if ( ! $host ) {
+        return ''; // Invalid URL structure
     }
+
+    // Normalize for case-insensitive comparison
+    $host           = strtolower( $host );
+    $allowed_domain = strtolower( $allowed_domain );
+
+    // Allow exact match or subdomains
+    // Examples:
+    // - "github.com" matches "github.com" ✓
+    // - "www.github.com" matches "github.com" ✓
+    // - "gist.github.com" matches "github.com" ✓
+    // - "github.io" does NOT match "github.com" ✗
+    if ( $host === $allowed_domain || str_ends_with( $host, '.' . $allowed_domain ) ) {
+        return $url;
+    }
+
+    return ''; // Domain doesn't match
 }
-add_action( 'customize_register', 'lambros_customize_social_links' );
-
-
-/**
- * Register a Customizer section, setting, and control for the homepage hero intro text.
- *
- * This function adds a dedicated Customizer section that allows users to edit
- * the fallback intro text displayed on the front page. It registers a setting
- * that accepts HTML (sanitized through wp_kses_post) and exposes it through a
- * textarea control inside the new "Hero Intro Text" section.
- *
- * Behavior:
- * - Creates a Customizer section with a title, priority, and description.
- * - Registers a setting for storing the intro text, allowing safe HTML.
- * - Adds a textarea control so users can edit the intro text directly.
- *
- * Intended to be hooked into the 'customize_register' action.
- *
- * @param WP_Customize_Manager $wp_customize The Customizer manager instance.
- *
- * @return void
- */
-
-function lambros_customize_hero_intro( $wp_customize ) {
-  $wp_customize->add_section( 'lambros_hero_intro', [
-    'title'       => __( 'Hero Intro Text', 'LambrosPersonalTheme' ),
-    'priority'    => 30,
-    'description' => __( 'Customize the fallback intro text shown on the homepage.', 'LambrosPersonalTheme' ),
-  ] );
-
-  $wp_customize->add_setting( 'lambros_hero_intro_text', [
-    'default'           => '',
-    'sanitize_callback' => 'wp_kses_post',
-  ] );
-
-  $wp_customize->add_control( 'lambros_hero_intro_text', [
-    'label'   => __( 'Intro Text (HTML allowed)', 'LambrosPersonalTheme' ),
-    'section' => 'lambros_hero_intro',
-    'type'    => 'textarea',
-  ] );
-}
-add_action( 'customize_register', 'lambros_customize_hero_intro' );
-
-
-
 
