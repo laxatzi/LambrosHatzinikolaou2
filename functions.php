@@ -1,5 +1,6 @@
 <?php
 
+// Exit if accessed directly for security
 if ( ! defined( 'ABSPATH' ) ) {
     http_response_code( 403 );
      header( 'Content-Type: text/plain; charset=utf-8' );
