@@ -236,7 +236,16 @@ function lambros_modify_search_query( $query ) {
 add_action( 'pre_get_posts', 'lambros_modify_search_query' );
 
 
-// Add emoji to post titles
+/**
+ * Prefix post titles with an emoji on singular post views.
+ *
+ * Intended to be used as a callback for the `the_title` filter on the front end.
+ *
+ * @param string $title   The post title.
+ * @param int    $post_id The ID of the current post.
+ *
+ * @return string Filtered post title, potentially prefixed with an emoji.
+ */
 function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
      // Only on singular post pages, in the main content area
     if ( ! is_singular( 'post' ) ) {
