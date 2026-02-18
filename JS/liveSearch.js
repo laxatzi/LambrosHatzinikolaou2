@@ -7,7 +7,27 @@
 
   let timer;
   let activeIndex = -1;
-
+  
+  
+  /**
+   * Fetches and displays search results based on user input
+   * 
+   * Validates that the query is at least 2 characters long, then makes an AJAX request
+   * to retrieve search results filtered by the selected type. Updates the results box
+   * with the response HTML and manages loading/error states and accessibility attributes.
+   * 
+   * @function fetchResults
+   * @returns {void}
+   * 
+   * @description
+   * - Clears results if query is less than 2 characters
+   * - Constructs URL with query parameters including nonce for security
+   * - Shows loading message while fetching
+   * - Updates results box with HTML response on success
+   * - Displays error message on failure
+   * - Manages aria-busy attribute for accessibility
+   * - Resets activeIndex for keyboard navigation
+   */
   function fetchResults() {
     const query = input.value.trim();
     const type = typeSelect ? typeSelect.value: 'any';
