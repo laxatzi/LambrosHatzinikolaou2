@@ -3,7 +3,7 @@
 ?>
 <main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <article id="post-<?php the_ID(); ?>" <?php post_class('page-contact'); ?>>
+  <article id="post-<?php the_ID(); ?>" <?php post_class( 'page-contact' ); ?>>
     <header class="entry-header">
       <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"><?php the_title(); ?></h1>
       <?php
@@ -16,8 +16,8 @@
   <section id="contactme" class="contact-section">
     <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
 <!-- Show flash message on the page -->
-    <?php if ( $m = get_transient('contact_msg') ) : delete_transient('contact_msg'); ?>
-      <div class="notice notice-<?php echo esc_attr($m['type']); ?>" role="status" aria-live="polite">
+    <?php if ( $m = get_transient( 'contact_msg' ) ) : delete_transient( 'contact_msg' ); ?>
+      <div class="notice notice-<?php echo esc_attr( $m['type']); ?>" role="status" aria-live="polite">
         <?php echo esc_html( $m['text'] ); ?>
       </div>
     <?php endif; ?>
