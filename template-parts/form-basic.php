@@ -1,19 +1,19 @@
 <?php
 // Pre-fill values when redisplaying after a failed submit
 $posted = wp_unslash( $_POST ?? [] );
-$name   = isset($posted['name'])   ? sanitize_text_field($posted['name'])   : '';
-$email  = isset($posted['email'])  ? sanitize_email($posted['email'])       : '';
-$subj   = isset($posted['subject'])? sanitize_text_field($posted['subject']): '';
-$msg    = isset($posted['message'])? wp_kses_post($posted['message'])       : '';
+$name   = isset( $posted['name'])   ? sanitize_text_field($posted['name'] )   : '';
+$email  = isset( $posted['email'])  ? sanitize_email($posted['email'] )       : '';
+$subj   = isset( $posted['subject'])? sanitize_text_field($posted['subject'] ): '';
+$msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : '';
 ?>
  <form
-  class="contact-form"
-  name="contact_form"
-  method="post"
-  action="<?php echo esc_url( get_permalink() ); ?>"
-  autocomplete="on"
-  enctype="multipart/form-data"
-  novalidate
+   class="contact-form"
+   name="contact_form"
+   method="post"
+   action="<?php echo esc_url( get_permalink() ); ?>"
+   autocomplete="on"
+   enctype="multipart/form-data"
+   novalidate
 >
 <?php wp_nonce_field( 'contact_form_submit', 'contact_nonce' ); ?>
  <!-- Honeypot: should stay empty -->
@@ -25,38 +25,38 @@ $msg    = isset($posted['message'])? wp_kses_post($posted['message'])       : ''
   <div class="label-form">
     <label for="name"><?php esc_html_e( 'Name', 'LambrosPersonalTheme' ); ?></label>
     <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      autocomplete="name"
-      value="<?php echo esc_attr( $name ); ?>"
+       type="text"
+       id="name"
+       name="name"
+       required
+       autocomplete="name"
+       value="<?php echo esc_attr( $name ); ?>"
     />
   </div>
 
   <div class="label-form">
     <label for="email"><?php esc_html_e( 'Email', 'LambrosPersonalTheme' ); ?></label>
     <input
-      type="email"
-      id="email"
-      name="email"
-      required
-      autocomplete="email"
-      inputmode="email"
-      value="<?php echo esc_attr( $email ); ?>"
+       type="email"
+       id="email"
+       name="email"
+       required
+       autocomplete="email"
+       inputmode="email"
+       value="<?php echo esc_attr( $email ); ?>"
     />
   </div>
 
   <div class="label-form">
     <label for="subject"><?php esc_html_e( 'Subject', 'LambrosPersonalTheme' ); ?></label>
     <input
-      type="text"
-      id="subject"
-      name="subject"
-      placeholder="<?php esc_attr_e( 'Subject line', 'LambrosPersonalTheme' ); ?>"
-      required
-      autocomplete="on"
-      value="<?php echo esc_attr( $subj ); ?>"
+       type="text"
+       id="subject"
+       name="subject"
+       placeholder="<?php esc_attr_e( 'Subject line', 'LambrosPersonalTheme' ); ?>"
+       required
+       autocomplete="on"
+       value="<?php echo esc_attr( $subj ); ?>"
     />
   </div>
 
