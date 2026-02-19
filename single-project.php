@@ -1,11 +1,11 @@
 <?php
 
-  get_header();
+get_header();
 ?>
 <main id="main-content">
   <div class="container">
 <?php
-  while(have_posts()) {
+  while( have_posts() ) {
    the_post(); ?>
     <div class="the-project">
       <h1 class="project-title">
@@ -20,4 +20,4 @@
 </main>
 <?php
   }
-  get_footer();
+get_footer();
