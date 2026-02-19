@@ -55,7 +55,7 @@ function lambros_my_custom_rest() {
         ],
     ] );
   }
-  add_action('rest_api_init', 'lambros_my_custom_rest');
+  add_action( 'rest_api_init', 'lambros_my_custom_rest' );
 
 
 /**
@@ -84,7 +84,7 @@ function lambros_enqueue_assets() {
 
 // Styles
     //Adding a version (cache busting)
-    wp_enqueue_style('main-styles', get_stylesheet_uri(), [], 'LAMBROS_THEME_VERSION');
+    wp_enqueue_style( 'main-styles', get_stylesheet_uri(), [], 'LAMBROS_THEME_VERSION' );
     wp_enqueue_style(
       'google-fonts',
       'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap',
@@ -100,7 +100,7 @@ function lambros_enqueue_assets() {
       null,
       true
     );
-    wp_script_add_data('ionicons-module', 'type', 'module');
+    wp_script_add_data( 'ionicons-module', 'type', 'module' );
 
     wp_enqueue_script(
       'ionicons-legacy',
@@ -109,7 +109,7 @@ function lambros_enqueue_assets() {
       null,
       true
     );
-    wp_script_add_data('ionicons-legacy', 'nomodule', true);
+    wp_script_add_data( 'ionicons-legacy', 'nomodule', true );
 
 // YOUR theme JS — note the CASE "js/index.js"
     wp_enqueue_script(
@@ -139,7 +139,7 @@ add_action( 'wp_enqueue_scripts', 'lambros_enqueue_assets' );
 
 
 // If you previously injected inline JS in the footer, keep this to avoid duplicate/old code
-remove_action('wp_footer', 'wpb_hook_javascript_footer');
+remove_action( 'wp_footer', 'wpb_hook_javascript_footer' );
 
 
 /**
@@ -161,23 +161,23 @@ remove_action('wp_footer', 'wpb_hook_javascript_footer');
  */
 
 function lambros_theme_slug_setup() {
-      load_theme_textdomain('LambrosPersonalTheme', get_template_directory().'/languages');
+      load_theme_textdomain( 'LambrosPersonalTheme', get_template_directory().'/languages' );
       add_theme_support( 'title-tag' );
-      add_theme_support('post-thumbnails');
-      add_theme_support('html5', ['search-form', 'gallery', 'caption', 'script', 'style']);
+      add_theme_support( 'post-thumbnails' );
+      add_theme_support( 'html5', ['search-form', 'gallery', 'caption', 'script', 'style'] );
   // Custom logo support
-  add_theme_support('custom-logo', [
+  add_theme_support( 'custom-logo', [
     'height' => 80,
     'width'  => 80,
     'flex-height' => true,
     'flex-width'  => true,
-  ]);
+  ] );
   // Menus
-  register_nav_menus([
+  register_nav_menus( [
     'primary' => __( 'Primary menu', 'LambrosPersonalTheme' ),
     'footer'  => __( 'Footer menu',  'LambrosPersonalTheme' ),
     'social'  => __( 'Social links', 'LambrosPersonalTheme' ),
-  ]);
+  ] );
 
     }
 
@@ -365,9 +365,9 @@ add_filter( 'get_the_archive_title', 'lambros_filter_archive_title' );
 
 // Add noindex to 404 pages
 
-add_action('wp_head', function () {
+add_action( 'wp_head', function () {
   if (is_404()) echo '<meta name="robots" content="noindex,follow">';
-}, 5);
+}, 5 );
 
 
 /**
@@ -391,7 +391,7 @@ add_action('wp_head', function () {
  */
 
 function lambros_log_404_errors() {
-    if (is_404()) {
+    if ( is_404() ) {
         $url = isset($_SERVER['REQUEST_URI']) ? esc_url_raw($_SERVER['REQUEST_URI']) : '';
         $referrer = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : 'Direct';
         $ip = filter_var(
@@ -407,7 +407,7 @@ function lambros_log_404_errors() {
         ));
     }
 }
-add_action('wp', 'lambros_log_404_errors');
+add_action( 'wp', 'lambros_log_404_errors' );
 
 
 /**
@@ -464,7 +464,7 @@ function lambros_handle_contact_form() {
     'LambrosPersonalTheme')); 
     return lambros_redirect_back();
   }
-  set_transient($k, 1, 60);
+  set_transient( $k, 1, 60 );
   
 // Honeypot (bots usually fill this)
   if ( ! empty($_POST['website']) ) {
@@ -487,7 +487,7 @@ function lambros_handle_contact_form() {
   if ( trim($message) === '' )     $errors[] = __('Message is required.','LambrosPersonalTheme');
 
   if ( $errors ) {
-    set_transient('contact_msg', ['type'=>'error','text'=>implode(' ', $errors)], 30);
+    set_transient( 'contact_msg', ['type'=>'error','text'=>implode(' ', $errors)], 30 );
     wp_safe_redirect( wp_get_referer() ?: home_url('/') );
     exit;
   }
@@ -513,7 +513,7 @@ function lambros_handle_contact_form() {
   $body .= "Message:\n{$message}\n";
 
 // Send
-   $to = get_option('admin_email');
+   $to = get_option( 'admin_email' );
   // Change to a custom recipient if you prefer
   $ok = wp_mail( $to, $mail_subject, $body, $headers );
 
@@ -527,7 +527,7 @@ function lambros_handle_contact_form() {
      return lambros_redirect_back();
 }
 
-add_action('template_redirect', 'lambros_handle_contact_form' );
+add_action( 'template_redirect', 'lambros_handle_contact_form' );
 
 
 // --- Helpers ---
@@ -545,7 +545,7 @@ add_action('template_redirect', 'lambros_handle_contact_form' );
  */
 
 function lambros_set_contact_message($type, $text) {
-    set_transient('contact_msg', ['type'=>$type,'text'=>$text], 30);
+    set_transient( 'contact_msg', ['type'=>$type,'text'=>$text], 30 );
   }
 
 
