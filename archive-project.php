@@ -10,22 +10,22 @@
       *
       * @since 1.0.0
      */
-    do_action('lambros_before_archive_loop');
+    do_action( 'lambros_before_archive_loop' );
 
     if ( have_posts() ) : ?>
     <header class="archive-header" aria-labelledby="archive-project-title">
       <?php
       // Title + description (WP will escape these appropriately)
 
-        the_archive_title('<h1>','</h1>');
-        the_archive_description('<p>','</p>');
+        the_archive_title( '<h1>','</h1>' );
+        the_archive_description( '<p>','</p>' );
       ?>
     </header>
     <section id="posts">
       <?php
         while(have_posts()) :
           the_post();
-          get_template_part('template-parts/project-presentation');
+          get_template_part( 'template-parts/project-presentation' );
         endwhile;
       ?>
     </section>
@@ -50,7 +50,7 @@
    *
    * @since 1.0.0
    */
-    do_action('lambros_after_archive_loop');
+    do_action( 'lambros_after_archive_loop' );
   ?>
   </div>
 </main>
