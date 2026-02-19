@@ -1,6 +1,6 @@
 <?php
   // Safer asset URL helper (child-theme friendly)
-$img_src = get_theme_file_uri('images/aggelikoyla.jpg');
+$img_src = get_theme_file_uri( 'images/aggelikoyla.jpg' );
 ?>
 <section id="hero">
   <div class="intro-heading-section">
@@ -8,8 +8,8 @@ $img_src = get_theme_file_uri('images/aggelikoyla.jpg');
       <img
         class="intro-heading-img"
         src="<?php echo esc_url( $img_src ); ?>"        
-       alt="<?php esc_attr_e('Portrait of Aggelikoyla', 'LambrosPersonalTheme'); ?>"
-        title="<?php esc_attr_e('Aggeliki is a web developer\'s cat!', 'LambrosPersonalTheme'); ?>"
+       alt="<?php esc_attr_e( 'Portrait of Aggelikoyla', 'LambrosPersonalTheme' ); ?>"
+        title="<?php esc_attr_e( 'Aggeliki is a web developer\'s cat!', 'LambrosPersonalTheme' ); ?>"
         loading="lazy"
         decoding="async"
       />
@@ -29,8 +29,8 @@ $img_src = get_theme_file_uri('images/aggelikoyla.jpg');
   // If used elsewhere, additional checks may be needed.
 $front_id = get_queried_object_id();
 
-  if ( ! $front_id && get_option('show_on_front') === 'page' ) {
-    $front_id = (int) get_option('page_on_front');
+  if ( ! $front_id && get_option( 'show_on_front' ) === 'page' ) {
+    $front_id = (int) get_option( 'page_on_front' );
   }
 
   if ( $front_id ) {
