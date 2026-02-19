@@ -200,7 +200,7 @@ add_action( 'after_setup_theme', 'lambros_theme_slug_setup' );
  */
 
 function lambros_add_favicon_html() {
-if (has_site_icon()) return;
+if ( has_site_icon() ) return;
 ?>
   <link rel="icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/favicon.ico' ); ?>" />
   <link rel="apple-touch-icon" href="<?php echo esc_url( get_stylesheet_directory_uri() . '/apple-touch-icon.png' ); ?>">
@@ -366,7 +366,7 @@ add_filter( 'get_the_archive_title', 'lambros_filter_archive_title' );
 // Add noindex to 404 pages
 
 add_action( 'wp_head', function () {
-  if (is_404()) echo '<meta name="robots" content="noindex,follow">';
+  if ( is_404() ) echo '<meta name="robots" content="noindex,follow">';
 }, 5 );
 
 
@@ -683,7 +683,7 @@ function lambros_live_search_scripts() {
     );
 
     wp_localize_script( 'live-search', 'LiveSearch', [
-        'ajax_url' => admin_url('admin-ajax.php'),
+        'ajax_url' => admin_url( 'admin-ajax.php' ),
         'nonce'    => wp_create_nonce( 'live_search_nonce' ),                       
     ] );
 }
@@ -741,7 +741,7 @@ function lambros_live_search_ajax() {
     if ($search->have_posts()) {
         echo '<ul class="live-search-list">';
 
-        while ($search->have_posts()) {
+        while ( $search->have_posts() ) {
             $search->the_post();
             $title = get_the_title();
           // Escape title FIRST, then highlight
@@ -756,7 +756,7 @@ function lambros_live_search_ajax() {
 
             echo '<li class="live-search-item" >';
 
-            if (has_post_thumbnail()) {
+            if ( has_post_thumbnail() ) {
                 echo '<span class="thumb">';
                 echo get_the_post_thumbnail( get_the_ID(), 'thumbnail', ['loading' => 'lazy'] );
                 echo '</span>';
@@ -768,14 +768,14 @@ function lambros_live_search_ajax() {
 
         echo '</ul>';
     } else {
-        echo '<p class="no-results">' . esc_html__('No results found.', 'LambrosPersonalTheme') . '</p>';
+        echo '<p class="no-results">' . esc_html__( 'No results found.', 'LambrosPersonalTheme' ) . '</p>';
     }
 
     wp_reset_postdata();
     wp_die();
 }
-add_action('wp_ajax_live_search', 'lambros_live_search_ajax');
-add_action('wp_ajax_nopriv_live_search', 'lambros_live_search_ajax');
+add_action( 'wp_ajax_live_search', 'lambros_live_search_ajax' );
+add_action( 'wp_ajax_nopriv_live_search', 'lambros_live_search_ajax' );
 
 
 /**
