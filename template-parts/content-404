@@ -6,8 +6,8 @@
     <?php
       printf(
           /* translators: %s: "Oops" or equivalent attention-getting word */
-          esc_html__('%s, we haven\'t found what you\'re looking for.', 'LambrosPersonalTheme'),
-          '<span class="subtitle-emphasis">' . esc_html__('Oops', 'LambrosPersonalTheme') . '</span>'
+          esc_html__( '%s, we haven\'t found what you\'re looking for.', 'LambrosPersonalTheme' ),
+          '<span class="subtitle-emphasis">' . esc_html__( 'Oops', 'LambrosPersonalTheme' ) . '</span>'
        );
     ?>
     </h2>
@@ -18,28 +18,28 @@
      *
      * @since 1.0.0
      */
-    do_action('lambros_after_404_header');
+    do_action( 'lambros_after_404_header' );
   ?>
   <!-- Explanation text -->
   <div class="error-explanation">
     <p>
-      <?php esc_html_e('The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'LambrosPersonalTheme'); ?>
+      <?php esc_html_e( 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.', 'LambrosPersonalTheme' ); ?>
     </p>
   </div>
 
  <!-- Search Form -->
  <div class="error-search">
-    <h3><?php esc_html_e('Try searching for what you need:', 'LambrosPersonalTheme'); ?></h3>
+    <h3><?php esc_html_e( 'Try searching for what you need:', 'LambrosPersonalTheme' ); ?></h3>
     <form role="search" method="get" class="search-form search-form-404" action="<?php echo esc_url(home_url('/')); ?>">
       <div class="search-wrapper">
         <label for="error-page-search" class="screen-reader-text">
-          <?php esc_html_e('Search for:', 'LambrosPersonalTheme'); ?>
+          <?php esc_html_e( 'Search for:', 'LambrosPersonalTheme' ); ?>
         </label>
         <input
           type="search"
           id="error-page-search"
           class="search-field"
-          placeholder="<?php esc_attr_e('What are you looking for?', 'LambrosPersonalTheme'); ?>"
+          placeholder="<?php esc_attr_e( 'What are you looking for?', 'LambrosPersonalTheme' ); ?>"
           value="<?php echo get_search_query(); ?>"
           name="s"
           autocomplete="off"
@@ -50,7 +50,7 @@
               <circle cx="11" cy="11" r="8"></circle>
               <path d="m21 21-4.35-4.35"></path>
             </svg>
-            <span class="search-submit-text"><?php esc_html_e('Search', 'LambrosPersonalTheme'); ?></span>
+            <span class="search-submit-text"><?php esc_html_e( 'Search', 'LambrosPersonalTheme' ); ?></span>
          </button>
         </div>
      </form>
@@ -58,9 +58,9 @@
 
   <!-- Actions -->
   <div class="back-to-home">
-    <a class="button" href="<?php echo esc_url(home_url('/')); ?>">
+    <a class="button" href="<?php echo esc_url( home_url('/') ); ?>">
       <span aria-hidden="true">←</span>
-      <?php esc_html_e('Back to home page', 'LambrosPersonalTheme'); ?>
+      <?php esc_html_e( 'Back to home page', 'LambrosPersonalTheme' ); ?>
     </a>
   </div>
   <div class="recent-posts-404">
