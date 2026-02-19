@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo('charset') ?>">
+<meta charset="<?php bloginfo( 'charset' ) ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1" >
 
   <?php  wp_head(); ?>
@@ -19,7 +19,7 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); 
-  get_template_part('template-parts/alerts');
+  get_template_part( 'template-parts/alerts' );
 ?>
 <button
   id="top-button"
@@ -87,6 +87,6 @@
     </button>
        <?php
 
-        get_template_part('template-parts/menu-basic');
+        get_template_part( 'template-parts/menu-basic' );
        ?>
     </header>
