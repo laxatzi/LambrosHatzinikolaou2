@@ -3,7 +3,7 @@
         /**
          * Hook: lambros_before_post_content
          */
-        do_action( "lambros_before_post_content" );
+        do_action( 'lambros_before_post_content' );
     ?>
   <!-- Featured Image -->
     <?php if ( has_post_thumbnail() ) : ?>
@@ -53,7 +53,7 @@
             <?php if ( get_post_type() === "post" ) : ?>
               <span class="byline">
                 <span class="author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  <?php esc_html_e( "Written by", "LambrosPersonalTheme" ); ?>
+                  <?php esc_html_e( 'Written by', 'LambrosPersonalTheme' ); ?>
                   <a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>" itemprop="url">
                     <span itemprop="name"><?php echo esc_html( get_the_author() ); ?></span>
                   </a>
@@ -77,7 +77,7 @@
         </div> <!-- header-metadata -->
 
         <!-- Categories -->
-        <?php if ( get_post_type() === "post" && has_category() ) : ?>
+        <?php if ( get_post_type() === 'post' && has_category() ) : ?>
           <div class="entry-categories" itemprop="articleSection">
             <span class="categories-label"><?php esc_html_e( 'Categories:', 'LambrosPersonalTheme' ); ?></span>
             <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
