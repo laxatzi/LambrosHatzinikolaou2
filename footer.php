@@ -9,7 +9,7 @@
     <div class="footer-menu-wrapper">
       <nav class="footer-nav" aria-label="<?php esc_attr_e( 'Footer', 'LambrosPersonalTheme' ); ?>">
       <?php
-            get_template_part('template-parts/menu-footer');
+            get_template_part( 'template-parts/menu-footer' );
         ?>
       </nav>
     </div>
