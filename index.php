@@ -6,10 +6,10 @@
   <div class="container">
     <section id="posts" aria-labelledby="posts-title">
       <h1 id="posts-title" class="screen-reader-text">
-        <?php esc_html_e('Posts', 'LambrosPersonalTheme'); ?>
+        <?php esc_html_e( 'Posts', 'LambrosPersonalTheme' ); ?>
       </h1>
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-         <article id="post-<?php the_ID(); ?>" <?php post_class('the-post'); ?> itemscope itemtype="https://schema.org/BlogPosting" class="the-post fade-up">
+         <article id="post-<?php the_ID(); ?>" <?php post_class( 'the-post' ); ?> itemscope itemtype="https://schema.org/BlogPosting" class="the-post fade-up">
            <header class="the-post_title">
              <h2 class="posts">
                <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
@@ -67,14 +67,14 @@
 
           <p>
             <a class="read_more" href="<?php echo esc_url( get_permalink() ); ?>">
-              <?php esc_html_e('Read more', 'LambrosPersonalTheme'); ?>
+              <?php esc_html_e( 'Read more', 'LambrosPersonalTheme' ); ?>
             </a>
           </p>
 
         </article>
      <?php
        endwhile; else : ?>
-       <p><?php esc_html_e('No posts found.', 'LambrosPersonalTheme'); ?></p>
+       <p><?php esc_html_e( 'No posts found.', 'LambrosPersonalTheme' ); ?></p>
 
      <?php endif; ?>
 
