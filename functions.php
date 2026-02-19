@@ -392,8 +392,8 @@ add_action( 'wp_head', function () {
 
 function lambros_log_404_errors() {
     if ( is_404() ) {
-        $url = isset($_SERVER['REQUEST_URI']) ? esc_url_raw($_SERVER['REQUEST_URI']) : '';
-        $referrer = isset($_SERVER['HTTP_REFERER']) ? esc_url_raw($_SERVER['HTTP_REFERER']) : 'Direct';
+        $url = isset( $_SERVER['REQUEST_URI'] ) ? esc_url_raw( $_SERVER['REQUEST_URI'] ) : '';
+        $referrer = isset( $_SERVER['HTTP_REFERER'] ) ? esc_url_raw( $_SERVER['HTTP_REFERER'] ) : 'Direct';
         $ip = filter_var(
                 $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0',
                 FILTER_VALIDATE_IP
@@ -445,38 +445,38 @@ add_action( 'wp', 'lambros_log_404_errors' );
 function lambros_handle_contact_form() {
   // This function is now empty because we moved the code to an anonymous function below.
   // Only handle our form posts
-  if ( empty($_POST['contact_nonce']) || ! isset($_POST['submit']) ) {
+  if ( empty( $_POST['contact_nonce'] ) || ! isset( $_POST['submit'] ) ) {
     return;
   }
 
   // CSRF check
   if ( ! wp_verify_nonce( $_POST['contact_nonce'], 'contact_form_submit' ) ) {
-    lambros_set_contact_message('error', __('Security check failed. Please try again.',
-    'LambrosPersonalTheme')); 
+    lambros_set_contact_message( 'error', __('Security check failed. Please try again.',
+    'LambrosPersonalTheme') ); 
      return lambros_redirect_back();
   }
 
   // Basic throttle by IP (60s)
   $ip = $_SERVER['REMOTE_ADDR'] ?? '';
   $k  = 'contact_last_' . md5($ip);
-  if ( get_transient($k) ) {
-    lambros_set_contact_message('error', __('Please wait a minute before sending again.',
-    'LambrosPersonalTheme')); 
+  if ( get_transient( $k ) ) {
+    lambros_set_contact_message( 'error', __('Please wait a minute before sending again.',
+    'LambrosPersonalTheme') ); 
     return lambros_redirect_back();
   }
   set_transient( $k, 1, 60 );
   
 // Honeypot (bots usually fill this)
-  if ( ! empty($_POST['website']) ) {
-   lambros_set_contact_message('error', __('Spam detected.','LambrosPersonalTheme')); 
+  if ( ! empty( $_POST['website'] ) ) {
+   lambros_set_contact_message( 'error', __('Spam detected.','LambrosPersonalTheme') ); 
     return lambros_redirect_back();
   }
 
 // Sanitize input
-  $name    = sanitize_text_field( wp_unslash($_POST['name'] ?? '') );
-  $email   = sanitize_email(      wp_unslash($_POST['email'] ?? '') );
-  $subject = sanitize_text_field( wp_unslash($_POST['subject'] ?? '') );
-  $message = wp_strip_all_tags(   wp_unslash($_POST['message'] ?? '') );
+  $name    = sanitize_text_field( wp_unslash( $_POST['name'] ?? '' ) );
+  $email   = sanitize_email(      wp_unslash( $_POST['email'] ?? '' ) );
+  $subject = sanitize_text_field( wp_unslash( $_POST['subject'] ?? '' ) );
+  $message = wp_strip_all_tags(   wp_unslash( $_POST['message'] ?? '' ) );
 
 
   // Validate required fields
@@ -488,13 +488,13 @@ function lambros_handle_contact_form() {
 
   if ( $errors ) {
     set_transient( 'contact_msg', ['type'=>'error','text'=>implode(' ', $errors)], 30 );
-    wp_safe_redirect( wp_get_referer() ?: home_url('/') );
+    wp_safe_redirect( wp_get_referer() ?: home_url( '/' ) );
     exit;
   }
   // ---- Hardened email headers ----
   // Use a site address as the From: to avoid SPF/DMARC rejections.
   $host = wp_parse_url( home_url(), PHP_URL_HOST );
-  $host = $host ? preg_replace('/^www\./', '', $host) : 'example.com';
+  $host = $host ? preg_replace( '/^www\./', '', $host ) : 'example.com';
   $site_from = 'wordpress@' . $host; // or create a real mailbox like "noreply@yourdomain"
   $mail_subject = sprintf( __('Contact form: %s','LambrosPersonalTheme'), $subject );
   // Remove newlines from name to prevent header injection
@@ -560,7 +560,7 @@ function lambros_set_contact_message( $type, $text ) {
  */
 
 function lambros_redirect_back() {
-  wp_safe_redirect( wp_get_referer() ?: home_url('/') );
+  wp_safe_redirect( wp_get_referer() ?: home_url( '/' ) );
   exit;
   }
 
@@ -723,8 +723,8 @@ function lambros_live_search_ajax() {
 // Verify nonce
     check_ajax_referer( 'live_search_nonce', 'nonce' );
     
-    $query = isset($_GET['q']) ? sanitize_text_field($_GET['q']) : '';
-    $type  = isset($_GET['type']) ? sanitize_text_field($_GET['type']) : 'any';
+    $query = isset( $_GET['q'] ) ? sanitize_text_field( $_GET['q'] ) : '';
+    $type  = isset( $_GET['type'] ) ? sanitize_text_field( $_GET['type'] ) : 'any';
 
     if (strlen( $query ) < 2) {
         wp_die();
@@ -749,7 +749,7 @@ function lambros_live_search_ajax() {
           
      // Now safely highlight the already-escaped content
            $highlighted = preg_replace(
-                '/(' . preg_quote( esc_html($query), '/' ) . ')/i',
+                '/(' . preg_quote( esc_html( $query ), '/' ) . ')/i',
                 '<mark class="highlight">$1</mark>',
                 $safe_title
             );
