@@ -544,7 +544,7 @@ add_action( 'template_redirect', 'lambros_handle_contact_form' );
  * @return void
  */
 
-function lambros_set_contact_message($type, $text) {
+function lambros_set_contact_message( $type, $text ) {
     set_transient( 'contact_msg', ['type'=>$type,'text'=>$text], 30 );
   }
 
@@ -587,7 +587,7 @@ function lambros_redirect_back() {
  *               based on the specified relation type.
  */
 
- function lambros_preconnect_Google_Fonts ($urls, $relation_type) {
+ function lambros_preconnect_Google_Fonts ( $urls, $relation_type ) {
   if ( $relation_type === 'preconnect' ) {
     // Preconnect: opens socket + TLS early
     $urls[] = 'https://fonts.googleapis.com';
@@ -625,7 +625,7 @@ function lambros_redirect_back() {
   return $unique_urls;
 }
 
-add_filter('wp_resource_hints', 'lambros_preconnect_Google_Fonts', 10, 2);
+add_filter( 'wp_resource_hints', 'lambros_preconnect_Google_Fonts', 10, 2 );
 
 
 /**
@@ -682,12 +682,12 @@ function lambros_live_search_scripts() {
         true
     );
 
-    wp_localize_script('live-search', 'LiveSearch', [
+    wp_localize_script( 'live-search', 'LiveSearch', [
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce'    => wp_create_nonce( 'live_search_nonce' ),                       
-    ]);
+    ] );
 }
-add_action('wp_enqueue_scripts', 'lambros_live_search_scripts');
+add_action( 'wp_enqueue_scripts', 'lambros_live_search_scripts' );
 
 
 /**
@@ -726,7 +726,7 @@ function lambros_live_search_ajax() {
     $query = isset($_GET['q']) ? sanitize_text_field($_GET['q']) : '';
     $type  = isset($_GET['type']) ? sanitize_text_field($_GET['type']) : 'any';
 
-    if (strlen($query) < 2) {
+    if (strlen( $query ) < 2) {
         wp_die();
     }
 
@@ -736,7 +736,7 @@ function lambros_live_search_ajax() {
         's'              => $query,
     ];
 
-    $search = new WP_Query($args);
+    $search = new WP_Query( $args );
 
     if ($search->have_posts()) {
         echo '<ul class="live-search-list">';
@@ -749,7 +749,7 @@ function lambros_live_search_ajax() {
           
      // Now safely highlight the already-escaped content
            $highlighted = preg_replace(
-                '/(' . preg_quote( esc_html($query), '/') . ')/i',
+                '/(' . preg_quote( esc_html($query), '/' ) . ')/i',
                 '<mark class="highlight">$1</mark>',
                 $safe_title
             );
@@ -758,11 +758,11 @@ function lambros_live_search_ajax() {
 
             if (has_post_thumbnail()) {
                 echo '<span class="thumb">';
-                echo get_the_post_thumbnail(get_the_ID(), 'thumbnail', ['loading' => 'lazy']);
+                echo get_the_post_thumbnail( get_the_ID(), 'thumbnail', ['loading' => 'lazy'] );
                 echo '</span>';
             }
 
-            echo '<a href="' . esc_url(get_permalink()) . '">' . $highlighted . '</a>';
+            echo '<a href="' . esc_url( get_permalink() ) . '">' . $highlighted . '</a>';
             echo '</li>';
         }
 
