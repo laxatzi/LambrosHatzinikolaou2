@@ -15,7 +15,7 @@ $img_src = get_theme_file_uri( 'images/aggelikoyla.jpg' );
       />
     </div>
       <h1 class="intro-heading">
-        <?php echo esc_html__( "Hi, I'm Lambros", 'LambrosPersonalTheme' ); ?>
+        <?php echo esc_html__( 'Hi, I\'m Lambros', 'LambrosPersonalTheme' ); ?>
       </h1>
     </div>
 <?php
@@ -48,7 +48,7 @@ $front_id = get_queried_object_id();
       echo '</div>';
       ?>
       <div class="hero__content">
-        <p><?php echo esc_html__( "I'm a web developer in Thessaloniki, Greece. This is my tech blog where", 'LambrosPersonalTheme' ); ?>
+        <p><?php echo esc_html__( 'I\'m a web developer in Thessaloniki, Greece. This is my tech blog where', 'LambrosPersonalTheme' ); ?>
           <a href="<?php echo esc_url( site_url( '/blog' ) ); ?>">
             <?php echo esc_html__( 'I write about web development', 'LambrosPersonalTheme' ); ?>
           </a>,
@@ -68,7 +68,7 @@ $front_id = get_queried_object_id();
             <?php echo esc_html__( 'my code on GitHub', 'LambrosPersonalTheme' ); ?>
           </a>.
         </p>
-        <p><?php echo esc_html__( "If you want to talk about anything programming related, have recommendations, comments, want to work with me, meet up or just say hello—tweet me or send an email!", 'LambrosPersonalTheme' ); ?></p>
+        <p><?php echo esc_html__( 'If you want to talk about anything programming related, have recommendations, comments, want to work with me, meet up or just say hello—tweet me or send an email!', 'LambrosPersonalTheme' ); ?></p>
       </div>
       <?php
     }
