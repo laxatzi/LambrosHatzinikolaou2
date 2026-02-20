@@ -6,8 +6,25 @@
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'page-contact' ); ?>>
     <header class="entry-header">
       <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"><?php the_title(); ?></h1>
-      <?php
-        // Optional: intro text editable in the page body (block editor)
+      
+  <?php
+        /**
+           * Display the page introduction text from excerpt.
+           *
+           * Checks if the current page has an excerpt set in the WordPress block editor.
+           * If an excerpt exists, it wraps the excerpt content in a div with the class
+           * 'page-intro' and applies WordPress paragraph formatting.
+           *
+           * The excerpt content is sanitized using wp_kses_post() to allow safe HTML tags
+           * and wpautop() to automatically add paragraph tags around line breaks.
+           *
+           * @uses has_excerpt() - Check if the current post has an excerpt.
+           * @uses get_the_excerpt() - Retrieve the post excerpt.
+           * @uses wpautop() - Add paragraph tags to text.
+           * @uses wp_kses_post() - Sanitize post content for safe HTML output.
+           *
+           * @return void Outputs HTML directly to the page.
+           */
         if ( has_excerpt() ) {
           echo '<div class="page-intro">' . wp_kses_post( wpautop( get_the_excerpt() ) ) . '</div>';
         }
@@ -15,12 +32,34 @@
     </header>
   <section id="contactme" class="contact-section">
     <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
-<!-- Show flash message on the page -->
-    <?php if ( $m = get_transient( 'contact_msg' ) ) : delete_transient( 'contact_msg' ); ?>
-      <div class="notice notice-<?php echo esc_attr( $m['type']); ?>" role="status" aria-live="polite">
-        <?php echo esc_html( $m['text'] ); ?>
-      </div>
-    <?php endif; ?>
+
+  
+    <?php 
+    /**
+     * Display transient contact form message notification
+     * 
+     * Retrieves and displays a contact form submission message stored as a transient.
+     * The transient is deleted immediately after retrieval to ensure it displays only once.
+     * 
+     * The message is wrapped in a dismissible notice div with dynamic styling based on message type
+     * (e.g., 'success', 'error', 'warning', 'info').
+     * 
+     * @since 1.0.0
+     * 
+     * @global array $m Contact message array from transient
+     *                   - 'type' (string) Notice class type (success, error, warning, info)
+     *                   - 'text' (string) Message text content
+     * 
+     * @uses get_transient() Retrieve transient value
+     * @uses delete_transient() Delete transient after retrieval
+     * @uses esc_attr() Sanitize attribute output
+     * @uses esc_html() Sanitize HTML output
+     */
+      if ( $m = get_transient( 'contact_msg' ) ) : delete_transient( 'contact_msg' ); ?>
+        <div class="notice notice-<?php echo esc_attr( $m['type']); ?>" role="status" aria-live="polite">
+          <?php echo esc_html( $m['text'] ); ?>
+        </div>
+     <?php endif; ?>
 
     <div class="contact grid">
       <div class="message">
