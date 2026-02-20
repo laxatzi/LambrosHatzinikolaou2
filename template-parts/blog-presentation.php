@@ -11,8 +11,27 @@
               itemprop="datePublished">
             <?php echo get_the_date( get_option( LAMBROS_DATE_FORMAT ) ); ?>
 <!-- ⭐ Read time indicator -->
-              <span class="read-time" itemprop="timeRequired"> <svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"> <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/> <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/> </svg>
-                • <?php
+              <span class="read-time" itemprop="timeRequired"> 
+                <svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/> 
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/> 
+                </svg>
+                <?php
+               /**
+                 * Display the estimated reading time for a blog post.
+                 *
+                 * Retrieves the reading time in minutes using the lambros_get_reading_time() function
+                 * and outputs it with proper internationalization support for both singular and plural forms.
+                 * The text is escaped for security before being displayed.
+                 *
+                 * @since 1.0.0
+                 *
+                 * @return void Outputs the reading time string directly to the page.
+                 *
+                 * @uses lambros_get_reading_time() To get the calculated reading time in minutes.
+                 * @uses _n() For proper pluralization of the reading time text.
+                 * @uses esc_html() To safely escape the output for display.
+                 */
                     $minutes = lambros_get_reading_time();
                     echo esc_html( sprintf(
                       _n( '%d min read', '%d mins read', $minutes, 'LambrosPersonalTheme' ),
