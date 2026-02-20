@@ -14,14 +14,25 @@
       </nav>
     </div>
     <small class="site-credit">
+      
       <?php
-      /* translators: 1: Developer/brand name, 2: year */
+      /**
+       * Displays the footer copyright information with dynamic year.
+       *
+       * Outputs a translatable copyright notice that includes the theme author name
+       * and the current year. The content is properly escaped for security.
+       *
+       * @since 1.0.0
+       *
+       * @return void Echoes the copyright text directly to output.
+       */
       printf(
             esc_html__( 'Developed by %1$s © 2024 - %2$s. All rights reserved.', 'LambrosPersonalTheme' ),
             '<span>' . esc_html( LAMBROS_THEME_AUTHOR ) . '</span>',
             esc_html( wp_date( 'Y' ) )
            );
       ?>
+
     </small>
   </div>
 </footer>
