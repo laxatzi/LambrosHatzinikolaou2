@@ -33,6 +33,7 @@
 </button>
  <div id="wrapper">
      <header class="site-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+  
   <!-- Logo -->
     <div id="logo" class="site-branding">
       <!-- Upload a logo in Customizer (Appearance → Customize → Site Identity). No hard-coding image tags; users can swap logos without editing code. WordPress outputs proper img with alt, srcset, etc. -->
@@ -43,6 +44,20 @@
    <!-- the homepage carries the primary <h1>. On inner pages, the page/post title is the <h1>, so the site title should not also be an H1 (avoid multiple H1s). -->
       <?php if ( is_front_page() && ! is_paged() ) : ?>
         <h1 class="site-title">
+        <?php
+                    /**
+           * Site logo/title link in header
+           *
+           * Displays the site name as a link to the homepage.
+           * Adds 'indicator' class to highlight the link when on the front page.
+           * Includes rel='home' attribute for better accessibility and SEO.
+           *
+           * @uses is_front_page() - Checks if current page is the front page
+           * @uses home_url() - Gets the home URL
+           * @uses esc_url() - Escapes URL for safe output
+           * @uses bloginfo() - Outputs the site name
+           */
+          ?>
           <a class="<?php echo is_front_page() ? 'indicator' : ''; ?>"
              href="<?php echo esc_url( home_url( '/' ) ); ?>"
              rel="home">
@@ -52,6 +67,20 @@
         </h1>
       <?php else : ?>
         <p class="site-title">
+        <?php
+          /**
+           * Display site home link with conditional active indicator
+           *
+           * Outputs a clickable link to the site homepage that displays the blog name.
+           * Applies an 'indicator' CSS class when viewing the front page to visually
+           * highlight the active navigation state.
+           *
+           * @uses is_front_page() - Checks if current page is the front page
+           * @uses home_url() - Gets the site homepage URL
+           * @uses esc_url() - Sanitizes and escapes the URL for safe output
+           * @uses bloginfo() - Retrieves and displays blog information
+           */
+          ?>
           <a class="<?php echo is_front_page() ? 'indicator' : ''; ?>"
              href="<?php echo esc_url( home_url( '/' ) ); ?>"
              rel="home">
@@ -61,8 +90,20 @@
       <?php endif; ?>
 
       <?php
-      $desc = get_bloginfo( 'description', 'display' );
-      if ( $desc || is_customize_preview() ) :
+      /**
+       * Displays the site description/tagline in the header.
+       *
+       * Retrieves the site description from blog info and displays it within
+       * a paragraph element with the class 'site-description'. The description
+       * is only rendered if it exists or if the site is being previewed in the
+       * WordPress Customizer.
+       *
+       * @global void
+       *
+       * @return void Outputs HTML markup directly.
+       */
+        $desc = get_bloginfo( 'description', 'display' );
+        if ( $desc || is_customize_preview() ) :
       ?>
         <p class="site-description"><?php echo esc_html( $desc ); ?></p>
       <?php endif; ?>
