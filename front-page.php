@@ -20,7 +20,20 @@
                      <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
                   </a>
               </div>
-            <?php
+
+          <?php
+            /**
+             * Retrieve and display the latest blog posts on the front page.
+             *
+             * Queries for the 2 most recent posts, excluding sticky posts, with optimized
+             * performance by disabling term and meta cache updates. Each post is rendered
+             * using the 'blog-presentation' template part. If no posts are found, displays
+             * a localized message.
+             *
+             * @global WP_Query $latestPosts The query object containing the latest posts.
+             *
+             * @return void
+             */
            $latestPosts = new WP_Query(array(
               'posts_per_page' => 2,
               'ignore_sticky_posts'    => true,
@@ -67,7 +80,19 @@
                 <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
               </a>
             </div>
+            
             <?php
+            /**
+             * Retrieves and displays the latest 2 projects.
+             *
+             * Queries for the 2 most recent 'project' custom post type entries
+             * with optimized performance settings to avoid unnecessary cache updates.
+             * Each project is rendered using the 'project-presentation' template part.
+             *
+             * @global WP_Query $latestProjects The query object containing project posts.
+             *
+             * @return void
+             */
             $latestProjects = new WP_Query( array(
               'posts_per_page' => 2,
               'post_type' => 'project',
