@@ -29,8 +29,25 @@
         endwhile;
       ?>
     </section>
+     
   <?php
-  // Accessible pagination
+  /**
+       * Display paginated navigation for archive pages.
+       *
+       * Renders pagination links for navigating between pages of posts on archive pages.
+       * Includes previous/next navigation with accessible labels and screen reader text.
+       *
+       * @uses the_posts_pagination() WordPress template tag
+       *
+       * Configuration:
+       * - mid_size: Number of page links to show around current page (set to 1)
+       * - prev_text: HTML for previous page link with accessibility label and arrow icon
+       * - next_text: HTML for next page link with accessibility label and arrow icon
+       * - screen_reader_text: Label for screen readers describing the navigation section
+       * - class: CSS class applied to the pagination wrapper ('posts-pagination')
+       *
+       * Text strings are localized using the 'LambrosPersonalTheme' text domain.
+       */
     the_posts_pagination( 
        [
         'mid_size'           => 1,
