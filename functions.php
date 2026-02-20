@@ -1,6 +1,15 @@
 <?php
 
-// Exit if accessed directly for security
+/**
+ * Security check to prevent direct access to the theme functions file.
+ *
+ * This code verifies that WordPress has been properly loaded by checking
+ * if the ABSPATH constant is defined. If the file is accessed directly
+ * without going through WordPress, it terminates execution and returns
+ * a 403 Forbidden HTTP status code with a plain text error message.
+ *
+ * @return void Exits execution if direct access is detected.
+ */
 if ( ! defined( 'ABSPATH' ) ) {
     http_response_code( 403 );
      header( 'Content-Type: text/plain; charset=utf-8' );
