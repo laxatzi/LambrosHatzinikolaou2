@@ -6,7 +6,16 @@
         do_action( 'lambros_before_post_content' );
     ?>
   <!-- Featured Image -->
-    <?php if ( has_post_thumbnail() ) : ?>
+    <?php 
+    /**
+     * Displays the featured image for a single post.
+     *
+     * Renders the post thumbnail with schema.org ImageObject microdata markup.
+     * The image is set to 'large' size and includes accessibility attributes.
+     *
+     * @since 1.0.0
+     */
+     if ( has_post_thumbnail() ) : ?>
       <div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <?php
           the_post_thumbnail( 'large', [
@@ -36,7 +45,24 @@
               $modified  = get_the_modified_date( 'U' );
               $diff_days = ( $modified - $published ) / DAY_IN_SECONDS;
   
-              // If modified more than 7 days after publish
+             
+            /**
+             * Display an updated notice if the post was modified more than 7 days ago.
+             *
+             * Shows a notice box containing the last modified date of the current post,
+             * but only displays if the difference between the current date and the
+             * modified date is greater than 7 days.
+             *
+             * The notice uses the LAMBROS_DATE_FORMAT constant for date formatting
+             * and the 'LambrosPersonalTheme' text domain for internationalization.
+             *
+             * @global int $diff_days The number of days since the post was last modified.
+             * @uses get_the_modified_date() To retrieve the post's last modified date.
+             * @uses esc_html__() To safely output translated text.
+             * @uses esc_html() To safely escape HTML output.
+             *
+             * @return void
+             */
               if ( $diff_days > 7 ) :
             ?>
             <div class="updated-notice">
