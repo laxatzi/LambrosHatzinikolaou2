@@ -256,20 +256,22 @@ add_action( 'pre_get_posts', 'lambros_modify_search_query' );
  * @return string Filtered post title, potentially prefixed with an emoji.
  */
 function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
-     // Only on singular post pages, in the main content area
-    if ( ! is_singular( 'post' ) ) {
-        return $title;
-    }
     
+    // Skip if in admin, not in loop, or not main query
     if ( is_admin() || ! in_the_loop() || ! is_main_query() ) {
         return $title;
     }
-    
-    // Optional: Make it toggleable via post meta
+
+    // Only on singular post pages
+    if ( ! is_singular( 'post' ) ) {
+        return $title;
+    }
+
+    // Check if emoji is disabled via post meta
     if ( get_post_meta( $post_id, '_disable_emoji', true ) ) {
         return $title;
     }
-    
+
     return '✨ ' . $title;
 }
 
