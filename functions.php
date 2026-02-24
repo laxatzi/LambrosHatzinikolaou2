@@ -277,6 +277,25 @@ function lambros_add_emoji_to_title_frontend( $title, $post_id ) {
 
 add_filter( 'the_title', 'lambros_add_emoji_to_title_frontend', 10, 2 );
 
+
+/**
+ * Add meta box for emoji toggle in post editor
+ *
+ * @return void
+ */
+function lambros_add_emoji_meta_box() {
+    add_meta_box(
+        'lambros_emoji_toggle',
+        __( 'Title Emoji', 'LambrosPersonalTheme' ),
+        'lambros_emoji_meta_box_callback',
+        'post',
+        'side',
+        'default'
+    );
+}
+add_action( 'add_meta_boxes', 'lambros_add_emoji_meta_box' );
+
+
 /**
  * Render emoji toggle meta box content
  *
