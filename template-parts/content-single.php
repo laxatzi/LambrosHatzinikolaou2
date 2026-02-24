@@ -76,7 +76,18 @@
             <?php endif; ?>
 
         <!-- Author -->
-            <?php if ( get_post_type() === "post" ) : ?>
+            <?php 
+            /**
+             * Displays the author byline for single posts.
+             *
+             * Renders a byline section with the author's name and link to their posts archive page.
+             * Only displays for posts (not other post types). Includes schema.org markup for better SEO.
+             *
+             * @since 1.0.0
+             *
+             * @return void
+             */
+              if ( get_post_type() === "post" ) : ?>
               <span class="byline">
                 <span class="author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person">
                   <?php esc_html_e( 'Written by', 'LambrosPersonalTheme' ); ?>
@@ -89,6 +100,7 @@
 
           <!-- ⭐ Read time indicator -->
               <span class="read-time" itemprop="timeRequired">
+                
 
                   <?php echo lambros_get_reading_time_icon(); // Get the SVG icon for reading time ?>
                   <?php
