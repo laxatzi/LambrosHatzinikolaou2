@@ -56,8 +56,8 @@ body {
   line-height: 1.5;
   background-color: var(--color-background);
   -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
   min-width: 385px;
 }
