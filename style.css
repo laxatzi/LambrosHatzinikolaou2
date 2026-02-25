@@ -831,7 +831,7 @@ time {
 }
 
 .entry-title {
-  font-size: 48px;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   margin-bottom: 0;
 }
