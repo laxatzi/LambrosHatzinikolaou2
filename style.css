@@ -194,7 +194,7 @@ img {
 blockquote {
   text-align: left;
   line-height: 1.6em;
-  font-size: 1.25;
+  font-size: 1.25rem;
   font-style: italic;
   color: var(--color-lighter);
   padding: 10px;
