@@ -1586,7 +1586,6 @@ li.live-search-item {
     margin-top: 50px;
   }
 
-
   #p-wrapper {
     flex: 100%;
     margin: 0;
@@ -1646,8 +1645,8 @@ li.live-search-item {
 
   .back-to-top {
     padding: 0.2em;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 80px;
   }
 
   .search-overlay .label-form {
