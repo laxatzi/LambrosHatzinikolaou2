@@ -878,6 +878,12 @@ span.byline {
   font-weight: lighter;
 }
 
+.entry-categories {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
 /* Updated Notice */
 .updated-notice {
   margin: 0;
