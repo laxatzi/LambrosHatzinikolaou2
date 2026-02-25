@@ -694,6 +694,10 @@ ul ul li {
   border: 0;
 }
 
+.buttons a:hover {
+  background-color: var(--color-distinct-light);
+}
+
 .label-form {
   display: flex;
   flex-direction: column;
