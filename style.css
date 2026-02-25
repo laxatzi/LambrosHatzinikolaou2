@@ -710,11 +710,13 @@ label {
 }
 
 .closer {
-  font-size: 3rem;
-  color: var(--color);
+  font-size: 1.65rem;
+  color: var(--color-main-dark);
   font-weight: 900;
-  display: block;
-  width: 5%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+
 }
 
 .textarea {
