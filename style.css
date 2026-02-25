@@ -465,7 +465,7 @@ input[type="submit"]:hover {
 }
 
 .intro-heading-image img:hover {
-  transform: scale(1.2);
+  transform: scale(1.032);
 }
 
 h1.intro-heading {
