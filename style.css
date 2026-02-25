@@ -1557,65 +1557,7 @@ li.live-search-item {
     margin-left: 20%;
   }
 
-  /* toggling navigation */
-  header {
-    height: auto;
-    flex-direction: column;
-    padding-bottom: 0;
-  }
-
-  .nav {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    display: none;
-    width: 100%;
-  }
-
-  .nav a {
-    display: flex;
-    width: 100%;
-    margin: 5px 0;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-  }
-
-  .toggle-menu {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .toggle-menu ion-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-    font-weight: bold;
-  }
-
-  .toggle-menu ion-icon.close {
-    display: none;
-  }
-
-  .toggle-menu ion-icon.show {
-    display: flex;
-  }
-
-  .show {
-    display: flex;
-  }
-
-  .close {
-    display: none;
-  }
-
-  .search-trigger {
-    margin-top: 10px;
-    text-align: center;
-  }
-  .contact {
+ .contact {
     flex-direction: column;
   }
 
