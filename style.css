@@ -1184,11 +1184,9 @@ section.not-found {
   cursor: pointer;
 }
 
-
-
 form#search {
   width: 60%;
-  margin: 100px 0;
+  margin: 20px 0;
 }
 
 form#search input {
