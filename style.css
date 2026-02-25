@@ -1663,6 +1663,73 @@ li.live-search-item {
   form#searchform {
     width: 100%;
   }
+
+menu.nav {
+    display: none;
+  }
+  
+ menu.nav.is-open {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+  }
+
+  /* toggling navigation */
+  header {
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .nav {
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    display: none;
+    width: 100%;
+  }
+
+  .nav a {
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+    align-items: center;
+    font-size: 1.25rem;
+  }
+
+  .toggle-menu {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .toggle-menu ion-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  .toggle-menu ion-icon[hidden] {
+    display: none !important;
+  }
+
+  .toggle-menu:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  /* top-button */
+
+  .back-to-top {
+    padding: 0.2em;
+    width: 60px;
+    height: 80px;
+  }
+
 }
 /*------------------------------------------------------------------
    ^MAX 550px
