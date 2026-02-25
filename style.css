@@ -791,11 +791,19 @@ hr {
   margin-right: 10px;
 }
 
+.project-date {
+  display: flex;
+  flex-direction: row;
+}
+
 time {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+
 }
 
 .read-time {
