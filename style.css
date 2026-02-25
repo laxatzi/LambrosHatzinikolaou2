@@ -893,13 +893,6 @@ span.byline {
   font-style: oblique;
 }
 
-
-.entry-categories {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  font-weight: bold;
-}
-
 .contact-info_box {
   margin-top: 40px;
 }
@@ -994,7 +987,7 @@ section.not-found {
 .back-to-home {
   display: inline-block;
   width: 300px;
-  margin-top: 50px;
+  margin-bottom: 30px !important;
 }
 
 .back-to-home span {
