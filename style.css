@@ -1575,6 +1575,17 @@ li.live-search-item {
     display: flex;
     flex-direction: column;
   }
+  
+  #main-content.contain-about .about-portrait {
+    max-height: 200px;
+    height: auto;
+    width: auto;
+  }
+
+  #main-content .myStack {
+    margin-top: 50px;
+  }
+
 
   #p-wrapper {
     flex: 100%;
