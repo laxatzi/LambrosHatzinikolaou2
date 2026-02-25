@@ -611,10 +611,6 @@ ul ul li {
   margin: 15px 0;
 }
 
-.buttons a:hover {
-  background-color: var(--color-distinct-light);
-}
-
 .page-contact .grid {
   display: grid;
   gap: 2rem;
@@ -629,7 +625,7 @@ ul ul li {
   }
 }
 
-.contact-info_box ul li{
+.contact-info_box p{
   display: flex;
   align-items: center;
   gap: 0.5rem;
