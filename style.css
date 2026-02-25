@@ -1233,13 +1233,8 @@ form#search input {
   display: block;
 }
 
-
 .search-results--styling li {
   list-style: none;
-}
-
-.search-trigger {
-  margin-left: 10px;
 }
 
 form#searchform {
@@ -1307,6 +1302,10 @@ main#main-content.main-page-search section form#searchform {
 
 li.live-search-item {
   list-style-type: none;
+}
+
+.spinner-div {
+  margin: 20px 0 20px 40%;
 }
 
 .input-field {
