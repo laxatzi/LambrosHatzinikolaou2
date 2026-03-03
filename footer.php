@@ -6,8 +6,8 @@
 <footer id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter" aria-labelledby="footer-title">
   <h2 id="footer-title" class="screen-reader-text">Footer</h2>
   <div id="sig" class="container">
-    <div class="footer-menu-wrapper">
-      <nav class="footer-nav" aria-label="<?php esc_attr_e( 'Footer', 'LambrosPersonalTheme' ); ?>">
+    <div class="footer-menu-wrapper site-footer__menu-wrapper">
+      <nav class="footer-nav site-footer__nav" aria-label="<?php esc_attr_e( 'Footer', 'LambrosPersonalTheme' ); ?>">
       <?php
             get_template_part( 'template-parts/menu-footer' );
         ?>
