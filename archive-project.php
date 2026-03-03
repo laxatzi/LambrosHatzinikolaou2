@@ -2,7 +2,7 @@
  get_header();
 ?>
 
-<main id="main-content" aria-labelledby="archive-project-title">
+<main id="main-content" class="layout__content" aria-labelledby="archive-project-title">
   <div class="container">
     <?php 
      /**
