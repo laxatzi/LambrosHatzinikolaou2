@@ -29,8 +29,8 @@ $links = [
   ],
 ];
 ?>
-<nav class="primary-nav" aria-label="<?php esc_attr_e( 'Primary', 'LambrosPersonalTheme' ); ?>">
-  <ul class="nav site-nav" id="js--menu">
+<nav class="primary-nav site-nav__primary" aria-label="<?php esc_attr_e( 'Primary', 'LambrosPersonalTheme' ); ?>">
+  <ul class="nav nav__list site-nav" id="js--menu">
     <?php foreach ( $links as $item ) : ?>
     <!-- If you ever want to style the active item differently (background, underline, etc.), 
     it’s useful to have a CSS class on that item. 
