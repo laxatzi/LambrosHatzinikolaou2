@@ -162,10 +162,10 @@
          */
 
         if ( get_post_type() === 'post' && has_category() ) : ?>
-          <div class="entry-categories" itemprop="articleSection">
-            <span class="categories-label"><?php esc_html_e( 'Categories:', 'LambrosPersonalTheme' ); ?></span>
-            <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
-          </div>
+            <span class="categories-label entry-categories__label"><?php esc_html_e( 'Categories:', 'LambrosPersonalTheme' ); ?></span>
+            <nav class="entry-categories-nav entry-categories__nav" aria-label="<?php esc_attr_e( 'Post categories', 'LambrosPersonalTheme' ); ?>">
+              <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
+            </nav>
         <?php endif; ?>
 
       </div> <!-- .header-info -->
