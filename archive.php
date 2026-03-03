@@ -1,7 +1,7 @@
 <?php
  get_header();
 ?>
-<main id="main-content" aria-labelledby="archive-title">
+<main id="main-content" class="layout__content" aria-labelledby="archive-title">
   <div class="container">
   <?php
     /**
