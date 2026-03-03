@@ -31,7 +31,7 @@
 >
   ↑
 </button>
- <div id="wrapper">
+ <div id="wrapper" class="layout">
      <header class="site-header" role="banner" itemscope itemtype="https://schema.org/WPHeader">
   
   <!-- Logo -->
