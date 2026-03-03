@@ -31,7 +31,7 @@ $display_names = [
 <?php
 
 if ( ! empty( $social_links ) ) : ?>
-<ul class="footer-links social-links">
+<ul class="footer-links site-footer__links site-footer__links--social">
   <?php foreach ( $social_links as $network => $url ) : ?>
     <?php if ( $url ) : ?>
       <li>
