@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
+<main id="main-content" class="layout__content site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php 
   
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
