@@ -2,7 +2,8 @@
  get_header();
 ?>
 
-<main id="main-content" class="layout__content" aria-labelledby="archive-project-title">
+<main id="main-content" class="layout__content" aria-labelledby="archive__project-title">
+
   <div class="container">
     <?php 
      /**
@@ -13,11 +14,11 @@
     do_action( 'lambros_before_archive_loop' );
 
     if ( have_posts() ) : ?>
-    <header class="archive-header" aria-labelledby="archive-project-title">
+    <header class="archive-header" aria-labelledby="archive__project-title">
       <?php
       // Title + description (WP will escape these appropriately)
 
-        the_archive_title( '<h1>','</h1>' );
+        the_archive_title( '<h1 id="archive__project-title">', '</h1>' );
         the_archive_description( '<p>','</p>' );
       ?>
     </header>
