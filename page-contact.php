@@ -1,7 +1,7 @@
 <?php
   get_header();
 ?>
-<main id="main-content" class="site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
+<main id="main-content" class="layout__content site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'page-contact' ); ?>>
     <header class="entry-header">
