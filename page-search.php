@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<main id="main-content" class="site-main main-page-search" aria-label="Search page">
+<main id="main-content" class="layout__content site-main main-page-search" aria-label="Search page">
   <?php 
   /**
    * Displays the search results page template.
