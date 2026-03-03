@@ -1,7 +1,7 @@
 <?php
  get_header();
 ?>
-<main id="main-content">
+<main id="main-content" class="layout__content">
 <div class="dot-bg-section-1"></div>
   <div class="container">
     <section id="posts" aria-labelledby="posts-title">
