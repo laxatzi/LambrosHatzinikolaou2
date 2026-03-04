@@ -1,4 +1,13 @@
 <article class="the-project the-post fade-up">
+  <?php
+    /**
+     * Hook: lambros_before_post_content
+     */
+    do_action( "lambros_before_post_content" );
+  ?>
+
+<div class="entry-content" itemprop="articleBody">
+
   <div class="project-title--wrapper">
     <h3 class="project-title">
       <a href="<?php echo esc_url( get_permalink() ); ?>">
