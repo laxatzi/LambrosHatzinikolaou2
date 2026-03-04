@@ -5,6 +5,8 @@ $name   = isset( $posted['name'])   ? sanitize_text_field($posted['name'] )   : 
 $email  = isset( $posted['email'])  ? sanitize_email($posted['email'] )       : '';
 $subj   = isset( $posted['subject'])? sanitize_text_field($posted['subject'] ): '';
 $msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : '';
+
+ get_template_part( 'template-parts/alerts' );
 ?>
  <form
    class="contact-form"
