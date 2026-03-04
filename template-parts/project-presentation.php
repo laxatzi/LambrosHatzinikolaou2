@@ -1,4 +1,4 @@
-<article class="the-project">
+<article class="the-project the-post fade-up">
   <div class="project-title--wrapper">
     <h3 class="project-title">
       <a href="<?php echo esc_url( get_permalink() ); ?>">
