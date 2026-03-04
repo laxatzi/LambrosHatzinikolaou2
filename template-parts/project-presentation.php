@@ -7,7 +7,18 @@
   ?>
 
 <div class="entry-content" itemprop="articleBody">
-
+  <?php
+    /**
+     * Displays the project title and date in a header section.
+     *
+     * Renders the project title as a link to the single project page and
+     * displays the publication date formatted according to the theme's date format.
+     * The title is wrapped in an h3 element for semantic structure, and the date is
+     * displayed in a small element for visual distinction.
+     *
+     * @return void Outputs HTML directly to the page
+     */
+  ?>
   <div class="project-title--wrapper">
     <h3 class="project-title">
       <a href="<?php echo esc_url( get_permalink() ); ?>">
