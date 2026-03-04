@@ -1,4 +1,4 @@
-  <article <?php post_class(); ?> itemscope itemtype="https://schema.org/Article" >
+  <article <?php post_class(); ?> itemscope itemtype="https://schema.org/Article" class="the-post fade-up">
     <?php
         /**
          * Hook: lambros_before_post_content
