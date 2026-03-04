@@ -29,8 +29,9 @@
       <?php echo get_the_date( LAMBROS_DATE_FORMAT ) ); ?>
     </small>
   </div>
+  
  <p class="project-desc">
-  <?php
+<!-- Use the_excerpt() instead of get_the_excerpt() ? -->
   <?php
     if ( has_excerpt() ) { 
       the_excerpt(); 
@@ -39,8 +40,9 @@
     }
    ?>
   </p>
+  
   <div class="buttons">
-   <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php echo esc_html__( 'Project article', 'LambrosPersonalTheme' ); ?> </a>
-   <a href="https://github.com/laxatzi/LambrosHatzinikolaou2.git"> <?php echo esc_html__( 'Source code', 'LambrosPersonalTheme' ); ?> </a>
+    <a href="<?php echo esc_url( get_permalink() ); ?>"> <?php echo esc_html__( 'Project article', 'LambrosPersonalTheme' ); ?> </a>
+    <a href="https://github.com/laxatzi/LambrosHatzinikolaou2.git"> <?php echo esc_html__( 'Source code', 'LambrosPersonalTheme' ); ?> </a>
   </div>
 </article>
