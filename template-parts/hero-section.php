@@ -36,6 +36,14 @@ $front_id = get_queried_object_id();
     $front_id = (int) get_option( 'page_on_front' );
   }
 
+// Fetch Customizer intro text
+$custom_intro = trim( get_theme_mod( 'lambros_hero_intro_text', '' ) );
+// Get front page content ONLY if static front page is set
+$content = '';
+if ( get_option( 'show_on_front' ) === 'page' ) {
+  $front_id = (int) get_option( 'page_on_front' );
+
+
   if ( $front_id ) {
     $content = get_post_field( 'post_content', $front_id );
     if ( $content ) {
