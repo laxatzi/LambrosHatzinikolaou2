@@ -48,53 +48,51 @@ if ( get_option( 'show_on_front' ) === 'page' ) {
     }
   }
   echo '<div class="hero__content">';
-
-    if ( $content ) {
-      echo '<div class="hero__content">';
-      // the_content filters add paragraph tags, shortcodes, embeds, etc.
+  if ( $content ) {
+  // Use the page content
+     // the_content filters add paragraph tags, shortcodes, embeds, etc.
       echo apply_filters( 'the_content', $content );
-      echo '</div>';
-    } else {
+     } else {
       // Fallback (what you had commented out, cleaned up + escaped)
-      $custom_intro = get_theme_mod( 'lambros_hero_intro_text' );
-      echo '<div class="hero__content">';
-      echo $custom_intro ? wp_kses_post( $custom_intro ) : '<p>' . esc_html__( 'Welcome to my blog. I write about web development, my work, and life as a programmer.', 'LambrosPersonalTheme' ) . '</p>';
-      echo '</div>';
-      ?>
-      <div class="hero__content">
-        <p><?php echo esc_html__( 'I\'m a web developer in Thessaloniki, Greece. This is my tech blog where', 'LambrosPersonalTheme' ); ?>
-          <a href="<?php echo esc_url( site_url( '/blog' ) ); ?>">
-            <?php echo esc_html__( 'I write about web development', 'LambrosPersonalTheme' ); ?>
-          </a>,
-          <a href="#latest-projects" class="hop">
-            <?php echo esc_html__( 'my work', 'LambrosPersonalTheme' ); ?>
-          </a>,
-          <?php echo esc_html__( 'and my life as a programmer.', 'LambrosPersonalTheme' ); ?>
-        </p>
-        <p>
-          <a href="#latest-posts" class="hop">
-            <?php echo esc_html__( 'I’ve written a few interesting posts recently.', 'LambrosPersonalTheme' ); ?>
-          </a>
-        </p>
-        <p>
-          <?php echo esc_html__( 'You can look over', 'LambrosPersonalTheme' ); ?>
-          <a href="https://github.com/laxatzi" rel="me noopener" target="_blank">
-            <?php echo esc_html__( 'my code on GitHub', 'LambrosPersonalTheme' ); ?>
-          </a>.
-        </p>
-        <p><?php echo esc_html__( 'If you want to talk about anything programming related, have recommendations, comments, want to work with me, meet up or just say hello—tweet me or send an email!', 'LambrosPersonalTheme' ); ?></p>
-      </div>
-      <?php
-    }
-  }
+    ?>
+    <p>
+      <?php echo esc_html__( 'I\'m a web developer in Thessaloniki, Greece. This is my tech blog where', 'LambrosPersonalTheme' ); ?>
+        <a href="<?php echo esc_url( site_url( '/blog' ) ); ?>">
+          <?php echo esc_html__( 'I write about web development', 'LambrosPersonalTheme' ); ?>
+        </a>,
+        <a href="#latest-projects" class="hop">
+          <?php echo esc_html__( 'my work', 'LambrosPersonalTheme' ); ?>
+        </a>,
+      <?php echo esc_html__( 'and my life as a programmer.', 'LambrosPersonalTheme' ); ?>
+    </p>
     
+    <p>
+      <a href="#latest-posts" class="hop">
+        <?php echo esc_html__( 'I\'ve written a few interesting posts recently.', 'LambrosPersonalTheme' ); ?>
+      </a>
+    </p>
+
+    <p>
+      <?php echo esc_html__( 'You can look over', 'LambrosPersonalTheme' ); ?>
+      <a href="https://github.com/laxatzi" rel="me noopener" target="_blank">
+        <?php echo esc_html__( 'my code on GitHub', 'LambrosPersonalTheme' ); ?>
+      </a>.
+    </p>
+
+    <p>
+      <?php echo esc_html__( 'If you want to talk about anything programming related, have recommendations, comments, want to work with me, meet up or just say hello—tweet me or send an email!', 'LambrosPersonalTheme' ); ?>
+    </p>
+
+<?php
+  }
+
   echo '</div>';
 
   // CTA button (Customizer)
   $cta_url   = get_theme_mod( 'lambros_hero_cta_url', site_url( '/contact' ) );
   $cta_label = get_theme_mod( 'lambros_hero_cta_label', __( 'Let\'s Work Together', 'LambrosPersonalTheme' ) );
 
-  ?>
+?>
 
   <div class="hero__cta">
     <a href="<?php echo esc_url( $cta_url ); ?>" class="button primary-button">
