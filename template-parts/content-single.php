@@ -5,7 +5,7 @@
          */
         do_action( 'lambros_before_post_content' );
     ?>
-  <!-- Featured Image -->
+
     <?php 
     /**
      * Displays the featured image for a single post.
@@ -25,7 +25,8 @@
         ?>
       </div>
      <?php endif; ?>
-        <!-- Header -->
+
+    <!-- Header -->
     <header class="entry-header" >
       <h1 id="post-title-<?php the_ID(); ?>" class="entry-title" itemprop="headline">
         <?php the_title(); ?>
@@ -75,7 +76,6 @@
             </div>
             <?php endif; ?>
 
-        <!-- Author -->
             <?php 
             /**
              * Displays the author byline for single posts.
@@ -98,7 +98,6 @@
               </span>
             <?php endif; ?>
 
-          <!-- ⭐ Read time indicator -->
               <span class="read-time" itemprop="timeRequired">
               <?php
                  /**
@@ -120,20 +119,18 @@
                    * The output might appear as: [icon] 5 mins read
                    */
                   ?>
-
-                  <?php echo lambros_get_reading_time_icon(); // Get the SVG icon for reading time ?>
-                  <?php
-                    $minutes = lambros_get_reading_time();
-                    echo esc_html( sprintf(
-                      _n( '%d min read', '%d mins read', $minutes, 'LambrosPersonalTheme' ),
-                      $minutes
-                    ) );
-                  ?>
+                 <?php echo lambros_get_reading_time_icon(); // Get the SVG icon for reading time ?>
+                   <?php
+                     $minutes = lambros_get_reading_time();
+                     echo esc_html( sprintf(
+                       _n( '%d min read', '%d mins read', $minutes, 'LambrosPersonalTheme' ),
+                       $minutes
+                     ) );
+                   ?>
               </span>
 
         </div> <!-- header-metadata -->
-
-        <!-- Categories -->
+        
         <?php 
         /**
          * Display post categories section for single post view.
@@ -174,7 +171,6 @@
       </div> <!-- .header-info -->
     </header> <!-- .entry-header -->
 
-  <!-- Content -->
     <?php
       /**
        * Displays the main content of a single post/page with article body markup.
@@ -195,7 +191,6 @@
         ?>
       </div>
 
-       <!-- Footer: Tags, Share, etc. -->
         <?php 
         /**
          * Displays the entry footer with tags for single post type content.
@@ -209,7 +204,7 @@
          * @return void
          */
         if ( get_post_type() === 'post' ) : ?>
-          <footer class="entry-footer">
+          <footer class="entry-footer site-footer">
             <?php if ( has_tag() ) : ?>
               <div class="entry-tags">
                 <span class="tags-label"><?php esc_html_e( 'Tags:', 'LambrosPersonalTheme' ); ?></span>
