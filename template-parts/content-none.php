@@ -175,13 +175,13 @@
       </h2>
     </header>
   
-    <div class="error-explanation no-results-explanation">
+    <div class="error-explanation">
       <p>
         <?php esc_html_e( 'Try searching for something else or explore recent posts below.', 'LambrosPersonalTheme' ); ?>
       </p>
     </div>
   
-    <div class="error-search no-results-search">
+    <div class="error-search">
       <h3><?php esc_html_e( 'Search the site:', 'LambrosPersonalTheme' ); ?></h3>
       <?php get_search_form(); ?>
     </div>
