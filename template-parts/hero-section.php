@@ -76,5 +76,20 @@ $front_id = get_queried_object_id();
       <?php
     }
   }
+    
+  echo '</div>';
+
+  // CTA button (Customizer)
+  $cta_url   = get_theme_mod( 'lambros_hero_cta_url', site_url( '/contact' ) );
+  $cta_label = get_theme_mod( 'lambros_hero_cta_label', __( 'Let\'s Work Together', 'LambrosPersonalTheme' ) );
+
   ?>
- </section>
+
+  <div class="hero__cta">
+    <a href="<?php echo esc_url( $cta_url ); ?>" class="button primary-button">
+      <?php echo esc_html( $cta_label ); ?>
+    </a>
+  </div>
+
+</section>
+
