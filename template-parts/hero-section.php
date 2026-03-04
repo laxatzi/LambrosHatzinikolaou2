@@ -42,10 +42,13 @@ $custom_intro = trim( get_theme_mod( 'lambros_hero_intro_text', '' ) );
 $content = '';
 if ( get_option( 'show_on_front' ) === 'page' ) {
   $front_id = (int) get_option( 'page_on_front' );
-
-
   if ( $front_id ) {
-    $content = get_post_field( 'post_content', $front_id );
+    $raw = get_post_field( 'post_content', $front_id );
+    $content = trim( wp_strip_all_tags( $raw ) ); // strip HTML + whitespace
+    }
+  }
+  echo '<div class="hero__content">';
+
     if ( $content ) {
       echo '<div class="hero__content">';
       // the_content filters add paragraph tags, shortcodes, embeds, etc.
