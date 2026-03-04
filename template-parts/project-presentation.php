@@ -25,8 +25,8 @@
        <?php the_title(); ?>
       </a>
     </h3>
-    <small>
-      <?php echo get_the_date( get_option( LAMBROS_DATE_FORMAT ) ); ?>
+    <small class="project-date">
+      <?php echo get_the_date( LAMBROS_DATE_FORMAT ) ); ?>
     </small>
   </div>
  <p class="project-desc">
