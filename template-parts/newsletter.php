@@ -1,4 +1,4 @@
-<section id="newsletter">
+<section id="newsletter" class="section newsletter-section" aria-labelledby="newsletter-title">
   <h2 id="newsletter-title"><?php echo esc_html__( 'My Monthly Newsletter about Web Development', 'LambrosPersonalTheme' ); ?></h2>
     <small><?php echo esc_html__( 'Subscribe to my newsletter to get useful tips and a selection of articles about web technologies on the first Monday of every month.', 'LambrosPersonalTheme' ); ?>
     </small>
