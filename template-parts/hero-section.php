@@ -2,7 +2,8 @@
   // Safer asset URL helper (child-theme friendly)
 $img_src = get_theme_file_uri( 'images/aggelikoyla.jpg' );
 ?>
-<section id="hero">
+<section id="hero" class="section" aria-labelledby="intro-heading">
+  
   <div class="intro-heading-section">
     <div class="intro-heading-image">
       <img
@@ -14,10 +15,12 @@ $img_src = get_theme_file_uri( 'images/aggelikoyla.jpg' );
         decoding="async"
       />
     </div>
-      <h1 class="intro-heading">
-        <?php echo esc_html__( 'Hi, I\'m Lambros', 'LambrosPersonalTheme' ); ?>
-      </h1>
-    </div>
+    
+    <h1 class="intro-heading">
+      <?php echo esc_html__( 'Hi, I\'m Lambros', 'LambrosPersonalTheme' ); ?>
+    </h1>
+  </div>
+  
 <?php
   // Pull the content of the current front page and print it here.
   // Works whether you're on a static front page or using a custom front-page template.
