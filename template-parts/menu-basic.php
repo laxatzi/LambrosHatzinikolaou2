@@ -46,20 +46,5 @@ $links = [
       </li>
     <?php endforeach; ?>
 
-    <li>
-      <!-- Search trigger: this activates your overlay via JS -->
-       <button
-          type="button"
-          class="search-trigger visible"
-          aria-label="Open search"
-          aria-haspopup="dialog"
-          aria-controls="search-overlay"
-          aria-expanded="false"
-        >
-        <?php esc_html_e( 'Search', 'LambrosPersonalTheme' ); ?>
-        <ion-icon class="magnifying-glass" name="search" size="small" aria-hidden="true"></ion-icon>
-        <span class="sr-only"><?php esc_html_e( 'Open site search', 'LambrosPersonalTheme' ); ?></span>
-     </button>
-    </li>
   </ul>
 </nav>
