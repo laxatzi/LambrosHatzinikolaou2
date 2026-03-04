@@ -1,7 +1,9 @@
 <section id="newsletter" class="section newsletter-section" aria-labelledby="newsletter-title">
   <h2 id="newsletter-title"><?php echo esc_html__( 'My Monthly Newsletter about Web Development', 'LambrosPersonalTheme' ); ?></h2>
-    <small><?php echo esc_html__( 'Subscribe to my newsletter to get useful tips and a selection of articles about web technologies on the first Monday of every month.', 'LambrosPersonalTheme' ); ?>
-    </small>
+    <div class="newsletter-content">
+      <small>
+        <?php echo esc_html__( 'Subscribe to my newsletter to get useful tips and a selection of articles about web technologies on the first Monday of every month.', 'LambrosPersonalTheme' ); ?>
+      </small>
     <form action="" method="post" aria-label="Newsletter subscription form">
       <input type="email" placeholder="<?php echo esc_attr__( 'Email', 'LambrosPersonalTheme' ); ?>" name="email" autocomplete="email" required/>
   <!-- Honeypot field (hidden from humans, visible to bots) -->
@@ -16,4 +18,5 @@
       <input type="submit" value="<?php echo esc_attr__( 'Subscribe', 'LambrosPersonalTheme' ); ?>" />
       <div class="newsletter-message" aria-live="polite"></div>
     </form>
+    </div>
 </section>
