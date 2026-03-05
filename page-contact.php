@@ -1,10 +1,10 @@
 <?php
   get_header();
 ?>
-<main id="main-content" class="layout__content site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
+<main id="main-content" class="layout__content layout__main site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <article id="post-<?php the_ID(); ?>" <?php post_class( 'page-contact' ); ?>>
-    <header class="entry-header">
+  <article id="post-<?php the_ID(); ?>" <?php post_class( 'page-contact the-post fade-up' ); ?>>
+    <header class="entry-header site-header">
       <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"><?php the_title(); ?></h1>
       
   <?php
@@ -30,7 +30,7 @@
         }
       ?>
     </header>
-  <section id="contactme" class="contact-section">
+  <section id="contactme" class="contact-section section" aria-lebelledby="contactme-title">
     <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
 
   
