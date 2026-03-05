@@ -2,7 +2,7 @@
 
 get_header();
 ?>
-<main id="main-content">
+<main id="main-content" class="layout__main">
   <div class="container">
 <?php
   while( have_posts() ) {
