@@ -53,11 +53,10 @@ get_header();
       <option value="project"><?php esc_html_e( 'Projects', 'LambrosPersonalTheme' ); ?></option>
    </select>
 
-    <?php
+ <?php
       // Core search form (already pre-fills the current query and has label)
-      get_search_form();
-
-    ?>
+      ?>
+      <div id="search-page-form"> <?php get_search_form(); ?> </div>
     <div id="live-search-results" class="live-search-results" aria-live="polite"></div>
 
   </section>
