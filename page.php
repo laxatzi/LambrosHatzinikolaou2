@@ -102,7 +102,12 @@ get_header();
 
   <?php endwhile; else : ?>
 
-    <?php get_template_part( 'template-parts/content', 'none' ); ?>
+    <?php 
+      /**
+     * Falls back to a 'no content' template if the main loop has no posts.
+     */
+      get_template_part( 'template-parts/content', 'none' ); 
+     ?>
 
   <?php endif; ?>
 </main>
