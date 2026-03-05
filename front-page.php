@@ -101,7 +101,7 @@
               'update_post_meta_cache' => false,
             ) );
             if ( $latestProjects->have_posts() ) :
-              while($latestProjects -> have_posts()) :
+              while( $latestProjects -> have_posts() ) :
                 $latestProjects -> the_post();
 
                 get_template_part( 'template-parts/project-presentation' );
