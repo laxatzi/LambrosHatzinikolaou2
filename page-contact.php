@@ -56,7 +56,7 @@
      * @uses esc_html() Sanitize HTML output
      */
       if ( $m = get_transient( 'contact_msg' ) ) : delete_transient( 'contact_msg' ); ?>
-        <div class="notice notice-<?php echo esc_attr( $m['type']); ?>" role="status" aria-live="polite">
+        <div class="notice notice-<?php echo esc_attr( $m['type'] ); ?>" role="status" aria-live="polite">
           <?php echo esc_html( $m['text'] ); ?>
         </div>
      <?php endif; ?>
