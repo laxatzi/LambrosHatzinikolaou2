@@ -3,8 +3,9 @@
 ?>
 <main style="margin-top:50px">
   <div class="container">
- <h2>Your search query was "<span class='search-query'><?php echo esc_html( get_search_query(false) ) ?></span>"</h2>
-    <section id="posts">
+  <h2>Your search query was "<span class='search-query'><?php echo esc_html( get_search_query( false ) ); ?></span>"</h2>
+   <section id="posts" class="section" aria-labelledby="search-results-title">
+
       <?php
          if (have_posts() && 'page' !== get_post_type()) {
           while(have_posts()) {
