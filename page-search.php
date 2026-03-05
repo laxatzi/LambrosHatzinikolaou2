@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<main id="main-content" class="layout__content site-main main-page-search" aria-label="<?php esc_attr_e( 'Search results', 'LambrosPersonalTheme' ); ?>">
+<main id="main-content" class="layout__main layout__content site-main main-page-search" aria-label="<?php esc_attr_e( 'Search results', 'LambrosPersonalTheme' ); ?>">
   <?php 
   /**
    * Displays the search results page template.
@@ -25,10 +25,10 @@ get_header();
    * @return void
    */
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class("the-post fade-up"); ?>
         itemscope itemtype="https://schema.org/SearchResultsPage"
       >
-        <header class="entry-header">
+        <header class="entry-header site-header">
           <h1 id="page-title" class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
         </header>
 
