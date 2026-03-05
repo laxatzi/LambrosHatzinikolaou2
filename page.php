@@ -3,16 +3,16 @@
 get_header();
 ?>
 
-<main id="main-content" class="layout__content site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
+<main id="main-content" class="layout__main layout__content site-main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php 
   
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class("the-post fade-up"); ?>
         itemscope
         itemtype="https://schema.org/WebPage"
       >
   
-        <header class="entry-header">
+        <header class="entry-header site-header">
           <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"
             itemprop="headline">
              <?php the_title(); ?>
@@ -62,7 +62,7 @@ get_header();
         ?>
       </div>
 
-      <footer class="entry-footer">
+      <footer class="entry-footer site-footer">
       <?php 
          /**
          * Displays an edit link for the current page in the frontend.
