@@ -2,7 +2,7 @@
         <div class="the-post_title">
           <h3 class="posts">
             <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-            <small><?php echo get_the_date( 'l F j, Y' ); ?></small>
+            <small><?php echo get_the_date( LAMBROS_DATE_FORMAT ); ?></small>
           </h3>
         </div>
         <div class="tags">
