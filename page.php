@@ -79,7 +79,7 @@ get_header();
          *
          * @return void Outputs HTML directly to the page
          */
-        edit_post_link( __( 'Edit this page', 'LambrosPersonalTheme' ), '<span class="edit-link">', '</span>' ); ?>
+        edit_post_link(esc_html__( 'Edit this page', 'LambrosPersonalTheme' ), '<span class="edit-link">', '</span>' ); ?>
         </footer>
 
     </article>
