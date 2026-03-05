@@ -35,7 +35,7 @@
                <small class="project-date" style="margin-top: 10px;">
                  <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"
                    itemprop="datePublished">
-                 <?php echo get_the_date( get_option( 'l F j, Y' ) ); ?>
+                 <?php echo get_the_date( LAMBROS_DATE_FORMAT ); ?>
             <!-- ⭐ Read time indicator -->
                  <span class="read-time" itemprop="timeRequired"> 
                  <svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"> 
