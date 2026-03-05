@@ -14,7 +14,7 @@
           }
           echo paginate_links();
         } else {
-          echo "<h3 class=\"search-query--heading\">No results mach the search!</h3>";
+          echo "<h3 class=\"search-query--heading\">No results match the search!</h3>";
         }
 
           get_search_form();
