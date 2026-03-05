@@ -1,10 +1,10 @@
 <?php
  get_header();
 ?>
-<main id="main-content" class="layout__content">
+<main id="main-content" class="layout__content layout__main">
 <div class="dot-bg-section-1"></div>
   <div class="container">
-    <section id="posts" aria-labelledby="posts-title">
+    <section id="posts" aria-labelledby="posts-title" class="section">
       <h1 id="posts-title" class="screen-reader-text">
         <?php esc_html_e( 'Posts', 'LambrosPersonalTheme' ); ?>
       </h1>
@@ -27,7 +27,7 @@
        */
       if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
          <article id="post-<?php the_ID(); ?>" <?php post_class( 'the-post' ); ?> itemscope itemtype="https://schema.org/BlogPosting" class="the-post fade-up">
-           <header class="the-post_title">
+           <header class="the-post_title site-header">
              <h2 class="posts">
                <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
                  <?php the_title(); ?>
