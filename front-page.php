@@ -65,18 +65,8 @@
               <?php
                 $projects_url = get_post_type_archive_link( 'project' ) ?: home_url( '/projects/' );
               ?>
-       <!-- Serious Bug 
-              <a href="<?php echo site_url($projects_url); ?>" class="read_more">
-              But $projects_url is already a full URL returned by:
-              
-              get_post_type_archive_link( 'project' )
-              So site_url() wraps a URL inside another URL, producing something like:
-              
-              https://example.com/https://example.com/projects/
-            // The actual code
-              <a href="<?php echo site_url($projects_url);  ?>" class="read_more"><?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?></a>
-              -->
-              <a href="<?php echo esc_url( $projects_url ); ?>" class="read_more" aria-label="<?php esc_attr_e( 'View all projects', 'LambrosPersonalTheme' ); ?>">
+               <a href="<?php echo esc_url( $projects_url ); ?>" class="read_more" aria-label="<?php esc_attr_e( 'View all projects', 'LambrosPersonalTheme' ); ?>"
+
                 <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
               </a>
             </div>
