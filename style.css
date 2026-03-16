@@ -1756,13 +1756,6 @@ header a {
   padding: 0 10px 0 0;
 }
 
-header a:hover,
-header a:active,
-header a:focus {
-  text-decoration-color: var(--color-main-dark);
-  font-weight: bolder;
-}
-
 .site-header {
   display: flex;
   flex: 50%;
@@ -1770,5 +1763,32 @@ header a:focus {
   align-items: center;
   padding: 10px 0 20px;
 }
+
+.nav__list {
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+}
+
+.nav__list-item {
+  list-style-type: none;
+}
+
+.nav__list-link {
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.nav__list-link:hover,
+.nav__list-link:active,
+.nav__list-link:focus {
+  text-decoration-color: var(--color-main-dark);
+  font-weight: bolder;
+}
+
 
 
