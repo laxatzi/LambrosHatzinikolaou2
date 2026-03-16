@@ -34,7 +34,7 @@ if ( ! empty( $social_links ) ) : ?>
 <ul class="footer-links site-footer__links site-footer__links--social">
   <?php foreach ( $social_links as $network => $url ) : ?>
     <?php if ( $url ) : ?>
-      <li>
+      <li class="nav__item">
         <a href="<?php echo esc_url( $url ); ?>"
            target="_blank"
             class="social-link social-link-<?php echo esc_attr( $network ); ?>"
