@@ -2,7 +2,7 @@
   get_template_part( 'template-parts/social-links' );
 ?>
 
-<ul class="footer-links site-footer__links legal-links nav__list">
+<ul class="site-footer__links legal-links nav__list">
   
   <li class="nav__item">
     <a <?php if ( is_page( 'privacy-policy' ) ) echo 'class="site-footer__indicator site-footer__link" aria-current="page"'; ?>
