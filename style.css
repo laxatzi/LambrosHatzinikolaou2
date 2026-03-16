@@ -732,6 +732,7 @@ a.indicator {
 #logo a.indicator {
   text-decoration: underline 4px var(--color-distinct);
   font-weight: 800;
+  font-size: 2rem;
 }
 
 .meta {
