@@ -1798,4 +1798,32 @@ h1 {
   font-weight: 800;
 }
 
+/* HEADER Navigation */
+
+header h2 a {
+  font-size: 2rem;
+}
+
+header a {
+  text-decoration-color: var(--color-main-dark);
+  font-size: 1rem;
+  text-decoration: underline 4px;
+  padding: 0 10px 0 0;
+}
+
+header a:hover,
+header a:active,
+header a:focus {
+  text-decoration-color: var(--color-main-dark);
+  font-weight: bolder;
+}
+
+.site-header {
+  display: flex;
+  flex: 50%;
+  justify-content: end;
+  align-items: center;
+  padding: 10px 0 20px;
+}
+
 
