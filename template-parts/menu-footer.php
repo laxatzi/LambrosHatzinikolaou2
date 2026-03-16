@@ -11,8 +11,8 @@
     </a>
   </li>
   
-  <li>
-    <a <?php if ( is_page( 'terms-of-service' ) ) echo 'class="indicator" aria-current="page"'; ?>
+  <li class="nav__item">
+    <a <?php if ( is_page( 'terms-of-service' ) ) echo 'class="site-footer__indicator site-footer__link" aria-current="page"'; ?>
       href="<?php echo esc_url( site_url( '/terms-of-service' ) ); ?>">
       <?php esc_html_e( 'Terms', 'LambrosPersonalTheme' ); ?>
     </a>
