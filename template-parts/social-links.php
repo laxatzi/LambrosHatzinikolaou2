@@ -37,7 +37,7 @@ if ( ! empty( $social_links ) ) : ?>
       <li class="nav__item">
         <a href="<?php echo esc_url( $url ); ?>"
            target="_blank"
-            class="social-link social-link-<?php echo esc_attr( $network ); ?>"
+            class="site-footer__link social-link-<?php echo esc_attr( $network ); ?>"
             aria-label="<?php echo esc_attr( isset( $display_names[ $network ] ) ? $display_names[ $network ] : ucfirst( $network ) ); ?>"
             rel="noopener noreferrer">
            <ion-icon name="<?php echo esc_attr( $icons[ $network ] ); ?>" aria-hidden="true"></ion-icon>
