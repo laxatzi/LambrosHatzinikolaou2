@@ -1316,7 +1316,8 @@ li.live-search-item {
   margin: -1px;
 }
 
-.screen-reader-text:focus {
+.screen-reader-text:focus,
+.sr-only:focus {
   clip: auto;
   height: auto;
   width: auto;
