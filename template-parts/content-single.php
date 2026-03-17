@@ -16,7 +16,7 @@
      * @since 1.0.0
      */
      if ( has_post_thumbnail() ) : ?>
-      <div class="post-thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <div class="post-thumbnail post__thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <?php
           the_post_thumbnail( 'large', [
             'itemprop' => 'url',
