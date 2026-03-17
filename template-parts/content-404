@@ -1,7 +1,7 @@
 <section class="no-results not-found section" aria-labelledby="page-title">
     <!-- Error message header -->
-    <header class="error-page-header site-header">
-       <h1 id="page-title">404</h1>
+    <header class="error-page-header error-404__header site-header">
+       <h1 id="page-title" class="error-404__title">404</h1>
        <h2 class="page-subtitle">
        <?php
        printf(
@@ -28,9 +28,9 @@
   </div>
 
  <!-- Search Form -->
- <div class="error-search">
+ <div class="error-search error-404__search--wrapper">
     <h3><?php esc_html_e( 'Try searching for what you need:', 'LambrosPersonalTheme' ); ?></h3>
-    <form role="search" method="get" class="search-form search-form-404" action="<?php echo esc_url(home_url('/')); ?>">
+    <form role="search" method="get" class="search-form search-form-404 search-form__404" action="<?php echo esc_url(home_url('/')); ?>">
       <div class="search-wrapper">
         <label for="error-page-search" class="screen-reader-text">
           <?php esc_html_e( 'Search for:', 'LambrosPersonalTheme' ); ?>
@@ -63,7 +63,7 @@
       <?php esc_html_e( 'Back to home page', 'LambrosPersonalTheme' ); ?>
     </a>
   </div>
-  <div class="recent-posts-404">
+  <div class="recent-posts-404 recent-posts__404--wrapper">
     <?php
       // Show a few recent posts to help users recover
       the_widget( 'WP_Widget_Recent_Posts', [ 'number' => 5 ], [ 'before_title' => '<h3>', 'after_title' => '</h3>' ] );
