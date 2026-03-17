@@ -959,6 +959,10 @@ section.not-found {
   position: relative;
 }
 
+.search-form__404 {
+  position: relative;
+}
+
 .search-wrapper {
   position: relative;
   display: flex;
