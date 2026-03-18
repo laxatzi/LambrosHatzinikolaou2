@@ -1498,13 +1498,6 @@ li.live-search-item {
     width: 80%;
   }
 
-  .search-overlay .label-form {
-    width: 60%;
-  }
-  .search-overlay .label-form label {
-    font-size: 165%;
-  }
-
   form#searchform {
     width: 70%;
   }
