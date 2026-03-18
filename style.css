@@ -1540,14 +1540,6 @@ li.live-search-item {
     width: 40%;
   }
 
-
-  .search-overlay .label-form {
-    width: 80%;
-  }
-  .search-overlay .label-form label {
-    font-size: 145%;
-  }
-
   #wrapper-spinner {
     margin-left: 10%;
   }
