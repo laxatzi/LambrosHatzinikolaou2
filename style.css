@@ -1247,6 +1247,17 @@ form#searchform {
   width: 60%;
   margin: 20px 0;
 }
+@media screen and (max-width: 1200px) {
+form#searchform {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+form#searchform {
+    width: 100%;
+  }
+}
 
 form#searchform input {
   width: 75%;
