@@ -1493,11 +1493,6 @@ li.live-search-item {
     margin: 35px 0 0;
     flex: 1;
   }
-
-  #contain-about {
-    display: flex;
-    flex-direction: column;
-  }
   
   #main-content.contain-about .about-portrait {
     max-height: 200px;
