@@ -1534,10 +1534,6 @@ li.live-search-item {
   #main-content .myStack {
     margin-top: 50px;
   }
-
-  form#searchform {
-    width: 70%;
-  }
 }
 
 /*------------------------------------------------------------------
@@ -1571,10 +1567,6 @@ li.live-search-item {
     padding: 5px 10px;
     display: block;
     width: 40%;
-  }
-
-  form#searchform {
-    width: 100%;
   }
 
 menu.nav {
