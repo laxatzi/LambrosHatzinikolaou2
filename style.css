@@ -1312,6 +1312,12 @@ li.live-search-item {
   width: 60%;
 }
 
+@media screen and (max-width: 1200px) {
+  .input-field {
+    width: 80%;
+  }
+}
+
 .input-field input {
   flex: 4;
   border-right: none;
