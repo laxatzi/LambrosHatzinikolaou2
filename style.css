@@ -1191,6 +1191,32 @@ form#search input {
   display: block;
 }
 
+
+@media screen and (max-width: 1500px) {
+  #wrapper-spinner {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #wrapper-spinner {
+    width: 100%;
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #wrapper-spinner {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #wrapper-spinner {
+    margin-left: 7%;
+  }
+}
+
 .search-results--styling li {
   list-style: none;
 }
