@@ -1263,6 +1263,12 @@ form#searchform input {
   width: 75%;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 550px) {
+  form#searchform input {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 .search-query {
   font-style: oblique;
