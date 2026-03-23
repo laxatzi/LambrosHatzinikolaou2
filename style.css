@@ -272,6 +272,18 @@ main {
   width: 70%;
 }
 
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
 main img {
   flex: 40%;
 }
