@@ -880,6 +880,14 @@ ul.contact-list li {
   margin-top: 100px;
 }
 
+@media screen and (max-width: 1200px) {
+
+  #contain-about {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .contents {
   margin-top: 50px;
 }
