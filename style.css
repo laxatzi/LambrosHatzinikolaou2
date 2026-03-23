@@ -1440,9 +1440,7 @@ li.live-search-item {
    ^MAX 1500px
 -------------------------------------------------------------------*/
 @media screen and (max-width: 1500px) {
-  .container {
-    width: 85%;
-  }
+
 
   #wrapper-spinner {
     width: 85%;
@@ -1464,9 +1462,6 @@ li.live-search-item {
    ^MAX 1200px
 -------------------------------------------------------------------*/
 @media screen and (max-width: 1200px) {
-  .container {
-    width: 100%;
-  }
 
   #wrapper-spinner {
     width: 100%;
