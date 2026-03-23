@@ -1483,10 +1483,6 @@ li.live-search-item {
   .message,
   .contact-info-section {
     margin: 35px 0 0;
-  }
-
-  .message,
-  .contact-info-section {
     flex: 1;
   }
 
