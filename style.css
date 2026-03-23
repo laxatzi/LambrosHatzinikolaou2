@@ -1639,10 +1639,6 @@ menu.nav {
 h1 {
     font-size: 36px;
   }
-
-  #wrapper-spinner {
-    margin-left: 7%;
-  }
   
   form#searchform input {
     width: 100%;
