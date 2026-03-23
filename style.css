@@ -1511,10 +1511,6 @@ li.live-search-item {
     margin-top: 50px;
   }
 
-  #p-wrapper {
-    flex: 100%;
-    margin: 0;
-  }
   .input-field {
     width: 80%;
   }
