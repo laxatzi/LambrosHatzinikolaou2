@@ -1205,7 +1205,7 @@ form#search input {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 920px) {
   #wrapper-spinner {
     margin-left: 10%;
   }
