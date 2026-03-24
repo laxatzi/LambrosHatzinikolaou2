@@ -954,6 +954,13 @@ pre {
   padding: 5% 10%;
 }
 
+  
+@media screen and (max-width: 940px) {
+  #error-message {
+    padding: 5%;
+  }
+}
+
 #error-message h1 {
   font-size: 290px;
   font-weight: 900;
