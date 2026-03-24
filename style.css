@@ -1536,6 +1536,10 @@ li.live-search-item {
     margin: 35px 0 0;
     flex: 1;
   }
+
+  .wp-block-heading {
+    margin-top: 50px;
+  }
   
 }
 
