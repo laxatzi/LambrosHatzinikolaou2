@@ -34,71 +34,9 @@
 
       <div class="header-info">
         <div class="header-metadata">
-
-        <!-- Published Date -->
-          <time datetime="<?php echo esc_attr( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>" itemprop="datePublished">
-              <?php echo esc_html( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>
-          </time>
-        <!-- Modified date (hidden visually, important for SEO) -->
-          <meta itemprop="dateModified" content="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>" >
-          <?php
-              $published = get_the_date( 'U' );
-              $modified  = get_the_modified_date( 'U' );
-              $diff_days = ( $modified - $published ) / DAY_IN_SECONDS;
-  
-             
-            /**
-             * Display an updated notice if the post was modified more than 7 days ago.
-             *
-             * Shows a notice box containing the last modified date of the current post,
-             * but only displays if the difference between the current date and the
-             * modified date is greater than 7 days.
-             *
-             * The notice uses the LAMBROS_DATE_FORMAT constant for date formatting
-             * and the 'LambrosPersonalTheme' text domain for internationalization.
-             *
-             * @global int $diff_days The number of days since the post was last modified.
-             * @uses get_the_modified_date() To retrieve the post's last modified date.
-             * @uses esc_html__() To safely output translated text.
-             * @uses esc_html() To safely escape HTML output.
-             *
-             * @return void
-             */
-              if ( $diff_days > 7 ) :
-            ?>
-            <div class="updated-notice">
-              <?php
-                printf(
-                    esc_html__( 'Updated on %s', 'LambrosPersonalTheme' ),
-                    esc_html( get_the_modified_date( LAMBROS_DATE_FORMAT ) )
-                );
-              ?>
-            </div>
-            <?php endif; ?>
-
-            <?php 
-            /**
-             * Displays the author byline for single posts.
-             *
-             * Renders a byline section with the author's name and link to their posts archive page.
-             * Only displays for posts (not other post types). Includes schema.org markup for better SEO.
-             *
-             * @since 1.0.0
-             *
-             * @return void
-             */
-              if ( get_post_type() === "post" ) : ?>
-              <span class="byline">
-                <span class="author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  <?php esc_html_e( 'Written by', 'LambrosPersonalTheme' ); ?>
-                  <a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>" itemprop="url">
-                    <span itemprop="name"><?php echo esc_html( get_the_author() ); ?></span>
-                  </a>
-                </span>
-              </span>
-            <?php endif; ?>
-
-              <span class="read-time" itemprop="timeRequired">
+          <div class="header-metadata--row">
+          <!-- ⭐ Read time indicator -->
+            <span class="read-time" itemprop="timeRequired">
               <?php
                  /**
                    * Display reading time estimate for a post
@@ -161,7 +99,7 @@
         if ( get_post_type() === "post" && has_category() ) : ?>
           <div class="entry-categories" itemprop="articleSection">
 
-            <span class="categories-label entry-categories__label"><?php esc_html_e( 'Categories:', 'LambrosPersonalTheme' ); ?></span>
+            <span class="categories-label entry-categories__label"></span>
             <nav class="entry-categories-nav entry-categories__nav" aria-label="<?php esc_attr_e( 'Post categories', 'LambrosPersonalTheme' ); ?>">
               <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
             </nav>
