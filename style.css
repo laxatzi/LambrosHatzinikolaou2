@@ -836,14 +836,6 @@ time {
   margin-bottom: 50px;
 }
 
-.header-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  width: 100%;
-  max-width: 600px;
-}
-
 .single-metadata time {
   margin-top: 10px;
   font-style: italic;
