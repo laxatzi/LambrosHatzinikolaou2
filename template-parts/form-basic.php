@@ -72,7 +72,6 @@ $msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : 
       required
     ><?php echo esc_textarea( $msg ); ?></textarea>
   </div>
-  <button id="send-button" type="submit" name="submit">
-    <?php esc_html_e( 'Send Message', 'LambrosPersonalTheme' ); ?>
-  </button>
+  <input id="send-button" type="submit" name="submit" value="<?php esc_attr_e( 'Send Message', 'LambrosPersonalTheme' ); ?>">
+
 </form>
