@@ -65,6 +65,27 @@
                        $minutes
                      ) );
                    ?>
+           </span>
+            <?php
+            /**
+             * Displays the author byline for single posts.
+             *
+             * Renders a byline section with the author's name and link to their posts archive page.
+             * Only displays for posts (not other post types). Includes schema.org markup for better SEO.
+             *
+             * @since 1.0.0
+             *
+             * @return void
+             */
+            if ( get_post_type() === "post" ) : ?>
+              <span class="byline">
+                <span class="author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                  <?php esc_html_e( "Written by", "LambrosPersonalTheme" ); ?>
+                  <a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ); ?>" itemprop="url">
+                    <span itemprop="name"><?php echo esc_html( get_the_author() ); ?></span>
+                  </a>
+                </span>
+      
               </span>
 
         </div> <!-- header-metadata -->
