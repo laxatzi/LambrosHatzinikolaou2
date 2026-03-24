@@ -335,19 +335,6 @@ main img {
   font-weight: 800;
 }
 
-/* #logo a:focus-visible {
-  outline: 4px solid var(--color-distinct);
-} */
-
-header a:hover,
-header a:active,
-footer a:hover,
-footer a:active,
-header a:focus,
-footer a:focus {
-  text-decoration-color: var(--color-main-light);
-}
-
 a:focus-visible {
   outline: 4px solid var(--color-main-light);
 }
