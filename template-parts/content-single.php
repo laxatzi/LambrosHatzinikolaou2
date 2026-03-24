@@ -87,6 +87,49 @@
                 </span>
       
               </span>
+                          <?php endif; ?>
+          </div>
+
+            <!-- Published Date -->
+                    <time datetime="<?php echo esc_attr( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>" itemprop="datePublished">
+                        <?php echo esc_html( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>
+                    </time>
+                  <!-- Modified date (hidden visually, important for SEO) -->
+                    <meta itemprop="dateModified" content="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>" >
+                    <?php
+                      $published = get_the_date( 'U' );
+                      $modified  = get_the_modified_date( 'U' );
+                      $diff_days = ( $modified - $published ) / DAY_IN_SECONDS;
+
+                      /**
+                       * Display an updated notice if the post was modified more than 7 days ago.
+                       *
+                       * Shows a notice box containing the last modified date of the current post,
+                       * but only displays if the difference between the current date and the
+                       * modified date is greater than 7 days.
+                       *
+                       * The notice uses the LAMBROS_DATE_FORMAT constant for date formatting
+                       * and the 'LambrosPersonalTheme' text domain for internationalization.
+                       *
+                       * @global int $diff_days The number of days since the post was last modified.
+                       * @uses get_the_modified_date() To retrieve the post's last modified date.
+                       * @uses esc_html__() To safely output translated text.
+                       * @uses esc_html() To safely escape HTML output.
+                       *
+                       * @return void
+                       */
+                    if ( $diff_days > 7 ) :
+                    ?>
+                    <div class="updated-notice" >
+                        <?php
+                        printf(
+                            esc_html__( 'Updated on %s', 'LambrosPersonalTheme' ),
+                            esc_html( get_the_modified_date( LAMBROS_DATE_FORMAT ) )
+                        );
+                        ?>
+                    </div>
+                  <?php endif; ?>
+
 
         </div> <!-- header-metadata -->
         
