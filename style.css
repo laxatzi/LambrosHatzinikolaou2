@@ -1577,10 +1577,6 @@ li.live-search-item {
 -------------------------------------------------------------------*/
 @media screen and (max-width: 940px) {
 
-  main {
-    padding: 0;
-  }
-
   a.read_more {
     margin-top: 20px;
     padding: 5px 10px;
