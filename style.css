@@ -1571,10 +1571,6 @@ li.live-search-item {
 -------------------------------------------------------------------*/
 @media screen and (max-width: 940px) {
 
-  #error-message {
-    padding: 5%;
-  }
-
   main {
     padding: 0;
   }
