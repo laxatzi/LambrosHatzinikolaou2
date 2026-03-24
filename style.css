@@ -1537,15 +1537,6 @@ li.live-search-item {
     flex: 1;
   }
   
-  #main-content.contain-about .about-portrait {
-    max-height: 200px;
-    height: auto;
-    width: auto;
-  }
-
-  #main-content .myStack {
-    margin-top: 50px;
-  }
 }
 
 /*------------------------------------------------------------------
