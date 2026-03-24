@@ -1716,7 +1716,6 @@ header a {
 .site-header {
   display: flex;
   flex: 50%;
-  justify-content: end;
   align-items: center;
   padding: 10px 0 20px;
 }
