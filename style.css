@@ -269,6 +269,12 @@ main {
   padding: 30px 0;
 }
 
+@media screen and (max-width: 940px) {
+  main {
+    padding: 0;
+  }
+}
+
 #p-wrapper {
   min-height: 625px;
   flex: 60%;
