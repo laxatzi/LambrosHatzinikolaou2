@@ -421,6 +421,14 @@ input[type="submit"]:hover {
   height: 85px;
 }
 
+@media screen and (max-width: 940px) {
+  
+  .intro-heading-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .intro-heading-image img {
   max-width: 80px;
   max-height: 80px;
@@ -429,6 +437,14 @@ input[type="submit"]:hover {
   margin-right: 10px;
   transition: 300ms;
   vertical-align: sub;
+}
+
+@media screen and (max-width: 940px) {
+
+  .intro-heading-image img {
+    max-width: 70px;
+    max-height: 70px;
+  }
 }
 
 .intro-heading-image img:hover {
