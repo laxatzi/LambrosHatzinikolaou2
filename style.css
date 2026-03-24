@@ -1546,10 +1546,7 @@ li.live-search-item {
    ^MAX 920px
 -------------------------------------------------------------------*/
 @media screen and (max-width: 940px) {
-  h1.intro-heading {
-    font-size: 38px;
-  }
-
+  
   .intro-heading-image {
     width: 80px;
     height: 80px;
