@@ -869,6 +869,37 @@ span.byline {
   font-weight: bold;
 }
 
+  
+
+.header-info {
+  display: flex;
+  min-width: 90%;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: #555;
+  justify-content: space-between;
+  margin-top: 30px;
+  background-color: var(--color-background-alt);
+  padding: 10px;
+}
+
+.header-metadata--row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.header-meta--row span {
+  display: flex;
+}
+
+.entry-categories {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 /* Updated Notice */
 .updated-notice {
   margin: 0;
