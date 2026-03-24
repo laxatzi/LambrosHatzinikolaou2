@@ -324,12 +324,6 @@ main img {
   flex: 40%;
 }
 
-header {
-  display: flex;
-  padding: 10px 0 20px;
-  align-items: center;
-}
-
 #logo {
   flex: 50%;
 }
