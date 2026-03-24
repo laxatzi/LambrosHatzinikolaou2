@@ -248,6 +248,15 @@ a.read_more {
   color: var(--color);
 }
 
+@media screen and (max-width: 940px) {
+  a.read_more {
+    margin-top: 20px;
+    padding: 5px 10px;
+    display: block;
+    width: 40%;
+  }
+}
+
 a.read_more:hover,
 a.read_more:active {
   background-color: var(--color-distinct-light);
