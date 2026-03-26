@@ -1,6 +1,6 @@
 <section class="no-results not-found section" aria-labelledby="page-title">
     <!-- Error message header -->
-    <header class="error-page-header error-404__header site-header">
+    <header class="error-page__header error-404__header site-header">
        <h1 id="page-title" class="error-404__title">404</h1>
        <h2 class="page-subtitle">
        <?php
