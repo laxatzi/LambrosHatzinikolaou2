@@ -30,7 +30,7 @@
  <!-- Search Form -->
  <div class="error-search error-404__search--wrapper">
     <h3><?php esc_html_e( 'Try searching for what you need:', 'LambrosPersonalTheme' ); ?></h3>
-    <form role="search" method="get" class="search-form search-form-404 search-form__404" action="<?php echo esc_url(home_url('/')); ?>">
+    <form role="search" method="get" class="search-form__404" action="<?php echo esc_url(home_url('/')); ?>">
       <div class="search-wrapper">
         <label for="error-page-search" class="screen-reader-text">
           <?php esc_html_e( 'Search for:', 'LambrosPersonalTheme' ); ?>
