@@ -38,7 +38,7 @@
         <input
           type="search"
           id="error-page-search"
-          class="search-field"
+          class="search-field form__input"
           placeholder="<?php esc_attr_e( 'What are you looking for?', 'LambrosPersonalTheme' ); ?>"
           value="<?php echo get_search_query(); ?>"
           name="s"
