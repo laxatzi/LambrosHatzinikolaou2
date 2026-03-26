@@ -1011,7 +1011,7 @@ section.not-found {
   margin-top: 0;
 }
 
-.error-page-header H1 {
+.error-page__header H1 {
   margin: 0;
 }
 
