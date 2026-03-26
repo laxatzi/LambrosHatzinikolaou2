@@ -1491,13 +1491,13 @@ li.live-search-item {
 
 
 /* Error page */
-.error-page-header {
+.error-page__header {
   display: flex;
   padding: 10px 0 20px;
   flex-direction: column;
 }
 
-.error-page-header #page-title {
+.error-page__header #page-title {
   font-size: 290px;
   font-weight: 900;
   color: var(--color-main-dark);
