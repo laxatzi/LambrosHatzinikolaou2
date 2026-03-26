@@ -66,6 +66,7 @@ $msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : 
     <label for="message"><?php esc_html_e( 'Your message', 'LambrosPersonalTheme' ); ?></label>
     <textarea
       id="message"
+      class="form__textarea"
       name="message"
       rows="5"
       placeholder="<?php esc_attr_e( 'Type your message…', 'LambrosPersonalTheme' ); ?>"
