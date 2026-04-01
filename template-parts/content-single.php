@@ -16,7 +16,7 @@
      * @since 1.0.0
      */
      if ( has_post_thumbnail() ) : ?>
-      <div class="post-thumbnail post__thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <div class="post__thumbnail" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <?php
           the_post_thumbnail( 'large', [
             'itemprop' => 'url',
@@ -32,9 +32,9 @@
         <?php the_title(); ?>
       </h1>
 
-      <div class="header-info">
-        <div class="header-metadata">
-          <div class="header-metadata--row">
+      <div class="header__info">
+        <div class="header__metadata">
+          <div class="header__metadata--row">
           <!-- ⭐ Read time indicator -->
             <span class="read-time" itemprop="timeRequired">
               <?php
