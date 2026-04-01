@@ -64,6 +64,15 @@
     </a>
   </div>
   <div class="recent-posts-404 recent-posts__404--wrapper">
+    <h3><?php esc_html_e( 'Here are some recent posts that might interest you:', 'LambrosPersonalTheme' ); ?></h3>
+    <?php
+       /**
+       * Fires before recent posts on 404 page.
+       *
+       * @since 1.0.0
+       */
+       do_action( 'lambros_before_404_recent_posts' );
+    ?>
 
     <?php
       // Show a few recent posts to help users recover
