@@ -1,7 +1,7 @@
 <article class="the-post" itemscope
   itemtype="https://schema.org/BlogPosting">
-  <div class="post-title--wrapper">
-    <div class="the-post_title">
+  <div class="post-title__wrapper">
+    <div class="the-post__title">
       <h3 class="posts">
         <a href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url">
           <span itemprop="headline"><?php the_title(); ?></span>
@@ -76,7 +76,7 @@
          *
          * @return void Outputs the excerpt or trimmed content directly to the page.
          */
-        if (has_excerpt()) {
+        if ( has_excerpt() ) {
           echo get_the_excerpt();
         } else {
           echo wp_trim_words( get_the_content(), 26 );
@@ -103,7 +103,7 @@
        * @return void - Outputs HTML directly to the page
        */
       ?>
-    <div class="read-more-wrapper">
+    <div class="read-more__wrapper">
         <a href="<?php echo esc_url( get_permalink() ); ?>" class="read_more" 
           aria-label="<?php echo esc_attr( sprintf( __( 'Read more about %s', 'LambrosPersonalTheme' ), 
           esc_html(get_the_title() ) ) ); ?>"> 
