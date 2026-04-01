@@ -17,7 +17,7 @@
   nocache_headers();
 ?>
 
-<main id="main-content" class="layout__content layout__main site-main error-404 not-found" aria-labelledby="page-title">
+<main id="main-content" class="layout__content layout__main error-404 not-found" aria-labelledby="page-title">
   <div class="container">
   <?php
     /**
