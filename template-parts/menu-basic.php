@@ -47,6 +47,3 @@ $links = [
     <?php endforeach; ?>
   </ul>
 </nav>
-
-  </ul>
-</nav>
