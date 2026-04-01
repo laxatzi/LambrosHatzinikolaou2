@@ -134,7 +134,7 @@
   <?php elseif ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
    <!-- Header -->
-    <header class="error-page-header no-results-header site-header">
+    <header class="error-page__header no-results__header site-header">
       <h1 class="page-title">
         <?php esc_html_e( 'Ready to publish your first post?', 'LambrosPersonalTheme' ); ?>
       </h1>
@@ -163,7 +163,7 @@
 
   <?php else : ?>
     <!-- Header -->
-    <header class="error-page-header site-header">
+    <header class="error-page__header site-header">
       <h1 id="page-title">0</h1>
       <h2 class="page-subtitle">
         <?php
