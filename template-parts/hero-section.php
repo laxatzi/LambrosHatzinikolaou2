@@ -4,10 +4,10 @@ $img_src = get_theme_file_uri( 'images/aggelikoyla.jpg' );
 ?>
 <section id="hero" class="section" aria-labelledby="intro-heading">
   
-  <div class="intro-heading-section">
-    <div class="intro-heading-image">
+  <div class="intro-heading__section">
+    <div class="intro-heading__image">
       <img
-        class="intro-heading-img"
+        class="intro-heading__img"
         src="<?php echo esc_url( $img_src ); ?>"        
        alt="<?php esc_attr_e( 'Portrait of Aggelikoyla', 'LambrosPersonalTheme' ); ?>"
         title="<?php esc_attr_e( 'Aggeliki is a web developer\'s cat!', 'LambrosPersonalTheme' ); ?>"
