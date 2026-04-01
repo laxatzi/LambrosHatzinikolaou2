@@ -1,7 +1,7 @@
 <section class="no-results not-found section">
   <?php if ( is_search() ) : ?>
  <!-- Header -->
-    <header class="error-page-header no-results-header site-headers">
+    <header class="error-page__header no-results__header site-headers">
       <h1 class="page-title">
         <?php esc_html_e( 'No results found', 'LambrosPersonalTheme' ); ?>
       </h1>
@@ -67,7 +67,7 @@
 
   <?php elseif ( is_archive() ) : ?>
 
-    <header class="error-page-header no-results-header site-header">
+    <header class="error-page__header no-results__header site-header">
       <h1 class="page-title">
         <?php esc_html_e( 'Nothing here yet', 'LambrosPersonalTheme' ); ?>
       </h1>
