@@ -17,19 +17,13 @@ $img_src = get_theme_file_uri( 'images/aggelikoyla.jpg' );
     </div>
     
     <h1 class="intro-heading">
-      <?php echo esc_html__( 'Hi, I\'m Lambros', 'LambrosPersonalTheme' ); ?>
+      <?php echo esc_html__( "Hi, I\'m Lambros", 'LambrosPersonalTheme' ); ?>
     </h1>
   </div>
   
 <?php
-  // Pull the content of the current front page and print it here.
-  // Works whether you're on a static front page or using a custom front-page template.
-  // Fallback content is provided below if no content is found.
-  // $front_id will be 0 if we're on a posts page or similar non-front-page context.
-  // In that case, we check if the front page is set to a static page and use that ID.
-  // This ensures we always get the correct front page content.
-  // Note: This assumes this template part is only used on the front page.
-  // If used elsewhere, additional checks may be needed.
+
+//Determine the correct front-page ID
 $front_id = get_queried_object_id();
 
   if ( ! $front_id && get_option( 'show_on_front' ) === 'page' ) {
