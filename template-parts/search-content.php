@@ -6,7 +6,7 @@
           </h3>
         </div>
         <div class="tags">
-          <ul class="taglist-parent">
+          <ul class="taglist__parent">
             <li class="taglist tag">
               <?php echo get_the_category_list(' / ') ?>
             </li>
