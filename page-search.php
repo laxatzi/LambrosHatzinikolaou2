@@ -43,9 +43,9 @@ get_header();
      <?php get_template_part( 'template-parts/content', 'none' ); ?>
     <?php endif; ?>
 
-  <section class="search-form-wrapper section" aria-labelledby="search-form-title">
-    <h2 id="search-form-title" class="screen-reader-text"><?php esc_html_e( 'Search this site', 'LambrosPersonalTheme' ); ?></h2>
-    <label for="search-type" class="search-type-label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
+  <section class="search-form__wrapper section" aria-labelledby="search-form-title">
+    <h2 id="search-form-title" class="screen-reader__text"><?php esc_html_e( 'Search this site', 'LambrosPersonalTheme' ); ?></h2>
+    <label for="search-type" class="search-type__label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
     <select id="search-type" class="search-type">
       <option value="any"><?php esc_html_e( 'All', 'LambrosPersonalTheme' ); ?></option>
       <option value="post"><?php esc_html_e( 'Posts', 'LambrosPersonalTheme' ); ?></option>
@@ -57,7 +57,7 @@ get_header();
       // Core search form (already pre-fills the current query and has label)
       ?>
       <div id="search-page-form"> <?php get_search_form(); ?> </div>
-    <div id="live-search-results" class="live-search-results" aria-live="polite"></div>
+    <div id="live-search-results" class="live-search__results" aria-live="polite"></div>
 
   </section>
 </main>
