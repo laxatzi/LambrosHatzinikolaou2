@@ -30,7 +30,7 @@
         }
       ?>
     </header>
-  <section id="contactme" class="contact-section section" aria-labelledby="contactme-title">
+  <section id="contactme" class="contact__section section" aria-labelledby="contactme-title">
     <h2><?php esc_html_e( "Why don't you reach out?", 'LambrosPersonalTheme' ); ?></h2>
 
   
