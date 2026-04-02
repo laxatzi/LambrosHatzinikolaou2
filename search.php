@@ -25,7 +25,7 @@
           echo "<h3 class=\"search-query--heading\">No results match the search!</h3>";
         }
       ?>
-       <label for="search-type" class="search-type-label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
+       <label for="search-type" class="search-type__label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
        <select id="search-type" class="search-type">
           <option value="any"><?php esc_html_e( 'All', 'LambrosPersonalTheme' ); ?></option>
           <option value="post"><?php esc_html_e( 'Posts', 'LambrosPersonalTheme' ); ?></option>
@@ -33,7 +33,7 @@
           <option value="project"><?php esc_html_e( 'Projects', 'LambrosPersonalTheme' ); ?></option>
        </select>
        <div id="search-page-form"> <?php get_search_form(); ?> </div>
-       <div id="live-search-results" class="live-search-results" aria-live="polite"></div>
+       <div id="live-search-results" class="live-search__results" aria-live="polite"></div>
  
     </section>
 </div>
