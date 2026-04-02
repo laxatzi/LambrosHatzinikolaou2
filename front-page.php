@@ -10,7 +10,7 @@
           ?>
     <!-- latest posts -->
           <section id="latest-posts" class="home-section" aria-labelledby="latest-posts-title">
-            <div class="blog-intro">
+            <div class="blog__intro">
                   <h2 id="latest-posts-title"><?php esc_html_e( 'My latest posts', 'LambrosPersonalTheme' ); ?></h2>
                   <?php
                     $posts_page_id = (int) get_option( 'page_for_posts' );
