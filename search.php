@@ -6,18 +6,24 @@
   <h2 id="search-title">Your search query was "<span class='search-query'><?php echo esc_html( get_search_query( false ) ); ?></span>"</h2>
    <section id="posts" class="section" aria-labelledby="search-results-title">
      <h2 id="search-results-title" class="screen-reader__text">
-      <?php
-         if (have_posts() && 'page' !== get_post_type()) {
-          while(have_posts()) {
+     <?php
+        if (have_posts()) {
+          $has_non_page_results = false;
+          while (have_posts()) {
             the_post();
+            if ('page' === get_post_type()) {
+              continue;
+            }
+            $has_non_page_results = true;
             get_template_part( '/template-parts/search-content' );
           }
-          echo paginate_links();
+          if ( ! $has_non_page_results ) {
+            echo "<h3 class=\"search-query--heading\">No results match the search!</h3>";
+          }
+
         } else {
           echo "<h3 class=\"search-query--heading\">No results match the search!</h3>";
         }
-
-          get_search_form();
       ?>
        <label for="search-type" class="search-type-label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
        <select id="search-type" class="search-type">
