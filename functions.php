@@ -769,7 +769,7 @@ function lambros_live_search_ajax() {
     $search = new WP_Query( $args );
 
     if ($search->have_posts()) {
-        echo '<ul class="live-search-list">';
+        echo '<ul class="live-search__list">';
 
         while ( $search->have_posts() ) {
             $search->the_post();
@@ -784,7 +784,7 @@ function lambros_live_search_ajax() {
                 $safe_title
             );
 
-            echo '<li class="live-search-item" >';
+            echo '<li class="live-search__item" >';
 
             if ( has_post_thumbnail() ) {
                 echo '<span class="thumb">';
