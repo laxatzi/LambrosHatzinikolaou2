@@ -109,7 +109,7 @@
       <!-- end #logo -->
     </div>
        
-    <a class="skip-link screen-reader-text" href="#main-content">
+    <a class="skip-link screen-reader__text" href="#main-content">
       <?php echo esc_html__( 'Skip to content', 'LambrosPersonalTheme' ); ?>
     </a>
    
