@@ -3,9 +3,9 @@
 ?>
 <main style="margin-top:50px" class="layout__main" aria-labelledby="search-title">
   <div class="container">
-  <h2>Your search query was "<span class='search-query'><?php echo esc_html( get_search_query( false ) ); ?></span>"</h2>
+  <h2 id="search-title">Your search query was "<span class='search-query'><?php echo esc_html( get_search_query( false ) ); ?></span>"</h2>
    <section id="posts" class="section" aria-labelledby="search-results-title">
-
+     <h2 id="search-results-title" class="screen-reader__text">
       <?php
          if (have_posts() && 'page' !== get_post_type()) {
           while(have_posts()) {
