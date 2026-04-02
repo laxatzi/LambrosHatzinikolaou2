@@ -69,29 +69,29 @@
               get_template_part( 'template-parts/form-basic' );
             ?>
       </div>
-       <div class="contact-info">
+       <div class="contact__info">
          <h3><?php esc_html_e( 'Other ways to get in touch', 'LambrosPersonalTheme' ); ?></h3>
-           <address class="contact-info_box" translate="no">
-               <ul class="contact-list">
-                <li class="contact-item">
+           <address class="contact__info-box" translate="no">
+               <ul class="contact__info-box-list">
+                <li class="contact__info-box-item">
                   <ion-icon name="location" size="small" aria-hidden="true"></ion-icon>
                   <small style="font-weight: 200; font-size: 16px;">
                     <?php echo esc_html__( 'Mikras Asia 89, Thessaloniki, Greece, ZIP code: 55000', 'LambrosPersonalTheme' ); ?>
                   </small>
                 </li>
-                <li class="contact-item">
+                <li class="contact__info-box-item">
                   <ion-icon name="mail" size="small" aria-hidden="true"></ion-icon>
                   <a href="mailto:duck@gmail.com">
                     <span class="sr-only"><?php esc_html_e( 'Email: ', 'LambrosPersonalTheme' ); ?></span>duck@gmail.com
                   </a>
                 </li>
-                <li class="contact-item">
+                <li class="contact__info-box-item">
                   <ion-icon name="call" size="small" aria-hidden="true"></ion-icon>
                   <a href="tel:+302310XXXXXX" aria-label="<?php esc_attr_e( 'Phone: +30 2310 XXX XXX', 'LambrosPersonalTheme' ); ?>">
                     +30 2310 XXX XXX
                   </a>
                 </li>
-                <li class="contact-item">
+                <li class="contact__info-box-item">
                   <ion-icon name="logo-whatsapp" size="small" aria-hidden="true"></ion-icon>
                   <a aria-label="<?php esc_attr_e( 'Contact via WhatsApp', 'LambrosPersonalTheme' ); ?>"
                      href="<?php echo esc_url( 'https://wa.me/' . $whatsapp_number ); ?>"
