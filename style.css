@@ -1433,7 +1433,7 @@ li.live-search__item {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .intro-heading-img,
+  .intro-heading__img,
   .intro-heading,
   .hero__content,
   .hero__cta {
