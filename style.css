@@ -517,23 +517,23 @@ form {
   margin-top: 30px;
 }
 
-.nav-subtitle {
+.nav__subtitle {
   display: block;
   font-size: 0.875rem;
   color: #6b7280;
   margin-bottom: 0.25rem;
 }
 
-.nav-title {
+.nav__title {
   font-weight: 600;
   color: #1f2937;
 }
 
-.nav-previous::before {
+.nav__previous::before {
   content: '← ';
 }
 
-.nav-next::after {
+.nav__next::after {
   content: ' →';
 }
 
