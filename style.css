@@ -756,7 +756,7 @@ hr {
 .tag {
   padding: 1px 3px;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   color: var(--color-main-dark);
   font-style: italic;
   background-color: var(--color-background-alt);
@@ -784,9 +784,8 @@ time {
   align-items: center;
   justify-content: space-between;
   min-width: 100%;
-  font-size: 14px;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: bold;
-
 }
 
 .read-time {
@@ -794,7 +793,7 @@ time {
   align-items: center;
   gap: 0.3rem;
   opacity: 0.8;
-  font-size: 0.85em;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: bold;
 }
 
@@ -829,7 +828,7 @@ time {
 .single-metadata time {
   margin-top: 10px;
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: bold;
   display: block;
 }
@@ -844,7 +843,7 @@ span.byline {
 }
 
 .author span {
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: bold;
 }
 
@@ -863,7 +862,7 @@ span.byline {
   display: flex;
   min-width: 90%;
   gap: 0.25rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   color: #555;
   justify-content: space-between;
   margin-top: 30px;
@@ -893,7 +892,7 @@ span.byline {
   margin: 0;
   padding: 10px;
   font-weight: 800;
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-style: oblique;
 }
 
@@ -948,7 +947,8 @@ ul.contact-list li {
 
 code {
   font-family: JetBrains Mono, monospace;
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
+
 }
 
 pre {
@@ -972,7 +972,7 @@ pre {
 }
 
 #error-message h1 {
-  font-size: 290px;
+  font-size: clamp(2rem, 10vw, 290px);
   font-weight: 900;
   color: var(--color-main-dark);
 }
@@ -1007,7 +1007,7 @@ section.not-found {
 
 .back-to-home span {
   vertical-align: sub;
-  font-size: 32px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   color: var(--color-main-dark);
 }
 
@@ -1022,7 +1022,7 @@ section.not-found {
 }
 
 .error-search h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
