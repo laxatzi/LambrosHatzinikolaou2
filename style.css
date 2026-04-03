@@ -1367,7 +1367,7 @@ li.live-search__item {
   overflow-x: hidden;
 }
 
-.screen-reader-text,
+.screen-reader__text,
 .sr-only {
   position: absolute !important;
   height: 1px;
@@ -1380,7 +1380,7 @@ li.live-search__item {
   margin: -1px;
 }
 
-.screen-reader-text:focus,
+.screen-reader__text:focus,
 .sr-only:focus {
   clip: auto;
   height: auto;
@@ -1407,7 +1407,7 @@ li.live-search__item {
   color: var(--color);
   cursor: pointer;
   padding: 0 10px;
-  font-size: 48px;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   opacity: 0;
   transition: all 0.5s ease-in;
@@ -1427,7 +1427,7 @@ li.live-search__item {
 }
 
 .error-page__header #page-title {
-  font-size: 290px;
+  font-size: clamp(100px, 15vw, 290px);
   font-weight: 900;
   color: var(--color-main-dark);
 }
