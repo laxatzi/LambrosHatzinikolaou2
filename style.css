@@ -374,7 +374,7 @@ p.form-submit {
 }
 
 p.comment-form-cookies-consent label {
-  font-size: 0.85rem !important;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem) !important;
 }
 
 p.comment-form-cookies-consent {
@@ -408,11 +408,11 @@ input[type="submit"]:hover {
   color: var(--color);
 }
 
-.intro-heading-section {
+.intro-heading__section {
   display: flex;
 }
 
-.intro-heading-image {
+.intro-heading__image {
   width: 85px;
   height: 85px;
 }
