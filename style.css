@@ -1562,7 +1562,7 @@ menu.nav {
     width: 100%;
     margin: 5px 0;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
   }
 
   .toggle-menu {
