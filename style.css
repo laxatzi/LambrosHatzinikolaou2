@@ -451,11 +451,6 @@ h1.intro-heading {
   font-weight: 800;
 }
 
-@media screen and (max-width: 940px) {
-  h1.intro-heading {
-    font-size: 38px;
-  }
-
 #newsletter input[type="submit"] {
   width: auto;
   padding: 10px;
