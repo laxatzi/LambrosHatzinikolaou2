@@ -50,7 +50,6 @@ body {
   padding: 0;
   font-family: Inter, Helvetica, "Segoe UI", Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.15rem;
   text-align: left;
   vertical-align: baseline;
   line-height: 1.5;
@@ -117,7 +116,6 @@ h4 {
 #posts h3 a,
 #projects h3 a {
   font-weight: 800;
-  font-size: 1.5rem;
 }
 
 h3.projects,
@@ -952,10 +950,6 @@ ul.contact-list li {
 
 .contents {
   margin-top: 50px;
-}
-
-.archive h1 {
-  font-size: 48px;
 }
 
 .archive {
