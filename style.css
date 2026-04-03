@@ -162,7 +162,7 @@ p {
 }
 
 small {
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: 800;
 }
 
@@ -178,7 +178,7 @@ a.button {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
 }
 
 a ion-icon {
@@ -201,7 +201,7 @@ img {
 blockquote {
   text-align: left;
   line-height: 1.6em;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
   font-style: italic;
   color: var(--color-lighter);
   padding: 10px;
@@ -214,7 +214,7 @@ section {
 }
 
 .intro {
-  font-size: 48px;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
 }
 
@@ -224,7 +224,7 @@ section {
 
 ion-icon {
   color: var(--color-main-dark);
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   vertical-align: sub;
   margin-right: 10px;
 }
@@ -353,7 +353,7 @@ footer {
 }
 
 #commentform p.comment-notes {
-  font-size: 0.95rem;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
 }
 
 p.comment-form-comment,
