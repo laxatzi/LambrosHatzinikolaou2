@@ -610,7 +610,7 @@ ul ul li {
   }
 }
 
-.contact-info_box p{
+.contact__info-box p{
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -629,7 +629,7 @@ ul ul li {
   outline: 2px solid #c00;
 }
 
-.contact-message {
+.contact__message {
   margin: 1em auto;
   padding: 1em;
   max-width: 600px;
@@ -637,11 +637,13 @@ ul ul li {
   font-weight: 600;
   text-align: center;
 }
+  
 .contact-success {
   background: #e6ffed;
   color: #1a7f37;
   border: 1px solid #1a7f37;
 }
+  
 .contact-error {
   background: #ffe6e6;
   color: #a71d2a;
@@ -658,6 +660,7 @@ ul ul li {
   background: #e8f5e9;
   border: 1px solid #a5d6a7;
 }
+  
 .notice-error {
   background: #ffebee;
   border: 1px solid #ef9a9a;
@@ -695,13 +698,12 @@ label {
 }
 
 .closer {
-  font-size: 1.65rem;
+  font-size: clamp(1.5rem, 3vw, 1.65rem);
   color: var(--color-main-dark);
   font-weight: 900;
   text-align: center;
   padding: 10px;
   margin-bottom: 20px;
-
 }
 
 .textarea {
@@ -742,8 +744,6 @@ hr {
 
 .writtenby p {
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
-  padding: 20px;
-  flex: 5;
 }
 
 .the-post_title,
@@ -765,6 +765,7 @@ hr {
 .tags ul {
   margin-top: 0;
 }
+  
 .taglist-parent {
   display: flex;
 }
@@ -1011,7 +1012,6 @@ section.not-found {
   color: var(--color-main-dark);
 }
 
-
 /* ============================================
    404 Page Search Form 
    ============================================ */
@@ -1165,7 +1165,6 @@ section.not-found {
   }
 }
 
-
 .toggle-menu {
   margin-top: 60px;
 }
@@ -1257,7 +1256,6 @@ form#search input {
   margin-left: 25%;
   display: block;
 }
-
 
 @media screen and (max-width: 1500px) {
   #wrapper-spinner {
@@ -1473,7 +1471,6 @@ li.live-search-item {
   border: 4px solid var(--color-lighter); /* Remove borders */
 }
 
-
 /* Error page */
 .error-page__header {
   display: flex;
@@ -1644,7 +1641,6 @@ menu.nav {
   }
 
 }
-
 
 /*------------------------------------------------------------------
   REFACTORING BEM NAMING CONVENTION
