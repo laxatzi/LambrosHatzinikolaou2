@@ -1055,7 +1055,7 @@ section.not-found {
 
 /* Screen reader text for accessibility */
   
-.screen-reader-text {
+.screen-reader__text {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1133,13 +1133,15 @@ section.not-found {
 }
 
 /* Responsive Design */
+  
 @media (min-width: 640px) {
-  .search-submit__text {
+  
+.search-submit__text {
     display: inline;
   }
 
-  .search-field {
-    font-size: 1.125rem;
+.search-field {
+    font-size: clamp(1rem, 2vw, 1.125rem);
   }
 }
 
@@ -1150,6 +1152,7 @@ section.not-found {
 }
 
 /* Dark mode support */
+  
 @media (prefers-color-scheme: dark) {
   .error-search h3 {
     color: #f9fafb;
@@ -1176,7 +1179,7 @@ section.not-found {
 
 .toggle-menu ion-icon {
   color: var(--color-main-dark);
-  font-size: 3.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   vertical-align: middle;
   margin: 0;
   display: none;
@@ -1291,31 +1294,16 @@ form#search input {
   list-style: none;
 }
 
-form#searchform {
-  width: 60%;
-  margin: 20px 0;
-}
-
-@media screen and (max-width: 940px) {
-form#searchform {
-    width: 70%;
-  }
-}
-
 form#searchform input {
-  width: 75%;
+  width: 100%;
   margin-bottom: 5px;
-}
-@media screen and (max-width: 550px) {
-  form#searchform input {
-    width: 100%;
-    max-width: 100%;
-  }
+  width: 100%;
+  max-width: 100%;
 }
 
 .search-query {
   font-style: oblique;
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem);
   color: var(--color-main-dark);
 }
 
@@ -1335,7 +1323,7 @@ main#main-content.main-page-search section form#searchform {
   margin: 0;
 }
 
-.live-search-results {
+.live-search__results {
   margin-top: 1rem;
   background: var(--color-background-alt);
   border-radius: 8px;
@@ -1343,30 +1331,30 @@ main#main-content.main-page-search section form#searchform {
   box-shadow: var(--color-background);
 }
 
-.live-search-results .loading {
+.live-search__results .loading {
   font-style: italic;
   opacity: 0.8;
 }
 
-.live-search-list {
+.live-search__list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.live-search-item + .live-search-item {
+.live-search__item + .live-search__item {
   margin-top: 0.5rem;
 }
 
-.live-search-item a {
+.live-search__item a {
   color: var(--color-main-dark);
 }
 
-.live-search-item a:hover {
+.live-search__item a:hover {
   text-decoration: underline;
 }
 
-li.live-search-item {
+li.live-search__item {
   list-style-type: none;
 }
 
