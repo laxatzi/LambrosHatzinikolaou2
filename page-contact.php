@@ -4,7 +4,7 @@
 <main id="main-content" class="layout__content layout__main" aria-labelledby="page-title-<?php the_ID(); ?>">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'page-contact the-post fade-up' ); ?>>
-    <header class="entry-header site-header">
+    <header class="entry-header flex-column site-header">
       <h1 id="page-title-<?php the_ID(); ?>" class="entry-title"><?php the_title(); ?></h1>
       
   <?php
