@@ -114,6 +114,11 @@ h3.posts {
   color: var(--color-main-dark);
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 h3.posts,
 h3.project-title {
   display: flex;
