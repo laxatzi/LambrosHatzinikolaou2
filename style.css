@@ -342,17 +342,18 @@ footer {
   margin: 50px auto;
 }
 
+/* Comments */
+
 #commentform {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #commentform p.comment-notes {
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
 }
 
-p.comment-form-comment,
 p.comment-form-author,
 p.comment-form-email,
 p.comment-form-url {
@@ -362,11 +363,32 @@ p.comment-form-url {
   align-items: center;
 }
 
+p.comment-form-comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+p.comment-form-comment textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
 p.form-submit {
   width: 100%;
   display: flex;
-  justify-content: center;
-  max-width: 400px;
+}
+
+p.form-submit input[type="submit"] {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 940px) {
+  p.form-submit {
+    justify-content: flex-start;
+  }
 }
 
 p.comment-form-cookies-consent label {
