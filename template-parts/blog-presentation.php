@@ -2,7 +2,7 @@
   itemtype="https://schema.org/BlogPosting">
   <div class="post-title__wrapper">
     <div class="the-post__title">
-      <h3 class="posts">
+      <h3 class="posts flex-column">
         <a href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url">
           <span itemprop="headline"><?php the_title(); ?></span>
         </a>
