@@ -28,7 +28,7 @@
       if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
          <article id="post-<?php the_ID(); ?>" <?php post_class( 'the-post' ); ?> itemscope itemtype="https://schema.org/BlogPosting" class="the-post fade-up">
            <header class="the-post_title site-header">
-             <h2 class="posts">
+             <h2 class="posts flex-column">
                <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
                  <?php the_title(); ?>
                </a>
