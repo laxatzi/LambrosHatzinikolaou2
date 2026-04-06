@@ -119,6 +119,11 @@ h3.posts {
   flex-direction: column;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
 h3.posts small {
   color: var(--color);
 }
