@@ -119,12 +119,6 @@ h3.posts {
   flex-direction: column;
 }
 
-h3.posts,
-h3.project-title {
-  display: flex;
-  flex-direction: column;
-}
-
 h3.posts small {
   color: var(--color);
 }
@@ -1190,7 +1184,7 @@ section.not-found {
   margin-left: auto;
 }
 
-.navigation.posts-pagination {
+.navigation-pagination {
   margin: 100px 0;
   text-align: center;
 }
