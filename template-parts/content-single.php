@@ -34,7 +34,7 @@
 
       <div class="header__info">
         <div class="header__metadata">
-          <div class="header__metadata--row">
+          <div class="header__metadata--row flex-column">
           <!-- ⭐ Read time indicator -->
             <span class="read-time" itemprop="timeRequired">
               <?php
