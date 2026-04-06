@@ -28,7 +28,7 @@ get_header();
       <article id="post-<?php the_ID(); ?>" <?php post_class("the-post fade-up"); ?>
         itemscope itemtype="https://schema.org/SearchResultsPage"
       >
-        <header class="entry-header site-header">
+        <header class="entry-header flex-column site-header">
           <h1 id="page-title" class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
         </header>
 
