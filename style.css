@@ -718,11 +718,6 @@ label {
   margin-bottom: 20px;
 }
 
-.textarea {
-  display: flex;
-  flex-direction: column;
-}
-
 a.indicator {
   text-decoration-color: var(--color-distinct);
   font-weight: 800;
