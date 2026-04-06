@@ -1424,9 +1424,7 @@ li.live-search__item {
 
 /* Error page */
 .error-page__header {
-  display: flex;
   padding: 10px 0 20px;
-  flex-direction: column;
 }
 
 .error-page__header #page-title {
