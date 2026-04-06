@@ -877,10 +877,8 @@ span.byline {
 }
 
 .header__metadata--row {
-  display: flex;
   gap: 0.5rem;
   margin-bottom: 20px;
-  flex-direction: column;
 }
 
 .entry-categories {
