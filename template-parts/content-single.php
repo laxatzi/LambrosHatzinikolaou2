@@ -27,7 +27,7 @@
      <?php endif; ?>
 
     <!-- Header -->
-    <header class="entry-header" >
+    <header class="entry-header flex-column" >
       <h1 id="post-title-<?php the_ID(); ?>" class="entry-title" itemprop="headline">
         <?php the_title(); ?>
       </h1>
