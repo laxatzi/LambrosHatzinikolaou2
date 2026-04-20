@@ -4,7 +4,7 @@
  */
 ?>
 <footer id="colophon" class="site-footer flex-column" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter" aria-labelledby="footer-title">
-  <h2 id="footer-title" class="screen-reader__text">Footer</h2>
+  <h2 id="footer-title" class="u-sr-only">Footer</h2>
   <div id="sig" class="container">
     <div class="site-footer__menu-wrapper">
       <nav class="site-footer__nav" aria-label="<?php esc_attr_e( 'Footer', 'LambrosPersonalTheme' ); ?>">
