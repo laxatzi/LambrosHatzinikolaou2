@@ -1542,11 +1542,11 @@ a.read_more {
     width: 40%;
   }
 
-menu.nav {
+.nav {
     display: none;
   }
   
- menu.nav.is-open {
+ .nav.is-open {
     display: flex;
     flex-direction: column;
     width: 40%;
