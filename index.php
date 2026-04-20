@@ -160,8 +160,8 @@
        */
         the_posts_pagination( [
           'mid_size'           => 1,
-          'prev_text'          => '<span class="screen-reader__text">'.esc_html__( 'Previous','LambrosPersonalTheme' ).'</span><span aria-hidden="true">Previous</span>',
-          'next_text'          => '<span class="screen-reader__text">'.esc_html__( 'Next','LambrosPersonalTheme' ).'</span><span aria-hidden="true">Next</span>',
+          'prev_text'          => '<span class="u-sr-only">'.esc_html__( 'Previous','LambrosPersonalTheme' ).'</span><span aria-hidden="true">Previous</span>',
+          'next_text'          => '<span class="u-sr-only">'.esc_html__( 'Next','LambrosPersonalTheme' ).'</span><span aria-hidden="true">Next</span>',
           'screen_reader_text' => esc_html__( 'Posts navigation','LambrosPersonalTheme' ),
           'aria_label'         => esc_html__( 'Posts','LambrosPersonalTheme' ),
           'class'              => 'posts-pagination', // adds this to the <nav>
