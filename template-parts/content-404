@@ -32,7 +32,7 @@
     <h3><?php esc_html_e( 'Try searching for what you need:', 'LambrosPersonalTheme' ); ?></h3>
     <form role="search" method="get" class="search-form__404" action="<?php echo esc_url(home_url('/')); ?>">
       <div class="search-wrapper">
-        <label for="error-404__search" class="screen-reader__text">
+        <label for="error-404__search" class="screen-reader__text u-sr-only">
           <?php esc_html_e( 'Search for:', 'LambrosPersonalTheme' ); ?>
         </label>
         <input
