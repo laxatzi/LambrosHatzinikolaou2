@@ -1662,7 +1662,7 @@ header h2 a {
   font-size: 2rem;
 }
 
-header a {
+.nav__list-link {
   text-decoration-color: var(--color-main-dark);
   font-size: 1rem;
   text-decoration: underline 4px;
