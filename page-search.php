@@ -44,7 +44,7 @@ get_header();
     <?php endif; ?>
 
   <section class="search-form__wrapper section" aria-labelledby="search-form-title">
-    <h2 id="search-form-title" class="screen-reader__text"><?php esc_html_e( 'Search this site', 'LambrosPersonalTheme' ); ?></h2>
+    <h2 id="search-form-title" class="u-sr-only"><?php esc_html_e( 'Search this site', 'LambrosPersonalTheme' ); ?></h2>
     <label for="search-type" class="search-type__label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
     <select id="search-type" class="search-type">
       <option value="any"><?php esc_html_e( 'All', 'LambrosPersonalTheme' ); ?></option>
