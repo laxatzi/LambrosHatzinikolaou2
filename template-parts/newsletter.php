@@ -11,7 +11,7 @@
         <label for="hp"><?php echo esc_html__( 'Leave this field empty', 'LambrosPersonalTheme' ); ?></label>
         <input type="text" id="hp" name="hp" tabindex="-1" autocomplete="off" />
       </div>
-      <label for="newsletter__email" class="screen-reader-text">
+      <label for="newsletter__email" class="u-sr-only">
         Email address
       </label>
       
