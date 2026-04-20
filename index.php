@@ -5,7 +5,7 @@
 <div class="dot-bg-section-1"></div>
   <div class="container">
     <section id="posts" aria-labelledby="posts-title" class="section">
-      <h1 id="posts-title" class="screen-reader__text">
+      <h1 id="posts-title" class="u-sr-only">
         <?php esc_html_e( 'Posts', 'LambrosPersonalTheme' ); ?>
       </h1>
       <?php 
