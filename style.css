@@ -1647,7 +1647,7 @@ li.live-search__item {
 
 .nav__list-link {
   text-decoration-color: var(--color-main-dark);
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   text-decoration: underline 4px;
   padding: 0 10px 0 0;
 }
