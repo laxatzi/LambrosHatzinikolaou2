@@ -1655,7 +1655,6 @@ li.live-search__item {
 .site-header {
   display: flex;
   flex: 50%;
-  align-items: center;
   padding: 10px 0 20px;
 }
 
