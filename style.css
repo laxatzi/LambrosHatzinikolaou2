@@ -1369,8 +1369,7 @@ li.live-search__item {
   overflow-x: hidden;
 }
 
-.screen-reader__text,
-.sr-only {
+.u-sr-only {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -1382,8 +1381,7 @@ li.live-search__item {
   margin: -1px;
 }
 
-.screen-reader__text:focus,
-.sr-only:focus {
+.u-sr-only:focus {
   clip: auto;
   height: auto;
   width: auto;
