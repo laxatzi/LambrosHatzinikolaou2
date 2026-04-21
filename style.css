@@ -1192,7 +1192,7 @@ section.not-found {
   margin-left: auto;
 }
 
-.navigation-pagination {
+.navigation.posts-pagination {
   margin: 100px 0;
   text-align: center;
 }
