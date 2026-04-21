@@ -19,18 +19,18 @@
      * @return void Outputs HTML directly to the page
      */
   ?>
-  <div class="project-title--wrapper">
-    <h3 class="project-title">
+  <div class="project__title-wrapper">
+    <h3 class="project__title flex-column">
       <a href="<?php echo esc_url( get_permalink() ); ?>">
        <?php the_title(); ?>
       </a>
     </h3>
-    <small class="project-date">
+    <small class="project__date">
       <?php echo get_the_date( LAMBROS_DATE_FORMAT ) ); ?>
     </small>
   </div>
   
- <p class="project-desc">
+ <p class="project__desc">
 <!-- Use the_excerpt() instead of get_the_excerpt() ? -->
   <?php
     if ( has_excerpt() ) { 
