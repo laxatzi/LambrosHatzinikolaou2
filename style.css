@@ -1258,7 +1258,7 @@ form#search input {
   animation: spin 1s infinite linear;
 }
 
-#wrapper-spinner {
+.wrapper-spinner {
   width: 50%;
   max-width: 800px;
   min-width: 435px;
@@ -1268,26 +1268,26 @@ form#search input {
 }
 
 @media screen and (max-width: 1500px) {
-  #wrapper-spinner {
+  .wrapper-spinner {
     width: 85%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  #wrapper-spinner {
+  .wrapper-spinner {
     width: 100%;
     margin-left: 20%;
   }
 }
 
 @media screen and (max-width: 920px) {
-  #wrapper-spinner {
+  .wrapper-spinner {
     margin-left: 10%;
   }
 }
 
 @media screen and (max-width: 550px) {
-  #wrapper-spinner {
+  .wrapper-spinner {
     margin-left: 7%;
   }
 }
