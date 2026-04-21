@@ -899,12 +899,12 @@ span.byline {
   margin-top: 40px;
 }
 
-.contact__info-box ul li {
+.contact__info-box-item {
   margin: 5px;
   list-style-type: none;
 }
 
-.contact__info-box ul {
+.contact__info-box-list {
   margin-bottom: 0;
 }
 
