@@ -753,6 +753,8 @@ hr {
 }
 
 .writtenby p {
+  padding: 20px;
+  flex: 5;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
 }
 
