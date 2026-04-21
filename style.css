@@ -1642,9 +1642,8 @@ li.live-search__item {
 
 /* HEADER Navigation */
 
-header h2 a {
-  font-size: 2rem;
-}
+.site-header__title-link {
+  font-size: clamp(1.5rem, 4vw, 2rem);
 
 .nav__list-link {
   text-decoration-color: var(--color-main-dark);
