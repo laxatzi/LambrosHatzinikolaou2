@@ -1056,7 +1056,8 @@ section.not-found {
 
 /* Screen reader text for accessibility */
   
-.screen-reader__text {
+
+.u-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
