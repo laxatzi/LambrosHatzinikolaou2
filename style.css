@@ -133,7 +133,7 @@ p {
   font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
 }
 
-#post-container {
+.post-container {
   width: 75%;
 }
 
@@ -285,14 +285,14 @@ main {
   }
 }
 
-#p-wrapper {
+.p-wrapper {
   min-height: 625px;
   flex: 60%;
   margin: 0 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
-  #p-wrapper {
+  .p-wrapper {
     flex: 100%;
     margin: 0;
   }
@@ -626,7 +626,7 @@ ul ul li {
   }
 }
 
-.contact__info-box p{
+.contact__info-box p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
