@@ -1532,13 +1532,6 @@ li.live-search__item {
 -------------------------------------------------------------------*/
 @media screen and (max-width: 940px) {
 
-a.read_more {
-    margin-top: 20px;
-    padding: 5px 10px;
-    display: block;
-    width: 40%;
-  }
-
 .nav {
     display: none;
   }
