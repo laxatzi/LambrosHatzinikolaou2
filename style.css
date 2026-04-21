@@ -786,7 +786,7 @@ hr {
   margin-right: 10px;
 }
 
-.project-date {
+.project__date {
   display: flex;
   flex-direction: row;
 }
