@@ -8,7 +8,7 @@ get_header();
   while( have_posts() ) {
    the_post(); ?>
     <div class="the-project">
-      <h1 class="project-title">
+      <h1 class="project__title">
         <?php the_title(); ?>
 
       </h1>
