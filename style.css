@@ -584,20 +584,20 @@ ul ul li {
   margin-left: 2%;
 }
 
-.project-title a {
+.project__title a {
   font-weight: 800;
-  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
+  font-size: clamp(1.25rem, 1vw + 0.55rem, 1.95rem);
 }
 
-.project-desc {
-  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
+.project__desc {
+  font-size: clamp(1rem, 1vw + 0.25rem, 1.35rem);
 }
 
-.project-title--wrapper {
+.project__title-wrapper {
   margin-bottom: 10px;
 }
 
-.project-title--wrapper h3 {
+.project__title-wrapper h3 {
   margin-bottom: 0;
 }
 
