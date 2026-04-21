@@ -318,11 +318,11 @@ main img {
   flex: 40%;
 }
 
-#logo {
+.site-branding {
   flex: 50%;
 }
 
-#logo a {
+.site-branding a {
   color: var(--color);
   text-decoration: underline 4px var(--color-main-dark);
   letter-spacing: -0.08em;
