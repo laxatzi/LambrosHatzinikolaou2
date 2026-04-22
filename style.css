@@ -377,18 +377,18 @@ p.comment-form__comment textarea {
   max-width: 100%;
 }
 
-p.form-submit {
+p.form__submit {
   width: 100%;
   display: flex;
 }
 
-p.form-submit input[type="submit"] {
+p.form__submit input[type="submit"] {
   width: 100%;
   max-width: 100%;
 }
 
 @media screen and (max-width: 940px) {
-  p.form-submit {
+  p.form__submit {
     justify-content: flex-start;
   }
 }
