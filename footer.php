@@ -3,7 +3,7 @@
  * Theme footer
  */
 ?>
-<footer id="colophon" class="site-footer flex-column" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter" aria-labelledby="footer-title">
+<footer id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter" aria-labelledby="footer-title">
   <h2 id="footer-title" class="u-sr-only">Footer</h2>
   <div id="sig" class="container">
     <div class="site-footer__menu-wrapper">
