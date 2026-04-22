@@ -2,8 +2,8 @@
   itemtype="https://schema.org/BlogPosting">
   <div class="post-title__wrapper">
     <div class="the-post__title">
-      <h3 class="posts flex-column">
-        <a href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url">
+      <h3 class="post flex-column">
+        <a href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url" class="post__title-link">
           <span itemprop="headline"><?php the_title(); ?></span>
         </a>
         <small class="project-date">
