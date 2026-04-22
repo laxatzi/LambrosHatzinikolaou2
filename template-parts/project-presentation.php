@@ -21,7 +21,7 @@
   ?>
   <div class="project__title-wrapper">
     <h3 class="project__title flex-column">
-      <a href="<?php echo esc_url( get_permalink() ); ?>">
+      <a href="<?php echo esc_url( get_permalink() ); ?>" class="project__title-link">
        <?php the_title(); ?>
       </a>
     </h3>
