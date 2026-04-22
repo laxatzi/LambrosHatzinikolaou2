@@ -580,7 +580,7 @@ ul ul li {
   margin-left: 2%;
 }
 
-.project__title a {
+.project__title-link {
   font-weight: 800;
   font-size: clamp(1.25rem, 1vw + 0.55rem, 1.95rem);
 }
