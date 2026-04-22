@@ -8,7 +8,7 @@ get_header();
   while( have_posts() ) {
    the_post(); ?>
     <div class="the-project">
-      <h1 class="project__title">
+      <h1 class="project__title flex-column">
         <?php the_title(); ?>
 
       </h1>
