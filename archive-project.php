@@ -22,7 +22,7 @@
         the_archive_description( '<p>','</p>' );
       ?>
     </header>
-    <section id="posts" class="section">
+    <section id="posts" class="section" aria-labelledby="archive__project-title">
       <?php
         while(have_posts()) :
           the_post();
@@ -49,15 +49,13 @@
        *
        * Text strings are localized using the 'LambrosPersonalTheme' text domain.
        */
-    the_posts_pagination( 
-       [
+      the_posts_pagination( [
         'mid_size'           => 1,
         'prev_text'          => '<span class="u-sr-only">' . esc_html__( 'Previous', 'LambrosPersonalTheme' ) . '</span><span aria-hidden="true">←</span>',
         'next_text'          => '<span class="u-sr-only">' . esc_html__( 'Next', 'LambrosPersonalTheme' ) . '</span><span aria-hidden="true">→</span>',
         'screen_reader_text' => esc_html__( 'Posts navigation', 'LambrosPersonalTheme' ),
         'class'              => 'posts-pagination',
-      ] 
-    );
+      ] );
   ?>
   <?php else : ?>
   <?php get_template_part( 'template-parts/content', 'none' ); ?>
