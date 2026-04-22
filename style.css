@@ -393,11 +393,11 @@ p.form__submit input[type="submit"] {
   }
 }
 
-p.comment-form-cookies-consent label {
+p.comment-form__cookies-consent label {
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem) !important;
 }
 
-p.comment-form-cookies-consent {
+p.comment-form__cookies-consent {
   display: inline-block;
   max-width: 400px;
   margin-bottom: 20px;
