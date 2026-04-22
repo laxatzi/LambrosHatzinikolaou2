@@ -1,8 +1,8 @@
       <div class="the-post" style="margin-bottom: 40px">
         <div class="the-post_title">
           <h3 class="posts">
-            <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-            <small><?php echo get_the_date( LAMBROS_DATE_FORMAT ); ?></small>
+            <a href="<?php the_permalink() ?>" class="post__title-link"><?php the_title(); ?></a>
+            <small class="post__small"><?php echo get_the_date( LAMBROS_DATE_FORMAT ); ?></small>
           </h3>
         </div>
         <div class="tags">
