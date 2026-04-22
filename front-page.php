@@ -1,7 +1,7 @@
 <?php
   get_header();
   ?>
-    <main id="main-content">
+    <main id="main-content" class="layout__main layout__content" aria-labelledby="home-title">
     <div class="dot-bg-section-1"></div>
       <div class="container">
           <?php
@@ -9,7 +9,7 @@
             get_template_part( 'template-parts/newsletter' );
           ?>
     <!-- latest posts -->
-          <section id="latest-posts" class="home-section" aria-labelledby="latest-posts-title">
+          <section id="latest-posts" class="home-section section" aria-labelledby="latest-posts-title">
             <div class="blog__intro">
                   <h2 id="latest-posts-title"><?php esc_html_e( 'My latest posts', 'LambrosPersonalTheme' ); ?></h2>
                   <?php
@@ -59,16 +59,18 @@
          </section>
 
     <!-- latest projects -->
-          <section id="latest-projects" class="home-section" aria-labelledby="latest-projects-title">
+          <section id="latest-projects" class="home-section section" aria-labelledby="latest-projects-title">
             <div class="heading">
               <h2 id="latest-projects-title"><?php esc_html_e( 'My latest projects!', 'LambrosPersonalTheme' ); ?></h2>
               <?php
                 $projects_url = get_post_type_archive_link( 'project' ) ?: home_url( '/projects/' );
-              ?>
-               <a href="<?php echo esc_url( $projects_url ); ?>" class="read_more" aria-label="<?php esc_attr_e( 'View all projects', 'LambrosPersonalTheme' ); ?>"
-
+                ?>
+               <a href="<?php echo esc_url( $projects_url ); ?>" class="latest-projects__title-link read_more" aria-label="<?php esc_attr_e( 'View all projects', 'LambrosPersonalTheme' ); ?>"
+                class="read_more" aria-label="<?php esc_attr_e( 'View all projects', 'LambrosPersonalTheme' ); ?>"
+               >
                 <?php esc_html_e( 'View All', 'LambrosPersonalTheme' ); ?>
               </a>
+
             </div>
             
             <?php
