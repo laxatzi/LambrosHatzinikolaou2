@@ -28,17 +28,17 @@
       if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
          <article id="post-<?php the_ID(); ?>" <?php post_class( 'the-post' ); ?> itemscope itemtype="https://schema.org/BlogPosting" class="the-post fade-up">
            <header class="the-post_title site-header">
-             <h2 class="posts flex-column">
+             <h2 class="posts flex-column" itemprop="headline">
                <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
                  <?php the_title(); ?>
                </a>
-               <small class="project-date" style="margin-top: 10px;">
+               <small class="post__small project__date" style="margin-top: 10px;">
                  <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"
                    itemprop="datePublished">
                  <?php echo get_the_date( LAMBROS_DATE_FORMAT ); ?>
             <!-- ⭐ Read time indicator -->
                  <span class="read-time" itemprop="timeRequired"> 
-                 <svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"> 
+                 <svg class="read-time__icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"> 
                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/> 
                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/> 
                  </svg>
