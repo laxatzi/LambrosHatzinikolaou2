@@ -7,7 +7,7 @@
  */
   get_header();
 ?>
-<main id="main-content" class="layout__main the-post-single" aria-labelledby="post-title-<?php the_ID(); ?>">
+<main id="main-content" class="layout__main the-post__single" aria-labelledby="post-title-<?php the_ID(); ?>">
   <div class="container">
 <?php
   while ( have_posts() ) : the_post();
