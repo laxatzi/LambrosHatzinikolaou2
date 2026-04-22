@@ -356,23 +356,23 @@ footer {
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
 }
 
-p.comment-form-author,
-p.comment-form-email,
-p.comment-form-url {
+p.comment-form__author,
+p.comment-form__email,
+p.comment-form__url {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-p.comment-form-comment {
+p.comment-form__comment {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-p.comment-form-comment textarea {
+p.comment-form__comment textarea {
   width: 100%;
   max-width: 100%;
 }
