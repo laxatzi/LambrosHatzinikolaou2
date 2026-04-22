@@ -121,7 +121,7 @@
       aria-expanded="false"
       type="button"
     >
-      <span class="sr-only"><?php echo esc_html__( 'Toggle main menu', 'LambrosPersonalTheme' ); ?></span>
+      <span class="u-sr-only"><?php echo esc_html__( 'Toggle main menu', 'LambrosPersonalTheme' ); ?></span>
       <ion-icon name="menu"  aria-hidden="true"></ion-icon>
       <ion-icon name="close" aria-hidden="true" hidden></ion-icon>
     </button>
