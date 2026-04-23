@@ -95,20 +95,30 @@
       );
     };
 
-    if (e.key === "ArrowDown") {
+ if (e.key === "ArrowDown") {
       e.preventDefault();
       activeIndex = (activeIndex + 1) % items.length;
-      updateActiveClass();
+    } else if (e.key === "Escape") {
+      resultsBox.innerHTML = "";
+      resultsBox.classList.remove("open");
+      input.focus();
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       activeIndex = (activeIndex - 1 + items.length) % items.length;
-      updateActiveClass();
     } else if (e.key === "Enter" && activeIndex >= 0) {
-       e.preventDefault();
-      items[activeIndex].querySelector("a").click();
+      e.preventDefault();
+      const activeLink = items[activeIndex].querySelector("a");
+      if (activeLink) activeLink.click();
+      return;
     }
 
-    items[activeIndex].querySelector("a").focus();
+    updateActiveClass();
+
+    if (activeIndex >= 0) {
+      const link = items[activeIndex].querySelector("a");
+      if (link) link.focus();
+    }
+  });
 
   });
 })();
