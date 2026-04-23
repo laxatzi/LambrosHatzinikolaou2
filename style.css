@@ -107,6 +107,15 @@ h5 {
   font-weight: 800;
 }
 
+.blog__intro,
+.project__intro {
+  margin-bottom: 70px;
+}
+
+.project__intro {
+  margin-top: 100px;
+}  
+
 h3.projects,
 h3.posts {
   font-weight: 800;
