@@ -82,6 +82,13 @@
     const items = resultsBox.querySelectorAll(".live-search-item");
     if (!items.length) return;
 
+    /**
+     * Updates the active class on search result items based on the current active index.
+     * Toggles the "active" class on each item, ensuring only the item at activeIndex has it.
+     * @function updateActiveClass
+     * @returns {void}
+     */
+
     const updateActiveClass = () => {
       items.forEach((item, i) =>
         item.classList.toggle("active", i === activeIndex),
