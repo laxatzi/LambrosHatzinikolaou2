@@ -133,7 +133,7 @@ h3.posts {
   align-items: center;
 }
 
-h3.posts small {
+posts__small {
   color: var(--color);
 }
 
@@ -141,7 +141,7 @@ p {
   font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
 }
 
-.post-container {
+.post__container {
   width: 75%;
 }
 
