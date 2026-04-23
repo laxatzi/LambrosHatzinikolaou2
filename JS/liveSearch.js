@@ -120,5 +120,12 @@
     }
   });
 
+    document.addEventListener("click", function (e) {
+    if (!input.contains(e.target) && !resultsBox.contains(e.target)) {
+      resultsBox.innerHTML = "";
+      resultsBox.classList.remove("open");
+    }
+
+
   });
 })();
