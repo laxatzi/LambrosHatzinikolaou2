@@ -5,13 +5,31 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.classList.remove("no-js");
 
   // Back to top
-  const backToTop = document.querySelector("[data-back-to-top]");
-  if (backToTop) {
-    backToTop.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const backToTop = document.getElementById("top-button");
+  if (!backToTop) return;
+
+  const toggleBackToTop = () => {
+    const shouldShow = window.scrollY > window.innerHeight;
+    backToTop.hidden = !shouldShow;
+    backToTop.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+  };
+
+  window.addEventListener("scroll", toggleBackToTop, { passive: true });
+  toggleBackToTop();
+
+  backToTop.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
     });
-  }
+  });
 
   // Mobile menu toggle
   const toggleBtn = document.querySelector(".toggle-menu");
