@@ -1,3 +1,31 @@
+/**
+ * Live Search Module
+ *
+ * Implements a real-time search functionality with keyboard navigation support.
+ * Fetches search results via AJAX based on user input and selected search type,
+ * displaying results dynamically while maintaining accessibility standards.
+ *
+ * @module liveSearch
+ * @description
+ * - Monitors input field for user queries (minimum 2 characters)
+ * - Supports filtering results by type via dropdown selector
+ * - Debounces search requests for performance optimization (250ms delay)
+ * - Provides keyboard navigation (Arrow Up/Down, Enter) through results
+ * - Maintains accessibility with aria-busy attribute and focus management
+ * - Implements AJAX security via nonce validation
+ *
+ * @requires LiveSearch.ajax_url - Global variable containing WordPress AJAX endpoint
+ * @requires LiveSearch.nonce - Global variable containing security nonce token
+ *
+ * @example
+ * <!-- HTML structure required -->
+ * <input id="live-search-input" type="text" placeholder="Search...">
+ * <select id="search-type">
+ *   <option value="any">Any Type</option>
+ * </select>
+ * <div id="live-search-results"></div>
+ */
+
 (function () {
   const input = document.querySelector("#live-search-input");
   const typeSelect = document.querySelector("#search-type");
