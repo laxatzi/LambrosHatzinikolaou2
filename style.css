@@ -85,9 +85,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-  line-height: 1.25;
-  letter-spacing: -1px;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
 }
 
 h3 {
@@ -103,6 +101,8 @@ h5 {
 }
 
 .post__title-link,
+.latest-posts__title,
+.latest-projects__title {
 .latest-posts__title-link {
   font-weight: 800;
 }
