@@ -32,17 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Mobile menu toggle
-  const toggleBtn = document.querySelector(".toggle-menu");
-  const nav = document.querySelector(".site-nav");
-  if (toggleBtn && nav) {
-    const setExpanded = (state) => {
-      toggleBtn.setAttribute("aria-expanded", state ? "true" : "false");
-      nav.classList.toggle("is-open", state);
-    };
-    setExpanded(false);
-    toggleBtn.addEventListener("click", () => {
-      const next = !(toggleBtn.getAttribute("aria-expanded") === "true");
-      setExpanded(next);
+
+  const button = document.getElementById("toggle-menu-button");
+  const menu = document.getElementById("js--menu");
+
+  if (button && menu) {
+    button.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("is-open");
+      button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+      const icons = button.querySelectorAll("ion-icon");
+      if (icons.length === 2) {
+        icons[0].hidden = isOpen; // menu icon
+        icons[1].hidden = !isOpen; // close icon
+      }
     });
   }
 }); // end of window load
