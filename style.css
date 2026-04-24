@@ -577,12 +577,15 @@ form {
 .nav__next::after {
   content: ' →';
 }
-
+  
 .the-project,
-#newsletter {
-  margin-top: 30px;
+.newsletter__section {
   background-color: var(--color-background-alt);
-  padding: 10px;
+  padding: 20px;
+}
+
+.the-project {
+  margin-top: 70px;
 }
 
 .the-project ul {
