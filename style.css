@@ -1599,14 +1599,13 @@ li.live-search__item {
 
   /* toggling navigation */
   
-  header {
+  site-header {
     height: auto;
     flex-direction: column;
     padding-bottom: 0;
   }
 
   .nav {
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     margin-top: 20px;
