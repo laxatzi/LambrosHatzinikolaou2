@@ -489,7 +489,7 @@ input[type="submit"]:hover {
   }
 }
 
-.intro-heading__image img:hover {
+.intro-heading__image:hover {
   transform: scale(1.032);
 }
 
