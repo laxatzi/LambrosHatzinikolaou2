@@ -823,6 +823,7 @@ time {
   opacity: 0.8;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .read-time__icon {
