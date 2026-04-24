@@ -793,11 +793,13 @@ hr {
   
 .taglist__parent {
   display: flex;
+  padding-top: 0;
 }
 
 .taglist {
   list-style: none;
   margin-right: 10px;
+  margin: 6px;
 }
 
 .project__date {
