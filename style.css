@@ -876,16 +876,14 @@ span.byline {
 }
 
 .header__info {
-  display: flex;
   min-width: 90%;
-  gap: 0.25rem;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   color: #555;
-  justify-content: space-between;
   margin-top: 30px;
   background-color: var(--color-background-alt);
-  padding: 10px;
+  padding: 15px;
 }
+
 
 .header__metadata--row {
   gap: 0.5rem;
@@ -1037,10 +1035,6 @@ section.not-found {
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 1rem;
-}
-
-.search-form-404 {
-  position: relative;
 }
 
 .search-form__404 {
