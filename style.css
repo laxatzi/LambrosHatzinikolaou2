@@ -852,16 +852,12 @@ time {
   margin-bottom: 50px;
 }
 
-.single-metadata time {
+.single__metadata-time {
   margin-top: 10px;
   font-style: italic;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: bold;
   display: block;
-}
-
-.header__metadata span {
-  margin-top: 5px;
 }
 
 span.byline {
