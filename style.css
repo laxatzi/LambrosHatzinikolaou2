@@ -626,7 +626,7 @@ ul ul li {
   margin-bottom: 0;
 }
 
-.buttons a {
+.button__link {
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: 800;
   padding: 5px 10px;
@@ -638,6 +638,8 @@ ul ul li {
 
 .buttons {
   margin: 15px 0;
+  display: flex;
+  gap: 10px;
 }
 
 .page-contact .grid {
