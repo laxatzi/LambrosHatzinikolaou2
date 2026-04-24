@@ -1623,7 +1623,8 @@ li.live-search__item {
 
   .toggle-menu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     margin-top: 20px;
   }
@@ -1632,8 +1633,9 @@ li.live-search__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
     font-weight: bold;
+    margin: 0 auto;
   }
 
   .toggle-menu ion-icon[hidden] {
