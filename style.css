@@ -761,21 +761,21 @@ hr {
 .writtenby {
   display: flex;
 }
-  
-.writtenby img {
+
+.writtenby__paragraph {
+  padding: 20px;
+  flex: 5;
+  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
+}
+
+.writtenby__img {
   border-radius: 100%;
   margin-top: 20px;
   width: 100px;
   height: 100px;
   flex: 1;
 }
-
-.writtenby p {
-  padding: 20px;
-  flex: 5;
-  font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
-}
-
+  
 .the-post_title,
 .the-project_title {
   display: flex;
@@ -789,10 +789,6 @@ hr {
   color: var(--color-main-dark);
   font-style: italic;
   background-color: var(--color-background-alt);
-}
-
-.tags ul {
-  margin-top: 0;
 }
   
 .taglist__parent {
