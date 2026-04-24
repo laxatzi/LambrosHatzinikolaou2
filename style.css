@@ -1613,12 +1613,12 @@ li.live-search__item {
     width: 100%;
   }
 
-  .nav a {
+  .nav__list-link {
     display: flex;
     width: 100%;
     margin: 5px 0;
     align-items: center;
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1.25rem, 1.62vw, 1.7rem);
   }
 
   .toggle-menu {
