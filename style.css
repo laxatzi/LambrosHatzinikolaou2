@@ -1720,21 +1720,12 @@ li.live-search__item {
 
 .nav__list {
   align-items: center;
-  margin-top: 20px;
   width: 100%;
   display: flex;
 }
 
 .nav__list-item {
   list-style-type: none;
-}
-
-.nav__list-link {
-  display: flex;
-  width: 100%;
-  margin: 5px 0;
-  align-items: center;
-  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 .nav__list-link:hover,
