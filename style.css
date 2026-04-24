@@ -1078,7 +1078,7 @@ section.not-found {
 
 /* Search Input */
   
-.search-field {
+.search__field {
   flex: 1;
   padding: 1rem 1.25rem;
   font-size: 1rem;
@@ -1091,11 +1091,11 @@ section.not-found {
   transition: border-color 0.2s ease;
 }
 
-.search-field:focus {
+.search__field:focus {
   border-color: #026fb7;
 }
 
-.search-field::placeholder {
+.search__field::placeholder {
   color: #9ca3af;
 }
 
