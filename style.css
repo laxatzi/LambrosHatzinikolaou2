@@ -1698,12 +1698,18 @@ li.live-search__item {
 
 .site-header__title-link {
   font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+}
 
 .nav__list-link {
   text-decoration-color: var(--color-main-dark);
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1.25rem, 1.62vw, 1.57rem);
   text-decoration: underline 4px;
   padding: 0 10px 0 0;
+  display: flex;
+  width: 100%;
+  margin: 5px 0;
+  align-items: center;
 }
 
 .site-header {
