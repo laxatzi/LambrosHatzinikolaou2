@@ -425,14 +425,18 @@ p.comment-form__cookies-consent {
   margin-bottom: 20px;
 }
 
-#sig {
+.sig {
   margin-left: 1%;
   margin-top: 1%;
 }
 
-#sig span {
+.sig__span {
   background-color: var(--color-background-alt);
   color: var(--color-main-dark);
+}
+
+.site-footer__menu-wrapper {
+  margin-bottom: 10px;
 }
 
 input[type="submit"] {
