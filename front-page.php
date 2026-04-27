@@ -11,7 +11,7 @@
     <!-- latest posts -->
           <section id="latest-posts" class="home-section section" aria-labelledby="latest-posts-title">
             <div class="blog__intro">
-                  <h2 id="latest-posts-title"><?php esc_html_e( 'My latest posts', 'LambrosPersonalTheme' ); ?></h2>
+                  <h2 id="latest-posts-title" class="latest-posts__title"><?php esc_html_e( 'My latest posts', 'LambrosPersonalTheme' ); ?></h2>
                   <?php
                     $posts_page_id = (int) get_option( 'page_for_posts' );
                     $blog_url = $posts_page_id ? get_permalink( $posts_page_id ) : home_url( '/blog/' );
@@ -60,8 +60,8 @@
 
     <!-- latest projects -->
           <section id="latest-projects" class="home-section section" aria-labelledby="latest-projects-title">
-            <div class="heading">
-              <h2 id="latest-projects-title"><?php esc_html_e( 'My latest projects!', 'LambrosPersonalTheme' ); ?></h2>
+            <div class="heading project__intro">
+              <h2 id="latest-projects-title" class="latest-projects__title"><?php esc_html_e( 'My latest projects!', 'LambrosPersonalTheme' ); ?></h2>
               <?php
                 $projects_url = get_post_type_archive_link( 'project' ) ?: home_url( '/projects/' );
                 ?>
