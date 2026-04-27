@@ -5,7 +5,7 @@
 ?>
 <footer id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter" aria-labelledby="footer-title">
   <h2 id="footer-title" class="u-sr-only">Footer</h2>
-  <div id="sig" class="container">
+  <div id="sig" class="container sig">
     <div class="site-footer__menu-wrapper">
       <nav class="site-footer__nav" aria-label="<?php esc_attr_e( 'Footer', 'LambrosPersonalTheme' ); ?>">
       <?php
@@ -28,7 +28,7 @@
        */
       printf(
             esc_html__( 'Developed by %1$s © 2024 - %2$s. All rights reserved.', 'LambrosPersonalTheme' ),
-            '<span>' . esc_html( LAMBROS_THEME_AUTHOR ) . '</span>',
+            '<span class="sig__span">' . esc_html( LAMBROS_THEME_AUTHOR ) . '</span>',
             esc_html( wp_date( 'Y' ) )
            );
       ?>
