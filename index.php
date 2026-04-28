@@ -27,9 +27,9 @@
        */
       if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
          <article id="post-<?php the_ID(); ?>" <?php post_class( 'the-post' ); ?> itemscope itemtype="https://schema.org/BlogPosting" class="the-post fade-up">
-           <header class="the-post_title site-header">
+           <header class="the-post__title site-header">
              <h2 class="posts flex-column" itemprop="headline">
-               <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+               <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" class="site-header__title-link" itemprop="url">
                  <?php the_title(); ?>
                </a>
                <small class="post__small project__date" style="margin-top: 10px;">
