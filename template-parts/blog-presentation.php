@@ -33,10 +33,10 @@
                  * @uses esc_html() To safely escape the output for display.
                  */
                     $minutes = lambros_get_reading_time();
-                    echo esc_html( sprintf(
-                      _n( '%d min read', '%d mins read', $minutes, 'LambrosPersonalTheme' ),
+                    printf(
+                      esc_html( _n( '%d min read', '%d mins read', $minutes, 'LambrosPersonalTheme' ) ),
                       $minutes
-                    ) );
+                    );
                   ?>
               </span>
             </time>
