@@ -106,7 +106,7 @@
     <div class="read-more__wrapper">
         <a href="<?php echo esc_url( get_permalink() ); ?>" class="read_more" 
           aria-label="<?php echo esc_attr( sprintf( __( 'Read more about %s', 'LambrosPersonalTheme' ), 
-          esc_html(get_the_title() ) ) ); ?>"> 
+          get_the_title()  ) ); ?>"> 
       <?php echo esc_html__( 'Read More', 'LambrosPersonalTheme' ); ?> </a>
     </div>
   </div>
