@@ -1,6 +1,6 @@
 <article class="the-post" itemscope
   itemtype="https://schema.org/BlogPosting">
-  <div class="post-title__wrapper">
+  <div class="the-post__title-wrapper">
     <div class="the-post__title">
       <h3 class="post flex-column">
         <a href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url" class="post__title-link">
@@ -12,7 +12,7 @@
             <?php echo get_the_date( LAMBROS_DATE_FORMAT  ); ?>
 <!-- ⭐ Read time indicator -->
               <span class="read-time" itemprop="timeRequired"> 
-                <svg class="read-time-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                <svg class="read-time__icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/> 
                   <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/> 
                 </svg>
