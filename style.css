@@ -226,6 +226,7 @@ section {
 section:hover {
   background-color: var(--color-background-alt);
   border: 2px solid var(--color-lighter);
+  padding: 28px;
 }
 
 .intro {
