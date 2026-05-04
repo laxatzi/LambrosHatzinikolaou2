@@ -1737,6 +1737,7 @@ li.live-search__item {
 
 .nav__list-item {
   list-style-type: none;
+  width: 100%;
 }
 
 .nav__list-link:hover,
