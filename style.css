@@ -484,7 +484,7 @@ input[type="submit"]:hover {
 
 @media screen and (max-width: 940px) {
 
-  .intro-heading__image img {
+  .intro-heading__image {
     max-width: 70px;
     max-height: 70px;
   }
