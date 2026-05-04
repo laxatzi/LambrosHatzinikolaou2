@@ -45,7 +45,7 @@
     </div>
     
     <div class="tags" itemprop="keywords">
-      <ul class="taglist-parent">
+      <ul class="taglist__parent">
         <?php
          /**
              * Displays the post categories as a list item with tag styling.
