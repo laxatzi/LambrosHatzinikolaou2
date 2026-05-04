@@ -587,6 +587,12 @@ form {
   padding: 20px;
 }
 
+.newsletter__section:hover {
+  background-color: var(--color-background-alt);
+  border: 2px solid var(--color-lighter);
+  padding: 18px;
+}
+  
 .the-project {
   margin-top: 70px;
 }
