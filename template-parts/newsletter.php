@@ -1,5 +1,5 @@
 <section id="newsletter" class="section newsletter__section" aria-labelledby="newsletter__title">
-  <h2 id="newsletter__title"><?php echo esc_html__( 'My Monthly Newsletter about Web Development', 'LambrosPersonalTheme' ); ?></h2>
+  <h3 id="newsletter__title"><?php echo esc_html__( 'My Monthly Newsletter about Web Development', 'LambrosPersonalTheme' ); ?></h3>
     <div class="newsletter__content">
       <small>
         <?php echo esc_html__( 'Subscribe to my newsletter to get useful tips and a selection of articles about web technologies on the first Monday of every month.', 'LambrosPersonalTheme' ); ?>
