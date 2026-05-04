@@ -223,6 +223,11 @@ section {
   padding: 30px;
 }
 
+section:hover {
+  background-color: var(--color-background-alt);
+  border: 2px solid var(--color-lighter);
+}
+
 .intro {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
