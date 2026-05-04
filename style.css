@@ -777,8 +777,8 @@ hr {
   flex: 1;
 }
   
-.the-post_title,
-.the-project_title {
+.the-post__title,
+.the-project__title {
   display: flex;
   justify-content: space-between;
 }
@@ -794,13 +794,13 @@ hr {
   
 .taglist__parent {
   display: flex;
-  padding-top: 0;
+  margin-top: 0;
 }
 
 .taglist {
   list-style: none;
   margin-right: 10px;
-  margin: 6px;
+  padding: 6px;
 }
 
 .project__date {
