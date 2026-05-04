@@ -134,7 +134,7 @@ h3.posts {
   align-items: center;
 }
 
-post__small {
+.post__small {
   color: var(--color);
 }
 
