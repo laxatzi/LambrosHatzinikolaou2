@@ -78,6 +78,7 @@ h6 {
   padding: 0;
   color: var(--color);
   vertical-align: baseline;
+  letter-spacing: -1px;
 }
 
 h1 {
@@ -133,7 +134,7 @@ h3.posts {
   align-items: center;
 }
 
-posts__small {
+post__small {
   color: var(--color);
 }
 
