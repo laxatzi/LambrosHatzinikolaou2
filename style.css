@@ -1721,7 +1721,7 @@ li.live-search__item {
     align-items: center;
     justify-content: center;
   }
-
+}
 
 .site-header {
   display: flex;
@@ -1752,7 +1752,7 @@ li.live-search__item {
 .dot-bg-section-1,
 .dog-bg-section-2 {
   background-color: pink;
-
+}
 
 
 
