@@ -96,7 +96,7 @@ function lambros_enqueue_assets() {
     wp_enqueue_style( 'main-styles', get_stylesheet_uri(), [], $ver );
     wp_enqueue_style(
       'google-fonts',
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&display=swap',
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap',
       [],
       null
     );
