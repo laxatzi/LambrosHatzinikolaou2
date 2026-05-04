@@ -1709,8 +1709,9 @@ li.live-search__item {
   padding: 0 10px 0 0;
   display: flex;
   width: 100%;
-  margin: 5px 0;
+  margin: 5px 2px;
   align-items: center;
+  justify-content: center;
 }
 
 .site-header {
