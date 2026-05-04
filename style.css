@@ -1714,6 +1714,15 @@ li.live-search__item {
   justify-content: center;
 }
 
+@media screen and (max-width: 940px) {
+  .nav__list-link {
+    font-size: clamp(1.25rem, 1.52vw, 1.57rem);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+
 .site-header {
   display: flex;
   flex: 50%;
