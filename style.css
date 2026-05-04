@@ -1566,6 +1566,50 @@ li.live-search__item {
   .wp-block-heading {
     margin-top: 50px;
   }
+
+  
+  .site-header {
+    display: flex;
+    padding: 10px 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .site-header__nav {
+    display: flex;
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav__item {
+    list-style: none;
+  }
+
+  .nav__link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color);
+    text-decoration: underline 4px var(--color-main-dark);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 500;
+    padding: 0 10px 0 0;
+  }
+
+  .nav__link:hover,
+  .nav__link:focus,
+  .nav__link:active {
+    text-decoration-color: var(--color-main-light);
+    font-weight: 800;
+  }
+
 }
 
 /*------------------------------------------------------------------
