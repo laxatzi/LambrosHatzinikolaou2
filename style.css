@@ -1617,7 +1617,7 @@ li.live-search__item {
   .nav__list-link {
     display: flex;
     width: 100%;
-    margin: 5px 0;
+    margin: 5px 2px;
     align-items: center;
     font-size: clamp(1.25rem, 1.62vw, 1.7rem);
   }
