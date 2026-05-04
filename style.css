@@ -1744,8 +1744,15 @@ li.live-search__item {
 .nav__list-link:active,
 .nav__list-link:focus {
   text-decoration-color: var(--color-main-dark);
-  font-weight: bolder;
+  color: #f7af24;
+  text-decoration: none;
+  background-color: var(--color-lighter);
 }
+
+.dot-bg-section-1,
+.dog-bg-section-2 {
+  background-color: pink;
+
 
 
 
