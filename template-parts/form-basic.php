@@ -24,7 +24,7 @@ $msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : 
     <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
   </div>
   
-  <div class="label__form flex-column">
+  <div class="form__label flex-column">
     <label for="name"><?php esc_html_e( 'Name', 'LambrosPersonalTheme' ); ?></label>
     <input
        type="text"
@@ -36,7 +36,7 @@ $msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : 
     />
   </div>
 
-  <div class="label__form flex-column">
+  <div class="form__label flex-column">
     <label for="email"><?php esc_html_e( 'Email', 'LambrosPersonalTheme' ); ?></label>
     <input
        type="email"
@@ -49,7 +49,7 @@ $msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : 
     />
   </div>
 
-  <div class="label__form flex-column">
+  <div class="form__label flex-column">
     <label for="subject"><?php esc_html_e( 'Subject', 'LambrosPersonalTheme' ); ?></label>
     <input
        type="text"
@@ -62,7 +62,7 @@ $msg    = isset( $posted['message'])? wp_kses_post($posted['message'] )       : 
     />
   </div>
 
-  <div class="label__form flex-column">
+  <div class="form__label flex-column">
     <label for="message"><?php esc_html_e( 'Your message', 'LambrosPersonalTheme' ); ?></label>
     <textarea
       id="message"
