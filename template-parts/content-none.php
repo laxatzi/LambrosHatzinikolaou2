@@ -1,7 +1,7 @@
 <section class="no-results not-found section">
   <?php if ( is_search() ) : ?>
  <!-- Header -->
-    <header class="error-page__header flex-column no-results__header site-headers">
+    <header class="error-page__header flex-column no-results__header site-header">
       <h1 class="page-title">
         <?php esc_html_e( 'No results found', 'LambrosPersonalTheme' ); ?>
       </h1>
@@ -163,7 +163,7 @@
 
   <?php else : ?>
     <!-- Header -->
-    <header class="error-page__header flex-column site-header">
+    <header class="error-page__header flex-column no-results__header site-header">
       <h1 id="page-title">0</h1>
       <h2 class="page-subtitle">
         <?php
