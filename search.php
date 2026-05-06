@@ -5,7 +5,7 @@
   <div class="container">
   <h2 id="search-title">Your search query was "<span class='search-query'><?php echo esc_html( get_search_query( false ) ); ?></span>"</h2>
    <section id="posts" class="section" aria-labelledby="search-results-title">
-     <h2 id="search-results-title" class="u-sr-only">
+      <h2 id="search-results-title" class="u-sr-only"><?php esc_html_e( 'Search results', 'LambrosPersonalTheme' ); ?></h2>
      <?php
         if (have_posts()) {
           $has_non_page_results = false;
