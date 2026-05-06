@@ -70,7 +70,6 @@
           /**
            * Display site home link with conditional active indicator
            *
-           * Outputs a clickable link to the site homepage that displays the blog name.
            * Applies an 'indicator' CSS class when viewing the front page to visually
            * highlight the active navigation state.
            *
