@@ -1413,11 +1413,6 @@ li.live-search__item {
     ^Back to top icon
 -------------------------------------------------------------------*/
 
-/* Error page */
-.error-page__header {
-  padding: 10px 0 20px;
-}
-
 /* top-button */
 
 .back-to-top {
@@ -1631,7 +1626,7 @@ li.live-search__item {
 
   /* toggling navigation */
   
-  site-header {
+  .site-header {
     height: auto;
     flex-direction: column;
     padding-bottom: 0;
