@@ -24,12 +24,12 @@
 <main id="main-content" class="layout__content layout__main error-404 not-found" aria-labelledby="page-title">
   <div class="container">
   <?php
-    /**
-     * Fires before 404 page content.
+     /**
+     * A custom action hook that fires before the 404 content. Enables coder (or a plugin) to inject content before the main message without editing this file directly — for example, a banner or breadcrumb.
      *
      * @since 1.0.0
      */
-    do_action( 'lambros_before_404_content' );
+    do_action( 'lambros_after_404_content' );  
   ?>
   <?php get_template_part( 'template-parts/content', '404' ); ?>
   <?php
