@@ -91,6 +91,8 @@
                     +30 2310 XXX XXX
                   </a>
                 </li>
+                <?php if ( ! empty( $whatsapp_number ) ) : ?>
+
                 <li class="contact__info-box-item">
                   <ion-icon name="logo-whatsapp" size="small" aria-hidden="true"></ion-icon>
                   <a aria-label="<?php esc_attr_e( 'Contact via WhatsApp', 'LambrosPersonalTheme' ); ?>"
@@ -99,7 +101,9 @@
                     WhatsApp
                   </a>
                 </li>
-              </ul>
+                
+              <?php endif; ?>
+            </ul>
             </address>
             <nav class="social-link-contact">
               <?php
