@@ -1,11 +1,10 @@
 <?php
 /**
  * Display a contact form message from a transient.
- * 
- * Retrieves a contact message stored in a transient, displays it with
- * appropriate styling based on message type (success or error), and then
- * deletes the transient to prevent the message from persisting across page loads.
- * 
+ * The transient should be an array with 'type' (success or error) and 'text' (the message).
+ * The message is displayed in the footer of the site and is styled based on its type.
+ * @uses get_transient() to retrieve the message and delete_transient() to remove it after displaying.
+ * The message is sanitized using esc_html() to prevent XSS attacks, and the CSS class is determined based on the type of message.
  * @return void
  */
 function lambros_show_contact_message() {
