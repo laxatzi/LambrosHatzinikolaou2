@@ -9,14 +9,16 @@
  * @return void
  */
 function lambros_show_contact_message() {
-  $msg = get_transient( 'contact_msg' );
-  if ( ! $msg ) return;
+    $msg = get_transient( 'contact_msg' );
+    if ( ! $msg || ! isset( $msg['type'], $msg['text'] ) ) return;
 
-  // Delete after showing so it doesn’t persist
-  delete_transient( 'contact_msg' );
+    $allowed_types = [ 'success', 'error' ];
+    $type  = in_array( $msg['type'], $allowed_types, true ) ? $msg['type'] : 'error';
+    $class = $type === 'success' ? 'contact-success' : 'contact-error';
 
-  $class = $msg['type'] === 'success' ? 'contact-success' : 'contact-error';
-  ?>
+    // Delete only after we've prepared everything
+    delete_transient( 'contact_msg' );
+    ?>
   <div class="contact-message <?php echo esc_attr( $class ); ?>">
     <?php echo esc_html( $msg['text'] ); ?>
   </div>
