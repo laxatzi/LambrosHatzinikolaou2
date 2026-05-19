@@ -82,11 +82,11 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: clamp(2rem, 4vw, 3.55rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2.45vw + 1rem, 2.85rem);
+  font-size: clamp(1.5rem, 2.45vw + 1rem, 3.25rem);
 }
 
 h3 {
@@ -106,6 +106,10 @@ h5 {
 .latest-projects__title,
 .latest-posts__title-link {
   font-weight: 800;
+}
+
+.post__title-link {
+  font-size: clamp(1.75rem, 1vw + 0.55rem, 1.95rem);
 }
 
 .blog__intro,
