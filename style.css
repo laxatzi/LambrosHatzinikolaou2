@@ -352,7 +352,7 @@ main img {
 
 .site-title a {
   color: var(--color);
-  text-decoration: underline 4px var(--color-main-dark);
+  text-decoration: underline 4px var(--color);
   letter-spacing: -0.08em;
   font-weight: 800;
 }
