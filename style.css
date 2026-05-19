@@ -1781,10 +1781,10 @@ li.live-search__item {
 .nav__list-link:hover,
 .nav__list-link:active,
 .nav__list-link:focus {
-  text-decoration-color: var(--color-main-dark);
-  color: #f7af24;
+  text-decoration-color: var(--color-distinct);
+  color: var(--color-distinct);
   text-decoration: none;
-  background-color: var(--color-lighter);
+  background-color: var(--color);
 }
 
 .dot-bg-section-1,
