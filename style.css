@@ -446,8 +446,9 @@ p.comment-form__cookies-consent {
 }
 
 .sig__span {
-  background-color: var(--color-background-alt);
-  color: var(--color-main-dark);
+  padding: 1px;
+  background-color: var(--color-distinct);
+  color: var(--color);
 }
 
 .site-footer__menu-wrapper {
