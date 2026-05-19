@@ -1235,7 +1235,7 @@ section.not-found {
 }
 
 .page-numbers:hover {
-  background-color: #f7af24;
+  background-color: var(--color-distinct);
 }
 
 .button-reset {
