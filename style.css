@@ -21,11 +21,11 @@ GENERIC STYLES
 :root {
   --color: #2e353f;
   --color-lighter: #4f5969;
-  --color-background: #ffffff;
-  --color-background-alt: #ecf2f7;
-  --color-main-dark: #026fb7;
-  --color-main-light: #5b8fb5;
-  --color-distinct: #f7af24;
+  --color-background: #edece4;
+  --color-background-alt: #f4f3ef;
+  --color-main-dark: #46432f;
+  --color-main-light: #7d7854;
+  --color-distinct: #fdd000;
   --color-distinct-light: #ecc67c;
 }
 
