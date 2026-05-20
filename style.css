@@ -1491,7 +1491,8 @@ li.live-search__item {
 
   .the-post,
   .search-form__wrapper,
-  .archive-header {
+  .archive-header,
+  section {
     opacity: 0;
     transform: translateY(20px);
     animation: postFadeUp 0.7s ease-out forwards;
