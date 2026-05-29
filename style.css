@@ -980,7 +980,7 @@ ul.contact-list li {
 code {
   font-family: JetBrains Mono, monospace;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
-
+  background-color: var(--color-highlight);
 }
 
 pre {
