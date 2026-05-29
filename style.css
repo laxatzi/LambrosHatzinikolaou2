@@ -1006,6 +1006,9 @@ code {
   font-family: JetBrains Mono, monospace;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   background-color: var(--color-highlight);
+  display: inline-block;
+  vertical-align: text-top;
+  color: var(--color-main-dark);
 }
 
 pre {
