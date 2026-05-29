@@ -393,25 +393,27 @@ footer {
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
 }
 
-p.comment-form__author,
-p.comment-form__email,
-p.comment-form__url {
+p.comment-form-author,
+p.comment-form-email,
+p.comment-form-url {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 600px;
+  min-width: 400px;
 }
 
-p.comment-form__comment {
+p.comment-form-comment {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-p.comment-form__comment textarea {
+p.comment-form-comment textarea {
   width: 100%;
-  max-width: 100%;
+  max-width: 600px;
+  min-width: 400px;
 }
 
 p.form__submit {
