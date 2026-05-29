@@ -917,7 +917,7 @@ span.byline {
   min-width: 90%;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   color: #555;
-  margin-top: 30px;
+  margin-top: 15px;
   background-color: var(--color-background-alt);
   padding: 15px;
 }
