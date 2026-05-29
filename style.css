@@ -818,7 +818,7 @@ hr {
   
 .taglist__parent {
   display: flex;
-  margin-top: 0;
+  margin: 0;
 }
 
 .taglist {
