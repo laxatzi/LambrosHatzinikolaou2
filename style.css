@@ -922,6 +922,10 @@ span.byline {
   padding: 15px;
 }
 
+.header__metadata {
+  display: flex;
+  justify-content: space-between;
+}
 
 .header__metadata--row {
   gap: 0.5rem;
