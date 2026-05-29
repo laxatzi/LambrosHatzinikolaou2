@@ -846,6 +846,14 @@ time {
   font-weight: bold;
 }
 
+.published-date {
+  font-style: italic;
+  color: var(--color-main-light);
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
 .read-time {
   display: flex;
   align-items: center;
