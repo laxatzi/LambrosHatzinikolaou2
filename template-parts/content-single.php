@@ -28,6 +28,40 @@
 
     <!-- Header -->
     <header class="entry-header flex-column" >
+          <?php
+        /**
+         * Display post categories section for single post view.
+         *
+         * This block renders a categorized section that displays all categories
+         * associated with the current post. It only appears when viewing a single
+         * post that has at least one category assigned.
+         *
+         * The output includes:
+         * - A label "Categories:" (translatable)
+         * - A navigation element containing comma-separated category links
+         * - Proper semantic markup with itemProp for article schema
+         * - Accessibility support with aria-label
+         *
+         * @package PersonalWebsite
+         * @since 1.0.0
+         *
+         * @uses get_post_type() - Checks if current post type is 'post'
+         * @uses has_category() - Verifies the post has assigned categories
+         * @uses esc_html_e() - Escapes and translates the "Categories:" label
+         * @uses esc_attr_e() - Escapes and translates the aria-label attribute
+         * @uses get_the_category_list() - Retrieves formatted category links with comma separator
+         * @uses wp_kses_post() - Sanitizes the category list HTML output
+         *
+         * Textdomain: 'LambrosPersonalTheme'
+         */
+        if ( get_post_type() === "post" && has_category() ) : ?>
+          <div class="entry-categories" itemprop="articleSection">
+            <span class="categories-label entry-categories__label"></span>
+            <nav class="entry-categories-nav entry-categories__nav" aria-label="<?php esc_attr_e( 'Post categories', 'LambrosPersonalTheme' ); ?>">
+              <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
+            </nav>
+          </div>
+        <?php endif; ?>
       <h1 id="post-title-<?php the_ID(); ?>" class="entry-title" itemprop="headline">
         <?php the_title(); ?>
       </h1>
@@ -132,43 +166,6 @@
 
 
         </div> <!-- header-metadata -->
-        
-        <?php 
-        /**
-         * Display post categories section for single post view.
-         *
-         * This block renders a categorized section that displays all categories
-         * associated with the current post. It only appears when viewing a single
-         * post that has at least one category assigned.
-         *
-         * The output includes:
-         * - A label "Categories:" (translatable)
-         * - A navigation element containing comma-separated category links
-         * - Proper semantic markup with itemProp for article schema
-         * - Accessibility support with aria-label
-         *
-         * @package PersonalWebsite
-         * @since 1.0.0
-         *
-         * @uses get_post_type() - Checks if current post type is 'post'
-         * @uses has_category() - Verifies the post has assigned categories
-         * @uses esc_html_e() - Escapes and translates the "Categories:" label
-         * @uses esc_attr_e() - Escapes and translates the aria-label attribute
-         * @uses get_the_category_list() - Retrieves formatted category links with comma separator
-         * @uses wp_kses_post() - Sanitizes the category list HTML output
-         *
-         * Textdomain: 'LambrosPersonalTheme'
-         */
-
-        if ( get_post_type() === "post" && has_category() ) : ?>
-          <div class="entry-categories" itemprop="articleSection">
-
-            <span class="categories-label entry-categories__label"></span>
-            <nav class="entry-categories-nav entry-categories__nav" aria-label="<?php esc_attr_e( 'Post categories', 'LambrosPersonalTheme' ); ?>">
-              <?php echo wp_kses_post( get_the_category_list( ', ' ) ); ?>
-            </nav>
-          </div>
-        <?php endif; ?>
 
       </div> <!-- .header-info -->
     </header> <!-- .entry-header -->
