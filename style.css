@@ -21,12 +21,13 @@ GENERIC STYLES
 :root {
   --color: #2e353f;
   --color-lighter: #4f5969;
-  --color-background: #edece4;
-  --color-background-alt: #f4f3ef;
+  --color-background: #f5f0e6;
+  --color-background-alt: #e8e6e1;
   --color-main-dark: #46432f;
   --color-main-light: #7d7854;
-  --color-distinct: #fdd000;
-  --color-distinct-light: #ecc67c;
+  --color-distinct: #f0a91a;
+  --color-distinct-light: #f5cd7e;
+  --color-highlight: #fcd993;
 }
 
 *,
