@@ -419,11 +419,6 @@ p.form__submit {
   display: flex;
 }
 
-p.form__submit input[type="submit"] {
-  width: 100%;
-  max-width: 100%;
-}
-
 @media screen and (max-width: 940px) {
   p.form__submit {
     justify-content: flex-start;
@@ -460,7 +455,9 @@ input[type="submit"] {
   color: var(--color);
   padding: 10px;
   border: 4px solid var(--color);
-  width: 80%;
+  width: 100%;
+  min-width: 200px;
+  max-width: 300px;
   font-size: 1rem;
   font-weight: 800;
 }
