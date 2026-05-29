@@ -140,7 +140,7 @@ h3.posts {
 }
 
 p {
-  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.15rem);
 }
 
 .post__container {
@@ -564,6 +564,8 @@ form {
 
 .the-post {
   margin-top: 70px;
+  background-color: var(--color-background-alt);
+  padding: 20px;
 }
 
 .the-post:last-of-type {
