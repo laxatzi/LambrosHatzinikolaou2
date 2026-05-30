@@ -24,10 +24,30 @@
         </ul>
       </div>
     <div class="the-post__title">
+      
       <h3 class="post flex-column">
         <a href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url" class="post__title-link">
           <span itemprop="headline"><?php the_title(); ?></span>
         </a>
+      </h3>
+    </div>
+    <div class="post-excerpt" itemprop="description">
+     <?php
+        /**
+         * Displays the post excerpt or a trimmed version of the post content.
+         *
+         * If the post has an excerpt defined, it will be displayed.
+         * Otherwise, the first 26 words of the post content will be shown.
+         *
+         * @return void Outputs the excerpt or trimmed content directly to the page.
+         */
+          if ( has_excerpt() ) {
+            echo get_the_excerpt();
+          } else {
+            echo wp_trim_words( get_the_content(), 26 );
+          } 
+       ?>
+     </div>
         <small class="project-date">
               <time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"
               itemprop="datePublished">
