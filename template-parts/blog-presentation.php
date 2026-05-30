@@ -1,6 +1,28 @@
 <article class="the-post" itemscope
   itemtype="https://schema.org/BlogPosting">
   <div class="the-post__title-wrapper">
+    <div class="tags" itemprop="keywords">
+      <ul class="taglist__parent">
+        <?php
+            /**
+             * Displays the post categories as a list item with tag styling.
+             *
+             * Retrieves all categories associated with the current post and outputs them
+             * as a comma-separated list wrapped in an HTML list item element with the
+             * 'taglist' and 'tag' CSS classes. If no categories are assigned to the post,
+             * nothing is output.
+             *
+             * @since 1.0.0
+             *
+             * @global void Uses get_the_category_list() WordPress function
+             *
+             * @return void Echoes HTML output directly
+             */
+                $categories = get_the_category_list( '' );
+                echo $categories ? '<li class="taglist tag">' . $categories . '</li>' : '';
+          ?>
+        </ul>
+      </div>
     <div class="the-post__title">
       <h3 class="post flex-column">
         <a href="<?php echo esc_url( get_permalink() ); ?>" itemprop="url" class="post__title-link">
