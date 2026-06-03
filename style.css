@@ -674,7 +674,7 @@ ul ul li {
   margin-top: 50px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   .page-contact .grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
