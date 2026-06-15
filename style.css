@@ -569,7 +569,8 @@ h1.intro-heading {
 input,
 textarea {
   padding: 10px 2px;
-  max-width: 80%;
+  max-width: 300px;
+  min-width: 200px;
   border: 4px solid black;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: 800;
