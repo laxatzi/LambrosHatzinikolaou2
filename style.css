@@ -235,6 +235,12 @@ section {
   padding: 30px;
   border-bottom: 2px solid var(--color-lighter);
 }
+@media screen and (max-width: 940px) {
+  section {
+    padding: 15px;
+  }
+}
+
 
 section:last-of-type {
   margin-bottom: 50px;
