@@ -239,13 +239,18 @@ section {
 @media screen and (max-width: 940px) {
   section {
     padding: 15px;
+    margin: 35px 0;
   }
 }
-
 
 section:last-of-type {
   margin-bottom: 20px;
   border-bottom: none;
+}
+
+.section-project {
+  padding: 0;
+  margin: 20px 0;
 }
 
 .intro {
