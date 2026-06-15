@@ -558,6 +558,10 @@ textarea {
   font-weight: 800;
 }
 
+input[name="wp-comment-cookies-consent"] {
+  min-width: 20px;
+}
+
 form {
   margin-top: 20px;
 }
