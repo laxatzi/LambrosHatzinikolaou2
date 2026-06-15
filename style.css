@@ -1849,5 +1849,12 @@ li.live-search__item {
   background-color: pink;
 }
 
+.site-footer__links.legal-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 
 
