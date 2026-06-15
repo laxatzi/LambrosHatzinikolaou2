@@ -476,6 +476,11 @@ input[type="submit"] {
   max-width: 300px;
   font-weight: 800;
 }
+@media screen and (max-width: 940px) {
+  input[type="submit"] {
+    margin-top: 5px;
+  }
+}
 
 input[type="submit"]:hover {
   background-color: var(--color-distinct-light);
