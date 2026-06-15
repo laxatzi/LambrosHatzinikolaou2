@@ -1783,6 +1783,12 @@ li.live-search__item {
   font-weight: 800;
 }
 
+.site-footer__links.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 /* HEADER Navigation */
 
 .site-header__title-link {
