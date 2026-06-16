@@ -1805,6 +1805,10 @@ li.live-search__item {
   gap: 0.75rem;
 }
 
+.site-credit {
+  margin-bottom: 20px;
+}
+
 /* HEADER Navigation */
 
 .site-header__title-link {
