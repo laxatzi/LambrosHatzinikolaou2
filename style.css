@@ -1210,6 +1210,11 @@ section.not-found {
   display: none;
 }
 
+.search-performer {
+  margin-top: 50px;
+  max-width: 500px;
+}
+
 /* Responsive Design */
   
 @media (min-width: 640px) {
