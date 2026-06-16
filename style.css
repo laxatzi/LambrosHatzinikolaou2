@@ -1658,6 +1658,13 @@ li.live-search__item {
     font-weight: 800;
   }
 
+  .nav__list-link {
+    display: flex;
+    width: 100%;
+    margin: 5px 1px;
+    align-items: center;
+    font-size: clamp(1.25rem, 1.42vw, 1.46rem);
+  }
 
 
   .site-header {
