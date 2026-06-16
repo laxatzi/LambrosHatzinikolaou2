@@ -1658,12 +1658,7 @@ li.live-search__item {
     font-weight: 800;
   }
 
-}
 
-/*------------------------------------------------------------------
-   ^MAX 920px
--------------------------------------------------------------------*/
-@media screen and (max-width: 940px) {
 
   .site-header {
     flex-direction: column;
