@@ -1723,7 +1723,7 @@ li.live-search__item {
     width: 100%;
     margin: 5px 2px;
     align-items: center;
-    font-size: clamp(1.25rem, 1.42vw, 1.6rem);
+    font-size: clamp(1.25rem, 1.42vw, 1.46rem);
   }
 
   .toggle-menu {
