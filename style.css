@@ -1698,6 +1698,7 @@ li.live-search__item {
     align-items: flex-start;
     width: 100%;
     gap: 0.5rem;
+    margin-left: 0;
   }
 
   .nav__item {
