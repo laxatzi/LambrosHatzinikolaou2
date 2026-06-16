@@ -903,7 +903,10 @@ time {
 
 .entry-header {
   align-items: start;
-  margin-bottom: 50px;
+}
+
+.entry-content {
+  margin-top: 50px;
 }
 
 .single__metadata-time {
