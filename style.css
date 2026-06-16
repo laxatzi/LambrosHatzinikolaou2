@@ -859,6 +859,7 @@ time {
   min-width: 100%;
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   font-weight: bold;
+  justify-content: space-between;
 }
 
 .published-date {
