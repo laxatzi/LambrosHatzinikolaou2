@@ -25,7 +25,7 @@ get_header();
    * @return void
    */
     if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class("the-post fade-up"); ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class("fade-up"); ?>
         itemscope itemtype="https://schema.org/SearchResultsPage"
       >
         <header class="entry-header flex-column site-header">
