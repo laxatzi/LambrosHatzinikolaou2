@@ -25,6 +25,7 @@
           echo "<h3 class=\"search-query--heading\">No results match the search!</h3>";
         }
       ?>
+      <div class="search-performer">
        <label for="search-type" class="search__type-label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
        <select id="search-type" class="search__type">
           <option value="any"><?php esc_html_e( 'All', 'LambrosPersonalTheme' ); ?></option>
@@ -34,7 +35,7 @@
        </select>
        <div id="search-page-form"> <?php get_search_form(); ?> </div>
        <div id="live-search-results" class="live-search__results" aria-live="polite"></div>
- 
+      </div>
     </section>
 </div>
 </main>
