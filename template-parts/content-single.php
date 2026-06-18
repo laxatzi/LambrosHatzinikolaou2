@@ -100,13 +100,12 @@
                      ) );
                    ?>
            </span>
-
+  <!-- Published Date -->
+              <time datetime="<?php echo esc_attr( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>" itemprop="datePublished">
+                <?php echo "<p>Published:</p> " . "<span class='published-date'>" . esc_html( get_the_date( LAMBROS_DATE_FORMAT ) ) . "</span>"; ?>
+              </time>
           </div>
 
-            <!-- Published Date -->
-                    <time datetime="<?php echo esc_attr( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>" itemprop="datePublished">
-                        <?php echo esc_html( get_the_date( LAMBROS_DATE_FORMAT ) ); ?>
-                    </time>
                   <!-- Modified date (hidden visually, important for SEO) -->
                     <meta itemprop="dateModified" content="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>" >
                     <?php
