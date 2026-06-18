@@ -905,10 +905,6 @@ time {
   align-items: start;
 }
 
-.entry-content {
-  margin-top: 50px;
-}
-
 .single__metadata-time {
   margin-top: 10px;
   font-style: italic;
@@ -937,6 +933,7 @@ span.byline {
   font-size: clamp(0.75rem, 1vw + 0.25rem, 0.95rem);
   color: #555;
   margin-top: 15px;
+  margin-bottom: 30px;
   background-color: var(--color-background-alt);
   padding: 15px;
 }
