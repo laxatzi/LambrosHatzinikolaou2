@@ -1,7 +1,7 @@
 <?php
  get_header();
 ?>
-<main style="margin-top:50px" class="layout__main" aria-labelledby="search-title">
+<main class="layout__main" aria-labelledby="search-title">
   <div class="container">
   <h2 id="search-title">Your search query was "<span class='search-query'><?php echo esc_html( get_search_query( false ) ); ?></span>"</h2>
    <section id="posts" class="section" aria-labelledby="search-results-title">
