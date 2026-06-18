@@ -1,6 +1,11 @@
 <?php 
 // Build link data
 $links = [
+      [
+    'label'   => esc_html__( 'Home', 'LambrosPersonalTheme' ),
+    'url'     => esc_url( home_url( '/' ) ),
+    'current' => is_front_page(),
+  ],
   [
     'label'   => esc_html__( 'About', 'LambrosPersonalTheme' ),
     'url'     => esc_url( home_url( '/about' ) ),
@@ -31,7 +36,7 @@ $links = [
 ?>
 
 <nav id="js--menu" class="site-header__nav site-nav__primary" aria-label="<?php esc_attr_e( 'Primary', 'LambrosPersonalTheme' ); ?>">
-  <ul class="nav nav__list site-nav" id="js--menu">
+  <ul class="nav nav__list site-nav">
     <?php foreach ( $links as $item ) : ?>
       <!-- If you ever want to style the active item differently (background, underline, etc.), it’s useful to have a CSS class on that item. Here, we add the class current-menu-item to the <li> of the active page. -->
       <li class="nav__list-item <?php echo $item['current'] ? 'current-menu-item' : ''; ?>">
