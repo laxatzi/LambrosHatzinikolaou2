@@ -765,9 +765,10 @@ add_action( 'wp_enqueue_scripts', 'lambros_live_search_scripts' );
 function lambros_live_search_ajax() {
 // Verify nonce
     check_ajax_referer( 'live_search_nonce', 'nonce' );
-    
-    $query = isset( $_GET['q'] ) ? sanitize_text_field( $_GET['q'] ) : '';
-    $type  = isset( $_GET['type'] ) ? sanitize_text_field( $_GET['type'] ) : 'any';
+   
+    $query = isset($_GET['q']) ? sanitize_text_field( wp_unslash( $_GET['q'] ) ) : '';
+    $type  = isset($_GET['type']) ? sanitize_text_field( wp_unslash( $_GET['type'] ) ) : 'any';
+
 
     if (strlen( $query ) < 2) {
         wp_die();
