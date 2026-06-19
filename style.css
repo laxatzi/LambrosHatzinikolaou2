@@ -599,7 +599,7 @@ form {
 }
 
 .nav__subtitle {
-  display: block;
+  display: none;
   font-size: 0.875rem;
   color: #6b7280;
   margin-bottom: 0.25rem;
@@ -1210,6 +1210,10 @@ section.not-found {
 .search-performer {
   margin-top: 50px;
   max-width: 500px;
+}
+
+.search-performer .highlight {
+  background-color: var(--color-distinct);
 }
 
 /* Responsive Design */
