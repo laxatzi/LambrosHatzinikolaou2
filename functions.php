@@ -783,6 +783,17 @@ function lambros_live_search_ajax() {
     $search = new WP_Query( $args );
 
     if ($search->have_posts()) {
+    $valid = check_ajax_referer( 'live_search_nonce', 'nonce', false ); // false = don't die
+
+    if ( ! $valid ) {
+        wp_send_json_error([
+            'nonce_received' => $_REQUEST['nonce'] ?? 'missing',
+            'user_id'        => get_current_user_id(),
+            'expected_nonce' => wp_create_nonce( 'live_search_nonce' ),
+        ]);
+        return;
+    }
+
         echo '<ul class="live-search__list">';
 
         while ( $search->have_posts() ) {
