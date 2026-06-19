@@ -100,6 +100,12 @@ function lambros_enqueue_assets() {
       [],
       null
     );
+      wp_enqueue_style(
+      'theme-bem',
+      get_template_directory_uri() . '/css/bem.css',
+      ['main-style'],
+      '1.0'
+    );
 
   // Ionicons (module + nomodule)
     wp_enqueue_script(
