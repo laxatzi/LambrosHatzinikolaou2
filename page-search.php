@@ -57,7 +57,6 @@ get_header();
       // Core search form (already pre-fills the current query and has label)
       ?>
       <div id="search-page-form"> <?php get_search_form(); ?> </div>
-    <div id="live-search-results" class="live-search__results" aria-live="polite"></div>
 
   </section>
 </main>
