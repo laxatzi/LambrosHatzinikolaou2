@@ -34,7 +34,7 @@
           <option value="project"><?php esc_html_e( 'Projects', 'LambrosPersonalTheme' ); ?></option>
        </select>
        <div id="search-page-form"> <?php get_search_form(); ?> </div>
-       <div id="live-search-results" class="live-search__results" aria-live="polite"></div>
+       
       </div>
     </section>
 </div>
