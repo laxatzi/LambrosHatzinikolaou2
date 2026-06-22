@@ -1407,41 +1407,6 @@ main#main-content.main-page-search section form#searchform {
   margin: 0;
 }
 
-.live-search__results {
-  margin-top: 1rem;
-  background: var(--color-background-alt);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: var(--color-background);
-}
-
-.live-search__results .loading {
-  font-style: italic;
-  opacity: 0.8;
-}
-
-.live-search__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.live-search__item + .live-search__item {
-  margin-top: 0.5rem;
-}
-
-.live-search__item a {
-  color: var(--color-main-dark);
-}
-
-.live-search__item a:hover {
-  text-decoration: underline;
-}
-
-li.live-search__item {
-  list-style-type: none;
-}
-
 .spinner-div {
   margin: 20px 0 20px 40%;
 }
