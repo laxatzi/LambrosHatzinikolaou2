@@ -25,12 +25,15 @@
             get_template_part( '/template-parts/search-content' );
           }
           if ( ! $has_non_page_results ) {
-            echo "<h3 class=\"search-query--heading\">No results match the search!</h3>";
-          }
-
-        } else {
-          echo "<h3 class=\"search-query--heading\">No results match the search!</h3>";
-        }
+            echo '<h3 class="search-query--heading">' .
+	                   esc_html__( 'No results match the search.', 'LambrosPersonalTheme' ) .
+                 '</h3>';
+              }
+          else {
+            echo '<h3 class="search-query--heading">' .
+	                  esc_html__( 'No results match the search.', 'LambrosPersonalTheme' ) .
+                  '</h3>';
+              }
       ?>
       <div class="search-performer">
        <div id="search-page-form"> <?php get_search_form(); ?> </div>
