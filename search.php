@@ -3,7 +3,14 @@
 ?>
 <main class="layout__main" aria-labelledby="search-title">
   <div class="container">
-  <h2 id="search-title">Your search query was "<mark class='search-query'><?php echo esc_html( get_search_query( false ) ); ?></mark>"</h2>
+    <h1 id="search-title">
+      <?php
+      printf(
+        esc_html__( 'Search results for "%s"', 'LambrosPersonalTheme' ),
+        esc_html( get_search_query() )
+      );
+      ?>
+    </h1>
    <section id="posts" class="section" aria-labelledby="search-results-title">
       <h2 id="search-results-title" class="u-sr-only"><?php esc_html_e( 'Search results', 'LambrosPersonalTheme' ); ?></h2>
      <?php
