@@ -26,13 +26,6 @@
         }
       ?>
       <div class="search-performer">
-       <label for="search-type" class="search__type-label"> <?php esc_html_e( 'Filter by type:', 'LambrosPersonalTheme' ); ?> </label>
-       <select id="search-type" class="search__type">
-          <option value="any"><?php esc_html_e( 'All', 'LambrosPersonalTheme' ); ?></option>
-          <option value="post"><?php esc_html_e( 'Posts', 'LambrosPersonalTheme' ); ?></option>
-          <option value="page"><?php esc_html_e( 'Pages', 'LambrosPersonalTheme' ); ?></option>
-          <option value="project"><?php esc_html_e( 'Projects', 'LambrosPersonalTheme' ); ?></option>
-       </select>
        <div id="search-page-form"> <?php get_search_form(); ?> </div>
        
       </div>
