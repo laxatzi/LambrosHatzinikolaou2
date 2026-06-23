@@ -5,10 +5,10 @@
   <div class="container">
     <h1 id="search-title">
       <?php
-      printf(
-        esc_html__( 'Search results for "%s"', 'LambrosPersonalTheme' ),
-        esc_html( get_search_query() )
-      );
+          esc_html_e( 'Search results for', 'LambrosPersonalTheme' ); ?>
+          <mark class='search-query'>
+            <?php echo esc_html( get_search_query() ); ?>
+          </mark>
       ?>
     </h1>
    <section id="posts" class="section" aria-labelledby="search-results-title">
