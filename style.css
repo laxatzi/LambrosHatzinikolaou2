@@ -1399,6 +1399,11 @@ form#searchform input {
   .search-query--heading {
     font-size: 1.25rem;
   }
+
+  #search-title {
+    margin-top: 50px;
+    font-size: 1.25rem;
+  }
 }
 
 main#main-content.main-page-search {
