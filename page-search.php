@@ -45,10 +45,6 @@ get_header();
 
   <section class="search-form__wrapper section" aria-labelledby="search-form-title">
     <h2 id="search-form-title" class="u-sr-only"><?php esc_html_e( 'Search this site', 'LambrosPersonalTheme' ); ?></h2>
-
- <?php
-      // Core search form (already pre-fills the current query and has label)
-      ?>
       <div id="search-page-form"> <?php get_search_form(); ?> </div>
 
   </section>
