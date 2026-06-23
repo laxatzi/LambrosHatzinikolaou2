@@ -1395,6 +1395,12 @@ form#searchform input {
   background-color: var(--color-distinct);
 }
 
+@media (max-width: 713px) {
+  .search-query--heading {
+    font-size: 1.25rem;
+  }
+}
+
 main#main-content.main-page-search {
   flex-direction: column;
 }
